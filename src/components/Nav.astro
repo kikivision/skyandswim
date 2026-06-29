@@ -10,7 +10,16 @@ const links = [
 <header class="nav">
   <div class="nav-inner">
     <a class="logo" href="/" aria-label="Sky & Swim home">
-      Sky <span class="amp">&amp;</span> Swim
+      <svg class="logo-mark" viewBox="0 0 82 110" aria-hidden="true" focusable="false">
+        <path
+          d="M 41 2 C 41 2, 43 8, 62 36 C 74 54, 79 68, 79 78 C 79 95, 62 108, 41 108 C 20 108, 3 95, 3 78 C 3 68, 8 54, 20 36 C 39 8, 41 2, 41 2 Z"
+          fill="none"
+          stroke="#D44868"
+          stroke-width="3"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+      <span class="logo-word">Sky <span class="amp">&amp;</span> Swim</span>
     </a>
 
     <nav class="nav-links" aria-label="Primary">
@@ -43,12 +52,21 @@ const links = [
   }
 
   .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 1.6rem;
     letter-spacing: 0.01em;
     color: #fff;
     white-space: nowrap;
+  }
+
+  .logo-mark {
+    width: 22px;
+    height: auto;
+    flex-shrink: 0;
   }
 
   .logo .amp {
