@@ -1,0 +1,346 @@
+---
+---
+
+<section class="hero" aria-label="Sky and Swim introduction">
+  <!-- Layered atmosphere -->
+  <div class="atmosphere" aria-hidden="true">
+    <div class="sun-bloom"></div>
+    <div class="waterline"></div>
+    <div class="skyline"></div>
+    <div class="city-lights"></div>
+    <div class="pool-surface"></div>
+    <div class="bottom-fade"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Rooftop Pool Hotels · United States</p>
+    <h1 class="headline">
+      The water knows when the light <span class="emph">is right.</span>
+    </h1>
+    <p class="subtext">
+      Curated rooftop pool hotels across America — ranked by the view, the
+      water, and whether the moment earns the price of admission.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#cities">Browse by City →</a>
+      <a class="btn btn-ghost" href="#picks">Editor's Picks</a>
+    </div>
+  </div>
+
+  <a class="scroll-hint" href="#trust" aria-label="Scroll down">
+    <span>Descend</span>
+    <span class="scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 4rem;
+  }
+
+  .atmosphere {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Sunlight bloom at the top */
+  .sun-bloom {
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 70%;
+    background: radial-gradient(
+      ellipse 60% 70% at 50% 0%,
+      rgba(255, 246, 224, 0.55) 0%,
+      rgba(255, 232, 198, 0.22) 28%,
+      rgba(168, 216, 216, 0) 62%
+    );
+  }
+
+  /* Waterline shimmer at ~38% down */
+  .waterline {
+    position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0 0 24px 4px rgba(255, 255, 255, 0.18);
+  }
+
+  /* City skyline silhouette */
+  .skyline {
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        #2a7080 4%,
+        #2a7080 7%,
+        transparent 7.5%,
+        transparent 10%,
+        #2a7080 10%,
+        #2a7080 14%,
+        transparent 14.5%,
+        transparent 17%,
+        #2a7080 17%,
+        #2a7080 23%,
+        transparent 23.5%,
+        transparent 27%,
+        #2a7080 27%,
+        #2a7080 30%,
+        transparent 30.5%,
+        transparent 34%,
+        #2a7080 34%,
+        #2a7080 41%,
+        transparent 41.5%,
+        transparent 45%,
+        #2a7080 45%,
+        #2a7080 49%,
+        transparent 49.5%,
+        transparent 53%,
+        #2a7080 53%,
+        #2a7080 60%,
+        transparent 60.5%,
+        transparent 64%,
+        #2a7080 64%,
+        #2a7080 68%,
+        transparent 68.5%,
+        transparent 72%,
+        #2a7080 72%,
+        #2a7080 79%,
+        transparent 79.5%,
+        transparent 83%,
+        #2a7080 83%,
+        #2a7080 87%,
+        transparent 87.5%,
+        transparent 91%,
+        #2a7080 91%,
+        #2a7080 96%,
+        transparent 96.5%
+      );
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 32%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 32%);
+    opacity: 0.85;
+  }
+
+  /* Warm city lights as radial-gradient dots */
+  .city-lights {
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-image:
+      radial-gradient(circle, rgba(255, 214, 150, 0.9) 0.8px, transparent 1.6px),
+      radial-gradient(circle, rgba(255, 226, 170, 0.7) 0.8px, transparent 1.6px);
+    background-size: 34px 26px, 53px 40px;
+    background-position: 6px 60px, 20px 96px;
+    -webkit-mask-image: linear-gradient(180deg, transparent 30%, #000 65%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 30%, #000 65%, transparent 100%);
+    opacity: 0.7;
+  }
+
+  /* Pool water surface at the bottom */
+  .pool-surface {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 22%;
+    background: linear-gradient(
+      180deg,
+      rgba(42, 191, 191, 0) 0%,
+      rgba(42, 191, 191, 0.28) 40%,
+      rgba(150, 226, 226, 0.42) 80%,
+      rgba(225, 248, 248, 0.55) 100%
+    );
+  }
+
+  /* Dark overlay fading up from the bottom for legibility */
+  .bottom-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(5, 14, 34, 0) 45%,
+      rgba(5, 14, 34, 0.35) 78%,
+      rgba(5, 14, 34, 0.55) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.4rem;
+  }
+
+  .headline {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.2rem, 6.5vw, 5.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    color: #fff;
+    max-width: 16ch;
+    text-shadow: 0 2px 30px rgba(5, 14, 34, 0.35);
+  }
+
+  .headline .emph {
+    font-style: italic;
+    color: var(--watermelon);
+  }
+
+  .subtext {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.6;
+    color: rgba(235, 248, 250, 0.92);
+    max-width: 56ch;
+    margin-top: 1.6rem;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.4rem;
+  }
+
+  .btn {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--watermelon);
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(212, 72, 104, 0.32);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #e0577a;
+  }
+
+  .btn-ghost {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+  }
+
+  .btn-ghost:hover {
+    transform: translateY(-2px);
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    right: clamp(1.25rem, 4vw, 3rem);
+    bottom: 2.2rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0)
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.95);
+    animation: descend 2.2s ease-in-out infinite;
+  }
+
+  @keyframes descend {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(260%);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-line::after {
+      animation: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .scroll-hint {
+      display: none;
+    }
+
+    .cta-row .btn {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+</style>

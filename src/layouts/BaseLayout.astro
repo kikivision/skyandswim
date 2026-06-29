@@ -1,0 +1,122 @@
+---
+import Nav from "../components/Nav.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Sky & Swim · Rooftop Pool Hotels Across America",
+  description = "Curated rooftop pool hotels across America — ranked by the view, the water, and whether the moment earns the price of admission.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+
+    <style is:global>
+      :root {
+        --robin: #a8d8d8;
+        --shallow: #3a9aaa;
+        --mid: #1a5a70;
+        --deep: #0a2a48;
+        --abyss: #050e22;
+        --watermelon: #d44868;
+        --teal: #2abfbf;
+
+        --font-display: "Cormorant Garamond", Georgia, serif;
+        --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: var(--font-body);
+        font-weight: 400;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+
+        /* The page IS the pool — full vertical ombre, pinned as you descend. */
+        background: linear-gradient(
+          180deg,
+          #a8d8d8 0%,
+          #3a9aaa 26%,
+          #1a5a70 52%,
+          #0a2a48 78%,
+          #050e22 100%
+        );
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      main {
+        display: block;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+        margin: 0;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      ::selection {
+        background: rgba(212, 72, 104, 0.4);
+        color: #fff;
+      }
+
+      .section-inner {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 clamp(1.25rem, 4vw, 3rem);
+      }
+    </style>
+  </body>
+</html>

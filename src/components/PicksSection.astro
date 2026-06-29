@@ -1,0 +1,238 @@
+---
+const picks = [
+  {
+    name: "The William Vale",
+    city: "Brooklyn, NY",
+    description:
+      "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something.",
+    href: "#",
+    scene: "vale",
+  },
+  {
+    name: "Catbird Hotel",
+    city: "Denver, CO",
+    description:
+      "Small, sharp, and unbothered — a RiNo rooftop where the pool deck feels like a friend's very good party with a mountain backdrop.",
+    href: "#",
+    scene: "catbird",
+  },
+  {
+    name: "Marriott Marquis Houston",
+    city: "Houston, TX",
+    description:
+      "The Texas-shaped lazy river is a gimmick, yes. It is also, undeniably, a great time eight floors above downtown.",
+    href: "#",
+    scene: "marquis",
+  },
+];
+---
+
+<section class="picks" id="picks" aria-labelledby="picks-heading">
+  <div class="section-inner">
+    <header class="picks-head">
+      <p class="kicker">Editor's Picks</p>
+      <h2 id="picks-heading">
+        The ones we keep thinking about <span class="emph">mid-scroll.</span>
+      </h2>
+    </header>
+
+    <div class="pick-grid">
+      {
+        picks.map((pick) => (
+          <article class="pick-card">
+            <div class={`pick-scene scene-${pick.scene}`} aria-hidden="true">
+              <span class="pick-shimmer" />
+            </div>
+            <div class="pick-content">
+              <p class="pick-label">✦ Sky &amp; Swim Pick</p>
+              <h3 class="pick-name">{pick.name}</h3>
+              <p class="pick-city">{pick.city}</p>
+              <p class="pick-desc">{pick.description}</p>
+              <a class="pick-link" href={pick.href}>
+                See this hotel →
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .picks {
+    padding: clamp(3rem, 7vw, 6rem) 0;
+  }
+
+  .picks-head {
+    margin-bottom: 2.6rem;
+    max-width: 32ch;
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+  }
+
+  .picks-head h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    line-height: 1.08;
+    color: #fff;
+  }
+
+  .picks-head .emph {
+    font-style: italic;
+    color: rgba(200, 230, 238, 0.9);
+  }
+
+  .pick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+
+  .pick-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(5, 30, 55, 0.45);
+    border: 1px solid rgba(42, 140, 170, 0.22);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .pick-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(42, 191, 191, 0.5);
+  }
+
+  .pick-scene {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .scene-vale {
+    background:
+      radial-gradient(80% 60% at 70% 10%, rgba(255, 226, 180, 0.25), transparent 60%),
+      linear-gradient(180deg, #0c3550 0%, #0a2740 45%, #06304a 100%);
+  }
+
+  .scene-catbird {
+    background:
+      radial-gradient(70% 60% at 30% 12%, rgba(212, 130, 150, 0.25), transparent 60%),
+      linear-gradient(180deg, #103a4a 0%, #0a2a40 50%, #07344c 100%);
+  }
+
+  .scene-marquis {
+    background:
+      radial-gradient(80% 70% at 50% 10%, rgba(255, 210, 160, 0.22), transparent 60%),
+      linear-gradient(180deg, #0e3346 0%, #0a2840 50%, #06354e 100%);
+  }
+
+  /* Pool water shimmer at the base of each scene */
+  .pick-shimmer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 46%;
+    background: linear-gradient(
+      180deg,
+      rgba(42, 191, 191, 0) 0%,
+      rgba(42, 191, 191, 0.3) 55%,
+      rgba(170, 230, 230, 0.45) 100%
+    );
+  }
+
+  .pick-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 2px,
+      transparent 2px,
+      transparent 9px
+    );
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000);
+    mask-image: linear-gradient(180deg, transparent, #000);
+  }
+
+  .pick-content {
+    padding: 1.5rem 1.6rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+  }
+
+  .pick-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--watermelon);
+  }
+
+  .pick-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    color: #fff;
+    margin-top: 0.3rem;
+  }
+
+  .pick-city {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(170, 210, 220, 0.8);
+  }
+
+  .pick-desc {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: rgba(215, 235, 240, 0.82);
+    margin-top: 0.6rem;
+  }
+
+  .pick-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--teal);
+    margin-top: auto;
+    padding-top: 1.1rem;
+    transition: color 0.2s ease;
+  }
+
+  .pick-link:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .pick-grid {
+      grid-template-columns: 1fr;
+      max-width: 460px;
+    }
+  }
+</style>

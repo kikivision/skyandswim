@@ -1,0 +1,156 @@
+---
+const items = [
+  {
+    label: "Hand-curated by water-obsessed editors",
+    icon: "drop",
+  },
+  {
+    label: "15+ US cities covered",
+    icon: "pin",
+  },
+  {
+    label: "Adults-focused picks only",
+    icon: "moon",
+  },
+  {
+    label: "Updated for 2026 seasonal openings",
+    icon: "calendar",
+  },
+];
+---
+
+<!-- Ripple divider between hero and trust bar -->
+<div class="ripple" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80">
+    <path
+      d="M0,40 C180,8 360,72 540,40 C720,8 900,72 1080,40 C1260,8 1440,72 1620,40 L1440,80 L0,80 Z"
+      fill="none"
+      stroke="rgba(255,255,255,0.25)"
+      stroke-width="2"
+    ></path>
+    <path
+      d="M0,52 C180,20 360,84 540,52 C720,20 900,84 1080,52 C1260,20 1440,84 1620,52"
+      fill="none"
+      stroke="rgba(255,255,255,0.1)"
+      stroke-width="2"
+    ></path>
+  </svg>
+</div>
+
+<section class="trust" id="trust" aria-label="Why Sky and Swim">
+  <div class="section-inner">
+    <ul class="trust-grid">
+      {
+        items.map((item) => (
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              {item.icon === "drop" && (
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <path
+                    d="M12 2.5c0 0 6.5 7.3 6.5 12a6.5 6.5 0 0 1-13 0c0-4.7 6.5-12 6.5-12Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              )}
+              {item.icon === "pin" && (
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <path
+                    d="M12 2.5a7 7 0 0 0-7 7c0 5 7 12 7 12s7-7 7-12a7 7 0 0 0-7-7Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              )}
+              {item.icon === "moon" && (
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <path
+                    d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              )}
+              {item.icon === "calendar" && (
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M3.5 9.5h17M8 3.5v3M16 3.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              )}
+            </span>
+            <span class="trust-label">{item.label}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .ripple {
+    line-height: 0;
+    margin-top: -1px;
+  }
+
+  .ripple svg {
+    display: block;
+  }
+
+  .trust {
+    background: rgba(10, 70, 90, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.6rem 0;
+  }
+
+  .trust-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .trust-icon {
+    flex-shrink: 0;
+    color: var(--watermelon);
+    display: inline-flex;
+  }
+
+  .trust-label {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    color: rgba(235, 245, 248, 0.9);
+  }
+
+  @media (max-width: 900px) {
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trust-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
