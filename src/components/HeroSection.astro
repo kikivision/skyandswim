@@ -15,7 +15,7 @@
   <div class="hero-content">
     <p class="eyebrow">Rooftop Pool Hotels · United States</p>
     <h1 class="headline">
-      The water knows when the light <span class="emph">is right.</span>
+      Where the skyline meets <span class="emph">the deep end.</span>
     </h1>
     <p class="subtext">
       Curated rooftop pool hotels across America — ranked by the view, the
@@ -220,6 +220,8 @@
   .headline .emph {
     font-style: italic;
     color: var(--watermelon);
+    /* Keep the emphasized phrase from splitting across lines (e.g. on mobile). */
+    white-space: nowrap;
   }
 
   .subtext {
