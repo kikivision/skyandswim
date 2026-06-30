@@ -1,4 +1,9 @@
 ---
+import { Image } from "astro:assets";
+import valePool from "../assets/picks/william-vale-brooklyn.jpg";
+import halcyonPool from "../assets/picks/halcyon-cherry-creek-rooftop-pool.jpg";
+import marquisPool from "../assets/picks/marriott-marquis-houston.jpg";
+
 const picks = [
   {
     name: "The William Vale",
@@ -6,15 +11,17 @@ const picks = [
     description:
       "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something.",
     href: "#",
-    scene: "vale",
+    image: valePool,
+    alt: "The William Vale's rooftop pool above North Brooklyn with the Manhattan skyline beyond.",
   },
   {
-    name: "Catbird Hotel",
+    name: "Halcyon, a Hotel in Cherry Creek",
     city: "Denver, CO",
     description:
-      "Small, sharp, and unbothered — a RiNo rooftop where the pool deck feels like a friend's very good party with a mountain backdrop.",
+      "A year-round heated rooftop pool that shrugs off the altitude — Rockies on the horizon, cabanas at the edge, and water blue enough to forgive the thin air.",
     href: "#",
-    scene: "catbird",
+    image: halcyonPool,
+    alt: "Halcyon's rooftop pool in Cherry Creek with the Rocky Mountains on the horizon.",
   },
   {
     name: "Marriott Marquis Houston",
@@ -22,7 +29,8 @@ const picks = [
     description:
       "The Texas-shaped lazy river is a gimmick, yes. It is also, undeniably, a great time eight floors above downtown.",
     href: "#",
-    scene: "marquis",
+    image: marquisPool,
+    alt: "The Marriott Marquis Houston's rooftop pool eight floors above downtown.",
   },
 ];
 ---
@@ -40,8 +48,15 @@ const picks = [
       {
         picks.map((pick) => (
           <article class="pick-card">
-            <div class={`pick-scene scene-${pick.scene}`} aria-hidden="true">
-              <span class="pick-shimmer" />
+            <div class="pick-scene">
+              <Image
+                class="pick-img"
+                src={pick.image}
+                alt={pick.alt}
+                widths={[360, 540, 760]}
+                sizes="(max-width: 900px) 460px, 30vw"
+                loading="lazy"
+              />
             </div>
             <div class="pick-content">
               <p class="pick-label">✦ Sky &amp; Swim Pick</p>
@@ -123,52 +138,16 @@ const picks = [
     overflow: hidden;
   }
 
-  .scene-vale {
-    background:
-      radial-gradient(80% 60% at 70% 10%, rgba(255, 226, 180, 0.25), transparent 60%),
-      linear-gradient(180deg, #0c3550 0%, #0a2740 45%, #06304a 100%);
+  .pick-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
   }
 
-  .scene-catbird {
-    background:
-      radial-gradient(70% 60% at 30% 12%, rgba(212, 130, 150, 0.25), transparent 60%),
-      linear-gradient(180deg, #103a4a 0%, #0a2a40 50%, #07344c 100%);
-  }
-
-  .scene-marquis {
-    background:
-      radial-gradient(80% 70% at 50% 10%, rgba(255, 210, 160, 0.22), transparent 60%),
-      linear-gradient(180deg, #0e3346 0%, #0a2840 50%, #06354e 100%);
-  }
-
-  /* Pool water shimmer at the base of each scene */
-  .pick-shimmer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 46%;
-    background: linear-gradient(
-      180deg,
-      rgba(42, 191, 191, 0) 0%,
-      rgba(42, 191, 191, 0.3) 55%,
-      rgba(170, 230, 230, 0.45) 100%
-    );
-  }
-
-  .pick-shimmer::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.06) 0px,
-      rgba(255, 255, 255, 0.06) 2px,
-      transparent 2px,
-      transparent 9px
-    );
-    -webkit-mask-image: linear-gradient(180deg, transparent, #000);
-    mask-image: linear-gradient(180deg, transparent, #000);
+  .pick-card:hover .pick-img {
+    transform: scale(1.04);
   }
 
   .pick-content {
