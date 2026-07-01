@@ -1,0 +1,44 @@
+{
+  "key": "skyandswim",
+  "name": "Sky & Swim",
+  "tagline": "Curated Travel",
+  "kicker": "Worth the Flight",
+  "domain": "skyandswim.com",
+  "url": "https://skyandswim.com",
+  "theme": "dark",
+  "colors": {
+    "primary": "#2ABFBF",
+    "accent": "#D44868",
+    "ink": "#FFFFFF",
+    "body": "#E6F1F2",
+    "muted": "#A8D8D8",
+    "paper": "#0A2A48",
+    "surface": "#1A5A70",
+    "line": "rgba(168,216,216,0.30)",
+    "onPrimary": "#062436",
+    "onAccent": "#FFFFFF"
+  },
+  "palette": {
+    "robin": "#A8D8D8",
+    "shallow": "#3A9AAA",
+    "mid": "#1A5A70",
+    "deep": "#0A2A48",
+    "abyss": "#050E22",
+    "watermelon": "#D44868",
+    "teal": "#2ABFBF"
+  },
+  "fonts": {
+    "heading": "'Cormorant Garamond', Georgia, 'Times New Roman', serif",
+    "body": "'DM Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "googleFontsHref": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap",
+    "headingExport": "Georgia, 'Times New Roman', serif",
+    "bodyExport": "Helvetica, Arial, sans-serif"
+  },
+  "wordmark": {
+    "ampersandColor": "#D44868"
+  },
+  "logos": {
+    "dir": "public/images/brand",
+    "mark": "logo_mark.svg"
+  }
+}
