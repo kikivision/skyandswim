@@ -7,13 +7,13 @@ const principles = [
   },
   {
     numeral: "II",
-    title: "Adults Welcome, Chaotic Neutral",
+    title: "Made for Grown-Ups",
     body: "These are picks for grown-ups who want a good drink, a great deck, and room to breathe. Some are serene; some are a scene. We tell you which, so you can choose your own afternoon.",
   },
   {
     numeral: "III",
-    title: "Honest, Updated, Linked",
-    body: "Seasonal closures, day-pass rules, resort fees, the catch nobody mentions — we keep it current and we link you straight to booking. No mystery, no bait.",
+    title: "No Surprises, No Bait",
+    body: "Seasonal closures, day-pass rules, resort fees, the catch nobody mentions — we keep it current and link you straight to booking. What you read is what you get.",
   },
 ];
 ---
@@ -52,6 +52,13 @@ const principles = [
     margin-bottom: 2.4rem;
   }
 
+  .standard-head .kicker,
+  .standard-head h2 {
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.55),
+      0 2px 16px rgba(3, 12, 28, 0.6);
+  }
+
   .kicker {
     font-family: var(--font-body);
     font-weight: 500;
@@ -73,31 +80,23 @@ const principles = [
   .principle-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid rgba(42, 120, 150, 0.2);
-    border-radius: 14px;
-    overflow: hidden;
+    gap: clamp(1.6rem, 3.5vw, 3rem);
   }
 
   .principle {
     position: relative;
-    padding: clamp(1.8rem, 3vw, 2.6rem);
+    padding: 0.4rem 0;
     overflow: hidden;
-    border-right: 1px solid rgba(42, 120, 150, 0.2);
-  }
-
-  .principle:last-child {
-    border-right: none;
   }
 
   .ghost-num {
-    position: absolute;
-    top: 0.4rem;
-    right: 1.2rem;
+    display: block;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 7.5rem;
+    font-size: 2.6rem;
     line-height: 1;
-    color: rgba(78, 172, 184, 0.14);
+    color: var(--teal);
+    margin-bottom: 0.7rem;
     pointer-events: none;
     user-select: none;
   }
@@ -114,7 +113,6 @@ const principles = [
     line-height: 1.15;
     color: #fff;
     margin-bottom: 0.8rem;
-    max-width: 14ch;
   }
 
   .principle-body p {
@@ -122,21 +120,13 @@ const principles = [
     font-weight: 300;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: rgba(190, 220, 228, 0.78);
+    color: rgba(220, 240, 245, 0.95);
   }
 
   @media (max-width: 900px) {
     .principle-grid {
       grid-template-columns: 1fr;
-    }
-
-    .principle {
-      border-right: none;
-      border-bottom: 1px solid rgba(42, 120, 150, 0.2);
-    }
-
-    .principle:last-child {
-      border-bottom: none;
+      gap: 2rem;
     }
   }
 </style>

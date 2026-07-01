@@ -91,6 +91,16 @@ const cities = [
     max-width: 40ch;
   }
 
+  /* Soft dark halo so bare copy reads over the light pool surface —
+     no box, keeps the floating-on-the-water look. */
+  .cities-head .kicker,
+  .cities-head h2,
+  .cities-head .lede {
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.6),
+      0 2px 16px rgba(3, 12, 28, 0.72);
+  }
+
   .kicker {
     font-family: var(--font-body);
     font-weight: 600;
@@ -158,7 +168,7 @@ const cities = [
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    background: rgba(6, 26, 44, 0.45);
+    background: rgba(6, 22, 40, 0.62);
     isolation: isolate;
   }
 
@@ -169,8 +179,8 @@ const cities = [
     z-index: 1;
     background: linear-gradient(
       180deg,
-      rgba(5, 20, 40, 0.15) 0%,
-      rgba(5, 20, 40, 0.55) 100%
+      rgba(5, 20, 40, 0.35) 0%,
+      rgba(5, 20, 40, 0.72) 100%
     );
     transition: background 0.4s ease;
   }

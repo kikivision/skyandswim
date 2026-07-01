@@ -67,18 +67,20 @@ const {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
 
-        /* The page IS the pool — full vertical ombre, pinned as you descend. */
+        /* The page IS the pool — a light sunlit surface at the very top that
+           gradually deepens into dark water as you scroll down. One smooth
+           ombre, scrolls with the page so the descent actually happens. */
         background: linear-gradient(
           180deg,
           #a8d8d8 0%,
-          #3a9aaa 26%,
-          #1a5a70 52%,
-          #0a2a48 78%,
+          #7ec1c8 12%,
+          #4a97a6 24%,
+          #286d89 38%,
+          #164a6c 54%,
+          #0b2e4e 72%,
           #050e22 100%
         );
-        background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
       }
 
       main {
