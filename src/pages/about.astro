@@ -6,24 +6,24 @@ const promises = [
   {
     numeral: "I",
     title: "Independent taste",
-    body: "Nobody buys their way onto the list. A pool earns its place on the view, the water, and the room to breathe — full stop.",
+    body: "Every pool here earns its place on the view, the water, and the space to actually unwind. Nothing is paid for, and nothing is padded.",
   },
   {
     numeral: "II",
     title: "Straight to the source",
-    body: "When you're ready to book, I point you to the hotel's own page. No mystery middlemen, no bait pricing, no resort-fee surprises at the desk.",
+    body: "When you're ready to book, I send you directly to the hotel — no unfamiliar middlemen, no bait pricing, no surprises at check-in.",
   },
   {
     numeral: "III",
     title: "Kept current",
-    body: "Seasonal closures, day-pass rules, the catch nobody mentions — the fine print changes, and I keep up with it.",
+    body: "Seasons change, pools close, day-pass rules shift. I keep the details up to date so your plans hold.",
   },
 ];
 ---
 
 <BaseLayout
   title="About · Sky & Swim"
-  description="Sky & Swim is a personal, independent guide to America's best rooftop pools — ranked by the view, the water, and whether the moment earns the price of admission."
+  description="Sky & Swim is a personal, independent guide to America's best rooftop pools — chosen for the view, the water, and whether the moment earns the price of admission."
 >
   <div class="about-page">
     <!-- Intro — dark copy on the sunlit surface -->
@@ -45,12 +45,13 @@ const promises = [
         </svg>
         <p class="kicker kicker-dark">About</p>
         <h1>
-          I've always been a <span class="accent">water girl.</span>
+          I plan my trips around <span class="accent">the water.</span>
         </h1>
         <p class="lede">
-          Sky &amp; Swim is the domestic half of that — the rooftop pools, the
-          skyline views, and the bar you don't want to leave, for the trips
-          when a long-haul flight isn't the move.
+          Sky &amp; Swim began with a simple preference: I would always rather be
+          near the water. When a long flight isn't in the cards, a great rooftop
+          pool is the next best thing — and this is where I keep the ones worth
+          your time.
         </p>
       </div>
     </section>
@@ -59,24 +60,23 @@ const promises = [
     <section class="band">
       <div class="section-inner narrow">
         <p class="kicker">How this started</p>
-        <h2>It started with the overwater bungalows.</h2>
+        <h2>The idea started far from any rooftop.</h2>
         <p class="prose">
-          My idea of a perfect trip usually involves a swim-up suite or an
-          overwater bungalow — that's a whole other love of mine, and the reason
-          my sister site <a
+          My favorite trips tend to involve a swim-up suite or an overwater
+          bungalow — the kind of water you plan a whole year around. That's the
+          world of my sister site, <a
             class="inline-link"
             href="https://jetandswim.com"
             target="_blank"
             rel="noopener">Jet &amp; Swim</a
-          > exists. But those trips mean long
-          flights, big blocks of time, and peak-season airfare I'm not always
-          up for.
+          >. But those journeys ask for long flights, real time, and the kind of
+          airfare that only makes sense once in a while.
         </p>
         <p class="prose">
-          Sometimes I just want the water closer to home — a stay-cation where
-          the pool, the view, and the rooftop bar do all the work. No passport,
-          no red-eye, no jet lag. So I started keeping a list of the rooftops
-          that actually deliver the moment. Sky &amp; Swim is that list.
+          The rest of the year, I still want the water — just closer to home. A
+          weekend where the pool, the view, and the rooftop bar are the entire
+          point. Sky &amp; Swim is where I gather those places: the American
+          rooftops worth booking, chosen with care and kept current.
         </p>
       </div>
     </section>
@@ -86,7 +86,7 @@ const promises = [
       <div class="section-inner">
         <header class="band-head">
           <p class="kicker">What you can count on</p>
-          <h2>An honest list, or it's nothing.</h2>
+          <h2>A guide you can actually trust.</h2>
         </header>
         <div class="promise-grid">
           {
@@ -108,34 +108,56 @@ const promises = [
 
     <!-- Who's behind it -->
     <section class="band">
-      <div class="section-inner narrow">
-        <p class="kicker">Who's behind it</p>
-        <h2>Just me, and a low tolerance for bad rooftops.</h2>
-        <p class="prose">
-          I'm the one flying (or driving) out, ordering the overpriced drink,
-          and deciding whether the view earns it. Sky &amp; Swim is the guide I
-          wished existed — and its sister site, <a
-            class="inline-link"
-            href="https://jetandswim.com"
-            target="_blank"
-            rel="noopener">Jet &amp; Swim</a
-          >, is for when the daydream calls for an overwater bungalow.
-        </p>
-        <p class="prose">
-          Some links here are affiliate links — if you book through them, I may
-          earn a small commission at no extra cost to you. It never buys a
-          ranking. Found a rooftop I've missed? Tell me:
-          <a class="inline-link" href="mailto:hello@skyandswim.com"
-            >hello@skyandswim.com</a
-          >.
-        </p>
+      <div class="section-inner">
+        <div class="who">
+          <figure class="who-photo">
+            <picture>
+              <source
+                srcset="/images/about/karen-rooftop.webp"
+                type="image/webp"
+              />
+              <img
+                src="/images/about/karen-rooftop.jpg"
+                alt="Neck-deep in a rooftop infinity pool with a city skyline behind me."
+                width="1000"
+                height="1077"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </figure>
+          <div class="who-text">
+            <p class="kicker">Who's behind it</p>
+            <h2>Written by someone who's been in the water.</h2>
+            <p class="prose">
+              I'm the one who visits, orders the drink, and stays until the
+              light turns. Sky &amp; Swim is the guide I always wished I had —
+              and its sister site, <a
+                class="inline-link"
+                href="https://jetandswim.com"
+                target="_blank"
+                rel="noopener">Jet &amp; Swim</a
+              >, is for the trips when the daydream calls for an overwater
+              bungalow.
+            </p>
+            <p class="prose">
+              A few links here are affiliate links; if you book through them, I
+              may earn a small commission at no additional cost to you. It never
+              influences a ranking. If there's a rooftop I should know about,
+              I'd love to hear it: <a
+                class="inline-link"
+                href="mailto:hello@skyandswim.com">hello@skyandswim.com</a
+              >.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Closing -->
     <section class="closing">
       <div class="section-inner">
-        <h2>Find your next deep end.</h2>
+        <h2>Find your next place on the water.</h2>
         <a class="btn btn-primary" href="/#cities">Browse by city →</a>
       </div>
     </section>
@@ -247,6 +269,41 @@ const promises = [
   }
   .inline-link:hover {
     border-color: var(--teal);
+  }
+
+  /* Who's behind it — portrait + text */
+  .who {
+    display: grid;
+    grid-template-columns: minmax(0, 340px) 1fr;
+    gap: clamp(2rem, 4.5vw, 3.75rem);
+    align-items: center;
+    max-width: 1040px;
+  }
+
+  .who-photo {
+    margin: 0;
+  }
+
+  .who-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(5, 14, 34, 0.45);
+  }
+
+  .who-text .prose:first-of-type {
+    margin-top: 1.6rem;
+  }
+
+  @media (max-width: 760px) {
+    .who {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+    .who-photo {
+      max-width: 380px;
+    }
   }
 
   /* Promise grid — echoes the homepage "how we pick" cadence */
