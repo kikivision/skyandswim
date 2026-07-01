@@ -1,0 +1,326 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+const promises = [
+  {
+    numeral: "I",
+    title: "Independent taste",
+    body: "Nobody buys their way onto the list. A pool earns its place on the view, the water, and the room to breathe — full stop.",
+  },
+  {
+    numeral: "II",
+    title: "Straight to the source",
+    body: "When you're ready to book, we send you to the hotel's own page. No mystery middlemen, no bait pricing, no resort-fee surprises at the desk.",
+  },
+  {
+    numeral: "III",
+    title: "Kept current",
+    body: "Seasonal closures, day-pass rules, the catch nobody mentions — the fine print changes, and we change with it.",
+  },
+];
+---
+
+<BaseLayout
+  title="About · Sky & Swim"
+  description="Sky & Swim is an independent field guide to America's best rooftop pools — ranked by the view, the water, and whether the moment earns the price of admission."
+>
+  <div class="about-page">
+    <!-- Intro — dark copy on the sunlit surface -->
+    <section class="intro">
+      <div class="section-inner">
+        <svg class="drop-mark" viewBox="0 0 82 110" aria-hidden="true">
+          <defs>
+            <linearGradient id="aboutDrop" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#C8ECEC" />
+              <stop offset="0.45" stop-color="#2ABFBF" />
+              <stop offset="0.72" stop-color="#3F8FB0" />
+              <stop offset="1" stop-color="#D44868" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 41 2 C 41 2, 43 8, 62 36 C 74 54, 79 68, 79 78 C 79 95, 62 108, 41 108 C 20 108, 3 95, 3 78 C 3 68, 8 54, 20 36 C 39 8, 41 2, 41 2 Z"
+            fill="url(#aboutDrop)"
+          />
+        </svg>
+        <p class="kicker kicker-dark">About</p>
+        <h1>
+          We chase the pools <span class="accent">worth the flight.</span>
+        </h1>
+        <p class="lede">
+          Sky &amp; Swim is an independent field guide to America's rooftop
+          pools — the ones where the skyline, the water, and that gold-hour
+          light all arrive at the same time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Story — light copy, descending into the water -->
+    <section class="band">
+      <div class="section-inner narrow">
+        <p class="kicker">Why we built it</p>
+        <h2>It started with one overhyped rooftop.</h2>
+        <p class="prose">
+          We'd flown in for a pool that looked unbelievable in the photos — and
+          found a cramped plunge tucked behind the HVAC, packed shoulder to
+          shoulder by noon, with a parking structure for a view and $22 for a
+          watery drink. We wanted the afternoon back.
+        </p>
+        <p class="prose">
+          So we started keeping a real list: the rooftops that actually deliver
+          the moment, and the ones that only sell it. Sky &amp; Swim is that
+          list — kept honest, kept current, and written for people who'd rather
+          know before they book.
+        </p>
+      </div>
+    </section>
+
+    <!-- The promise -->
+    <section class="band">
+      <div class="section-inner">
+        <header class="band-head">
+          <p class="kicker">What you can count on</p>
+          <h2>An honest guide, or it's nothing.</h2>
+        </header>
+        <div class="promise-grid">
+          {
+            promises.map((p) => (
+              <article class="promise">
+                <span class="ghost-num" aria-hidden="true">
+                  {p.numeral}
+                </span>
+                <div class="promise-body">
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Who's behind it -->
+    <section class="band">
+      <div class="section-inner narrow">
+        <p class="kicker">Who's behind it</p>
+        <h2>A small team with a low tolerance for bad rooftops.</h2>
+        <p class="prose">
+          Sky &amp; Swim is a Sunstate Bay Ventures property, run by a handful
+          of people who travel too much and swim whenever they can. Some links
+          on this site are affiliate links — if you book through them, we may
+          earn a small commission at no extra cost to you. It never buys a
+          ranking.
+        </p>
+        <p class="prose">
+          Found a rooftop we've missed, or fine print that's gone stale? Tell
+          us: <a class="inline-link" href="mailto:hello@skyandswim.com"
+            >hello@skyandswim.com</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing">
+      <div class="section-inner">
+        <h2>Find your next deep end.</h2>
+        <a class="btn btn-primary" href="/#cities">Browse by city →</a>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    min-height: 100vh;
+  }
+
+  .narrow {
+    max-width: 760px;
+  }
+
+  /* ── Intro: dark ink on the light surface ── */
+  .intro {
+    padding: clamp(9rem, 20vh, 13rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .drop-mark {
+    width: 40px;
+    height: auto;
+    margin-bottom: 1.6rem;
+    filter: drop-shadow(0 4px 10px rgba(5, 14, 34, 0.18));
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+  }
+
+  .kicker-dark {
+    color: #0f5568;
+  }
+
+  .intro h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    color: var(--deep);
+    max-width: 18ch;
+  }
+
+  .intro .accent {
+    font-style: italic;
+    color: var(--watermelon);
+  }
+
+  .intro .lede {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    line-height: 1.6;
+    color: rgba(9, 42, 68, 0.82);
+    max-width: 60ch;
+    margin-top: 1.6rem;
+  }
+
+  /* ── Bands: light copy in the deeper water ── */
+  .band {
+    padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  }
+
+  .band-head {
+    margin-bottom: 2.4rem;
+  }
+
+  .band h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    color: #fff;
+    max-width: 20ch;
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.5),
+      0 2px 18px rgba(3, 12, 28, 0.55);
+  }
+
+  .band .kicker {
+    text-shadow: 0 1px 10px rgba(3, 12, 28, 0.45);
+  }
+
+  .prose {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+    line-height: 1.7;
+    color: rgba(224, 241, 245, 0.92);
+    max-width: 62ch;
+    margin-top: 1.3rem;
+    text-shadow: 0 1px 12px rgba(3, 12, 28, 0.35);
+  }
+
+  .inline-link {
+    color: var(--teal);
+    border-bottom: 1px solid rgba(42, 191, 191, 0.4);
+    transition: border-color 0.2s ease;
+  }
+  .inline-link:hover {
+    border-color: var(--teal);
+  }
+
+  /* Promise grid — echoes the homepage "how we pick" cadence */
+  .promise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.6rem, 3.5vw, 3rem);
+  }
+
+  .promise {
+    position: relative;
+    padding: 0.4rem 0;
+  }
+
+  .ghost-num {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--teal);
+    margin-bottom: 0.7rem;
+    user-select: none;
+  }
+
+  .promise-body h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 0.7rem;
+    text-shadow: 0 1px 14px rgba(3, 12, 28, 0.4);
+  }
+
+  .promise-body p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(220, 240, 245, 0.9);
+  }
+
+  /* ── Closing CTA ── */
+  .closing {
+    padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 9vw, 6.5rem);
+  }
+
+  .closing h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.08;
+    color: #fff;
+    margin-bottom: 1.8rem;
+    text-shadow: 0 2px 24px rgba(3, 12, 28, 0.5);
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--watermelon);
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(212, 72, 104, 0.32);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #e0577a;
+  }
+
+  @media (max-width: 900px) {
+    .promise-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
