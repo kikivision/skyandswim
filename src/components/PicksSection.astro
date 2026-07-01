@@ -10,7 +10,7 @@ const picks = [
     city: "Brooklyn, NY",
     description:
       "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something.",
-    href: "#",
+    href: "https://www.thewilliamvale.com",
     image: valePool,
     alt: "The William Vale's rooftop pool above North Brooklyn with the Manhattan skyline beyond.",
   },
@@ -19,7 +19,7 @@ const picks = [
     city: "Denver, CO",
     description:
       "A year-round heated rooftop pool that shrugs off the altitude — Rockies on the horizon, cabanas at the edge, and water blue enough to forgive the thin air.",
-    href: "#",
+    href: "https://www.halcyonhotelcherrycreek.com",
     image: halcyonPool,
     alt: "Halcyon's rooftop pool in Cherry Creek with the Rocky Mountains on the horizon.",
   },
@@ -28,7 +28,7 @@ const picks = [
     city: "Houston, TX",
     description:
       "The Texas-shaped lazy river is a gimmick, yes. It is also, undeniably, a great time eight floors above downtown.",
-    href: "#",
+    href: "https://www.marriott.com/en-us/hotels/houcq-marriott-marquis-houston/overview/",
     image: marquisPool,
     alt: "The Marriott Marquis Houston's rooftop pool eight floors above downtown.",
   },
@@ -63,7 +63,12 @@ const picks = [
               <h3 class="pick-name">{pick.name}</h3>
               <p class="pick-city">{pick.city}</p>
               <p class="pick-desc">{pick.description}</p>
-              <a class="pick-link" href={pick.href}>
+              <a
+                class="pick-link"
+                href={pick.href}
+                target={pick.href !== "#" ? "_blank" : undefined}
+                rel={pick.href !== "#" ? "noopener noreferrer" : undefined}
+              >
                 See this hotel →
               </a>
             </div>
