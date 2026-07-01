@@ -124,9 +124,19 @@ const hotels = [
     padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
   }
 
+  /* Deep-navy scrim so the intro reads over any part of the fixed pool
+     gradient — the shallow (light) end otherwise washes the copy out. */
   .listings-header {
-    max-width: 52ch;
+    max-width: 56ch;
     margin-bottom: 2.8rem;
+    padding: clamp(1.4rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.2rem);
+    background: linear-gradient(
+      180deg,
+      rgba(5, 20, 40, 0.6) 0%,
+      rgba(5, 20, 40, 0.42) 100%
+    );
+    border: 1px solid rgba(168, 216, 216, 0.12);
+    border-radius: 16px;
   }
 
   .listings-kicker {
@@ -135,7 +145,7 @@ const hotels = [
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--teal);
+    color: var(--robin);
     margin: 0 0 0.8rem;
   }
 
