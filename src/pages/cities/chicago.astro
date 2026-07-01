@@ -1,0 +1,98 @@
+---
+import CityLayout from "../../layouts/CityLayout.astro";
+import HotelCard from "../../components/HotelCard.astro";
+
+const hotels = [
+  {
+    name: "LondonHouse Chicago",
+    neighborhood: "River North / The Loop",
+    description: "The tri-level rooftop at LondonHouse sits at the junction of the Chicago River and Michigan Avenue — if there's a more architecturally significant rooftop pool position in the country, we haven't found it. The pool is heated and the views are the Michigan Avenue bridge, the Tribune Tower, and the entire river corridor.",
+    poolNote: "Tri-level rooftop · Chicago River junction · Michigan Ave bridge views · Seasonal",
+    tags: ["River Views", "Architecture", "Scenic", "Seasonal"],
+    bookingUrl: "https://www.londonhousechicago.com",
+    pick: true,
+    priceRange: "$$$",
+  },
+  {
+    name: "Virgin Hotels Chicago",
+    neighborhood: "Wicker Park / West Loop",
+    description: "The rooftop pool and bar at Virgin extends the brand's playful energy up to the 26th floor. The west-facing orientation means afternoon light is excellent, and the skyline view angles toward Willis Tower and the Loop from a direction most tourists don't see it from.",
+    poolNote: "26th floor · West Loop skyline · Afternoon sun · Guest access priority",
+    tags: ["West Facing", "High Floor", "Loop Views", "Playful"],
+    bookingUrl: "https://virginhotels.com/chicago",
+    priceRange: "$$$",
+  },
+  {
+    name: "Pendry Chicago",
+    neighborhood: "River North",
+    description: "One of Chicago's newer additions with a rooftop pool that overlooks the River North gallery district. The design is refined where other Chicago rooftops lean loud — better for an afternoon with a book than an afternoon with a DJ.",
+    poolNote: "Rooftop pool · River North views · Design-focused · Quiet atmosphere",
+    tags: ["Quiet", "Design Hotel", "River North", "New"],
+    bookingUrl: "https://www.pendry.com/chicago",
+    priceRange: "$$$",
+  },
+  {
+    name: "Loews Chicago Hotel",
+    neighborhood: "Streeterville",
+    description: "The location between the Magnificent Mile and Lake Michigan means the pool deck faces the lake with the city at your back. A rare orientation in Chicago's rooftop pool landscape — most turn toward the skyline, not the water.",
+    poolNote: "Lake-facing pool · Streeterville location · Seasonal · City behind, water ahead",
+    tags: ["Lake Views", "Streeterville", "Seasonal", "Unique Orientation"],
+    bookingUrl: "https://www.loewshotels.com/chicago-hotel",
+    priceRange: "$$",
+  },
+  {
+    name: "ACME Hotel Company",
+    neighborhood: "River North",
+    description: "The scrappier option on the list — ACME's rooftop is unpretentious in a way Chicago does well, with good views and an energetic crowd that doesn't take the experience too seriously. Best for a warmer afternoon when expectations are low and payoff tends to be high.",
+    poolNote: "Compact rooftop pool · River North access · Casual energy · Best value",
+    tags: ["Value", "Casual", "River North", "Compact"],
+    bookingUrl: "https://www.acmehotelcompany.com",
+    priceRange: "$",
+  },
+];
+---
+
+<CityLayout
+  city="Chicago"
+  state="IL"
+  tagline="Chicago's architecture from pool level is a different argument — you're not looking at a skyline so much as a portfolio. The city was built to be looked at, and the right pool lets you do exactly that."
+  poolCount={5}
+  neighborhoods="River North & The Loop"
+  heroGradient="linear-gradient(180deg, rgba(15,50,80,0.5) 0%, rgba(5,15,35,0.8) 100%)"
+>
+  <section class="city-listings">
+    <div class="section-inner">
+
+      <div class="listings-header">
+        <p class="listings-kicker">5 picks · River North &amp; The Loop</p>
+        <h2 class="listings-heading">Architecture from the water.</h2>
+        <p class="listings-lede">
+          Chicago's rooftop pools compete with what may be the finest collection of buildings any American skyline has produced. The ones here have the views to justify the comparison.
+        </p>
+      </div>
+
+      <div class="hotel-grid">
+        {hotels.map((hotel) => (
+          <HotelCard {...hotel} />
+        ))}
+      </div>
+
+      <aside class="city-note">
+        <p><strong>Chicago is seasonal:</strong> Unlike the Sun Belt cities on this list, most Chicago rooftop pools operate May through September, with some brave enough to stay open into October. If you're planning a spring or fall trip, confirm current pool status before booking — nothing deflates a Chicago weekend like a drained rooftop.</p>
+      </aside>
+
+    </div>
+  </section>
+</CityLayout>
+
+<style>
+  .city-listings { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .listings-header { max-width: 52ch; margin-bottom: 2.8rem; }
+  .listings-kicker { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--teal); margin: 0 0 0.8rem; }
+  .listings-heading { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0 0 0.8rem; line-height: 1.05; }
+  .listings-lede { font-family: var(--font-body); font-weight: 300; font-size: 1rem; line-height: 1.6; color: rgba(220, 240, 245, 0.7); margin: 0; }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+</style>

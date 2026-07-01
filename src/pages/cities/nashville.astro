@@ -1,0 +1,89 @@
+---
+import CityLayout from "../../layouts/CityLayout.astro";
+import HotelCard from "../../components/HotelCard.astro";
+
+const hotels = [
+  {
+    name: "Graduate Nashville",
+    neighborhood: "Vanderbilt / Midtown",
+    description: "The rooftop bar and pool deck at Graduate is where the Vanderbilt crowd and the weekend visitors find each other, usually agreeably. The bar program is better than it needs to be. The downtown skyline view is a clean, low-horizon Nashville silhouette that earns the elevation.",
+    poolNote: "Rooftop pool · Nashville skyline · Open to hotel guests and day pass",
+    tags: ["Day Pass", "Skyline", "Bar", "Midtown"],
+    bookingUrl: "https://www.graduatehotels.com/nashville",
+    pick: true,
+    priceRange: "$$",
+  },
+  {
+    name: "Noelle Nashville",
+    neighborhood: "Downtown",
+    description: "A rooftop terrace with a plunge pool and spectacular views of the Cumberland River and the Batman Building. Smaller pool, but the setting does enough work that the scale doesn't matter. Strong cocktail program makes the wait worthwhile.",
+    poolNote: "Plunge pool + terrace · Cumberland River views · Rooftop bar",
+    tags: ["River View", "Plunge Pool", "Terrace", "Batman Building"],
+    bookingUrl: "https://www.noellenashville.com",
+    priceRange: "$$$",
+  },
+  {
+    name: "Thompson Nashville",
+    neighborhood: "The Gulch",
+    description: "The Gulch's premium offering — the rooftop pool here benefits from the neighborhood's slight elevation and the glass tower's height. The downtown panorama is wide and unobstructed, which is rare in a city still filling in its skyline.",
+    poolNote: "High-floor pool · Unobstructed downtown panorama · The Gulch setting",
+    tags: ["Panoramic", "The Gulch", "Premium"],
+    bookingUrl: "https://www.thompsonhotels.com/hotels/nashville",
+    priceRange: "$$$",
+  },
+  {
+    name: "Bobby Hotel",
+    neighborhood: "Downtown",
+    description: "The rooftop space at Bobby is a converted Airstream trailer bar perched atop the pool deck — a Nashville touch that could be tacky but somehow reads as exactly right. Views stretch toward the stadium. The pool is seasonal and genuinely swimmable.",
+    poolNote: "Seasonal pool · Airstream bar on deck · Stadium views",
+    tags: ["Seasonal", "Unique", "Bar", "Downtown"],
+    bookingUrl: "https://www.bobbyhotel.com",
+    priceRange: "$$",
+  },
+];
+---
+
+<CityLayout
+  city="Nashville"
+  state="TN"
+  tagline="Nashville's skyline is still finding itself, which means the rooftop pools here have an uncrowded, almost provisional quality — the city built up fast, and the views haven't been discovered yet."
+  poolCount={4}
+  neighborhoods="The Gulch & Downtown"
+  heroGradient="linear-gradient(180deg, rgba(26,60,90,0.5) 0%, rgba(10,42,72,0.8) 100%)"
+>
+  <section class="city-listings">
+    <div class="section-inner">
+
+      <div class="listings-header">
+        <p class="listings-kicker">4 picks · The Gulch &amp; Downtown</p>
+        <h2 class="listings-heading">A skyline still worth watching.</h2>
+        <p class="listings-lede">
+          Nashville's pool scene is smaller than the hype might suggest — but the four we've picked are genuinely good, and rarely as crowded as the honky-tonks below.
+        </p>
+      </div>
+
+      <div class="hotel-grid">
+        {hotels.map((hotel) => (
+          <HotelCard {...hotel} />
+        ))}
+      </div>
+
+      <aside class="city-note">
+        <p><strong>Timing matters in Nashville:</strong> The rooftop pool scene here is seasonal in a way Miami's isn't. Most pools run May through October, some close earlier. Call ahead or check current hours — the city's hospitality industry is still calibrating after rapid expansion.</p>
+      </aside>
+
+    </div>
+  </section>
+</CityLayout>
+
+<style>
+  .city-listings { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .listings-header { max-width: 52ch; margin-bottom: 2.8rem; }
+  .listings-kicker { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--teal); margin: 0 0 0.8rem; }
+  .listings-heading { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0 0 0.8rem; line-height: 1.05; }
+  .listings-lede { font-family: var(--font-body); font-weight: 300; font-size: 1rem; line-height: 1.6; color: rgba(220, 240, 245, 0.7); margin: 0; }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+</style>
