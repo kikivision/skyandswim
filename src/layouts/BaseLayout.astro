@@ -26,6 +26,9 @@ const ogImage = new URL("/og-image.png", site).href;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Short label shown under the icon when added to an iOS home screen;
+         without this, iOS falls back to the long <title> and crams it. -->
+    <meta name="apple-mobile-web-app-title" content="Sky & Swim" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
