@@ -58,12 +58,83 @@ const ogImage = new URL("/og-image.png", site).href;
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Owner opt-out: load /?noga=1 once per device/browser to stop sending GA
+         from it (works on any network — covers phone-on-cellular, laptop away
+         from home Wi-Fi, etc., which IP-based internal-traffic filters miss).
+         Undo with /?noga=0. Must run BEFORE the GA tags so the disable flag is
+         set before gtag.js executes. -->
+    <script is:inline>
+      (function () {
+        var KEY = 'ssNoGA';
+        try {
+          var noga = new URLSearchParams(location.search).get('noga');
+          if (noga === '1') localStorage.setItem(KEY, '1');
+          else if (noga === '0') localStorage.removeItem(KEY);
+          if (localStorage.getItem(KEY) === '1') window['ga-disable-G-BNSEB2Q53S'] = true;
+        } catch (e) { /* private mode / storage blocked — fail open, track normally */ }
+      })();
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNSEB2Q53S"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-BNSEB2Q53S');
+    </script>
   </head>
   <body>
     <Nav />
     <main>
       <slot />
     </main>
+
+    <!-- Affiliate & outbound click tracking → GA4 -->
+    <script>
+      // Fire a GA4 `affiliate_click` event whenever a booking or transfer link is
+      // clicked. Catches the internal /go/<provider>/<slug> redirectors (Hotels.com
+      // and Booking.com CTAs) as well as direct in-body partner links (USA Transfers,
+      // Stay22 short links). Mark `affiliate_click` as a key event in the GA4 UI.
+      // Until the affiliate links land, only the generic `outbound_click` fallback
+      // fires (on the current direct hotel links).
+      function classifyAffiliate(a) {
+        const href = a.getAttribute('href') || '';
+        const go = href.match(/^\/go\/(hotelscom|booking|expedia)\/([^/?#]+)/);
+        if (go) return { provider: go[1], slug: go[2] };
+        let host = '';
+        try { host = new URL(a.href).hostname; } catch { return null; }
+        if (host.includes('usa-transfers')) return { provider: 'usa_transfers', slug: '' };
+        if (host.includes('hotels.com') || host.includes('hotelscom.stay22')) return { provider: 'hotelscom', slug: '' };
+        if (host.includes('booking.com') || host.includes('booking.stay22')) return { provider: 'booking', slug: '' };
+        if (host.includes('stay22.com')) return { provider: 'stay22', slug: '' };
+        return null;
+      }
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest && e.target.closest('a[href]');
+        if (!a || typeof window.gtag !== 'function') return;
+        const hit = classifyAffiliate(a);
+        if (hit) {
+          let domain;
+          try { domain = new URL(a.href).hostname; } catch {}
+          window.gtag('event', 'affiliate_click', {
+            provider: hit.provider,
+            item_slug: hit.slug || undefined,
+            link_url: a.href,
+            link_domain: domain,
+          });
+          return;
+        }
+        // Any other link leaving the site (direct hotel sites, etc.).
+        try {
+          const u = new URL(a.href);
+          if ((u.protocol === 'https:' || u.protocol === 'http:') && u.hostname !== location.hostname) {
+            window.gtag('event', 'outbound_click', { link_url: a.href, link_domain: u.hostname });
+          }
+        } catch {}
+      }, { capture: true });
+    </script>
 
     <style is:global>
       :root {
