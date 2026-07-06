@@ -90,12 +90,6 @@ export const AFFILIATE_HOTELS = {
   'graduate-nashville': {
     bookingcom: 'https://www.booking.com/hotel/us/graduate-nashville.html',
   },
-  'noelle-nashville': {
-    bookingcom: 'https://www.booking.com/hotel/us/noelle-a-tribute-portfolio-nashville.html',
-  },
-  'thompson-nashville': {
-    bookingcom: 'https://www.booking.com/hotel/us/thompson-nashville.html',
-  },
   'bobby-hotel-nashville': {
     bookingcom: 'https://www.booking.com/hotel/us/bobby.html',
   },
@@ -105,9 +99,6 @@ export const AFFILIATE_HOTELS = {
   // Internal slug key stays 'ace-hotel-new-orleans'; Booking slug too.
   'ace-hotel-new-orleans': {
     bookingcom: 'https://www.booking.com/hotel/us/ace-new-orleans.html',
-  },
-  'higgins-hotel-new-orleans': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-higgins-new-orleans-curio-collection-by-hilton.html',
   },
   'virgin-hotels-new-orleans': {
     bookingcom: 'https://www.booking.com/hotel/us/virgin-hotels-new-orleans.html',
