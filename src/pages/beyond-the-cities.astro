@@ -1,0 +1,243 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import HotelCard from "../components/HotelCard.astro";
+
+// One-off standout rooftop pools in cities that don't (yet) have their own
+// page — a single exceptional pool in each. Same rules as everywhere: a real,
+// wade-in, swimmable rooftop/elevated pool with a view and strong reviews.
+// If a city accumulates ~3+, it graduates to its own city page.
+const hotels = [
+  {
+    name: "Four Seasons Hotel Philadelphia",
+    slug: "four-seasons-philadelphia",
+    neighborhood: "Philadelphia, PA",
+    description: "The highest hotel pool in the region — a 57th-floor infinity edge atop Philadelphia's tallest tower, where you swim toward the drop with Center City lit sixty stories below and the Delaware River beyond. Adults-only early and late, and long enough for actual laps.",
+    poolNote: "57th-floor infinity pool · Center City + Delaware River · Laps possible · Adults-only hours",
+    tags: ["Rooftop", "Highest in Region", "Infinity Edge", "Skyline"],
+    pick: true,
+    priceRange: "$$$$",
+  },
+  {
+    name: "Marriott Marquis Houston",
+    slug: "marriott-marquis-houston",
+    neighborhood: "Houston, TX",
+    description: "Yes, there's a Texas-shaped lazy river — but the real draw is the 77-foot infinity pool on the 6th-floor Altitude deck, heated year-round and aimed straight at the downtown skyline over Discovery Green. A bucket-list rooftop, gimmick and all.",
+    poolNote: "6th-floor rooftop · 77-ft infinity pool + Texas lazy river · Skyline views · Year-round",
+    tags: ["Rooftop", "Infinity Edge", "Skyline", "Lazy River"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Conrad Fort Lauderdale Beach",
+    slug: "conrad-fort-lauderdale",
+    neighborhood: "Fort Lauderdale, FL",
+    description: "The Sky Deck pool sits above the beachfront tower with the Atlantic filling the whole view — heated, cabana-lined, full towel-and-bar service. Fort Lauderdale's most-cited hotel pool, and it earns the billing.",
+    poolNote: "Elevated Sky Deck pool · Atlantic Ocean views · Cabanas + bar service · Heated",
+    tags: ["Elevated", "Oceanfront", "Cabanas", "Heated"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Four Seasons Hotel Seattle",
+    slug: "four-seasons-seattle",
+    neighborhood: "Seattle, WA",
+    description: "The Pacific Northwest barely does rooftop pools, which makes this one a standout: a 4th-floor terrace infinity pool heated to 84° year-round, open to Elliott Bay, Puget Sound, and the Olympics. Swim it in the rain — that's the whole point.",
+    poolNote: "4th-floor terrace infinity pool · Elliott Bay + Olympics · Heated 84° year-round · PNW's only one",
+    tags: ["Rooftop", "Infinity Edge", "Water Views", "Year-Round"],
+    priceRange: "$$$$",
+  },
+  {
+    name: "InterContinental Washington D.C. – The Wharf",
+    slug: "intercontinental-dc-wharf",
+    neighborhood: "Washington, DC",
+    description: "Washington has almost no true rooftop hotel pools; the WAVES deck here is the exception, looking over the Potomac waterfront and the DC skyline. Heated, guest-only, and an actual swim — not a bar with a puddle.",
+    poolNote: "Rooftop WAVES pool · Potomac waterfront + skyline · Heated · Guest-only",
+    tags: ["Rooftop", "Waterfront", "Skyline", "Rare"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Market Pavilion Hotel",
+    slug: "market-pavilion-charleston",
+    neighborhood: "Charleston, SC",
+    description: "Charleston's only genuine rooftop pool — a cascading pool on the 7th-floor Pavilion terrace, with the Cooper River bridge, Patriot's Point, and the steeples of the Holy City laid out for the sunset.",
+    poolNote: "7th-floor rooftop pool · Cooper River bridge + steeples · Historic district · Sunset views",
+    tags: ["Rooftop", "Historic", "Bridge Views", "Sunset"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Perry Lane Hotel",
+    slug: "perry-lane-savannah",
+    neighborhood: "Savannah, GA",
+    description: "Savannah's swankiest rooftop — a tropical-leaning pool deck beside the Peregrin bar with a panorama over the Historic District's rooftops and steeples. The poolside service is the part regulars won't stop mentioning.",
+    poolNote: "Rooftop pool · Historic District skyline · Peregrin bar · Attentive poolside service",
+    tags: ["Rooftop", "Historic", "Skyline", "Service"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Omni Hotel at The Battery Atlanta",
+    slug: "omni-battery-atlanta",
+    neighborhood: "Atlanta (The Battery), GA",
+    description: "Not downtown — out at The Battery, where the 5th-floor pool deck looks straight into Truist Park. You can watch a Braves game from the water, which is exactly the kind of one-off this list exists for.",
+    poolNote: "5th-floor elevated pool · Truist Park + Battery views · Cabanas · Year-round",
+    tags: ["Elevated", "Stadium Views", "Cabanas", "Unique"],
+    priceRange: "$$",
+  },
+  {
+    name: "Thompson San Antonio – Riverwalk",
+    slug: "thompson-san-antonio",
+    neighborhood: "San Antonio, TX",
+    description: "The Cenote pool deck juts off the 4th floor of the 20-story tower with an unobstructed sweep of the San Antonio skyline and the River Walk below — and Moon's Daughters bar one level up when you're done swimming.",
+    poolNote: "4th-floor Cenote pool deck · Skyline + River Walk · Cabanas · Rooftop bar above",
+    tags: ["Elevated", "Skyline", "River Walk", "Cabanas"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Omni Louisville Hotel",
+    slug: "omni-louisville",
+    neighborhood: "Louisville, KY",
+    description: "Downtown Louisville's marquee stay, and its heated elevated pool with a rooftop bar is the city's most-cited — a clean skyline swim in a town where rooftop pools are otherwise thin.",
+    poolNote: "Elevated pool deck · Downtown skyline · Rooftop bar · Heated · Cabanas",
+    tags: ["Elevated", "Skyline", "Heated", "Rooftop Bar"],
+    priceRange: "$$",
+  },
+  {
+    name: "AC Hotel Tucson Downtown",
+    slug: "ac-hotel-tucson",
+    neighborhood: "Tucson, AZ",
+    description: "The rooftop pool here comes with the Catalina Mountains as a backdrop and some of Tucson's best sunsets off the deck — an easy, well-reviewed standout in a city that doesn't have many.",
+    poolNote: "Rooftop pool + lounge · Catalina Mountains · Tucson sunsets · Well-reviewed",
+    tags: ["Rooftop", "Mountain Views", "Sunset", "Value"],
+    priceRange: "$$",
+  },
+];
+---
+
+<BaseLayout
+  title="Beyond the Cities · Standout Rooftop Pools · Sky & Swim"
+  description="Exceptional rooftop pools in cities without their own page — one standout each, from Four Seasons Philadelphia's 57th-floor infinity edge to the Marriott Marquis Houston's Texas lazy river."
+>
+  <div class="notable-page">
+    <Nav />
+
+    <section class="np-hero">
+      <div class="np-hero-bg" aria-hidden="true"></div>
+      <div class="np-hero-inner section-inner">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          All cities
+        </a>
+        <div class="np-hero-content">
+          <p class="np-kicker">Sky &amp; Swim · Beyond the Cities</p>
+          <h1 class="np-title">One perfect pool, anywhere.</h1>
+          <p class="np-tagline">Cities that don't rate a full page yet, but hide one rooftop pool worth the trip. When a city racks up enough of them, it graduates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="city-listings">
+      <div class="section-inner">
+        <div class="hotel-grid">
+          {hotels.map((hotel) => <HotelCard {...hotel} />)}
+        </div>
+
+        <aside class="city-note">
+          <p><strong>How a city makes this list:</strong> the same bar as everywhere else on Sky &amp; Swim — a real, wade-in, swimmable rooftop or high-elevated pool, a genuine view, and reviews that back it up. One standout per city here; hit three and you get your own page.</p>
+        </aside>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .notable-page { min-height: 100vh; }
+
+  .np-hero {
+    position: relative;
+    min-height: 46vh;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 6rem;
+    overflow: hidden;
+  }
+  .np-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(42,191,191,0.22) 0%, rgba(20,74,104,0.55) 45%, rgba(10,42,72,0.82) 100%);
+  }
+  .np-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 110%, rgba(42,191,191,0.3) 0%, transparent 65%);
+  }
+  .np-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 100%;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(168, 216, 216, 0.7);
+    transition: color 0.2s ease;
+  }
+  .back-link:hover { color: #fff; }
+  .np-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 680px;
+  }
+  .np-kicker {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    margin: 0;
+  }
+  .np-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    line-height: 0.98;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .np-tagline {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.5;
+    color: rgba(220, 240, 245, 0.78);
+    margin: 0.4rem 0 0;
+    max-width: 55ch;
+  }
+
+  .city-listings { position: relative; z-index: 1; padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+
+  @media (max-width: 640px) {
+    .np-hero { min-height: 40vh; }
+  }
+</style>

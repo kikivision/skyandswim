@@ -123,6 +123,41 @@ export const AFFILIATE_HOTELS = {
   'royalton-park-avenue': {
     bookingcom: 'https://www.booking.com/hotel/us/royalton-park-avenue-nyc.html',
   },
+
+  // --- Beyond the Cities (one-off standouts, /beyond-the-cities) ---
+  'four-seasons-philadelphia': {
+    bookingcom: 'https://www.booking.com/hotel/us/four-seasons-philadelphia-at-comcast-center.html',
+  },
+  'marriott-marquis-houston': {
+    bookingcom: 'https://www.booking.com/hotel/us/marriott-marquis-houston.html',
+  },
+  'conrad-fort-lauderdale': {
+    bookingcom: 'https://www.booking.com/hotel/us/conrad-fort-lauderdale-beach.html',
+  },
+  'four-seasons-seattle': {
+    bookingcom: 'https://www.booking.com/hotel/us/four-seasons-seattle.html',
+  },
+  'intercontinental-dc-wharf': {
+    bookingcom: 'https://www.booking.com/hotel/us/intercontinental-washington-dc-the-wharf.html',
+  },
+  'market-pavilion-charleston': {
+    bookingcom: 'https://www.booking.com/hotel/us/market-pavillion.html',
+  },
+  'perry-lane-savannah': {
+    bookingcom: 'https://www.booking.com/hotel/us/perry-lane-a-luxury-collection-savannah.html',
+  },
+  'omni-battery-atlanta': {
+    bookingcom: 'https://www.booking.com/hotel/us/omni-at-the-battery-atlanta.html',
+  },
+  'thompson-san-antonio': {
+    bookingcom: 'https://www.booking.com/hotel/us/thompson-san-antonio.html',
+  },
+  'omni-louisville': {
+    bookingcom: 'https://www.booking.com/hotel/us/omni-louisville.html',
+  },
+  'ac-hotel-tucson': {
+    bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
+  },
   // NOTE: "The Williamsburg Hotel" is intentionally NOT here — it is the SAME
   // building as `arlo-williamsburg` (96 Wythe Ave, rebranded 2023). And
   // "THEhotel at Mandarin Club" is omitted — no matching Booking.com property
