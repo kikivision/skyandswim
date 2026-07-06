@@ -7,7 +7,7 @@
 // account details stay in one place.
 //
 // To add a hotel to the affiliate program: add its slug here with a `bookingcom`
-// (and optionally `expedia`) property URL, then give the matching hotel object a
+// property URL, then give the matching hotel object a
 // `slug` field in its city page. No slug → HotelCard falls back to the direct
 // link, so non-migrated hotels/cities are unaffected.
 //

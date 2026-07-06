@@ -14,12 +14,10 @@
 import { AFFILIATE_HOTELS } from '../../../data/affiliates.js';
 
 // Provider param → CJ deep-link click base (empty = forward the URL verbatim).
-// Booking.com is confirmed from a generated Link Tools link. Expedia carries the
-// same property PID but its AID/approval is UNVERIFIED — generate an Expedia
-// link for this property to confirm before adding any `expedia:` destinations.
+// Sky & Swim runs Booking.com only. From a generated CJ Link Tools link:
+// property 101819827 (skyandswim.com) · Booking.com AID 17293132.
 const CJ_BASE = {
   booking: 'https://www.jdoqocy.com/click-101819827-17293132',
-  expedia: 'https://www.jdoqocy.com/click-101819827-10581071',
 };
 
 export function getStaticPaths() {
@@ -27,9 +25,6 @@ export function getStaticPaths() {
   for (const [slug, providers] of Object.entries(AFFILIATE_HOTELS)) {
     if (providers.bookingcom) {
       paths.push({ params: { provider: 'booking', slug }, props: { url: providers.bookingcom } });
-    }
-    if (providers.expedia) {
-      paths.push({ params: { provider: 'expedia', slug }, props: { url: providers.expedia } });
     }
   }
   return paths;
