@@ -119,15 +119,6 @@ export const AFFILIATE_HOTELS = {
   'jimmy-james-soho': {
     bookingcom: 'https://www.booking.com/hotel/us/modernhaus-soho.html',
   },
-  'sixty-soho': {
-    bookingcom: 'https://www.booking.com/hotel/us/sixty-soho.html',
-  },
-  'hotel-50-bowery': {
-    bookingcom: 'https://www.booking.com/hotel/us/50-bowery.html',
-  },
-  'wythe-hotel': {
-    bookingcom: 'https://www.booking.com/hotel/us/wythe.html',
-  },
   'gansevoort-meatpacking': {
     bookingcom: 'https://www.booking.com/hotel/us/gansevoort-manhattan.html',
   },
