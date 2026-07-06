@@ -1,17 +1,17 @@
 // Affiliate destinations — single source of truth for the /go redirector.
 //
-// Each entry maps a hotel `slug` (used in /go/<provider>/<slug> and passed to
-// HotelCard) to the PLAIN provider property URL. The CJ affiliate wrapping
-// (publisher ID + sid) is applied in src/pages/go/[provider]/[slug].astro, so
-// the raw booking.com / expedia.com URLs live here untouched and the affiliate
-// account details stay in one place.
+// Each entry maps a hotel `slug` (used in /go/booking/<slug> and passed to
+// HotelCard) to the PLAIN Booking.com property URL. The CJ affiliate wrapping
+// (publisher property ID) is applied in src/pages/go/[provider]/[slug].astro,
+// so the raw booking.com URLs live here untouched and the affiliate account
+// details stay in one place.
 //
 // To add a hotel to the affiliate program: add its slug here with a `bookingcom`
 // property URL, then give the matching hotel object a
 // `slug` field in its city page. No slug → HotelCard falls back to the direct
-// link, so non-migrated hotels/cities are unaffected.
+// link, so non-migrated hotels are unaffected.
 //
-// Pilot: Miami only. Expand city-by-city once commission tracking is confirmed.
+// Sky & Swim runs Booking.com only.
 
 export const AFFILIATE_HOTELS = {
   // --- Miami ---
@@ -24,8 +24,8 @@ export const AFFILIATE_HOTELS = {
   'nautilus-sonesta-miami-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/nautilus-sonesta-miami-beach.html',
   },
-  // "Dua Miami, Autograph Collection" — rebranded from SLS Brickell in 2024
-  // (same building). Booking.com's URL slug is still the old `sls-brickell`.
+  // Editorial reads "Dua Miami"; rebranded from SLS Brickell in 2024 (same
+  // building). Booking.com's URL slug is still the old `sls-brickell`.
   'dua-miami': {
     bookingcom: 'https://www.booking.com/hotel/us/sls-brickell.html',
   },
@@ -38,4 +38,110 @@ export const AFFILIATE_HOTELS = {
   'soho-beach-house': {
     bookingcom: 'https://www.booking.com/hotel/us/soho-beach-house.html',
   },
+
+  // --- Austin ---
+  'line-austin': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-line-austin.html',
+  },
+  'w-austin': {
+    bookingcom: 'https://www.booking.com/hotel/us/w-austin.html',
+  },
+  'hotel-van-zandt': {
+    bookingcom: 'https://www.booking.com/hotel/us/van-zandt.html',
+  },
+  'austin-proper': {
+    bookingcom: 'https://www.booking.com/hotel/us/austin-proper.html',
+  },
+  'cambria-austin-downtown': {
+    bookingcom: 'https://www.booking.com/hotel/us/cambria-austin-downtown.html',
+  },
+
+  // --- Chicago ---
+  'londonhouse-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/londonhouse-chicago-curio-collection-by-hilton.html',
+  },
+  // Editorial reads "Virgin Hotels Chicago"; rebranded to "Sports Illustrated
+  // Resorts Chicago" (2024, same building). Booking slug unchanged.
+  'virgin-hotels-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/virgin-hotels-chicago-chicago.html',
+  },
+  'pendry-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/pendry-chicago.html',
+  },
+  'loews-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/loews-chicago.html',
+  },
+  'acme-hotel-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/acme-chicago.html',
+  },
+
+  // --- Denver ---
+  'halcyon-cherry-creek': {
+    bookingcom: 'https://www.booking.com/hotel/us/halcyon-a-in-cherry-creek.html',
+  },
+  'maven-hotel-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-maven-at-the-dairy-block.html',
+  },
+  'crawford-hotel-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-crawford-at-union-station-denver.html',
+  },
+  'art-hotel-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-art-a.html',
+  },
+
+  // --- Nashville ---
+  'graduate-nashville': {
+    bookingcom: 'https://www.booking.com/hotel/us/graduate-nashville.html',
+  },
+  'noelle-nashville': {
+    bookingcom: 'https://www.booking.com/hotel/us/noelle-a-tribute-portfolio-nashville.html',
+  },
+  'thompson-nashville': {
+    bookingcom: 'https://www.booking.com/hotel/us/thompson-nashville.html',
+  },
+  'bobby-hotel-nashville': {
+    bookingcom: 'https://www.booking.com/hotel/us/bobby.html',
+  },
+
+  // --- New Orleans ---
+  // Editorial reads "The Ace Hotel New Orleans"; the Ace brand left — this
+  // building is now "The Barnett, JdV by Hyatt". Booking slug unchanged.
+  'ace-hotel-new-orleans': {
+    bookingcom: 'https://www.booking.com/hotel/us/ace-new-orleans.html',
+  },
+  'higgins-hotel-new-orleans': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-higgins-new-orleans-curio-collection-by-hilton.html',
+  },
+  'virgin-hotels-new-orleans': {
+    bookingcom: 'https://www.booking.com/hotel/us/virgin-hotels-new-orleans.html',
+  },
+
+  // --- New York ---
+  'william-vale': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-william-vale.html',
+  },
+  '1-hotel-brooklyn-bridge': {
+    bookingcom: 'https://www.booking.com/hotel/us/1-brooklyn-bridge.html',
+  },
+  'arlo-williamsburg': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-williamsburg.html',
+  },
+  // Editorial reads "Jimmy at The James Hotel"; The James SoHo rebranded to
+  // "ModernHaus SoHo" (Jimmy is its rooftop bar). Booking slug is the new name.
+  'jimmy-james-soho': {
+    bookingcom: 'https://www.booking.com/hotel/us/modernhaus-soho.html',
+  },
+  'sixty-soho': {
+    bookingcom: 'https://www.booking.com/hotel/us/sixty-soho.html',
+  },
+  'hotel-50-bowery': {
+    bookingcom: 'https://www.booking.com/hotel/us/50-bowery.html',
+  },
+  'wythe-hotel': {
+    bookingcom: 'https://www.booking.com/hotel/us/wythe.html',
+  },
+  // NOTE: "The Williamsburg Hotel" is intentionally NOT here — it is the SAME
+  // building as `arlo-williamsburg` (96 Wythe Ave, rebranded 2023). And
+  // "THEhotel at Mandarin Club" is omitted — no matching Booking.com property
+  // could be identified (source name appears garbled). Both flagged for review.
 };
