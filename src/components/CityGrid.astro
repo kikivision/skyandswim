@@ -8,6 +8,13 @@ const cities = [
     area: "nyc",
   },
   {
+    name: "Los Angeles",
+    meta: "6 rooftop pools · Hollywood & Downtown",
+    badge: "New",
+    href: "/cities/los-angeles",
+    area: "la",
+  },
+  {
     name: "Miami",
     meta: "4 rooftop pools · South Beach & Brickell",
     badge: null,
@@ -15,18 +22,11 @@ const cities = [
     area: "miami",
   },
   {
-    name: "Nashville",
-    meta: "2 rooftop pools · Downtown & Midtown",
-    badge: null,
-    href: "/cities/nashville",
-    area: "nashville",
-  },
-  {
-    name: "Austin",
-    meta: "4 rooftop pools · Downtown & Rainey St",
-    badge: "Rising",
-    href: "/cities/austin",
-    area: "austin",
+    name: "Dallas",
+    meta: "6 rooftop pools · Downtown & Uptown",
+    badge: "New",
+    href: "/cities/dallas",
+    area: "dallas",
   },
   {
     name: "Chicago",
@@ -36,11 +36,25 @@ const cities = [
     area: "chicago",
   },
   {
-    name: "New Orleans",
-    meta: "2 rooftop pools · Warehouse District",
-    badge: null,
-    href: "/cities/new-orleans",
-    area: "nola",
+    name: "San Diego",
+    meta: "5 rooftop pools · Gaslamp & Bayfront",
+    badge: "New",
+    href: "/cities/san-diego",
+    area: "sandiego",
+  },
+  {
+    name: "Austin",
+    meta: "4 rooftop pools · Downtown & Rainey St",
+    badge: "Rising",
+    href: "/cities/austin",
+    area: "austin",
+  },
+  {
+    name: "Phoenix",
+    meta: "4 rooftop pools · Phoenix & Scottsdale",
+    badge: "New",
+    href: "/cities/phoenix",
+    area: "phoenix",
   },
   {
     name: "Denver",
@@ -48,6 +62,20 @@ const cities = [
     badge: null,
     href: "/cities/denver",
     area: "denver",
+  },
+  {
+    name: "Nashville",
+    meta: "2 rooftop pools · Downtown & Midtown",
+    badge: null,
+    href: "/cities/nashville",
+    area: "nashville",
+  },
+  {
+    name: "New Orleans",
+    meta: "2 rooftop pools · Warehouse District",
+    badge: null,
+    href: "/cities/new-orleans",
+    area: "nola",
   },
 ];
 ---
@@ -58,7 +86,7 @@ const cities = [
       <p class="kicker">Browse by city</p>
       <h2 id="cities-heading">Pick a skyline.</h2>
       <p class="lede">
-        Seven US cities, mapped pool by pool. Start where the water's already
+        Eleven US cities, mapped pool by pool. Start where the water's already
         warm.
       </p>
     </header>
@@ -139,28 +167,42 @@ const cities = [
     overflow: hidden;
   }
 
-  /* Bento placement */
+  /* Bento placement — 11 cities in a 12-col grid.
+     Row 1-2: NYC feature (6×2) + LA (6). Row 2: Miami + Dallas (3+3 beside NYC).
+     Row 3: Chicago/San Diego/Austin/Phoenix (3 each). Row 4: Denver/Nashville/NOLA (4 each). */
   .card-nyc {
-    grid-column: span 5;
+    grid-column: span 6;
     grid-row: span 2;
   }
-  .card-miami {
-    grid-column: span 4;
+  .card-la {
+    grid-column: span 6;
   }
-  .card-nashville {
+  .card-miami {
+    grid-column: span 3;
+  }
+  .card-dallas {
+    grid-column: span 3;
+  }
+  .card-chicago {
+    grid-column: span 3;
+  }
+  .card-sandiego {
     grid-column: span 3;
   }
   .card-austin {
-    grid-column: span 7;
+    grid-column: span 3;
   }
-  .card-chicago {
-    grid-column: span 4;
-  }
-  .card-nola {
+  .card-phoenix {
     grid-column: span 3;
   }
   .card-denver {
-    grid-column: span 5;
+    grid-column: span 4;
+  }
+  .card-nashville {
+    grid-column: span 4;
+  }
+  .card-nola {
+    grid-column: span 4;
   }
 
   .card {
@@ -268,10 +310,14 @@ const cities = [
       grid-column: span 2;
       grid-row: span 2;
     }
+    .card-la,
     .card-miami,
-    .card-nashville,
-    .card-austin,
+    .card-dallas,
     .card-chicago,
+    .card-sandiego,
+    .card-austin,
+    .card-phoenix,
+    .card-nashville,
     .card-nola,
     .card-denver {
       grid-column: span 1;

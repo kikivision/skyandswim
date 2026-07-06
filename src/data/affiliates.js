@@ -124,6 +124,77 @@ export const AFFILIATE_HOTELS = {
     bookingcom: 'https://www.booking.com/hotel/us/royalton-park-avenue-nyc.html',
   },
 
+  // --- Dallas ---
+  'the-joule-dallas': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-joule.html',
+  },
+  'thompson-dallas': {
+    bookingcom: 'https://www.booking.com/hotel/us/thompson-dallas.html',
+  },
+  'hotel-swexan-dallas': {
+    bookingcom: 'https://www.booking.com/hotel/us/swexan.html',
+  },
+  'w-dallas-victory': {
+    bookingcom: 'https://www.booking.com/hotel/us/w-dallasvictory-dallas-texas.html',
+  },
+  'statler-dallas': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-statler-dallas-curio-collection-by-hilton.html',
+  },
+  'the-adolphus-dallas': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-adolphus.html',
+  },
+
+  // --- Los Angeles ---
+  'conrad-los-angeles': {
+    bookingcom: 'https://www.booking.com/hotel/us/conrad-los-angeles.html',
+  },
+  'thompson-hollywood': {
+    bookingcom: 'https://www.booking.com/hotel/us/thompson-hollywood.html',
+  },
+  'santa-monica-proper': {
+    bookingcom: 'https://www.booking.com/hotel/us/santa-monica-proper-hotel-a-member-of-design-hotels.html',
+  },
+  'godfrey-hollywood': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-godfrey-hollywood.html',
+  },
+  'kimpton-everly-hollywood': {
+    bookingcom: 'https://www.booking.com/hotel/us/kimpton-everly.html',
+  },
+  'hoxton-dtla': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-hoxton-downtown-los-angeles.html',
+  },
+
+  // --- Phoenix / Scottsdale ---
+  'palomar-phoenix': {
+    bookingcom: 'https://www.booking.com/hotel/us/kimpton-hotel-palomar-phoenix.html',
+  },
+  'canopy-scottsdale': {
+    bookingcom: 'https://www.booking.com/hotel/us/canopy-by-hilton-scottsdale-old-town.html',
+  },
+  'cambria-phoenix': {
+    bookingcom: 'https://www.booking.com/hotel/us/cambria-downtown-phoenix.html',
+  },
+  'ac-hotel-tempe': {
+    bookingcom: 'https://www.booking.com/hotel/us/ac-by-marriott-phoenix-tempe-downtown.html',
+  },
+
+  // --- San Diego ---
+  'pendry-san-diego': {
+    bookingcom: 'https://www.booking.com/hotel/us/pendry-san-diego.html',
+  },
+  'andaz-san-diego': {
+    bookingcom: 'https://www.booking.com/hotel/us/andaz-san-diego.html',
+  },
+  'intercontinental-san-diego': {
+    bookingcom: 'https://www.booking.com/hotel/us/intercontinental-hotels-san-diego.html',
+  },
+  'solamar-san-diego': {
+    bookingcom: 'https://www.booking.com/hotel/us/solamar-a-kimpton.html',
+  },
+  'hard-rock-san-diego': {
+    bookingcom: 'https://www.booking.com/hotel/us/hard-rock-san-diego-san-diego.html',
+  },
+
   // --- Beyond the Cities (one-off standouts, /beyond-the-cities) ---
   'four-seasons-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/four-seasons-philadelphia-at-comcast-center.html',

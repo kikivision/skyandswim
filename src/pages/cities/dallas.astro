@@ -1,0 +1,107 @@
+---
+import CityLayout from "../../layouts/CityLayout.astro";
+import HotelCard from "../../components/HotelCard.astro";
+
+const hotels = [
+  {
+    name: "The Joule",
+    slug: "the-joule-dallas",
+    neighborhood: "Main Street District",
+    description: "Downtown's showpiece: a rooftop pool cantilevered eight feet past the building edge behind glass, so you swim out over Main Street ten floors up and look straight down. The single most distinctive pool in Texas.",
+    poolNote: "Rooftop pool · Glass ledge over Main Street · 10 floors up · Cabanas",
+    tags: ["Rooftop", "Glass Ledge", "Iconic", "Downtown"],
+    pick: true,
+    priceRange: "$$$$",
+  },
+  {
+    name: "Thompson Dallas",
+    slug: "thompson-dallas",
+    neighborhood: "Main Street District",
+    description: "A heated infinity-edge rooftop pool atop The National tower, with an open-air sweep of the downtown skyline, private cabanas, and poolside dining. The polished, grown-up end of the Dallas rooftop scene.",
+    poolNote: "Rooftop infinity-edge pool · Downtown skyline · Cabanas · Poolside dining",
+    tags: ["Rooftop", "Infinity Edge", "Skyline", "Downtown"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Hôtel Swexan",
+    slug: "hotel-swexan-dallas",
+    neighborhood: "Harwood District",
+    description: "A 75-foot infinity-edge pool on the 20th floor with a 180-degree turn of the Dallas skyline, a guests-only deck, cabanas, and the Pomelo pool bar. The newest and highest of the city's serious pools.",
+    poolNote: "20th-floor 75-ft infinity pool · 180° skyline · Guests-only · Pool bar",
+    tags: ["Rooftop", "Infinity Edge", "High Floor", "Uptown"],
+    priceRange: "$$$$",
+  },
+  {
+    name: "W Dallas – Victory",
+    slug: "w-dallas-victory",
+    neighborhood: "Victory Park",
+    description: "The 16th-floor WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. Daybeds, a full bar, and the Victory Park energy below.",
+    poolNote: "16th-floor WET Deck infinity pool · Skyline · Daybeds · Full bar",
+    tags: ["Rooftop", "Infinity Edge", "Scene", "High Floor"],
+    priceRange: "$$$",
+  },
+  {
+    name: "The Statler Dallas",
+    slug: "statler-dallas",
+    neighborhood: "Main Street District",
+    description: "The Waterproof pool on the 19th floor is a rooftop scene with a panoramic downtown view, loungers, and cabanas (21+ up top; a quieter pool downstairs). A restored 1950s landmark with the roof to match.",
+    poolNote: "19th-floor rooftop pool · Panoramic downtown · Cabanas · 21+",
+    tags: ["Rooftop", "Panoramic", "Scene", "Historic"],
+    priceRange: "$$$",
+  },
+  {
+    name: "The Adolphus",
+    slug: "the-adolphus-dallas",
+    neighborhood: "Main Street District",
+    description: "The 1912 grande dame caps itself with a temperature-controlled rooftop pool deck — cabanas, a fire pit, a full pool bar, and downtown views from a genuine Dallas landmark.",
+    poolNote: "Rooftop pool deck · Downtown views · Cabanas + fire pit · Historic 1912 landmark",
+    tags: ["Rooftop", "Historic", "Cabanas", "Downtown"],
+    priceRange: "$$$",
+  },
+];
+---
+
+<CityLayout
+  city="Dallas"
+  state="TX"
+  tagline="Dallas builds tall and looks good doing it — the city's rooftop pools sit high enough to make the flat Texas horizon feel like a feature, and a couple of them hang right out over the street."
+  poolCount={6}
+  neighborhoods="Downtown & Uptown"
+  heroGradient="linear-gradient(180deg, rgba(180,60,50,0.85) 0%, rgba(120,50,62,0.68) 30%, rgba(44,60,90,0.6) 62%, rgba(8,24,52,0.84) 100%)"
+>
+  <section class="city-listings">
+    <div class="section-inner">
+
+      <div class="listings-header">
+        <p class="listings-kicker">6 picks · Downtown &amp; Uptown</p>
+        <h2 class="listings-heading">High, and hanging over Main Street.</h2>
+        <p class="listings-lede">
+          Downtown Dallas stacked its best pools up top — infinity edges, glass ledges, and one that swims right out over the street. Six that earn the elevation.
+        </p>
+      </div>
+
+      <div class="hotel-grid">
+        {hotels.map((hotel) => (
+          <HotelCard {...hotel} />
+        ))}
+      </div>
+
+      <aside class="city-note">
+        <p><strong>Downtown vs Uptown:</strong> the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. Either way, the Texas heat keeps most of them usable close to year-round.</p>
+      </aside>
+
+    </div>
+  </section>
+</CityLayout>
+
+<style>
+  .city-listings { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .listings-header { max-width: 52ch; margin-bottom: 2.8rem; }
+  .listings-kicker { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: #0c4453; margin: 0 0 0.8rem; }
+  .listings-heading { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); color: #0a2a48; margin: 0 0 0.8rem; line-height: 1.05; }
+  .listings-lede { font-family: var(--font-body); font-weight: 300; font-size: 1rem; line-height: 1.6; color: rgba(10, 38, 62, 0.9); margin: 0; }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+</style>
