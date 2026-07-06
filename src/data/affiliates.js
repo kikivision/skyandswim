@@ -79,9 +79,6 @@ export const AFFILIATE_HOTELS = {
   'jacquard-denver': {
     bookingcom: 'https://www.booking.com/hotel/us/the-jacquard-autograph-collection.html',
   },
-  'rally-denver': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-rally-at-mcgregor-square.html',
-  },
   'warwick-denver': {
     bookingcom: 'https://www.booking.com/hotel/us/warwick-denver-denver-co.html',
   },

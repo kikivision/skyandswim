@@ -7,6 +7,7 @@ import marquisPool from "../assets/picks/marriott-marquis-houston.jpg";
 const picks = [
   {
     name: "The William Vale",
+    slug: "william-vale",
     city: "Brooklyn, NY",
     description:
       "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something.",
@@ -16,6 +17,7 @@ const picks = [
   },
   {
     name: "Halcyon, a Hotel in Cherry Creek",
+    slug: "halcyon-cherry-creek",
     city: "Denver, CO",
     description:
       "A year-round heated rooftop pool that shrugs off the altitude — Rockies on the horizon, cabanas at the edge, and water blue enough to forgive the thin air.",
@@ -65,9 +67,9 @@ const picks = [
               <p class="pick-desc">{pick.description}</p>
               <a
                 class="pick-link"
-                href={pick.href}
-                target={pick.href !== "#" ? "_blank" : undefined}
-                rel={pick.href !== "#" ? "noopener noreferrer" : undefined}
+                href={pick.slug ? `/go/booking/${pick.slug}` : pick.href}
+                target="_blank"
+                rel={pick.slug ? "noopener noreferrer sponsored" : "noopener noreferrer"}
               >
                 See this hotel →
               </a>
