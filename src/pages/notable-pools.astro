@@ -1,0 +1,182 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import HotelCard from "../components/HotelCard.astro";
+
+// Non-rooftop hotel pools that are too good to leave off. Every hotel here has
+// a genuine, swimmable pool that happens to be at ground/garden/water level
+// rather than on a roof. They keep their Booking.com affiliate links (slugs in
+// src/data/affiliates.js) just like the rooftop city lists.
+const hotels = [
+  {
+    name: "Faena Hotel Miami Beach",
+    slug: "faena-miami-beach",
+    neighborhood: "Mid-Beach, Miami Beach",
+    description: "Alan Faena's maximalist monument to another era — the pool runs at garden level between the hotel and the sand, flanked by candy-striped cabanas that are gloriously over the top. Not a rooftop, but one of the most theatrical pools in the country.",
+    poolNote: "Ground-level oceanfront pool · Cabanas · Gold accents · Direct beach access",
+    tags: ["Oceanfront", "Cabanas", "Theatrical", "Ground Level"],
+    pick: true,
+    priceRange: "$$$$",
+  },
+  {
+    name: "The Standard Spa, Miami Beach",
+    slug: "standard-spa-miami-beach",
+    neighborhood: "Belle Isle, Miami Beach",
+    description: "An adults-only bayfront hideout on Belle Isle where the infinity pool meets Biscayne Bay at grade, wrapped in gardens with a full hydrotherapy circuit alongside. Not rooftop — waterline — and that's exactly the point of it.",
+    poolNote: "Ground-level bayfront infinity pool · Hydrotherapy circuit · Adults-only · Gardens",
+    tags: ["Bayfront", "Adults-Only", "Spa", "Ground Level"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Nautilus Sonesta Miami Beach",
+    slug: "nautilus-sonesta-miami-beach",
+    neighborhood: "South Beach, Miami Beach",
+    description: "Restored Art Deco bones and a 1,900-square-foot saltwater pool that curves through the oceanfront backyard with mid-century confidence. It sits at grade, in the garden — not on the roof — but the setting does the work.",
+    poolNote: "Ground-level saltwater pool · Oceanfront garden · Art Deco setting · Poolside dining",
+    tags: ["Oceanfront", "Art Deco", "Garden", "Ground Level"],
+    priceRange: "$$",
+  },
+  {
+    name: "LINE Austin",
+    slug: "line-austin",
+    neighborhood: "Lady Bird Lake, Austin",
+    description: "The pool sits at the water's edge on Lady Bird Lake with downtown Austin's skyline cresting above the treeline — a lakeside infinity pool, not a rooftop one, but on the right evening the Capitol dome lights gold and the bats cross the bridge below.",
+    poolNote: "Lakeside infinity pool · Lady Bird Lake · Capitol dome sightlines · Sunset-facing",
+    tags: ["Lake Views", "Infinity Edge", "Sunset", "Ground Level"],
+    priceRange: "$$$",
+  },
+];
+---
+
+<BaseLayout
+  title="Notable Pools (Not Rooftop) · Sky & Swim"
+  description="Hotel pools worth a trip that aren't on a roof — ground-level and waterline standouts, from Faena's oceanfront cabanas to LINE Austin's lakeside infinity edge."
+>
+  <div class="notable-page">
+    <Nav />
+
+    <section class="np-hero">
+      <div class="np-hero-bg" aria-hidden="true"></div>
+      <div class="np-hero-inner section-inner">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          All cities
+        </a>
+        <div class="np-hero-content">
+          <p class="np-kicker">Sky &amp; Swim · Notable Pools</p>
+          <h1 class="np-title">Not rooftop. Still worth it.</h1>
+          <p class="np-tagline">A short list of hotel pools we couldn't leave off — ground-level and waterline stunners that break our one rule and earn the exception.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="city-listings">
+      <div class="section-inner">
+        <div class="hotel-grid">
+          {hotels.map((hotel) => <HotelCard {...hotel} />)}
+        </div>
+
+        <aside class="city-note">
+          <p><strong>Why these are here:</strong> Sky &amp; Swim is a rooftop-pool guide, full stop. But a few hotel pools are so good — Faena's oceanfront theater, The Standard's bayfront spa — that leaving them off felt dishonest. They live here, clearly labeled as ground-level, so the rooftop lists stay pure.</p>
+        </aside>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .notable-page { min-height: 100vh; }
+
+  /* ── Hero ── */
+  .np-hero {
+    position: relative;
+    min-height: 46vh;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 6rem; /* clear fixed nav */
+    overflow: hidden;
+  }
+  .np-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(42,191,191,0.22) 0%, rgba(20,74,104,0.55) 45%, rgba(10,42,72,0.82) 100%);
+  }
+  .np-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 110%, rgba(42,191,191,0.3) 0%, transparent 65%);
+  }
+  .np-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 100%;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(168, 216, 216, 0.7);
+    transition: color 0.2s ease;
+  }
+  .back-link:hover { color: #fff; }
+  .np-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 680px;
+  }
+  .np-kicker {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    margin: 0;
+  }
+  .np-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    line-height: 0.98;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .np-tagline {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.5;
+    color: rgba(220, 240, 245, 0.78);
+    margin: 0.4rem 0 0;
+    max-width: 55ch;
+  }
+
+  /* ── Listings (matches the city pages) ── */
+  .city-listings { position: relative; z-index: 1; padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+
+  @media (max-width: 640px) {
+    .np-hero { min-height: 40vh; }
+  }
+</style>

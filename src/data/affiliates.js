@@ -18,6 +18,11 @@ export const AFFILIATE_HOTELS = {
   '1-hotel-south-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/1-south-beach.html',
   },
+  // Faena is a ground-level oceanfront pool — featured on /notable-pools,
+  // not the Miami rooftop list.
+  'faena-miami-beach': {
+    bookingcom: 'https://www.booking.com/hotel/us/faena-miami-beach.html',
+  },
   'nautilus-sonesta-miami-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/nautilus-sonesta-miami-beach.html',
   },
