@@ -61,15 +61,14 @@ const { name } = Astro.props;
   .motif-star     { top: 8%;  right: 6%; width: min(34%, 340px); height: 70%; -webkit-mask-image: url("/motifs/star.svg"); mask-image: url("/motifs/star.svg"); }
 
   /* Wide shapes, right side */
-  /* Large + faint, anchored to the right like NY's skyline; horns bleed off the
-     right edge rather than filling the whole hero. */
+  /* Large + faint, right-of-centre and fully in frame — horns uncropped. */
   .motif-longhorn {
-    top: 2%;
-    right: -8%;
-    width: min(58%, 640px);
-    height: 96%;
+    top: 0;
+    bottom: 0;
+    right: 6%;
+    width: min(64%, 700px);
     -webkit-mask-image: url("/motifs/longhorn.svg"); mask-image: url("/motifs/longhorn.svg");
-    -webkit-mask-position: right center; mask-position: right center;
+    -webkit-mask-position: center; mask-position: center;
   }
   .motif-guitar {
     top: 16%; right: 2%;
