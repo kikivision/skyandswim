@@ -85,9 +85,6 @@ export const AFFILIATE_HOTELS = {
   'warwick-denver': {
     bookingcom: 'https://www.booking.com/hotel/us/warwick-denver-denver-co.html',
   },
-  'source-hotel-denver': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-source.html',
-  },
 
   // --- Nashville ---
   'graduate-nashville': {
