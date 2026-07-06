@@ -92,7 +92,14 @@ const picks = [
             </div>
             <div class="pick-content">
               <p class="pick-label">✦ Sky &amp; Swim Pick</p>
-              <h3 class="pick-name">{pick.name}</h3>
+              <h3 class="pick-name">
+                <a
+                  class="pick-name-link"
+                  href={pick.slug ? `/go/booking/${pick.slug}` : pick.href}
+                  target="_blank"
+                  rel={pick.slug ? "noopener noreferrer sponsored" : "noopener noreferrer"}
+                >{pick.name}</a>
+              </h3>
               <p class="pick-city">{pick.city}</p>
               <p class="pick-desc">{pick.description}</p>
               <a
@@ -218,6 +225,14 @@ const picks = [
     line-height: 1.1;
     color: #fff;
     margin-top: 0.3rem;
+  }
+
+  .pick-name-link {
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+  .pick-name-link:hover {
+    color: var(--teal);
   }
 
   .pick-city {
