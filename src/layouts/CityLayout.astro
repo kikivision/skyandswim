@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import CityMotif from "../components/CityMotif.astro";
 
 interface Props {
   city: string;
@@ -11,6 +12,7 @@ interface Props {
   neighborhoods: string;
   heroGradient?: string;
   skyline?: boolean;
+  motif?: string;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   neighborhoods,
   heroGradient = "linear-gradient(180deg, rgba(42,191,191,0.25) 0%, rgba(10,42,72,0.6) 100%)",
   skyline = false,
+  motif,
 } = Astro.props;
 ---
 
@@ -34,13 +37,14 @@ const {
     <section class="city-hero">
       <div class="hero-bg" style={`background: ${heroGradient};`} aria-hidden="true">
         <div class="water-layer" aria-hidden="true"></div>
-        {!skyline && (
+        {!skyline && !motif && (
           <Fragment>
             <div class="ripple r1" aria-hidden="true"></div>
             <div class="ripple r2" aria-hidden="true"></div>
             <div class="ripple r3" aria-hidden="true"></div>
           </Fragment>
         )}
+        {motif && <CityMotif name={motif} />}
         {skyline && (
           <div class="hero-skyline" aria-hidden="true">
             <svg viewBox="0 0 640 240" preserveAspectRatio="xMaxYMax meet">

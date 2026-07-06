@@ -1,0 +1,54 @@
+---
+// A faint city motif laid into the hero, à la New York's skyline — but sourced
+// from real, CC0 / public-domain vector art (freesvg.org) rather than drawn by
+// hand. The SVG is used as a CSS mask so we only tint its silhouette; the file's
+// own colors are irrelevant. Art lives in /public/motifs/.
+interface Props {
+  name?: string;
+}
+const { name } = Astro.props;
+---
+
+{name && <div class={`city-motif motif-${name}`} aria-hidden="true"></div>}
+
+<style>
+  .city-motif {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    background: rgba(236, 246, 248, 0.16);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  /* New Orleans — heraldic fleur-de-lis */
+  .motif-fleur-de-lis {
+    top: 7%;
+    right: 6%;
+    width: min(26%, 250px);
+    height: 74%;
+    -webkit-mask-image: url("/motifs/fleur-de-lis.svg");
+    mask-image: url("/motifs/fleur-de-lis.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  /* Austin — longhorn (bull's-head) silhouette */
+  .motif-longhorn {
+    top: 15%;
+    right: 5%;
+    width: min(44%, 420px);
+    height: 52%;
+    -webkit-mask-image: url("/motifs/longhorn.svg");
+    mask-image: url("/motifs/longhorn.svg");
+    -webkit-mask-position: right center;
+    mask-position: right center;
+  }
+
+  @media (max-width: 640px) {
+    .motif-fleur-de-lis { width: 34%; }
+    .motif-longhorn { width: 56%; }
+  }
+</style>
