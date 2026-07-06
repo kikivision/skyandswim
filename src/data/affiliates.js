@@ -60,8 +60,8 @@ export const AFFILIATE_HOTELS = {
   'londonhouse-chicago': {
     bookingcom: 'https://www.booking.com/hotel/us/londonhouse-chicago-curio-collection-by-hilton.html',
   },
-  // Editorial reads "Virgin Hotels Chicago"; rebranded to "Sports Illustrated
-  // Resorts Chicago" (2024, same building). Booking slug unchanged.
+  // "Sports Illustrated Resorts Chicago" (rebranded from Virgin Hotels Chicago,
+  // 2024). Internal slug key stays 'virgin-hotels-chicago'; Booking slug too.
   'virgin-hotels-chicago': {
     bookingcom: 'https://www.booking.com/hotel/us/virgin-hotels-chicago-chicago.html',
   },
@@ -104,8 +104,8 @@ export const AFFILIATE_HOTELS = {
   },
 
   // --- New Orleans ---
-  // Editorial reads "The Ace Hotel New Orleans"; the Ace brand left — this
-  // building is now "The Barnett, JdV by Hyatt". Booking slug unchanged.
+  // "The Barnett, JdV by Hyatt" (rebranded from the Ace Hotel New Orleans).
+  // Internal slug key stays 'ace-hotel-new-orleans'; Booking slug too.
   'ace-hotel-new-orleans': {
     bookingcom: 'https://www.booking.com/hotel/us/ace-new-orleans.html',
   },
@@ -126,8 +126,8 @@ export const AFFILIATE_HOTELS = {
   'arlo-williamsburg': {
     bookingcom: 'https://www.booking.com/hotel/us/the-williamsburg.html',
   },
-  // Editorial reads "Jimmy at The James Hotel"; The James SoHo rebranded to
-  // "ModernHaus SoHo" (Jimmy is its rooftop bar). Booking slug is the new name.
+  // "ModernHaus SoHo" (formerly The James; Jimmy is its rooftop pool/bar).
+  // Internal slug key stays 'jimmy-james-soho'; Booking slug is modernhaus-soho.
   'jimmy-james-soho': {
     bookingcom: 'https://www.booking.com/hotel/us/modernhaus-soho.html',
   },
