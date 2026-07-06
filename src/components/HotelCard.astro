@@ -6,6 +6,7 @@ interface Props {
   poolNote: string;
   tags: string[];
   bookingUrl?: string;
+  slug?: string; // affiliate slug (src/data/affiliates.js) → routes CTA through /go
   pick?: boolean;
   priceRange?: string; // "$" | "$$" | "$$$" | "$$$$"
 }
@@ -17,9 +18,20 @@ const {
   poolNote,
   tags,
   bookingUrl = "#",
+  slug,
   pick = false,
   priceRange,
 } = Astro.props;
+
+// Affiliate hotels route through the /go redirector (provider-attributed click
+// tracking + CJ wrapping); everything else uses the direct link as before.
+const ctaHref = slug ? `/go/booking/${slug}` : bookingUrl;
+const isOutbound = ctaHref !== "#";
+const ctaRel = !isOutbound
+  ? undefined
+  : slug
+    ? "noopener noreferrer sponsored"
+    : "noopener noreferrer";
 ---
 
 <article class={`hotel-card ${pick ? "hotel-card--pick" : ""}`}>
@@ -51,7 +63,7 @@ const {
       </div>
     )}
 
-    <a class="card-cta" href={bookingUrl} target={bookingUrl !== "#" ? "_blank" : undefined} rel={bookingUrl !== "#" ? "noopener noreferrer" : undefined}>
+    <a class="card-cta" href={ctaHref} target={isOutbound ? "_blank" : undefined} rel={ctaRel}>
       See rooms &amp; rates
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
         <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>

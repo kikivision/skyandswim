@@ -1,0 +1,62 @@
+---
+// Affiliate outbound redirector. One static page per hotel × provider.
+//
+// Card CTAs point at /go/<provider>/<slug> (an internal path) instead of the
+// raw CJ link. This (a) lets the GA4 click tracker in BaseLayout fire a
+// provider-attributed `affiliate_click` event — it keys on the /go/<provider>/
+// path — and (b) keeps affiliate hygiene (noindex + rel=sponsored) in one place.
+//
+// The destination is a plain provider URL from src/data/affiliates.js; this
+// page wraps it in the CJ (Commission Junction) deep link for the Sky & Swim
+// promotional property — Property ID 101819827, its OWN id, distinct from
+// jetandswim's 101767900, so commissions attribute to skyandswim.com. The
+// format mirrors CJ's Link Tools output verbatim (no extra params).
+import { AFFILIATE_HOTELS } from '../../../data/affiliates.js';
+
+// Provider param → CJ deep-link click base (empty = forward the URL verbatim).
+// Booking.com is confirmed from a generated Link Tools link. Expedia carries the
+// same property PID but its AID/approval is UNVERIFIED — generate an Expedia
+// link for this property to confirm before adding any `expedia:` destinations.
+const CJ_BASE = {
+  booking: 'https://www.jdoqocy.com/click-101819827-17293132',
+  expedia: 'https://www.jdoqocy.com/click-101819827-10581071',
+};
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const [slug, providers] of Object.entries(AFFILIATE_HOTELS)) {
+    if (providers.bookingcom) {
+      paths.push({ params: { provider: 'booking', slug }, props: { url: providers.bookingcom } });
+    }
+    if (providers.expedia) {
+      paths.push({ params: { provider: 'expedia', slug }, props: { url: providers.expedia } });
+    }
+  }
+  return paths;
+}
+
+const { provider } = Astro.params;
+const { url } = Astro.props;
+const base = CJ_BASE[provider];
+const target = base ? `${base}?url=${encodeURIComponent(url)}` : url;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>
+      Redirecting to the booking site…
+      <a href={target} rel="noopener noreferrer sponsored">Continue</a>
+    </p>
+    <script is:inline define:vars={{ target }}>
+      location.replace(target);
+    </script>
+  </body>
+</html>

@@ -5,6 +5,7 @@ import HotelCard from "../../components/HotelCard.astro";
 const hotels = [
   {
     name: "1 Hotel South Beach",
+    slug: "1-hotel-south-beach",
     neighborhood: "South Beach",
     description: "The hotel that made sustainable design feel genuinely aspirational. Three pools on property, including a sprawling oceanside one that runs parallel to the Atlantic — the water-meets-water effect on a clear day is difficult to improve on.",
     poolNote: "3 pools · Oceanfront · Adults deck on 7th floor · Year-round warm",
@@ -15,6 +16,7 @@ const hotels = [
   },
   {
     name: "Faena Hotel Miami Beach",
+    slug: "faena-miami-beach",
     neighborhood: "Mid-Beach",
     description: "Alan Faena's maximalist monument to another era — the pool deck is theatrical in the way only Miami can carry off without irony. The cabanas are over the top. The pool is just long enough to feel like exercise.",
     poolNote: "Heated Olympic-length pool · Cabanas · Gold accents throughout",
@@ -24,6 +26,7 @@ const hotels = [
   },
   {
     name: "Nautilus Sonesta Miami Beach",
+    slug: "nautilus-sonesta-miami-beach",
     neighborhood: "South Beach",
     description: "Restored Art Deco bones, new pool infrastructure. The main pool curves through the tropical courtyard with a kind of mid-century confidence — not trying to be anything other than what it is, which is enough.",
     poolNote: "Courtyard pool · Art Deco setting · Poolside dining",
@@ -31,16 +34,17 @@ const hotels = [
     priceRange: "$$",
   },
   {
-    name: "SLS Brickell",
+    name: "Dua Miami",
+    slug: "dua-miami",
     neighborhood: "Brickell",
-    description: "The right rooftop pool for the Brickell crowd — elevated views over Biscayne Bay, a proper bar setup, and none of the tourist energy of South Beach. The bay-and-skyline combination is Miami's quieter but equally good alternative view.",
-    poolNote: "Rooftop · Bay views · Brickell skyline · Quieter scene",
+    description: "The right rooftop pool for the Brickell crowd — elevated views over Biscayne Bay, a proper bar setup, and none of the tourist energy of South Beach. Rebranded from SLS to Dua Miami (Autograph Collection) in 2024, with a refreshed pool deck and cabanas. The bay-and-skyline combination is Miami's quieter but equally good alternative view.",
+    poolNote: "Rooftop · Bay views · Brickell skyline · Refreshed 2024",
     tags: ["Bay Views", "Rooftop", "Brickell", "Scene"],
-    bookingUrl: "https://www.slsbrickell.com",
     priceRange: "$$$",
   },
   {
     name: "The Standard Spa",
+    slug: "standard-spa-miami-beach",
     neighborhood: "Miami Beach",
     description: "Not the flashiest pool on this list, but the hammam, hydrotherapy circuit, and cold plunge make The Standard the right choice if the goal is actually unwinding rather than being seen unwinding.",
     poolNote: "Heated pool + hydrotherapy circuit · Spa access included · Anti-scene",
@@ -50,6 +54,7 @@ const hotels = [
   },
   {
     name: "EAST Miami",
+    slug: "east-miami",
     neighborhood: "Brickell",
     description: "The pool deck on the 40th floor of Brickell City Centre makes this one of Miami's most genuinely elevated positions. Downtown on one side, the bay bleeding into the horizon on the other. The infinity edge disappears into the view.",
     poolNote: "40th floor infinity edge · Brickell City Centre · 360° views",
@@ -59,6 +64,7 @@ const hotels = [
   },
   {
     name: "Soho Beach House",
+    slug: "soho-beach-house",
     neighborhood: "Mid-Beach",
     description: "Members club that offers hotel rooms and pool access to guests. The outdoor pool setup is extensive — multiple levels, an ocean-facing orientation, and the kind of crowd that actually swims. The beach access makes it worth the rates.",
     poolNote: "Multiple pools · Ocean-facing · Beach access · Members & hotel guests",
