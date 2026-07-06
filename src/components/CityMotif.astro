@@ -16,7 +16,7 @@ const { name } = Astro.props;
     position: absolute;
     z-index: 0;
     pointer-events: none;
-    background: rgba(236, 246, 248, 0.16);
+    background: rgba(236, 246, 248, 0.08);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -25,10 +25,10 @@ const { name } = Astro.props;
 
   /* New Orleans — heraldic fleur-de-lis */
   .motif-fleur-de-lis {
-    top: 7%;
-    right: 6%;
-    width: min(26%, 250px);
-    height: 74%;
+    top: 0;
+    right: 4%;
+    width: min(46%, 520px);
+    height: 100%;
     -webkit-mask-image: url("/motifs/fleur-de-lis.svg");
     mask-image: url("/motifs/fleur-de-lis.svg");
     -webkit-mask-position: center;
@@ -37,10 +37,10 @@ const { name } = Astro.props;
 
   /* Austin — longhorn (bull's-head) silhouette */
   .motif-longhorn {
-    top: 15%;
-    right: 5%;
-    width: min(44%, 420px);
-    height: 52%;
+    top: 2%;
+    right: 2%;
+    width: min(68%, 720px);
+    height: 82%;
     -webkit-mask-image: url("/motifs/longhorn.svg");
     mask-image: url("/motifs/longhorn.svg");
     -webkit-mask-position: right center;
@@ -48,7 +48,7 @@ const { name } = Astro.props;
   }
 
   @media (max-width: 640px) {
-    .motif-fleur-de-lis { width: 34%; }
-    .motif-longhorn { width: 56%; }
+    .motif-fleur-de-lis { width: 60%; }
+    .motif-longhorn { width: 84%; }
   }
 </style>
