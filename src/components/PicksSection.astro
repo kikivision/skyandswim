@@ -1,38 +1,68 @@
 ---
 import { Image } from "astro:assets";
-import valePool from "../assets/picks/william-vale-brooklyn.jpg";
-import halcyonPool from "../assets/picks/halcyon-cherry-creek-rooftop-pool.jpg";
-import marquisPool from "../assets/picks/marriott-marquis-houston.jpg";
+import fsPhilly from "../assets/picks/four-seasons-philadelphia.jpg";
+import fsSeattle from "../assets/picks/four-seasons-seattle.jpg";
+import conradLA from "../assets/picks/conrad-los-angeles.jpg";
+import joule from "../assets/picks/the-joule-dallas.jpg";
+import oneHotelSB from "../assets/picks/1-hotel-south-beach.jpg";
+import gansevoort from "../assets/picks/gansevoort-new-york.jpg";
 
+// The six best rooftop pools in the directory, ranked on Booking guest scores
+// + pool-specific acclaim. Each links through the affiliate redirector.
 const picks = [
   {
-    name: "The William Vale",
-    slug: "william-vale",
-    city: "Brooklyn, NY",
+    name: "Four Seasons Philadelphia",
+    slug: "four-seasons-philadelphia",
+    city: "Philadelphia, PA",
     description:
-      "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something.",
-    href: "https://www.thewilliamvale.com",
-    image: valePool,
-    alt: "The William Vale's rooftop pool above North Brooklyn with the Manhattan skyline beyond.",
+      "A 57th-floor infinity edge atop the city's tallest tower — you swim toward the drop with Center City lit sixty stories below. The highest hotel pool in the region.",
+    image: fsPhilly,
+    alt: "Four Seasons Philadelphia's 57th-floor infinity pool high above the Center City skyline.",
   },
   {
-    name: "Halcyon, a Hotel in Cherry Creek",
-    slug: "halcyon-cherry-creek",
-    city: "Denver, CO",
+    name: "Four Seasons Seattle",
+    slug: "four-seasons-seattle",
+    city: "Seattle, WA",
     description:
-      "A year-round heated rooftop pool that shrugs off the altitude — Rockies on the horizon, cabanas at the edge, and water blue enough to forgive the thin air.",
-    href: "https://www.halcyonhotelcherrycreek.com",
-    image: halcyonPool,
-    alt: "Halcyon's rooftop pool in Cherry Creek with the Rocky Mountains on the horizon.",
+      "Seattle's only infinity hotel pool, heated to 84° year-round and open to Elliott Bay, Puget Sound, and the Olympics. Swim it in the rain — that's the point.",
+    image: fsSeattle,
+    alt: "Four Seasons Seattle's rooftop infinity pool overlooking Elliott Bay and the Olympic Mountains.",
   },
   {
-    name: "Marriott Marquis Houston",
-    city: "Houston, TX",
+    name: "Conrad Los Angeles",
+    slug: "conrad-los-angeles",
+    city: "Los Angeles, CA",
     description:
-      "The Texas-shaped lazy river is a gimmick, yes. It is also, undeniably, a great time eight floors above downtown.",
-    href: "https://www.marriott.com/en-us/hotels/houcq-marriott-marquis-houston/overview/",
-    image: marquisPool,
-    alt: "The Marriott Marquis Houston's rooftop pool eight floors above downtown.",
+      "A Frank Gehry-designed rooftop with a 16,000-square-foot deck and an infinity pool looking clear across downtown to the Walt Disney Concert Hall.",
+    image: conradLA,
+    alt: "Conrad Los Angeles's Gehry-designed rooftop infinity pool over downtown LA.",
+  },
+  {
+    name: "The Joule",
+    slug: "the-joule-dallas",
+    city: "Dallas, TX",
+    description:
+      "A pool cantilevered eight feet past the building behind glass — swim out over Main Street ten floors up and look straight down. The most distinctive pool in the country.",
+    image: joule,
+    alt: "The Joule's glass pool cantilevered over Main Street in downtown Dallas.",
+  },
+  {
+    name: "1 Hotel South Beach",
+    slug: "1-hotel-south-beach",
+    city: "Miami Beach, FL",
+    description:
+      "Eighteen stories over the sand, an adults-only rooftop pool with the Atlantic laid out to the horizon — the rare scene pool that's worth the climb.",
+    image: oneHotelSB,
+    alt: "1 Hotel South Beach's rooftop pool eighteen stories above the Atlantic.",
+  },
+  {
+    name: "Gansevoort Meatpacking",
+    slug: "gansevoort-meatpacking",
+    city: "New York, NY",
+    description:
+      "The heated rooftop pool that helped invent the Meatpacking scene — Hudson to the west, skyline to the east, open year-round. New York's rooftop-pool icon.",
+    image: gansevoort,
+    alt: "Gansevoort Meatpacking's rooftop pool with the Manhattan skyline and Hudson beyond.",
   },
 ];
 ---
