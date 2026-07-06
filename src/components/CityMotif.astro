@@ -61,11 +61,12 @@ const { name } = Astro.props;
   .motif-star     { top: 8%;  right: 6%; width: min(34%, 340px); height: 70%; -webkit-mask-image: url("/motifs/star.svg"); mask-image: url("/motifs/star.svg"); }
 
   /* Wide shapes, right side */
+  /* Oversized + cropped treatment (test): fills the hero and bleeds off-frame */
   .motif-longhorn {
-    top: 2%; right: 2%;
-    width: min(68%, 720px); height: 82%;
+    inset: 0;
     -webkit-mask-image: url("/motifs/longhorn.svg"); mask-image: url("/motifs/longhorn.svg");
-    -webkit-mask-position: right center; mask-position: right center;
+    -webkit-mask-size: 128%; mask-size: 128%;
+    -webkit-mask-position: 70% 46%; mask-position: 70% 46%;
   }
   .motif-guitar {
     top: 16%; right: 2%;
