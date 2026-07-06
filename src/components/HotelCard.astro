@@ -44,7 +44,13 @@ const ctaRel = !isOutbound
         {priceRange && <span class="card-price">{priceRange}</span>}
         {pick && <span class="card-pick-badge">✦ Editor's Pick</span>}
       </div>
-      <h3 class="card-name">{name}</h3>
+      <h3 class="card-name">
+        {isOutbound ? (
+          <a class="card-name-link" href={ctaHref} target="_blank" rel={ctaRel}>{name}</a>
+        ) : (
+          name
+        )}
+      </h3>
     </header>
 
     <p class="card-description">{description}</p>
@@ -164,6 +170,15 @@ const ctaRel = !isOutbound
     line-height: 1.1;
     color: #fff;
     margin: 0;
+  }
+
+  .card-name-link {
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+
+  .card-name-link:hover {
+    color: var(--teal);
   }
 
   .card-description {
