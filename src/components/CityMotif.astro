@@ -1,8 +1,9 @@
 ---
-// A faint city motif laid into the hero, à la New York's skyline — but sourced
-// from real, CC0 / public-domain vector art (freesvg.org) rather than drawn by
-// hand. The SVG is used as a CSS mask so we only tint its silhouette; the file's
-// own colors are irrelevant. Art lives in /public/motifs/.
+// A faint city motif laid into the hero, à la New York's skyline — sourced from
+// real, CC0 / public-domain vector art (freesvg.org) and used as a CSS mask so
+// we only tint its silhouette. Art lives in /public/motifs/. To add or swap a
+// city's motif: drop a solid-fill SVG into /public/motifs/<name>.svg, add a
+// `.motif-<name>` rule below, and pass `motif="<name>"` from the city page.
 interface Props {
   name?: string;
 }
@@ -23,32 +24,70 @@ const { name } = Astro.props;
     mask-size: contain;
   }
 
-  /* New Orleans — heraldic fleur-de-lis */
-  .motif-fleur-de-lis {
+  /* Tall shapes, right side, full height */
+  .motif-fleur-de-lis,
+  .motif-flamingo {
     top: 0;
-    right: 4%;
-    width: min(46%, 520px);
+    right: 5%;
+    width: min(38%, 420px);
     height: 100%;
-    -webkit-mask-image: url("/motifs/fleur-de-lis.svg");
-    mask-image: url("/motifs/fleur-de-lis.svg");
     -webkit-mask-position: center;
     mask-position: center;
   }
+  .motif-fleur-de-lis { width: min(46%, 520px); right: 4%; -webkit-mask-image: url("/motifs/fleur-de-lis.svg"); mask-image: url("/motifs/fleur-de-lis.svg"); }
+  .motif-flamingo     { -webkit-mask-image: url("/motifs/flamingo.svg"); mask-image: url("/motifs/flamingo.svg"); }
 
-  /* Austin — longhorn (bull's-head) silhouette */
+  .motif-palm {
+    top: 0;
+    right: 3%;
+    width: min(42%, 460px);
+    height: 100%;
+    -webkit-mask-image: url("/motifs/palm.svg");
+    mask-image: url("/motifs/palm.svg");
+    -webkit-mask-position: right bottom;
+    mask-position: right bottom;
+  }
+
+  /* Square-ish shapes, upper-right, large */
+  .motif-sailboat,
+  .motif-sun,
+  .motif-star {
+    right: 4%;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .motif-sailboat { top: 6%;  width: min(42%, 440px); height: 84%; -webkit-mask-image: url("/motifs/sailboat.svg"); mask-image: url("/motifs/sailboat.svg"); }
+  .motif-sun      { top: 4%;  width: min(44%, 460px); height: 88%; -webkit-mask-image: url("/motifs/sun.svg"); mask-image: url("/motifs/sun.svg"); }
+  .motif-star     { top: 8%;  right: 6%; width: min(34%, 340px); height: 70%; -webkit-mask-image: url("/motifs/star.svg"); mask-image: url("/motifs/star.svg"); }
+
+  /* Wide shapes, right side */
   .motif-longhorn {
-    top: 2%;
-    right: 2%;
-    width: min(68%, 720px);
-    height: 82%;
-    -webkit-mask-image: url("/motifs/longhorn.svg");
-    mask-image: url("/motifs/longhorn.svg");
-    -webkit-mask-position: right center;
-    mask-position: right center;
+    top: 2%; right: 2%;
+    width: min(68%, 720px); height: 82%;
+    -webkit-mask-image: url("/motifs/longhorn.svg"); mask-image: url("/motifs/longhorn.svg");
+    -webkit-mask-position: right center; mask-position: right center;
+  }
+  .motif-guitar {
+    top: 16%; right: 2%;
+    width: min(64%, 680px); height: 58%;
+    -webkit-mask-image: url("/motifs/guitar.svg"); mask-image: url("/motifs/guitar.svg");
+    -webkit-mask-position: right center; mask-position: right center;
+  }
+  .motif-mountains {
+    right: 0; bottom: 0;
+    width: min(66%, 720px); height: 64%;
+    -webkit-mask-image: url("/motifs/mountains.svg"); mask-image: url("/motifs/mountains.svg");
+    -webkit-mask-position: right bottom; mask-position: right bottom;
   }
 
   @media (max-width: 640px) {
     .motif-fleur-de-lis { width: 60%; }
+    .motif-flamingo { width: 52%; }
+    .motif-palm { width: 58%; }
     .motif-longhorn { width: 84%; }
+    .motif-guitar { width: 82%; }
+    .motif-mountains { width: 86%; }
+    .motif-sailboat, .motif-sun { width: 56%; }
+    .motif-star { width: 48%; }
   }
 </style>
