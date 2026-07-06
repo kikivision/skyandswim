@@ -4,54 +4,41 @@ import HotelCard from "../../components/HotelCard.astro";
 
 const hotels = [
   {
-    name: "LondonHouse Chicago",
-    slug: "londonhouse-chicago",
-    neighborhood: "River North / The Loop",
-    description: "The tri-level rooftop at LondonHouse sits at the junction of the Chicago River and Michigan Avenue — if there's a more architecturally significant rooftop pool position in the country, we haven't found it. The pool is heated and the views are the Michigan Avenue bridge, the Tribune Tower, and the entire river corridor.",
-    poolNote: "Tri-level rooftop · Chicago River junction · Michigan Ave bridge views · Seasonal",
-    tags: ["River Views", "Architecture", "Scenic", "Seasonal"],
-    bookingUrl: "https://www.londonhousechicago.com",
+    name: "Viceroy Chicago",
+    slug: "viceroy-chicago",
+    neighborhood: "Gold Coast",
+    description: "Eighteen floors up in the Gold Coast, the Viceroy trades the Loop's architecture for Lake Michigan — a heated, guest-only rooftop deck beside the Devereaux bar where, on the right afternoon, the water and the lake read as one blue plane. Seasonal, and worth timing a trip around.",
+    poolNote: "18th-floor rooftop pool · Lake Michigan + Gold Coast views · Guest-exclusive · Seasonal",
+    tags: ["Rooftop", "Lake Views", "Gold Coast", "Seasonal"],
     pick: true,
     priceRange: "$$$",
   },
   {
-    name: "Sports Illustrated Resorts Chicago",
-    slug: "virgin-hotels-chicago",
-    neighborhood: "Wicker Park / West Loop",
-    description: "The 26th-floor rooftop pool and bar now flies the Sports Illustrated Resorts flag — this was Virgin Hotels Chicago until its 2024 rebrand — but the west-facing perch is unchanged: excellent afternoon light and a skyline angle toward Willis Tower and the Loop that most tourists never catch.",
-    poolNote: "26th floor · West Loop skyline · Afternoon sun · Guest access priority",
-    tags: ["West Facing", "High Floor", "Loop Views", "Rooftop"],
+    name: "The Hoxton, Chicago",
+    slug: "hoxton-chicago",
+    neighborhood: "Fulton Market",
+    description: "The Hoxton stacks a rooftop pool above Cabra's Peruvian rooftop restaurant, with the West Loop and the downtown skyline filling the frame. Seasonal and guest-favored, it's the most design-forward pool deck in the neighborhood that's become the city's most design-forward.",
+    poolNote: "Rooftop pool above Cabra · Fulton Market skyline · Guests + members · Seasonal",
+    tags: ["Rooftop", "Skyline View", "Fulton Market", "Design Hotel"],
     priceRange: "$$$",
   },
   {
-    name: "Pendry Chicago",
-    slug: "pendry-chicago",
-    neighborhood: "River North",
-    description: "One of Chicago's newer additions with a rooftop pool that overlooks the River North gallery district. The design is refined where other Chicago rooftops lean loud — better for an afternoon with a book than an afternoon with a DJ.",
-    poolNote: "Rooftop pool · River North views · Design-focused · Quiet atmosphere",
-    tags: ["Quiet", "Design Hotel", "River North", "New"],
-    bookingUrl: "https://www.pendry.com/chicago",
-    priceRange: "$$$",
-  },
-  {
-    name: "Loews Chicago Hotel",
-    slug: "loews-chicago",
+    name: "DoubleTree by Hilton Chicago – Magnificent Mile",
+    slug: "doubletree-mag-mile",
     neighborhood: "Streeterville",
-    description: "The location between the Magnificent Mile and Lake Michigan means the pool deck faces the lake with the city at your back. A rare orientation in Chicago's rooftop pool landscape — most turn toward the skyline, not the water.",
-    poolNote: "Lake-facing pool · Streeterville location · Seasonal · City behind, water ahead",
-    tags: ["Lake Views", "Streeterville", "Seasonal", "Unique Orientation"],
-    bookingUrl: "https://www.loewshotels.com/chicago-hotel",
+    description: "Thirty floors up in Streeterville, this is the highest genuinely swimmable rooftop pool on the list — a heated deck with a panoramic downtown sweep and cabanas for the afternoon. Unfussy, well-placed, and a real value for the elevation.",
+    poolNote: "30th-floor rooftop pool · Panoramic downtown views · Cabanas · Seasonal",
+    tags: ["Rooftop", "High Floor", "Panoramic", "Value"],
     priceRange: "$$",
   },
   {
-    name: "ACME Hotel Company",
-    slug: "acme-hotel-chicago",
-    neighborhood: "River North",
-    description: "The scrappier option on the list — ACME's rooftop is unpretentious in a way Chicago does well, with good views and an energetic crowd that doesn't take the experience too seriously. Best for a warmer afternoon when expectations are low and payoff tends to be high.",
-    poolNote: "Compact rooftop pool · River North access · Casual energy · Best value",
-    tags: ["Value", "Casual", "River North", "Compact"],
-    bookingUrl: "https://www.acmehotelcompany.com",
-    priceRange: "$",
+    name: "Radisson Blu Aqua Chicago",
+    slug: "radisson-blu-aqua-chicago",
+    neighborhood: "Lakeshore East",
+    description: "The city's most serious rooftop swim: a 25-meter outdoor lap pool on the Aqua tower's 80,000-square-foot sky-deck, ringed by cabanas, fire pits, and a quarter-mile track. It sits on the podium rather than the summit, but the skyline is right there and the water is long enough to actually swim.",
+    poolNote: "25m outdoor lap pool · Elevated Aqua sky-deck · Cabanas + fire pits · Skyline views",
+    tags: ["Lap Pool", "Elevated", "Skyline View", "Big Deck"],
+    priceRange: "$$",
   },
 ];
 ---
@@ -60,15 +47,15 @@ const hotels = [
   city="Chicago"
   state="IL"
   tagline="Chicago's architecture from pool level is a different argument — you're not looking at a skyline so much as a portfolio. The city was built to be looked at, and the right pool lets you do exactly that."
-  poolCount={5}
-  neighborhoods="River North & The Loop"
+  poolCount={4}
+  neighborhoods="Gold Coast & Fulton Market"
   heroGradient="linear-gradient(180deg, rgba(15,50,80,0.5) 0%, rgba(5,15,35,0.8) 100%)"
 >
   <section class="city-listings">
     <div class="section-inner">
 
       <div class="listings-header">
-        <p class="listings-kicker">5 picks · River North &amp; The Loop</p>
+        <p class="listings-kicker">4 picks · Gold Coast &amp; Fulton Market</p>
         <h2 class="listings-heading">Architecture from the water.</h2>
         <p class="listings-lede">
           Chicago's rooftop pools compete with what may be the finest collection of buildings any American skyline has produced. The ones here have the views to justify the comparison.

@@ -53,37 +53,35 @@ export const AFFILIATE_HOTELS = {
     bookingcom: 'https://www.booking.com/hotel/us/cambria-austin-downtown.html',
   },
 
-  // --- Chicago ---
-  'londonhouse-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/londonhouse-chicago-curio-collection-by-hilton.html',
+  // --- Chicago --- (rebuilt: former picks were rooftop bars with no pool)
+  'viceroy-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/viceroy-chicago.html',
   },
-  // "Sports Illustrated Resorts Chicago" (rebranded from Virgin Hotels Chicago,
-  // 2024). Internal slug key stays 'virgin-hotels-chicago'; Booking slug too.
-  'virgin-hotels-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/virgin-hotels-chicago-chicago.html',
+  'hoxton-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-hoxton-chicago.html',
   },
-  'pendry-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/pendry-chicago.html',
+  'doubletree-mag-mile': {
+    bookingcom: 'https://www.booking.com/hotel/us/doubletree-chicago-magnificent-mile.html',
   },
-  'loews-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/loews-chicago.html',
-  },
-  'acme-hotel-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/acme-chicago.html',
+  'radisson-blu-aqua-chicago': {
+    bookingcom: 'https://www.booking.com/hotel/us/radisson-blu-aqua-chicago.html',
   },
 
   // --- Denver ---
   'halcyon-cherry-creek': {
     bookingcom: 'https://www.booking.com/hotel/us/halcyon-a-in-cherry-creek.html',
   },
-  'maven-hotel-denver': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-maven-at-the-dairy-block.html',
+  'jacquard-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-jacquard-autograph-collection.html',
   },
-  'crawford-hotel-denver': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-crawford-at-union-station-denver.html',
+  'rally-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-rally-at-mcgregor-square.html',
   },
-  'art-hotel-denver': {
-    bookingcom: 'https://www.booking.com/hotel/us/the-art-a.html',
+  'warwick-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/warwick-denver-denver-co.html',
+  },
+  'source-hotel-denver': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-source.html',
   },
 
   // --- Nashville ---

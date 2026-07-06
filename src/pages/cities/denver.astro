@@ -15,34 +15,40 @@ const hotels = [
     priceRange: "$$$",
   },
   {
-    name: "The Maven Hotel",
-    slug: "maven-hotel-denver",
-    neighborhood: "RiNo / Ballpark",
-    description: "Denver's Dairy Block neighborhood has become the city's most interesting food and drink corridor, and The Maven's rooftop pool sits above it with the downtown skyline framing the Front Range in the distance. An underrated position in a neighborhood worth staying in.",
-    poolNote: "Dairy Block rooftop · Downtown + mountain framing · Seasonal · Neighborhood gem",
-    tags: ["RiNo", "Downtown Views", "Seasonal", "Boutique"],
-    bookingUrl: "https://www.themavenhotel.com",
+    name: "The Jacquard, Autograph Collection",
+    slug: "jacquard-denver",
+    neighborhood: "Cherry Creek North",
+    description: "A 75-foot rooftop infinity lap pool in Cherry Creek North, with a 180-degree turn of the Rockies on one side and downtown Denver on the other — the rare Denver pool where you can actually swim laps with the Front Range in the frame. Kisbee on the Roof handles the drinks.",
+    poolNote: "75-ft rooftop infinity lap pool · 180° Rockies + downtown · Kisbee rooftop bar · Opens 6am",
+    tags: ["Rooftop", "Infinity Edge", "Mountain Views", "Lap Pool"],
+    priceRange: "$$$",
+  },
+  {
+    name: "The Rally Hotel at McGregor Square",
+    slug: "rally-denver",
+    neighborhood: "LoDo",
+    description: "On the Skybridge level above McGregor Square, the Rally's heated rooftop plunge pool comes with a 360-degree read of downtown — Coors Field on one side, the mountains beyond. It's a plunge, not a lap pool, but the deck and the pool bar make it a full afternoon.",
+    poolNote: "8th-floor rooftop plunge pool + hot tub · 360° downtown views · Poolside bar · Heated",
+    tags: ["Rooftop", "Plunge Pool", "360 Views", "LoDo"],
+    priceRange: "$$$",
+  },
+  {
+    name: "Warwick Denver",
+    slug: "warwick-denver",
+    neighborhood: "Uptown",
+    description: "One of Denver's longest-running rooftop pools — heated and open year-round on the Warwick's top floor, the Front Range on the horizon and cabanas for the wait. Less scene than the newer arrivals, more reliable; here, the pool is actually the point.",
+    poolNote: "Top-floor heated rooftop pool · Year-round · Front Range + skyline · Cabanas",
+    tags: ["Rooftop", "Year-Round", "Mountain Views", "Heated"],
     priceRange: "$$",
   },
   {
-    name: "The Crawford Hotel",
-    slug: "crawford-hotel-denver",
-    neighborhood: "LoDo / Union Station",
-    description: "Built inside Denver Union Station, The Crawford's rooftop pool is small but the setting is architecturally remarkable. The Denver tech and creative class fills the deck on summer evenings; the pool becomes the best place to watch the Front Range light shift.",
-    poolNote: "Union Station setting · Small pool · Front Range light · Summer evenings",
-    tags: ["Unique Setting", "Architecture", "LoDo", "Compact"],
-    bookingUrl: "https://www.thecrawfordhotel.com",
-    priceRange: "$$$",
-  },
-  {
-    name: "Art Hotel Denver",
-    slug: "art-hotel-denver",
-    neighborhood: "Golden Triangle",
-    description: "The Art Hotel's pool deck is the city's most visually considered space — the collection extends to the exterior, and the pool deck design has a clarity that most Denver hotels haven't achieved yet. Mountain views and a quieter Golden Triangle neighborhood make this the anti-LoDo option.",
-    poolNote: "Design hotel pool · Golden Triangle · Art collection · Mountain views",
-    tags: ["Design", "Art Hotel", "Golden Triangle", "Quiet"],
-    bookingUrl: "https://www.thearthotel.com",
-    priceRange: "$$$",
+    name: "The Source Hotel",
+    slug: "source-hotel-denver",
+    neighborhood: "RiNo",
+    description: "The Source caps RiNo's converted-foundry food hall with a heated rooftop plunge pool and hot tub, open year-round — skyline one way, Rockies the other. Small water, big neighborhood: you stay for RiNo and the roof is the nightcap.",
+    poolNote: "Rooftop plunge pool + hot tub · Year-round heated · Skyline + Rockies · RiNo",
+    tags: ["Rooftop", "Plunge Pool", "RiNo", "Year-Round"],
+    priceRange: "$$",
   },
 ];
 ---
@@ -51,18 +57,18 @@ const hotels = [
   city="Denver"
   state="CO"
   tagline="At 5,280 feet, every pool in Denver is technically a mile high — but the ones worth visiting earn that designation not with altitude but with mountains on the horizon and water warm enough to stay in through a thin-air afternoon."
-  poolCount={4}
-  neighborhoods="LoDo & RiNo"
+  poolCount={5}
+  neighborhoods="Cherry Creek & RiNo"
   heroGradient="linear-gradient(180deg, rgba(20,55,80,0.45) 0%, rgba(8,25,55,0.8) 100%)"
 >
   <section class="city-listings">
     <div class="section-inner">
 
       <div class="listings-header">
-        <p class="listings-kicker">4 picks · LoDo &amp; RiNo</p>
+        <p class="listings-kicker">5 picks · Cherry Creek &amp; RiNo</p>
         <h2 class="listings-heading">The Rockies, framed in water.</h2>
         <p class="listings-lede">
-          Denver's best rooftop pools face west — which means the Rocky Mountains are in the frame, and the afternoon light eventually turns the snowcaps pink. The four here have the views to prove it.
+          Denver's best rooftop pools face west — which means the Rocky Mountains are in the frame, and the afternoon light eventually turns the snowcaps pink. The five here have the views to prove it.
         </p>
       </div>
 
