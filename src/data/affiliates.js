@@ -140,6 +140,13 @@ export const AFFILIATE_HOTELS = {
   'wythe-hotel': {
     bookingcom: 'https://www.booking.com/hotel/us/wythe.html',
   },
+  'gansevoort-meatpacking': {
+    bookingcom: 'https://www.booking.com/hotel/us/gansevoort-manhattan.html',
+  },
+  // "Royalton Park Avenue" — formerly Gansevoort Park Avenue (NoMad).
+  'royalton-park-avenue': {
+    bookingcom: 'https://www.booking.com/hotel/us/royalton-park-avenue-nyc.html',
+  },
   // NOTE: "The Williamsburg Hotel" is intentionally NOT here — it is the SAME
   // building as `arlo-williamsburg` (96 Wythe Ave, rebranded 2023). And
   // "THEhotel at Mandarin Club" is omitted — no matching Booking.com property
