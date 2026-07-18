@@ -123,6 +123,13 @@ const ctaRel = !isOutbound
       )}
     </section>
 
+    {hotel.stay && (
+      <section class="block" aria-labelledby="stay-heading">
+        <h2 id="stay-heading">The stay</h2>
+        <p class="take">{hotel.stay}</p>
+      </section>
+    )}
+
     {isOutbound && (
       <section class="cta-block">
         <a class="cta" href={ctaHref} target="_blank" rel={ctaRel}>

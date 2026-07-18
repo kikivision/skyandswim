@@ -184,6 +184,7 @@ export const CITIES = {
         ],
         "pick": true,
         "priceRange": "$$$$",
+        "stay": "The Joule is a design hotel first and a place to sleep second — a landmark building on Main Street turned into one of the most art-forward stays in Texas, with a lobby that pulls in people who never booked a room. You're in the walkable heart of downtown, close to the Arts District and easy to base out of without a car. At $$$$ you're paying for the address, the art, and that pool as much as the room — worth it if the design is the reason you're coming, a stretch if you just need a well-located bed.",
         "verified": {
           "floor": "10th floor — Confirmed by Karen 2026-07-18. The operator publishes no floor number."
         },
@@ -206,6 +207,7 @@ export const CITIES = {
           "heated": "Confirmed by Karen 2026-07-18. Not stated by Hyatt or ResortPass.",
           "infinityEdge": "Confirmed by Karen 2026-07-18. Appeared only in aggregator copy, no operator source."
         },
+        "stay": "Thompson Dallas is the grown-up choice downtown — polished modern luxury inside The National, the restored bank tower that anchors Main Street, with an adults-only rooftop deck that keeps the calm the brand is going for. It's the same walkable downtown core as the Joule and the Statler, so you can leave the car and reach the Arts District and dining on foot. At $$$ it's priced right for what it is: if you want a refined, quiet-luxury base rather than a scene, this is the Dallas rooftop that fits.",
         "heroCredit": "Thompson Dallas"
       },
       {
@@ -227,6 +229,7 @@ export const CITIES = {
         "debunked": {
           "infinityEdge": "Checked against rooftop photography 2026-07-18 — solid coping above the waterline, no spillover, no catch basin. The claim comes from the 2023 opening press release and was copied onward from there. Do not re-add."
         },
+        "stay": "Swexan is the new-money glamour play — one of Dallas's newest luxury hotels, design-forward and deliberately showy, in the Harwood District just north of downtown. That puts you in Uptown's restaurant-and-bar scene rather than the office-core downtown, which is the right trade for some and the wrong one for others; a car or rideshare helps here more than it does on Main Street. At $$$$ it's the priciest of the Dallas rooftops, and you're paying for how new and polished it all is — worth it if you want the current 'it' hotel, less so if you'd rather a landmark with some history.",
         "heroCredit": "Hôtel Swexan"
       },
       {
@@ -245,6 +248,7 @@ export const CITIES = {
         "verified": {
           "floor": "16th floor — Confirmed by Karen 2026-07-18. Marriott states no floor; the only other source was the pool contractor's portfolio."
         },
+        "stay": "W Dallas is the party pick — the WET Deck and the W's usual high-energy, see-and-be-seen scene, set in Victory Park right next to the American Airlines Center. That location is the whole point: it's built for game nights, concerts, and going out, and it's a genuinely great base if that's your trip — less so if you want quiet, since the neighborhood empties out between events. At $$$ it's fair for the brand and the address; come for the energy, not for a restful downtown stay.",
         "heroCredit": "W Dallas"
       },
       {
@@ -260,6 +264,7 @@ export const CITIES = {
           "Historic"
         ],
         "priceRange": "$$$",
+        "stay": "The Statler is the fun one — a restored 1950s modernist landmark on Main Street that reopened as a lively, entertainment-forward hotel, with the Waterproof rooftop pool and bar up top and more going on downstairs than most Dallas hotels bother with. You're in the walkable downtown core near the Joule and the Adolphus, easy to pair with the Arts District. At $$$ it's a strong value for how much personality you get — the pick if you want a downtown base with buzz, not a quiet retreat.",
         "heroCredit": "The Statler Dallas"
       },
       {
@@ -275,6 +280,7 @@ export const CITIES = {
           "Downtown"
         ],
         "priceRange": "$$$",
+        "stay": "The Adolphus is the grande dame — a 1912 landmark that's the most traditional, old-world luxury stay on this list, a different world from the design hotels and party decks around it. It sits in the same walkable Main Street core downtown, so location-wise it's on par with the Joule and the Statler; the catch is the rooftop pool is seasonal, running only through Labor Day, so it's not a year-round pool trip. At $$$ you're paying for history and polish — the right call if a classic, refined Dallas stay appeals more than the newest rooftop scene.",
         "heroCredit": "The Adolphus"
       }
     ]
