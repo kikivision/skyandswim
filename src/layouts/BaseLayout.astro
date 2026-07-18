@@ -4,16 +4,42 @@ import Nav from "../components/Nav.astro";
 interface Props {
   title?: string;
   description?: string;
+  /** JSON-LD graph nodes for this page (Hotel, ItemList, BreadcrumbList, …).
+      Emitted as a single @graph so one script tag covers the whole page. */
+  jsonLd?: Record<string, unknown>[];
 }
 
 const {
   title = "Sky & Swim · Rooftop Pool Hotels Across America",
   description = "Curated rooftop pool hotels across America — ranked by the view, the water, and whether the moment earns the price of admission.",
+  jsonLd = [],
 } = Astro.props;
 
 const site = "https://skyandswim.com";
 const canonical = new URL(Astro.url.pathname, site).href;
 const ogImage = new URL("/og-image.png", site).href;
+
+// Site-level identity nodes ride along on every page; pages append their own
+// (Hotel, ItemList, BreadcrumbList) via the `jsonLd` prop.
+const graph = [
+  {
+    "@type": "Organization",
+    "@id": `${site}/#organization`,
+    name: "Sky & Swim",
+    url: `${site}/`,
+    logo: `${site}/apple-touch-icon.png`,
+    description:
+      "An independent guide to rooftop pool hotels across America, ranked by the view, the water, and whether the moment earns the price of admission.",
+  },
+  {
+    "@type": "WebSite",
+    "@id": `${site}/#website`,
+    url: `${site}/`,
+    name: "Sky & Swim",
+    publisher: { "@id": `${site}/#organization` },
+  },
+  ...jsonLd,
+];
 ---
 
 <!doctype html>
@@ -84,6 +110,12 @@ const ogImage = new URL("/og-image.png", site).href;
       gtag('js', new Date());
       gtag('config', 'G-BNSEB2Q53S');
     </script>
+
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })}
+    />
   </head>
   <body>
     <Nav />
