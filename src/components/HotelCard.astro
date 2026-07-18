@@ -57,7 +57,7 @@ const ctaRel = !isOutbound
       </div>
       <h3 class="card-name">
         {detailHref ? (
-          <a class="card-name-link" href={detailHref}>{name}</a>
+          <a class="card-name-link card-name-link--stretched" href={detailHref}>{name}</a>
         ) : isOutbound ? (
           <a class="card-name-link" href={ctaHref} target="_blank" rel={ctaRel}>{name}</a>
         ) : (
@@ -250,12 +250,29 @@ const ctaRel = !isOutbound
     letter-spacing: 0.08em;
   }
 
+  /* Stretched link — the whole card is a click target for our detail page, so
+     readers land on the write-up rather than only ever hitting the booking CTA.
+     Applied via ::after on the title link (no nested <a>, so the markup stays
+     valid and screen readers still announce one link named for the hotel).
+     Deliberately scoped to the detailHref case: the full card must never become
+     an outbound affiliate target. */
+  .card-name-link--stretched::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
   .card-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem 1.1rem;
     margin-top: 0.2rem;
+    /* Above the stretched overlay so the booking CTA stays independently
+       clickable rather than being swallowed by the card link. */
+    position: relative;
+    z-index: 2;
   }
 
   /* Internal link to our write-up; sits ahead of the outbound booking CTA so
