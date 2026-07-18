@@ -404,7 +404,8 @@ export const CITIES = {
         "priceRange": "$$$$",
         "stay": "Thompson Houston is the new design flagship — the city's newest serious hotel (opened 2024), sleek and polished, with a near-acre pool deck that looks over Buffalo Bayou Park's green rather than just more towers. It sits in the Fourth Ward on the edge of downtown, close to the park and the bayou trails, a slightly quieter base than the downtown core. At $$$$ it's among the priciest in Houston, and you're paying to be in the newest, best-designed room in town — worth it if that's the appeal, less so if you'd rather skip the new-hotel premium.",
         "verified": {
-          "stay": "Opened 2024; Fourth Ward, on the edge of downtown over Buffalo Bayou Park — Confirmed by Karen 2026-07-18."
+          "stay": "Opened 2024; Fourth Ward, on the edge of downtown over Buffalo Bayou Park — Confirmed by Karen 2026-07-18.",
+          "infinityEdge": "Confirmed by Karen 2026-07-18 from a rooftop photo she provided — glass-sided vanishing edge visible, water level with the lip."
         },
         "heroCredit": "Thompson Houston"
       },
