@@ -8,11 +8,14 @@ import oneHotelSB from "../assets/hotels/1-hotel-south-beach.jpg";
 import gansevoort from "../assets/hotels/gansevoort-meatpacking.jpg";
 
 // The six best rooftop pools in the directory, ranked on Booking guest scores
-// + pool-specific acclaim. Each links through the affiliate redirector.
+// + pool-specific acclaim. Each links to its on-site hotel detail page, which
+// carries the affiliate booking CTA. Four Seasons Seattle has no city, so it
+// lives at a standalone /hotels/ page; the other five sit under their city.
 const picks = [
   {
     name: "Four Seasons Philadelphia",
     slug: "four-seasons-philadelphia",
+    href: "/cities/philadelphia/four-seasons-philadelphia/",
     city: "Philadelphia, PA",
     description:
       "A 57th-floor infinity edge atop the city's tallest tower — you swim toward the drop with Center City lit sixty stories below. The highest hotel pool in the region.",
@@ -22,6 +25,7 @@ const picks = [
   {
     name: "Four Seasons Seattle",
     slug: "four-seasons-seattle",
+    href: "/hotels/four-seasons-seattle/",
     city: "Seattle, WA",
     description:
       "Seattle's only infinity hotel pool, heated to 84° year-round and open to Elliott Bay, Puget Sound, and the Olympics. Swim it in the rain — that's the point.",
@@ -31,6 +35,7 @@ const picks = [
   {
     name: "Conrad Los Angeles",
     slug: "conrad-los-angeles",
+    href: "/cities/los-angeles/conrad-los-angeles/",
     city: "Los Angeles, CA",
     description:
       "A 16,000-square-foot rooftop terrace atop Gehry's Grand LA, with an infinity pool looking clear across downtown to the Walt Disney Concert Hall.",
@@ -40,6 +45,7 @@ const picks = [
   {
     name: "The Joule",
     slug: "the-joule-dallas",
+    href: "/cities/dallas/the-joule-dallas/",
     city: "Dallas, TX",
     description:
       "A pool cantilevered eight feet past the building behind glass — swim out over Main Street ten floors up and look straight down. The most distinctive pool in Texas.",
@@ -49,6 +55,7 @@ const picks = [
   {
     name: "1 Hotel South Beach",
     slug: "1-hotel-south-beach",
+    href: "/cities/miami/1-hotel-south-beach/",
     city: "Miami Beach, FL",
     description:
       "Eighteen stories over the sand, an adults-only rooftop pool with the Atlantic laid out to the horizon — the rare scene pool that's worth the climb.",
@@ -58,6 +65,7 @@ const picks = [
   {
     name: "Gansevoort Meatpacking",
     slug: "gansevoort-meatpacking",
+    href: "/cities/new-york/gansevoort-meatpacking/",
     city: "New York, NY",
     description:
       "The heated rooftop pool that helped invent the Meatpacking scene — Hudson to the west, skyline to the east, open year-round. New York's rooftop-pool icon.",
@@ -93,21 +101,11 @@ const picks = [
             <div class="pick-content">
               <p class="pick-label">✦ Sky &amp; Swim Pick</p>
               <h3 class="pick-name">
-                <a
-                  class="pick-name-link"
-                  href={pick.slug ? `/go/booking/${pick.slug}/` : pick.href}
-                  target="_blank"
-                  rel={pick.slug ? "noopener noreferrer sponsored" : "noopener noreferrer"}
-                >{pick.name}</a>
+                <a class="pick-name-link" href={pick.href}>{pick.name}</a>
               </h3>
               <p class="pick-city">{pick.city}</p>
               <p class="pick-desc">{pick.description}</p>
-              <a
-                class="pick-link"
-                href={pick.slug ? `/go/booking/${pick.slug}/` : pick.href}
-                target="_blank"
-                rel={pick.slug ? "noopener noreferrer sponsored" : "noopener noreferrer"}
-              >
+              <a class="pick-link" href={pick.href}>
                 See this hotel →
               </a>
             </div>

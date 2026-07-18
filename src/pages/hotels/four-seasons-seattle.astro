@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Footer from "../../components/Footer.astro";
+import HotelDetail from "../../components/HotelDetail.astro";
+import { BEYOND_HOTELS } from "../../data/beyond.js";
+
+// Standalone detail page for Four Seasons Seattle — a homepage Editor's Pick
+// with no Seattle city, so the /cities/[city]/[hotel] route never generates a
+// page for it. Data is single-sourced from beyond.js (also drives the card on
+// /beyond-the-cities/); we only override the neighborhood, since that field
+// doubles as the city locator in the grid there.
+const base = BEYOND_HOTELS.find((h) => h.slug === "four-seasons-seattle");
+const hotel = { ...base, neighborhood: "Downtown" };
+
+const city = "Seattle";
+const state = "WA";
+
+const poolFacts = hotel.poolNote
+  .split("·")
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+const site = "https://skyandswim.com";
+const pageUrl = `${site}/hotels/${hotel.slug}/`;
+
+const title = `${hotel.name} Rooftop Pool · ${city}, ${state} · Sky & Swim`;
+const description = `${hotel.name} in ${city} — ${poolFacts.join(", ")}. Our honest take on whether the pool earns the price.`.slice(
+  0,
+  155,
+);
+
+const jsonLd = [
+  {
+    "@type": "Hotel",
+    "@id": `${pageUrl}#hotel`,
+    name: hotel.name,
+    description: hotel.description,
+    url: pageUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: city,
+      addressRegion: state,
+      addressCountry: "US",
+    },
+    ...(hotel.priceRange ? { priceRange: hotel.priceRange } : {}),
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Rooftop pool", value: true },
+      ...poolFacts.map((f) => ({
+        "@type": "LocationFeatureSpecification",
+        name: f,
+        value: true,
+      })),
+    ],
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Beyond the Cities",
+        item: `${site}/beyond-the-cities/`,
+      },
+      { "@type": "ListItem", position: 3, name: hotel.name, item: pageUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <HotelDetail hotel={hotel} city={city} state={state} />
+  <Footer />
+</BaseLayout>
