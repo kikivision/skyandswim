@@ -15,22 +15,23 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## ⚠️ Existing images — provenance unrecorded
+## Done (9)
 
-These nine predate the credit mechanism. Neither commit that added them records a
-source, and no attribution was ever rendered. **Re-pull from the Fora Portal to
-establish clean provenance**, or confirm the original source and set `heroCredit`
-accordingly. Until then they display with no credit line.
+Pulled from the Fora Portal and crediting the property. Each renders
+*"Photo courtesy of &lt;property&gt;."* beneath the hero.
 
-- [ ] `1-hotel-south-beach` — 1 Hotel South Beach (Miami)
-- [ ] `conrad-los-angeles` — Conrad Los Angeles (Los Angeles)
-- [ ] `four-seasons-philadelphia` — Four Seasons Hotel Philadelphia (Philadelphia)
-- [ ] `four-seasons-seattle` — Four Seasons Hotel Seattle (on /beyond-the-cities)
-- [ ] `gansevoort-meatpacking` — Gansevoort Meatpacking (New York)
-- [ ] `halcyon-cherry-creek` — Halcyon, a Hotel in Cherry Creek (Denver)
-- [ ] `marriott-marquis-houston` — Marriott Marquis Houston (Houston)
-- [ ] `the-joule-dallas` — The Joule (Dallas)
-- [ ] `william-vale` — The William Vale (New York)
+- [x] `1-hotel-south-beach` — 1 Hotel South Beach (Miami)
+- [x] `conrad-los-angeles` — Conrad Los Angeles (Los Angeles)
+- [x] `four-seasons-philadelphia` — Four Seasons Hotel Philadelphia (Philadelphia)
+- [x] `four-seasons-seattle` — Four Seasons Hotel Seattle (on /beyond-the-cities)
+- [x] `gansevoort-meatpacking` — Gansevoort Meatpacking (New York)
+- [x] `halcyon-cherry-creek` — Halcyon, a Hotel in Cherry Creek (Denver)
+- [x] `marriott-marquis-houston` — Marriott Marquis Houston (Houston)
+- [x] `the-joule-dallas` — The Joule (Dallas)
+- [x] `william-vale` — The William Vale (New York)
+
+Six of these also appear in the homepage Editor's Picks, which carries its own
+collective credit line beneath the grid.
 
 ## Needed
 

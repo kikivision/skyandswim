@@ -186,7 +186,8 @@ export const CITIES = {
         "priceRange": "$$$$",
         "verified": {
           "floor": "10th floor — Confirmed by Karen 2026-07-18. The operator publishes no floor number."
-        }
+        },
+        "heroCredit": "The Joule"
       },
       {
         "name": "Thompson Dallas",
@@ -299,7 +300,8 @@ export const CITIES = {
         ],
         "bookingUrl": "https://www.halcyonhotelcherrycreek.com",
         "pick": true,
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "heroCredit": "Halcyon, a Hotel in Cherry Creek"
       },
       {
         "name": "The Jacquard, Autograph Collection",
@@ -359,7 +361,8 @@ export const CITIES = {
           "Lazy River"
         ],
         "pick": true,
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "heroCredit": "Marriott Marquis Houston"
       },
       {
         "name": "Thompson Houston, by Hyatt",
@@ -444,7 +447,8 @@ export const CITIES = {
           "Downtown"
         ],
         "pick": true,
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "heroCredit": "Conrad Los Angeles"
       },
       {
         "name": "Thompson Hollywood",
@@ -544,7 +548,8 @@ export const CITIES = {
         ],
         "bookingUrl": "https://www.1hotels.com/south-beach",
         "pick": true,
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "heroCredit": "1 Hotel South Beach"
       },
       {
         "name": "Dua Miami",
@@ -695,7 +700,8 @@ export const CITIES = {
         "priceRange": "$$$",
         "debunked": {
           "infinityEdge": "Confirmed not an infinity edge by Karen 2026-07-18, despite the claim appearing across third-party coverage. thewilliamvale.com never uses the word. Do not re-add."
-        }
+        },
+        "heroCredit": "The William Vale"
       },
       {
         "name": "Arlo Williamsburg",
@@ -740,7 +746,8 @@ export const CITIES = {
           "Skyline View",
           "Members Only"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "heroCredit": "Gansevoort Meatpacking"
       }
     ]
   },
@@ -769,7 +776,8 @@ export const CITIES = {
           "Skyline"
         ],
         "pick": true,
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "heroCredit": "Four Seasons Hotel Philadelphia"
       },
       {
         "name": "The Windsor Suites",

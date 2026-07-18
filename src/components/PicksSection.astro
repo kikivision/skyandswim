@@ -33,16 +33,16 @@ const picks = [
     slug: "conrad-los-angeles",
     city: "Los Angeles, CA",
     description:
-      "A Frank Gehry-designed rooftop with a 16,000-square-foot deck and an infinity pool looking clear across downtown to the Walt Disney Concert Hall.",
+      "A 16,000-square-foot rooftop terrace atop Gehry's Grand LA, with an infinity pool looking clear across downtown to the Walt Disney Concert Hall.",
     image: conradLA,
-    alt: "Conrad Los Angeles's Gehry-designed rooftop infinity pool over downtown LA.",
+    alt: "Conrad Los Angeles's rooftop infinity pool atop the Grand LA, over downtown.",
   },
   {
     name: "The Joule",
     slug: "the-joule-dallas",
     city: "Dallas, TX",
     description:
-      "A pool cantilevered eight feet past the building behind glass — swim out over Main Street ten floors up and look straight down. The most distinctive pool in the country.",
+      "A pool cantilevered eight feet past the building behind glass — swim out over Main Street ten floors up and look straight down. The most distinctive pool in Texas.",
     image: joule,
     alt: "The Joule's glass pool cantilevered over Main Street in downtown Dallas.",
   },
@@ -115,10 +115,23 @@ const picks = [
         ))
       }
     </div>
+
+    <p class="picks-credit">Photos courtesy of the featured properties.</p>
   </div>
 </section>
 
 <style>
+  /* Property credit for Fora Portal photography, mirroring the per-hotel line
+     on the detail pages. */
+  .picks-credit {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: rgba(220, 240, 245, 0.5);
+    margin: 1.6rem 0 0;
+    text-align: right;
+  }
+
   .picks {
     padding: clamp(3rem, 7vw, 6rem) 0;
   }
