@@ -383,6 +383,7 @@ export const CITIES = {
         ],
         "pick": true,
         "priceRange": "$$$",
+        "stay": "The Marquis is the big-fun, do-it-all downtown hotel — a massive convention-and-family property on Discovery Green whose Texas-shaped lazy river and skyline infinity pool make it the most crowd- and kid-friendly rooftop in the city. You're in the thick of downtown, walkable to the convention center, Toyota Center, and Minute Maid Park, which makes it a natural for a game weekend or a work trip with the family along. At $$$ it's fair for the scale you get — the pick if you want the fun and the location, not if you're after quiet or intimate.",
         "heroCredit": "Marriott Marquis Houston"
       },
       {
@@ -397,7 +398,8 @@ export const CITIES = {
           "Park Views",
           "New"
         ],
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "Thompson Houston is the new design flagship — the city's newest serious hotel (opened 2024), sleek and polished, with a near-acre pool deck that looks over Buffalo Bayou Park's green rather than just more towers. It sits in the Fourth Ward on the edge of downtown, close to the park and the bayou trails, a slightly quieter base than the downtown core. At $$$$ it's among the priciest in Houston, and you're paying to be in the newest, best-designed room in town — worth it if that's the appeal, less so if you'd rather skip the new-hotel premium."
       },
       {
         "name": "Four Seasons Hotel Houston",
@@ -411,7 +413,8 @@ export const CITIES = {
           "Climate-Controlled",
           "Luxury"
         ],
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "The Four Seasons is the polished, reliable luxury choice — downtown, full-service, and the rare Houston pool engineered to stay pleasant through August, which in this city is the whole ballgame. You're in the downtown core, walkable to the business district and an easy base for work or a summer trip when the other decks are too hot to use. At $$$$ you're paying Four Seasons prices for Four Seasons competence and a genuinely usable summer pool — worth it if reliability and the August-proof deck matter more to you than novelty or scene."
       },
       {
         "name": "La Colombe d'Or Hotel",
@@ -425,7 +428,8 @@ export const CITIES = {
           "Intimate",
           "Guests Only"
         ],
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "La Colombe d'Or is the intimate, hidden one — a 32-suite boutique in a historic Montrose mansion where the guests-only rooftop is the least crowded good deck in the city almost by design. Montrose puts you in Houston's arts-and-dining heart, near the Museum District and the neighborhood's restaurants, a world away from the downtown convention crowd. At $$$$ you're paying for privacy, character, and scale-of-one service rather than amenities — the pick if you want quiet and a real neighborhood, not a big hotel."
       },
       {
         "name": "The Laura Hotel, Autograph Collection",
@@ -439,7 +443,8 @@ export const CITIES = {
           "Downtown",
           "Value"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "The Laura is the easy, accessible pick — a downtown Autograph Collection hotel above Discovery Green whose fifth-floor terrace sells day passes when it isn't full, so you don't even need a room to use it. It's right in the downtown core near the park, the convention center, and the ballpark, walkable and central. At $$$ it's a solid downtown value — the pick if you want a good, central base and easy pool access over a destination-grade swim."
       }
     ]
   },
