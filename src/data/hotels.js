@@ -23,14 +23,14 @@ export const CITIES = {
     "listingsHeading": "The city that built up fast.",
     "listingsLede": "Austin's rooftop pool scene punches above its size. The best ones have views of the lake, the Capitol, or the Congress Avenue corridor — and most are warm enough year-round to use on a January whim.",
     "noteLabel": "Year-round pool weather",
-    "noteBody": "Austin averages 228 sunny days a year, which means unlike Nashville or Denver, most of these pools run 12 months. The window from October through February is actually the underrated time — warm water, thinner crowds, and the full Austin skyline without the August heat.",
+    "noteBody": "Austin averages 228 sunny days a year, and the decks here stay usable far later than Nashville's or Denver's — but note that none of these four operators publishes a year-round or heated pool, and Austin Proper states outright that hours vary seasonally. October through February is the underrated window when they are open: warm afternoons, thinner crowds, and the full skyline without the August heat. Confirm before you plan a winter trip around one.",
     "hotels": [
       {
         "name": "W Austin",
         "slug": "w-austin",
         "neighborhood": "Downtown",
-        "description": "WET deck — the W's branded pool experience — is Austin's most premium rooftop pool offering, situated above the 2nd Street District with views into the Congress Avenue corridor. The DJ schedule means it leans scene on weekends, serene midweek.",
-        "poolNote": "WET deck · Downtown views · DJ weekends · Day passes",
+        "description": "WET deck is the W's branded pool experience, four floors up above the 2nd Street District — a real deck with cabanas, tanning shelves and a fireplace rather than a token plunge. DJs run Memorial Day to Labor Day; outside that stretch it is a considerably quieter afternoon.",
+        "poolNote": "4th-floor WET deck · Cabanas + tanning shelves · DJs Memorial Day–Labor Day · Day passes from $25",
         "tags": [
           "Scene",
           "Day Pass",
@@ -44,12 +44,12 @@ export const CITIES = {
         "name": "Hotel Van Zandt",
         "slug": "hotel-van-zandt",
         "neighborhood": "Rainey Street",
-        "description": "Named for the songwriter, the hotel carries the music city energy well. The rooftop pool deck faces east toward the Colorado River, and the Rainey Street neighborhood below provides a lively context without intruding on the deck itself.",
-        "poolNote": "River-facing pool · Rainey Street location · Live music events",
+        "description": "Named for the songwriter, and the hotel carries the music-city energy well — though the live music is downstairs at Geraldine's, not poolside. The 4th-floor deck looks out over Lady Bird Lake, with Rainey Street humming below without intruding.",
+        "poolNote": "4th-floor rooftop pool · Lady Bird Lake views · Rainey Street · Day passes via ResortPass",
         "tags": [
-          "River View",
+          "Lake View",
           "Rainey Street",
-          "Live Music",
+          "Day Pass",
           "Boutique"
         ],
         "bookingUrl": "https://www.hotelvanzandt.com",
@@ -59,13 +59,13 @@ export const CITIES = {
         "name": "Austin Proper",
         "slug": "austin-proper",
         "neighborhood": "Second Street",
-        "description": "Kelly Wearstler's design makes Austin Proper's rooftop pool feel like a set piece — and it is, but a very good one. The pool is heated year-round and the adjacent bar is one of the better designed rooftop spaces in the city.",
-        "poolNote": "Year-round heated · Wearstler-designed deck · Excellent bar",
+        "description": "Kelly Wearstler designed the hotel and it shows — the 5th-floor rooftop pool is saltwater, framed like a set piece, and it is a very good one. La Piscina handles the bar. Guests and weekday Proper Club members only; no day passes.",
+        "poolNote": "5th-floor saltwater rooftop pool · La Piscina pool bar · Guests + members only · Hours vary seasonally",
         "tags": [
-          "Year-Round",
+          "Saltwater",
           "Design Hotel",
           "Bar",
-          "Aesthetic"
+          "Guests Only"
         ],
         "bookingUrl": "https://www.properhotels.com/austin",
         "priceRange": "$$$$"
@@ -73,13 +73,14 @@ export const CITIES = {
       {
         "name": "Cambria Austin Downtown",
         "slug": "cambria-austin-downtown",
-        "neighborhood": "Downtown",
-        "description": "The value pick in downtown Austin — a smaller rooftop pool with clean views and a deck that doesn't try too hard. Good option when the bigger properties are sold out or over-priced for the weekend.",
-        "poolNote": "Compact rooftop pool · Downtown access · Best value midrise option",
+        "neighborhood": "Rainey Street",
+        "description": "The adults-only option downtown — a 5th-floor resort-style deck with cabanas, an outdoor fireplace and a view over Rainey Street, plus day passes from $35 when the bigger properties are full. The rooftop bar, Limestone, is eleven floors further up.",
+        "poolNote": "5th-floor adults-only pool · Rainey Street views · Cabanas + fireplace · Day passes from $35",
         "tags": [
-          "Value",
-          "Compact",
-          "Downtown"
+          "Adults Only",
+          "Day Pass",
+          "Rainey Street",
+          "Value"
         ],
         "priceRange": "$$"
       }
@@ -93,16 +94,16 @@ export const CITIES = {
     "neighborhoods": "Gold Coast & Fulton Market",
     "heroGradient": "linear-gradient(180deg, rgba(90,180,225,0.8) 0%, rgba(42,120,175,0.78) 42%, rgba(10,44,84,0.92) 100%)",
     "listingsHeading": "Architecture from the water.",
-    "listingsLede": "Chicago's rooftop pools compete with what may be the finest collection of buildings any American skyline has produced. The ones here have the views to justify the comparison.",
+    "listingsLede": "Chicago's rooftop pools compete with what may be the finest collection of buildings any American skyline has produced. The three here have the views to justify the comparison.",
     "noteLabel": "Chicago is seasonal",
-    "noteBody": "Unlike the Sun Belt cities on this list, most Chicago rooftop pools operate May through September, with some brave enough to stay open into October. If you're planning a spring or fall trip, confirm current pool status before booking — nothing deflates a Chicago weekend like a drained rooftop.",
+    "noteBody": "Chicago rooftop pools are firmly seasonal, and the published dates vary more than you would expect: the Viceroy opens May 1, the Hoxton runs early May through October, and the DoubleTree tracks roughly Memorial Day to Labor Day. If you are planning a spring or autumn trip, check the specific hotel rather than the season — nothing deflates a Chicago weekend like a drained rooftop.",
     "hotels": [
       {
         "name": "Viceroy Chicago",
         "slug": "viceroy-chicago",
         "neighborhood": "Gold Coast",
-        "description": "Eighteen floors up in the Gold Coast, the Viceroy trades the Loop's architecture for Lake Michigan — a heated, guest-only rooftop deck beside the Devereaux bar where, on the right afternoon, the water and the lake read as one blue plane. Seasonal, and worth timing a trip around.",
-        "poolNote": "18th-floor rooftop pool · Lake Michigan + Gold Coast views · Guest-exclusive · Seasonal",
+        "description": "Eighteen floors up in the Gold Coast, the Viceroy trades the Loop's architecture for Lake Michigan — a guests-only rooftop deck beside Pandan, where on the right afternoon the water and the lake read as one blue plane. Opens May 1, and worth timing a trip around.",
+        "poolNote": "18th-floor rooftop pool · Lake Michigan views · Guests only · Opens May 1",
         "tags": [
           "Rooftop",
           "Lake Views",
@@ -116,11 +117,11 @@ export const CITIES = {
         "name": "The Hoxton, Chicago",
         "slug": "hoxton-chicago",
         "neighborhood": "Fulton Market",
-        "description": "The Hoxton stacks a rooftop pool above Cabra's Peruvian rooftop restaurant, with the West Loop and the downtown skyline filling the frame. Seasonal and guest-favored, it's the most design-forward pool deck in the neighborhood that's become the city's most design-forward.",
-        "poolNote": "Rooftop pool above Cabra · Fulton Market skyline · Guests + members · Seasonal",
+        "description": "The Hoxton stacks a rooftop pool above Cabra's Peruvian rooftop restaurant, with the city filling the frame. Guests and Working From_ members have it Monday to Saturday — but Sunday brings $20 walk-up day passes, which is the cheapest way onto a good Chicago roof.",
+        "poolNote": "Rooftop pool above Cabra · City views · Early May–October · $20 Sunday day passes",
         "tags": [
           "Rooftop",
-          "Skyline View",
+          "Day Pass",
           "Fulton Market",
           "Design Hotel"
         ],
@@ -130,27 +131,13 @@ export const CITIES = {
         "name": "DoubleTree by Hilton Chicago – Magnificent Mile",
         "slug": "doubletree-mag-mile",
         "neighborhood": "Streeterville",
-        "description": "Thirty floors up in Streeterville, this is the highest genuinely swimmable rooftop pool on the list — a heated deck with a panoramic downtown sweep and cabanas for the afternoon. Unfussy, well-placed, and a real value for the elevation.",
-        "poolNote": "30th-floor rooftop pool · Panoramic downtown views · Cabanas · Seasonal",
+        "description": "High above Streeterville, a seasonal rooftop deck with a panoramic downtown sweep, cabanas for the afternoon, and day passes from $45. Unfussy, well-placed, and a real value for the elevation.",
+        "poolNote": "Rooftop pool · Downtown views · Cabanas · Seasonal · Day passes from $45",
         "tags": [
           "Rooftop",
-          "High Floor",
+          "Day Pass",
           "Panoramic",
           "Value"
-        ],
-        "priceRange": "$$"
-      },
-      {
-        "name": "Radisson Blu Aqua Chicago",
-        "slug": "radisson-blu-aqua-chicago",
-        "neighborhood": "Lakeshore East",
-        "description": "The city's most serious rooftop swim: a 25-meter outdoor lap pool on the Aqua tower's 80,000-square-foot sky-deck, ringed by cabanas, fire pits, and a quarter-mile track. It sits on the podium rather than the summit, but the skyline is right there and the water is long enough to actually swim.",
-        "poolNote": "25m outdoor lap pool · Elevated Aqua sky-deck · Cabanas + fire pits · Skyline views",
-        "tags": [
-          "Lap Pool",
-          "Elevated",
-          "Skyline View",
-          "Big Deck"
         ],
         "priceRange": "$$"
       }
@@ -201,7 +188,7 @@ export const CITIES = {
         "name": "Hôtel Swexan",
         "slug": "hotel-swexan-dallas",
         "neighborhood": "Harwood District",
-        "description": "A 75-foot infinity-edge pool on the 20th floor with a 180-degree turn of the Dallas skyline, a guests-only deck, cabanas, and the Pomelo pool bar. The newest and highest of the city's serious pools.",
+        "description": "A 75-foot infinity-edge pool on the top floor with a 180-degree turn of the Dallas skyline, a guests-only deck, cabanas, and the Pomelo pool bar. Among the newest and highest of the city's serious pools.",
         "poolNote": "20th-floor 75-ft infinity pool · 180° skyline · Guests-only · Pool bar",
         "tags": [
           "Rooftop",
@@ -288,7 +275,7 @@ export const CITIES = {
         "slug": "jacquard-denver",
         "neighborhood": "Cherry Creek North",
         "description": "A 75-foot rooftop infinity lap pool in Cherry Creek North, with a 180-degree turn of the Rockies on one side and downtown Denver on the other — the rare Denver pool where you can actually swim laps with the Front Range in the frame. Kisbee on the Roof handles the drinks.",
-        "poolNote": "75-ft rooftop infinity lap pool · 180° Rockies + downtown · Kisbee rooftop bar · Opens 6am",
+        "poolNote": "Rooftop pool + hot tub · Rockies + downtown views · Kisbee on the Roof · Day passes from $29",
         "tags": [
           "Rooftop",
           "Infinity Edge",
@@ -301,13 +288,13 @@ export const CITIES = {
         "name": "Warwick Denver",
         "slug": "warwick-denver",
         "neighborhood": "Uptown",
-        "description": "One of Denver's longest-running rooftop pools — heated and open year-round on the Warwick's top floor, the Front Range on the horizon and cabanas for the wait. Less scene than the newer arrivals, more reliable; here, the pool is actually the point.",
-        "poolNote": "Top-floor heated rooftop pool · Year-round · Front Range + skyline · Cabanas",
+        "description": "One of Denver's longest-running rooftop pools — heated and open all year on the Warwick's roof deck, with the Mile High skyline laid out below and designer loungers for the wait. Less scene than the newer arrivals, more reliable; here, the pool is actually the point.",
+        "poolNote": "Heated rooftop pool · Year-round · Mile High skyline · Loungers + poolside dining",
         "tags": [
           "Rooftop",
           "Year-Round",
-          "Mountain Views",
-          "Heated"
+          "Heated",
+          "Skyline"
         ],
         "priceRange": "$$"
       }
@@ -414,7 +401,7 @@ export const CITIES = {
         "name": "Conrad Los Angeles",
         "slug": "conrad-los-angeles",
         "neighborhood": "Downtown LA",
-        "description": "A rooftop terrace of 16,000 square feet atop Gehry's Grand LA, with an infinity pool looking straight across downtown to the Walt Disney Concert Hall. The largest and most architecturally serious rooftop pool in the city — though the deck itself is Tara Bernerd's work, not Gehry's.",
+        "description": "A rooftop terrace of 16,000 square feet atop Gehry's Grand LA, with an infinity pool looking straight across downtown to the Walt Disney Concert Hall. One of the largest and most architecturally serious rooftop pools in the city — though the deck itself is Tara Bernerd's work, not Gehry's.",
         "poolNote": "Rooftop infinity pool · 16,000 sq ft terrace · DTLA + Disney Concert Hall · Cabanas",
         "tags": [
           "Rooftop",
@@ -443,7 +430,7 @@ export const CITIES = {
         "name": "Santa Monica Proper",
         "slug": "santa-monica-proper",
         "neighborhood": "Santa Monica",
-        "description": "The only rooftop pool on the Westside — heated, on the top deck, with a panorama of the Pacific, the coastline, and the mountains, plus a Balearic-leaning poolside kitchen. Laps with an ocean in the frame.",
+        "description": "One of the very few rooftop pools on the Westside — heated, on the top deck, with a panorama of the Pacific, the coastline, and the mountains, plus a Balearic-leaning poolside kitchen. Laps with an ocean in the frame.",
         "poolNote": "Rooftop heated pool · Pacific + coastline · Alcoves + daybeds · Poolside dining",
         "tags": [
           "Rooftop",
@@ -614,15 +601,15 @@ export const CITIES = {
     "hotels": [
       {
         "name": "The Barnett",
-        "slug": "ace-hotel-new-orleans",
+        "slug": "the-barnett-new-orleans",
         "neighborhood": "Warehouse District",
-        "description": "The rooftop pool occupies the building's converted upper floors — the Superdome in view, the downtown grid below, and water warmer than the city deserves. The Ace brand has since left; it now runs as The Barnett (JdV by Hyatt), but the rooftop and its more-considered bar program carried over.",
-        "poolNote": "Year-round heated pool · Superdome views · Warehouse District rooftop · Formerly the Ace",
+        "description": "The old Ace, reborn as The Barnett — and the rooftop was rebuilt with it, now High Five Rooftop Pool & Bar nine floors above the Warehouse District. Sweeping downtown views, a proper bar, and a pool that runs on New Orleans weather rather than a calendar.",
+        "poolNote": "9th-floor High Five rooftop pool · Downtown skyline · Seasonal, weather permitting · Day passes",
         "tags": [
-          "Year-Round",
-          "Superdome Views",
+          "Rooftop",
+          "Skyline",
           "Bar",
-          "Warehouse District"
+          "Day Pass"
         ],
         "pick": true,
         "priceRange": "$$"
@@ -631,13 +618,13 @@ export const CITIES = {
         "name": "Virgin Hotels New Orleans",
         "slug": "virgin-hotels-new-orleans",
         "neighborhood": "Warehouse District",
-        "description": "Virgin's rooftop pool — called The Pool Club — carries the brand's social energy to the top of the Warehouse District with Mississippi River views in the distance. The pool is properly sized and the whole deck is open to day-pass guests, which keeps the energy up.",
-        "poolNote": "The Pool Club · Mississippi River distant views · Day passes · Social scene",
+        "description": "The Pool Club is the most sociable rooftop in the Warehouse District — heated, downtown skyline filling the view, and programming most afternoons. Worth knowing before you go: a day pass buys you the water, not a lounger. Poolside seating is reserved for hotel guests.",
+        "poolNote": "Heated rooftop pool · Downtown skyline · Day passes from $25 · Loungers for hotel guests only",
         "tags": [
           "Day Pass",
           "Scene",
-          "River Views",
-          "Social"
+          "Heated",
+          "Skyline"
         ],
         "bookingUrl": "https://virginhotels.com/new-orleans",
         "priceRange": "$$"
@@ -810,7 +797,7 @@ export const CITIES = {
     "neighborhoods": "Downtown Phoenix & Scottsdale",
     "heroGradient": "linear-gradient(180deg, rgba(229,96,32,0.92) 0%, rgba(158,58,110,0.8) 42%, rgba(41,20,110,0.9) 80%, rgba(14,20,54,0.96) 100%)",
     "listingsHeading": "Downtown one way, Camelback the other.",
-    "listingsLede": "Skip the ground-level resort sprawl — these four put you on a roof with a real view and water warm enough to use most of the year.",
+    "listingsLede": "Skip the ground-level resort sprawl — these three put you on a roof with a real view and water warm enough to use most of the year.",
     "noteLabel": "Rooftop, not resort",
     "noteBody": "Arizona is full of gorgeous ground-level resort pools — these four are the genuine elevated ones, chosen for the view. The Valley's summer highs mean early or evening is the move; Camelback from the Canopy deck is best right at sunset.",
     "hotels": [
@@ -819,7 +806,7 @@ export const CITIES = {
         "slug": "palomar-phoenix",
         "neighborhood": "Downtown Phoenix",
         "description": "A 3rd-floor rooftop pool at the Lustre garden, open to a sweeping downtown Phoenix skyline with cabanas and the Eden bar alongside. Downtown's most reliable rooftop swim, and the one that reads least like a resort.",
-        "poolNote": "3rd-floor rooftop pool · Downtown Phoenix skyline · Cabanas · Rooftop bar",
+        "poolNote": "3rd-floor rooftop pool · Downtown Phoenix skyline · Cabanas · Eden Rooftop Bar",
         "tags": [
           "Rooftop",
           "Skyline View",
@@ -834,7 +821,7 @@ export const CITIES = {
         "slug": "canopy-scottsdale",
         "neighborhood": "Old Town Scottsdale",
         "description": "The 7th-floor Outrider rooftop delivers the one view Scottsdale visitors come for: Camelback Mountain, dead ahead, from a heated pool with full poolside service. The sunsets are the reason to book.",
-        "poolNote": "7th-floor rooftop pool + hot tub · Camelback Mountain · Heated · Poolside service",
+        "poolNote": "Rooftop pool · Camelback Mountain views · Old Town Scottsdale · Sunset-facing",
         "tags": [
           "Rooftop",
           "Mountain Views",
@@ -844,25 +831,11 @@ export const CITIES = {
         "priceRange": "$$$"
       },
       {
-        "name": "Cambria Downtown Phoenix",
-        "slug": "cambria-phoenix",
-        "neighborhood": "Roosevelt Row",
-        "description": "A 7th-floor rooftop pool with a genuine 360 of the Phoenix skyline off the Roosevelt Row arts district, loungers, and a rooftop bar. An easy, well-reviewed downtown pick that doesn't cost resort money.",
-        "poolNote": "7th-floor rooftop pool · 360° Phoenix skyline · Loungers · Rooftop bar",
-        "tags": [
-          "Rooftop",
-          "360 Views",
-          "Roosevelt Row",
-          "Value"
-        ],
-        "priceRange": "$$"
-      },
-      {
         "name": "AC Hotel Phoenix Tempe/Downtown",
         "slug": "ac-hotel-tempe",
         "neighborhood": "Downtown Tempe",
         "description": "A rooftop pool and sun terrace looking over Tempe and ASU's stadium — the Valley's East Side entry, swimmable and well-served, with the Sun Devil skyline for company.",
-        "poolNote": "Rooftop pool + sun terrace · Tempe + ASU stadium views · Poolside service",
+        "poolNote": "Rooftop pool · Downtown Tempe · 21+ to check in",
         "tags": [
           "Rooftop",
           "Stadium Views",
@@ -890,7 +863,7 @@ export const CITIES = {
         "slug": "pendry-san-diego",
         "neighborhood": "Gaslamp Quarter",
         "description": "The Pool House rooftop perches above 5th Avenue with a sun-drenched deck and sweeping Gaslamp and downtown views — the Gaslamp's most polished rooftop swim, and its strongest luxury reputation.",
-        "poolNote": "Rooftop pool (The Pool House) · Gaslamp + downtown skyline · Cabanas · Luxury",
+        "poolNote": "Rooftop pool · Gaslamp + downtown skyline · Cabanas · Non-guest cabanas Mon–Thu only",
         "tags": [
           "Rooftop",
           "Skyline View",
@@ -905,7 +878,7 @@ export const CITIES = {
         "slug": "andaz-san-diego",
         "neighborhood": "Gaslamp Quarter",
         "description": "A heated, lap-size rooftop pool seven stories over the Gaslamp with a downtown skyline view. Scene-y on weekends, genuinely swimmable on a weekday morning — pick your hour.",
-        "poolNote": "7th-floor rooftop pool · Heated, lap-size · Gaslamp skyline · Scene",
+        "poolNote": "Rooftop pool · Lap-size, heated to 80° · Gaslamp skyline · Hotel guests only",
         "tags": [
           "Rooftop",
           "Lap Pool",
@@ -918,27 +891,27 @@ export const CITIES = {
         "name": "InterContinental San Diego",
         "slug": "intercontinental-san-diego",
         "neighborhood": "Embarcadero",
-        "description": "A 4th-floor rooftop pool right over the water, heated to 81°, with San Diego Bay and the harbor filling the view and the Layover bar alongside. The cleanest 'swim with a bay view' in the city.",
-        "poolNote": "4th-floor bayfront rooftop pool · Heated 81° · San Diego Bay + harbor · Rooftop bar",
+        "description": "The Layover rooftop pool sits four floors up on the Embarcadero with San Diego Bay filling the view — cabanas, a proper bar, and the harbour traffic going by below. Pool access is included in the guest amenity fee.",
+        "poolNote": "4th-floor rooftop pool · San Diego Bay views · Layover bar · Cabanas",
         "tags": [
           "Rooftop",
           "Bay Views",
-          "Heated",
-          "Bayfront"
+          "Bayfront",
+          "Cabanas"
         ],
         "priceRange": "$$$"
       },
       {
-        "name": "Kimpton Solamar San Diego",
-        "slug": "solamar-san-diego",
+        "name": "Margaritaville Hotel San Diego Gaslamp Quarter",
+        "slug": "margaritaville-san-diego",
         "neighborhood": "Gaslamp Quarter",
-        "description": "The Upper East Bar wraps a rooftop pool in a lush poolside terrace with sweeping downtown views — the more laid-back Gaslamp rooftop, easy to spend a whole afternoon on.",
-        "poolNote": "Rooftop pool (Upper East Bar) · Downtown views · Poolside terrace · Relaxed",
+        "description": "Rebranded from the Kimpton Solamar in 2023 after a gut renovation, and the rooftop came out the other side as what the operator calls downtown San Diego's largest rooftop pool. The Gaslamp is right below and 5 o'Clock Somewhere handles the drinks — sillier than its neighbours, and a bigger swim than any of them.",
+        "poolNote": "Rooftop pool · Downtown San Diego's largest · Gaslamp Quarter · 5 o'Clock Somewhere Bar",
         "tags": [
           "Rooftop",
-          "Skyline View",
+          "Largest Downtown",
           "Gaslamp",
-          "Relaxed"
+          "Scene"
         ],
         "priceRange": "$$"
       },
@@ -946,12 +919,12 @@ export const CITIES = {
         "name": "Hard Rock Hotel San Diego",
         "slug": "hard-rock-san-diego",
         "neighborhood": "Gaslamp Quarter",
-        "description": "The 4th-floor FLOAT rooftop pool takes in the Gaslamp, the harbor, and the Coronado Bridge — a full-scene rooftop that still lets you get in the water.",
-        "poolNote": "4th-floor rooftop pool (FLOAT) · Harbor + Coronado Bridge · Scene",
+        "description": "FLOAT is the fourth-floor rooftop pool and lounge, looking over the harbour, the Gaslamp and the Coronado Bridge. It runs seasonally and weather permitting — and the hotel is mid-renovation under new management, so confirm before you plan around it.",
+        "poolNote": "Rooftop pool (FLOAT) · Harbor + Coronado Bridge · Seasonal, weather permitting",
         "tags": [
           "Rooftop",
           "Harbor Views",
-          "Scene",
+          "Seasonal",
           "Gaslamp"
         ],
         "priceRange": "$$"

@@ -65,9 +65,6 @@ export const AFFILIATE_HOTELS = {
   'doubletree-mag-mile': {
     bookingcom: 'https://www.booking.com/hotel/us/doubletree-chicago-magnificent-mile.html',
   },
-  'radisson-blu-aqua-chicago': {
-    bookingcom: 'https://www.booking.com/hotel/us/radisson-blu-aqua-chicago.html',
-  },
 
   // --- Denver ---
   'halcyon-cherry-creek': {
@@ -92,8 +89,8 @@ export const AFFILIATE_HOTELS = {
 
   // --- New Orleans ---
   // "The Barnett, JdV by Hyatt" (rebranded from the Ace Hotel New Orleans).
-  // Internal slug key stays 'ace-hotel-new-orleans'; Booking slug too.
-  'ace-hotel-new-orleans': {
+  // Our slug now matches the current name; Booking.com still uses the Ace slug.
+  'the-barnett-new-orleans': {
     bookingcom: 'https://www.booking.com/hotel/us/ace-new-orleans.html',
   },
   'virgin-hotels-new-orleans': {
@@ -163,9 +160,6 @@ export const AFFILIATE_HOTELS = {
   'canopy-scottsdale': {
     bookingcom: 'https://www.booking.com/hotel/us/canopy-by-hilton-scottsdale-old-town.html',
   },
-  'cambria-phoenix': {
-    bookingcom: 'https://www.booking.com/hotel/us/cambria-downtown-phoenix.html',
-  },
   'ac-hotel-tempe': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-by-marriott-phoenix-tempe-downtown.html',
   },
@@ -180,7 +174,10 @@ export const AFFILIATE_HOTELS = {
   'intercontinental-san-diego': {
     bookingcom: 'https://www.booking.com/hotel/us/intercontinental-hotels-san-diego.html',
   },
-  'solamar-san-diego': {
+  // "Margaritaville Hotel San Diego Gaslamp Quarter" — rebranded from Kimpton
+  // Solamar in Aug 2023. Booking.com URL below is the legacy Kimpton slug and
+  // has NOT been re-verified since the rebrand.
+  'margaritaville-san-diego': {
     bookingcom: 'https://www.booking.com/hotel/us/solamar-a-kimpton.html',
   },
   'hard-rock-san-diego': {
@@ -221,6 +218,15 @@ export const AFFILIATE_HOTELS = {
   'ac-hotel-tucson': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
   },
+  // NOTE: "Cambria Downtown Phoenix" was REMOVED (2026-07-18). Its own amenity
+  // list says "Sun Deck" with no pool; the only pool claim anywhere is a Dec
+  // 2019 pre-opening press release, and independent copy calls the water a
+  // "reflecting pool". Looks value-engineered out before opening.
+  //
+  // NOTE: "Radisson Blu Aqua Chicago" was REMOVED (2026-07-18). The lap pool is
+  // INDOOR and 25 yards; the outdoor pool sits on a 3rd-level podium deck shared
+  // with Aqua Tower residents. Fails the elevation bar.
+  //
   // NOTE: "Soho Beach House" was REMOVED (2026-07-18) on review quality. The
   // audit had separately flagged that its only ELEVATED pool is an 8th-floor
   // plunge, the big 100ft pool is ground level, and rooftop access is members

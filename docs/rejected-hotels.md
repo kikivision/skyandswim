@@ -145,3 +145,50 @@ Anchor on the hotel's own site or Booking.com amenity data. Note also that
 TripAdvisor, Yelp, Booking.com, Google Reviews and Reddit all block automated
 access (HTTP 403), so review *sentiment* can't be gathered at scale — operator
 sites and published first-hand reviews are the reliable base.
+
+---
+
+## Second removal round (2026-07-18, operator-site audit)
+
+| Hotel | City | Reason |
+|---|---|---|
+| **Soho Beach House** | Miami | Review quality. Separately: the 100ft main pool is **ground level**, the only elevated pool is an 8th-floor plunge the operator never affirms as swimmable, and rooftop access is **members 21+ only** (guests buy a Soho Friends membership). |
+| **Cambria Downtown Phoenix** | Phoenix | **Probably has no pool.** The operator's amenity list reads "Sun Deck" with no pool anywhere. The only pool claim is a Dec 2019 *pre-opening* press release; independent copy calls the water a "reflecting pool" and "wading only." Classic value-engineered-out amenity. |
+| **Radisson Blu Aqua** | Chicago | Our "25m outdoor lap pool" was two errors fused: the lap pool is **indoor** and **25 yards**, and the outdoor pool is separate. That outdoor pool sits on a **3rd-level podium deck shared with Aqua Tower residents** — fails the elevation bar. |
+
+### Renamed, not removed
+
+- **Kimpton Solamar → Margaritaville Hotel San Diego Gaslamp Quarter** (Aug 2023,
+  $30M renovation). `hotelsolamar.com` 301s to Margaritaville. "Upper East Bar" is
+  dead branding — the outlets are LandShark and 5 o'Clock Somewhere. **IHG still
+  hosts an orphaned Upper East Bar page; do not validate against it.**
+- **Bobby Hotel → The Nash** (Opal Collection, 1 Mar 2026). `bobbyhotel.com` no
+  longer resolves. The rooftop fixture is a 1956 Scenicruiser bus, not an Airstream.
+- **Graduate Nashville → Graduate by Hilton Nashville.** The pool belongs to White
+  Limozeen, not the hotel — reservations required for everyone including guests.
+- **Ace Hotel New Orleans → The Barnett** (JdV by Hyatt). Rooftop bar replaced by
+  High Five; slug updated from `ace-hotel-new-orleans`.
+- **Nautilus Sonesta → The James Nautilus Miami Beach**, late 2026, after a $40M
+  renovation with a likely closure window. Watch this one.
+
+### Watch list
+
+- **Hard Rock San Diego** — Coury Hospitality took over July 2025 with a
+  "transformational renovation in 2026" underway. FLOAT is a plausible casualty.
+  Recheck around September 2026.
+
+## On superlatives
+
+Two of our exclusivity claims were falsified against operator sites:
+
+- "PNW's only one" (Four Seasons Seattle) — Four Seasons claims only **Seattle's
+  only *infinity-edge* hotel pool**. We widened it on two axes. Silver Cloud
+  Seattle Stadium advertises a rooftop pool a mile away.
+- "Charleston's only genuine rooftop pool" (Market Pavilion) — Hotel Bennett and
+  The Restoration both publish rooftop pools. The operator's real claim is
+  "Charleston's only rooftop **cascading** pool."
+
+**Rule going forward:** subjective curation ("the best of these", "the most
+distinctive") is fine and is the point of the site. Falsifiable exclusivity —
+*only, first, largest, highest, longest* — needs an operator source or a hedge,
+because a single counterexample kills it and takes credibility with it.

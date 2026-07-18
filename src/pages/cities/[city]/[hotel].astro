@@ -153,40 +153,6 @@ const jsonLd = [
         </section>
       )}
 
-      {hotel.guestReviews && (
-        <section class="block guests" aria-labelledby="guests-heading">
-          <h2 id="guests-heading">What guests say</h2>
-          <p class="guests-source">
-            Recurring themes from visitor reviews{hotel.guestReviews.volume ? ` — ${hotel.guestReviews.volume}` : ""}.
-          </p>
-
-          <ul class="verdicts">
-            {hotel.guestReviews.praise?.map((p) => (
-              <li class="v-good">
-                <span class="v-mark" aria-hidden="true">+</span>
-                <span>{p}</span>
-              </li>
-            ))}
-            {hotel.guestReviews.complaints?.map((c) => (
-              <li class="v-bad">
-                <span class="v-mark" aria-hidden="true">−</span>
-                <span>{c}</span>
-              </li>
-            ))}
-          </ul>
-
-          {hotel.guestReviews.bestTime && (
-            <p class="best-time">
-              <strong>Best time to go:</strong> {hotel.guestReviews.bestTime}
-            </p>
-          )}
-
-          {hotel.guestReviews.checked && (
-            <p class="checked">Reviews last read {hotel.guestReviews.checked}.</p>
-          )}
-        </section>
-      )}
-
       {siblings.length > 0 && (
         <section class="block siblings" aria-labelledby="more-heading">
           <h2 id="more-heading">More rooftop pools in {city}</h2>
@@ -331,71 +297,6 @@ const jsonLd = [
     color: rgba(220, 240, 245, 0.55);
     margin: 0.9rem 0 0;
     max-width: 48ch;
-  }
-
-  /* Review synthesis — visually distinct from our own editorial so a reader can
-     tell at a glance which voice is which. */
-  .guests {
-    border-top: 1px solid rgba(168, 216, 216, 0.18);
-    padding-top: clamp(2rem, 4vw, 2.8rem);
-  }
-  .guests-source {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 0.82rem;
-    line-height: 1.55;
-    color: rgba(220, 240, 245, 0.55);
-    margin: -0.4rem 0 1.4rem;
-    max-width: 60ch;
-  }
-
-  .verdicts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
-  .verdicts li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 0.98rem;
-    line-height: 1.55;
-    color: rgba(220, 240, 245, 0.88);
-  }
-  .v-mark {
-    flex: none;
-    width: 1.15rem;
-    height: 1.15rem;
-    margin-top: 0.16rem;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-  .v-good .v-mark { background: rgba(42, 191, 191, 0.18); color: var(--teal); }
-  .v-bad .v-mark { background: rgba(212, 72, 104, 0.18); color: #f090a6; }
-
-  .best-time {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(220, 240, 245, 0.88);
-    margin: 1.5rem 0 0;
-    padding: 0.9rem 1.2rem;
-    background: rgba(42, 191, 191, 0.07);
-    border-left: 2px solid rgba(42, 191, 191, 0.35);
-    border-radius: 0 6px 6px 0;
-    max-width: 66ch;
-  }
-  .best-time strong { font-weight: 500; color: #fff; }
-
-  .checked {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 0.75rem;
-    color: rgba(220, 240, 245, 0.45);
-    margin: 1rem 0 0;
   }
 
   .siblings { border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: clamp(2rem, 4vw, 2.8rem); }
