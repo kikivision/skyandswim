@@ -159,8 +159,8 @@ export const CITIES = {
         "name": "The Joule",
         "slug": "the-joule-dallas",
         "neighborhood": "Main Street District",
-        "description": "Downtown's showpiece: a rooftop pool cantilevered eight feet past the building edge behind glass, so you swim out over Main Street ten floors up and look straight down. The single most distinctive pool in Texas.",
-        "poolNote": "Rooftop pool · Glass ledge over Main Street · 10 floors up · Cabanas",
+        "description": "Downtown's showpiece: a rooftop pool cantilevered eight feet past the building edge behind glass, so you swim out over Main Street and look straight down. The single most distinctive pool in Texas.",
+        "poolNote": "Rooftop pool · Glass ledge over Main Street · Cabanas · Day passes Sun–Thu",
         "tags": [
           "Rooftop",
           "Glass Ledge",
@@ -174,13 +174,13 @@ export const CITIES = {
         "name": "Thompson Dallas",
         "slug": "thompson-dallas",
         "neighborhood": "Main Street District",
-        "description": "A heated infinity-edge rooftop pool atop The National tower, with an open-air sweep of the downtown skyline, private cabanas, and poolside dining. The polished, grown-up end of the Dallas rooftop scene.",
-        "poolNote": "Rooftop infinity-edge pool · Downtown skyline · Cabanas · Poolside dining",
+        "description": "A rooftop pool atop The National tower, with an open-air sweep of the downtown skyline, private cabanas, and poolside dining. Adults-only, and the polished, grown-up end of the Dallas rooftop scene.",
+        "poolNote": "Rooftop pool · Downtown skyline · Cabanas · Adults-only · Day passes from $40",
         "tags": [
           "Rooftop",
-          "Infinity Edge",
+          "Adults Only",
           "Skyline",
-          "Downtown"
+          "Day Pass"
         ],
         "priceRange": "$$$"
       },
@@ -188,12 +188,12 @@ export const CITIES = {
         "name": "Hôtel Swexan",
         "slug": "hotel-swexan-dallas",
         "neighborhood": "Harwood District",
-        "description": "A 75-foot infinity-edge pool on the top floor with a 180-degree turn of the Dallas skyline, a guests-only deck, cabanas, and the Pomelo pool bar. Among the newest and highest of the city's serious pools.",
-        "poolNote": "20th-floor 75-ft infinity pool · 180° skyline · Guests-only · Pool bar",
+        "description": "The top-floor pool turns a full 180 degrees across the Dallas skyline — a guests-only deck, cabanas, and the Pomelo pool bar. Among the newest and highest of the city's serious pools.",
+        "poolNote": "Top-floor pool · 180° Dallas skyline · Guests only · Pomelo pool bar",
         "tags": [
           "Rooftop",
-          "Infinity Edge",
           "High Floor",
+          "Guests Only",
           "Uptown"
         ],
         "priceRange": "$$$$"
@@ -202,13 +202,13 @@ export const CITIES = {
         "name": "W Dallas",
         "slug": "w-dallas-victory",
         "neighborhood": "Victory Park",
-        "description": "The 16th-floor WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. Daybeds, a full bar, and the Victory Park energy below.",
-        "poolNote": "16th-floor WET Deck infinity pool · Skyline · Daybeds · Full bar",
+        "description": "The WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. A full bar, and the Victory Park energy below.",
+        "poolNote": "Rooftop WET Deck infinity pool · Downtown skyline · Full bar · Day passes from $40",
         "tags": [
           "Rooftop",
           "Infinity Edge",
           "Scene",
-          "High Floor"
+          "Day Pass"
         ],
         "priceRange": "$$$"
       },
@@ -274,13 +274,13 @@ export const CITIES = {
         "name": "The Jacquard, Autograph Collection",
         "slug": "jacquard-denver",
         "neighborhood": "Cherry Creek North",
-        "description": "A 75-foot rooftop infinity lap pool in Cherry Creek North, with a 180-degree turn of the Rockies on one side and downtown Denver on the other — the rare Denver pool where you can actually swim laps with the Front Range in the frame. Kisbee on the Roof handles the drinks.",
+        "description": "A rooftop pool in Cherry Creek North with the Rockies on one side and downtown Denver on the other — the rare Denver deck where the Front Range is genuinely in the frame while you swim. Kisbee on the Roof handles the drinks.",
         "poolNote": "Rooftop pool + hot tub · Rockies + downtown views · Kisbee on the Roof · Day passes from $29",
         "tags": [
           "Rooftop",
-          "Infinity Edge",
           "Mountain Views",
-          "Lap Pool"
+          "Day Pass",
+          "Cherry Creek"
         ],
         "priceRange": "$$$"
       },
@@ -649,12 +649,12 @@ export const CITIES = {
         "slug": "william-vale",
         "neighborhood": "Williamsburg",
         "description": "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something. The views change character with the light — blinding at noon, cinematic at dusk.",
-        "poolNote": "60-ft heated infinity edge pool (80°F) · May–September · Day passes available · Deck bar",
+        "poolNote": "60-ft heated pool (80°F) · May–September · Day passes available · Deck bar",
         "tags": [
-          "Infinity Edge",
           "Day Pass",
           "Skyline View",
-          "Adults-Focused"
+          "Adults-Focused",
+          "Heated"
         ],
         "bookingUrl": "https://www.thewilliamvale.com",
         "pick": true,
@@ -665,7 +665,7 @@ export const CITIES = {
         "slug": "arlo-williamsburg",
         "neighborhood": "Williamsburg",
         "description": "Compact but capable — the rooftop pool is on the smaller side but is rarely crowded at the right hours. Good for an afternoon session, especially mid-week; the operator programmes weekend DJ sets and Sunday day parties, so that is when the deck turns.",
-        "poolNote": "Seasonal heated pool · 40-ft · East River views · Day passes + cabanas available",
+        "poolNote": "Seasonal rooftop pool · 40-ft · East River views · Day passes + cabanas available",
         "tags": [
           "Seasonal",
           "Day Pass",
@@ -820,7 +820,7 @@ export const CITIES = {
         "name": "Canopy by Hilton Scottsdale Old Town",
         "slug": "canopy-scottsdale",
         "neighborhood": "Old Town Scottsdale",
-        "description": "The 7th-floor Outrider rooftop delivers the one view Scottsdale visitors come for: Camelback Mountain, dead ahead, from a heated pool with full poolside service. The sunsets are the reason to book.",
+        "description": "The Outrider rooftop delivers the one view Scottsdale visitors come for: Camelback Mountain, dead ahead, from a pool that faces it square on. The sunsets are the reason to book.",
         "poolNote": "Rooftop pool · Camelback Mountain views · Old Town Scottsdale · Sunset-facing",
         "tags": [
           "Rooftop",
