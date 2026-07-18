@@ -13,6 +13,7 @@ interface Props {
   heroGradient?: string;
   skyline?: boolean;
   motif?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
 const {
@@ -24,12 +25,14 @@ const {
   heroGradient = "linear-gradient(180deg, rgba(42,191,191,0.25) 0%, rgba(10,42,72,0.6) 100%)",
   skyline = false,
   motif,
+  jsonLd = [],
 } = Astro.props;
 ---
 
 <BaseLayout
   title={`${city} Rooftop Pool Hotels · Sky & Swim`}
   description={`The best rooftop pool hotels in ${city}, ${state} — ranked by view, water, and whether the moment earns the price. ${poolCount} curated picks across ${neighborhoods}.`}
+  jsonLd={jsonLd}
 >
   <div class="city-page">
 
@@ -62,7 +65,11 @@ const {
         </a>
         <div class="hero-content">
           <p class="hero-kicker">Sky &amp; Swim · {state}</p>
-          <h1 class="hero-city">{city}</h1>
+          <!-- The H1 carries the full query phrase ("Austin Rooftop Pool
+               Hotels") while keeping the city name as the display element. -->
+          <h1 class="hero-city">
+            {city}<span class="hero-qualifier">Rooftop Pool Hotels</span>
+          </h1>
           <p class="hero-tagline">{tagline}</p>
           <div class="hero-stats">
             <span class="stat">
@@ -207,6 +214,17 @@ const {
     color: #fff;
     letter-spacing: -0.01em;
     margin: 0;
+  }
+
+  .hero-qualifier {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: rgba(220, 240, 245, 0.72);
+    margin-top: 0.9rem;
   }
 
   .hero-tagline {
