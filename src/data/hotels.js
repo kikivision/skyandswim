@@ -205,7 +205,8 @@ export const CITIES = {
         "verified": {
           "heated": "Confirmed by Karen 2026-07-18. Not stated by Hyatt or ResortPass.",
           "infinityEdge": "Confirmed by Karen 2026-07-18. Appeared only in aggregator copy, no operator source."
-        }
+        },
+        "heroCredit": "Thompson Dallas"
       },
       {
         "name": "Hôtel Swexan",
@@ -225,7 +226,8 @@ export const CITIES = {
         },
         "debunked": {
           "infinityEdge": "Checked against rooftop photography 2026-07-18 — solid coping above the waterline, no spillover, no catch basin. The claim comes from the 2023 opening press release and was copied onward from there. Do not re-add."
-        }
+        },
+        "heroCredit": "Hôtel Swexan"
       },
       {
         "name": "W Dallas",
@@ -242,7 +244,8 @@ export const CITIES = {
         "priceRange": "$$$",
         "verified": {
           "floor": "16th floor — Confirmed by Karen 2026-07-18. Marriott states no floor; the only other source was the pool contractor's portfolio."
-        }
+        },
+        "heroCredit": "W Dallas"
       },
       {
         "name": "The Statler Dallas",
@@ -256,7 +259,8 @@ export const CITIES = {
           "Scene",
           "Historic"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "heroCredit": "The Statler Dallas"
       },
       {
         "name": "The Adolphus",
@@ -270,7 +274,8 @@ export const CITIES = {
           "Cabanas",
           "Downtown"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "heroCredit": "The Adolphus"
       }
     ]
   },

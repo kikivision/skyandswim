@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (9)
+## Done (14)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -29,6 +29,11 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `marriott-marquis-houston` — Marriott Marquis Houston (Houston)
 - [x] `the-joule-dallas` — The Joule (Dallas)
 - [x] `william-vale` — The William Vale (New York)
+- [x] `thompson-dallas` — Thompson Dallas (Dallas)
+- [x] `hotel-swexan-dallas` — Hôtel Swexan (Dallas)
+- [x] `w-dallas-victory` — W Dallas (Dallas)
+- [x] `statler-dallas` — The Statler Dallas (Dallas)
+- [x] `the-adolphus-dallas` — The Adolphus (Dallas)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -45,13 +50,6 @@ collective credit line beneath the grid.
 - [ ] `viceroy-chicago` — Viceroy Chicago  **← Editor's Pick, homepage**
 - [ ] `hoxton-chicago` — The Hoxton, Chicago
 - [ ] `doubletree-mag-mile` — DoubleTree by Hilton Chicago – Magnificent Mile
-
-### Dallas, TX  (5)
-- [ ] `thompson-dallas` — Thompson Dallas
-- [ ] `hotel-swexan-dallas` — Hôtel Swexan
-- [ ] `w-dallas-victory` — W Dallas
-- [ ] `statler-dallas` — The Statler Dallas
-- [ ] `the-adolphus-dallas` — The Adolphus
 
 ### Denver, CO  (2)
 - [ ] `jacquard-denver` — The Jacquard, Autograph Collection
@@ -111,6 +109,6 @@ collective credit line beneath the grid.
 
 ---
 
-**46 to pull, 9 to re-verify.** Priority: Editor's Picks first (they
+**41 to pull, 9 to re-verify.** Priority: Editor's Picks first (they
 surface on the homepage), then the cities with proven Search Console demand —
 Washington DC, Philadelphia and Houston.
