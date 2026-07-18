@@ -37,9 +37,6 @@ export const AFFILIATE_HOTELS = {
   'east-miami': {
     bookingcom: 'https://www.booking.com/hotel/us/east-miami.html',
   },
-  'soho-beach-house': {
-    bookingcom: 'https://www.booking.com/hotel/us/soho-beach-house.html',
-  },
 
   // --- Austin ---
   'line-austin': {
@@ -87,7 +84,9 @@ export const AFFILIATE_HOTELS = {
   'graduate-nashville': {
     bookingcom: 'https://www.booking.com/hotel/us/graduate-nashville.html',
   },
-  'bobby-hotel-nashville': {
+  // "The Nash" — rebranded from Bobby Hotel 2026-03-01 (Opal Collection).
+  // Booking.com still serves it at the legacy /bobby.html slug; re-verify.
+  'the-nash-nashville': {
     bookingcom: 'https://www.booking.com/hotel/us/bobby.html',
   },
 
@@ -222,6 +221,11 @@ export const AFFILIATE_HOTELS = {
   'ac-hotel-tucson': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
   },
+  // NOTE: "Soho Beach House" was REMOVED (2026-07-18) on review quality. The
+  // audit had separately flagged that its only ELEVATED pool is an 8th-floor
+  // plunge, the big 100ft pool is ground level, and rooftop access is members
+  // 21+ only (guests get in by buying a Soho Friends membership).
+  //
   // NOTE: "Royalton Park Avenue" was REMOVED (2026-07-18) because the hotel is
   // CLOSED — its own site says it closed 2026-07-05, reopening December 2026 as
   // something "entirely new," so expect a rebrand. Revisit in December; if the

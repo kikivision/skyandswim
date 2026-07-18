@@ -166,7 +166,7 @@ export const CITIES = {
     "listingsHeading": "High, and hanging over Main Street.",
     "listingsLede": "Downtown Dallas stacked its best pools up top — infinity edges, glass ledges, and one that swims right out over the street. Six that earn the elevation.",
     "noteLabel": "Downtown vs Uptown",
-    "noteBody": "the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. Either way, the Texas heat keeps most of them usable close to year-round.",
+    "noteBody": "the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. The Texas heat keeps most of them usable well past summer, though the Adolphus runs its rooftop season through Labor Day and Swexan is the reliable year-round one.",
     "hotels": [
       {
         "name": "The Joule",
@@ -212,7 +212,7 @@ export const CITIES = {
         "priceRange": "$$$$"
       },
       {
-        "name": "W Dallas – Victory",
+        "name": "W Dallas",
         "slug": "w-dallas-victory",
         "neighborhood": "Victory Park",
         "description": "The 16th-floor WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. Daybeds, a full bar, and the Victory Park energy below.",
@@ -244,7 +244,7 @@ export const CITIES = {
         "slug": "the-adolphus-dallas",
         "neighborhood": "Main Street District",
         "description": "The 1912 grande dame caps itself with a temperature-controlled rooftop pool deck — cabanas, a fire pit, a full pool bar, and downtown views from a genuine Dallas landmark.",
-        "poolNote": "Rooftop pool deck · Downtown views · Cabanas + fire pit · Historic 1912 landmark",
+        "poolNote": "Rooftop pool deck · Downtown views · Cabanas + fire pit · Rooftop season runs through Labor Day",
         "tags": [
           "Rooftop",
           "Historic",
@@ -414,8 +414,8 @@ export const CITIES = {
         "name": "Conrad Los Angeles",
         "slug": "conrad-los-angeles",
         "neighborhood": "Downtown LA",
-        "description": "A Frank Gehry-designed rooftop with a 16,000-square-foot deck and an infinity pool looking straight across downtown to City Hall and the Walt Disney Concert Hall. The largest and most architecturally serious rooftop pool in the city.",
-        "poolNote": "Rooftop infinity pool · 16,000 sq ft Gehry deck · DTLA + Disney Concert Hall · Cabanas",
+        "description": "A rooftop terrace of 16,000 square feet atop Gehry's Grand LA, with an infinity pool looking straight across downtown to the Walt Disney Concert Hall. The largest and most architecturally serious rooftop pool in the city — though the deck itself is Tara Bernerd's work, not Gehry's.",
+        "poolNote": "Rooftop infinity pool · 16,000 sq ft terrace · DTLA + Disney Concert Hall · Cabanas",
         "tags": [
           "Rooftop",
           "Infinity Edge",
@@ -429,8 +429,8 @@ export const CITIES = {
         "name": "Thompson Hollywood",
         "slug": "thompson-hollywood",
         "neighborhood": "Hollywood",
-        "description": "The rooftop pool most likely to end up in your camera roll — Hollywood Hills and the Hollywood Sign on one side, the Pacific haze on the other. It doubles as a scene, but the view earns it.",
-        "poolNote": "Rooftop pool · Hollywood Sign + Pacific · Rooftop bar · Scene",
+        "description": "The rooftop pool most likely to end up in your camera roll — Hollywood Hills and the Hollywood Sign filling the frame, with Bar Lis and its retractable roof alongside. It doubles as a scene, but the view earns it.",
+        "poolNote": "Rooftop pool · Hollywood Hills + Hollywood Sign · Bar Lis · Scene",
         "tags": [
           "Rooftop",
           "Hollywood Views",
@@ -443,12 +443,12 @@ export const CITIES = {
         "name": "Santa Monica Proper",
         "slug": "santa-monica-proper",
         "neighborhood": "Santa Monica",
-        "description": "The only rooftop pool on the Westside — a heated saltwater pool on the top deck with a panorama of the Pacific, the coastline, and the mountains, plus a Balearic-leaning poolside kitchen. Laps with an ocean in the frame.",
-        "poolNote": "Rooftop saltwater pool · Pacific + coastline · Cabanas · Poolside dining",
+        "description": "The only rooftop pool on the Westside — heated, on the top deck, with a panorama of the Pacific, the coastline, and the mountains, plus a Balearic-leaning poolside kitchen. Laps with an ocean in the frame.",
+        "poolNote": "Rooftop heated pool · Pacific + coastline · Alcoves + daybeds · Poolside dining",
         "tags": [
           "Rooftop",
           "Ocean Views",
-          "Saltwater",
+          "Heated",
           "Design Hotel"
         ],
         "priceRange": "$$$$"
@@ -471,13 +471,13 @@ export const CITIES = {
         "name": "Kimpton Everly Hotel",
         "slug": "kimpton-everly-hollywood",
         "neighborhood": "Hollywood",
-        "description": "A 5th-floor rooftop pool tucked into the Hollywood Hills with six cabanas, an outdoor lounge, and Sign-and-skyline views. The calmer, more design-driven Hollywood rooftop.",
-        "poolNote": "5th-floor rooftop pool · Hollywood Hills + Sign · Six cabanas · Lounge",
+        "description": "A 5th-floor rooftop pool tucked into the Hollywood Hills with six named cabanas, an outdoor lounge, and a skyline-and-hills panorama. Heated and open year-round — the calmer, more design-driven Hollywood rooftop.",
+        "poolNote": "5th-floor rooftop pool · LA skyline + Hollywood Hills · Six cabanas · Year-round",
         "tags": [
           "Rooftop",
           "Hills Views",
           "Cabanas",
-          "Design Hotel"
+          "Year-Round"
         ],
         "priceRange": "$$$"
       },
@@ -485,12 +485,12 @@ export const CITIES = {
         "name": "The Hoxton, Downtown LA",
         "slug": "hoxton-dtla",
         "neighborhood": "Downtown LA",
-        "description": "A lagoon-colored rooftop pool beside the Pilot rooftop restaurant, with a wide-open downtown skyline view. The Hoxton's usual knack for a good-looking rooftop, applied to LA.",
-        "poolNote": "Rooftop pool · DTLA skyline · Pilot rooftop restaurant · Design-forward",
+        "description": "A lagoon-colored rooftop pool beside Inanna Bar, with a wide-open downtown skyline view and — unusually for LA — an operator who commits to opening it every day of the year. The Hoxton's usual knack for a good-looking rooftop, applied to Broadway.",
+        "poolNote": "Rooftop pool · DTLA skyline · Inanna Bar · Open year-round",
         "tags": [
           "Rooftop",
           "Skyline View",
-          "Downtown",
+          "Year-Round",
           "Design Hotel"
         ],
         "priceRange": "$$$"
@@ -505,7 +505,7 @@ export const CITIES = {
     "neighborhoods": "South Beach & Brickell",
     "heroGradient": "linear-gradient(180deg, rgba(233,116,112,0.9) 0%, rgba(172,72,80,0.7) 28%, rgba(42,76,94,0.6) 60%, rgba(10,42,72,0.84) 100%)",
     "listingsHeading": "Pools that earn the sun.",
-    "listingsLede": "Miami has more poolside options than anywhere else on this list — we picked the four rooftop and elevated pools where the setting, not the scene, is the reason to be there.",
+    "listingsLede": "Miami has more poolside options than anywhere else on this list — we picked the three rooftop and elevated pools where the setting, not the scene, is the reason to be there.",
     "noteLabel": "South Beach vs Brickell",
     "noteBody": "South Beach pools trend toward the theatrical; the crowd and the energy are part of what you're paying for. Brickell pools are newer, higher up, and more likely to give you the city-and-water view with less ambient noise. Neither is wrong — they're just different afternoons.",
     "hotels": [
@@ -513,8 +513,8 @@ export const CITIES = {
         "name": "1 Hotel South Beach",
         "slug": "1-hotel-south-beach",
         "neighborhood": "South Beach",
-        "description": "The hotel that made sustainable design feel genuinely aspirational. Three pools on property, including a sprawling oceanside one that runs parallel to the Atlantic — the water-meets-water effect on a clear day is difficult to improve on.",
-        "poolNote": "3 pools · Oceanfront · Adults deck on 7th floor · Year-round warm",
+        "description": "The hotel that made sustainable design feel genuinely aspirational. Four pools on property, including a sprawling oceanside one that runs parallel to the Atlantic — the water-meets-water effect on a clear day is difficult to improve on. The adults-only swim is the rooftop, eighteen storeys up.",
+        "poolNote": "4 pools · Oceanfront · 18th-floor adults-only rooftop pool (21+) · Year-round",
         "tags": [
           "Multiple Pools",
           "Oceanfront",
@@ -529,13 +529,13 @@ export const CITIES = {
         "name": "Dua Miami",
         "slug": "dua-miami",
         "neighborhood": "Brickell",
-        "description": "The right rooftop pool for the Brickell crowd — elevated views over Biscayne Bay, a proper bar setup, and none of the tourist energy of South Beach. Rebranded from SLS to Dua Miami (Autograph Collection) in 2024, with a refreshed pool deck and cabanas. The bay-and-skyline combination is Miami's quieter but equally good alternative view.",
-        "poolNote": "Rooftop · Bay views · Brickell skyline · Refreshed 2024",
+        "description": "The right rooftop pool for the Brickell crowd — two infinity pools looking straight into downtown Miami, a proper bar setup, and none of the tourist energy of South Beach. Rebranded from SLS Brickell to Dua Miami (Autograph Collection) in 2024.",
+        "poolNote": "Two rooftop infinity pools · Downtown Miami views · Day passes · Rebranded from SLS Brickell",
         "tags": [
-          "Bay Views",
+          "Infinity Edge",
           "Rooftop",
           "Brickell",
-          "Scene"
+          "Day Pass"
         ],
         "priceRange": "$$$"
       },
@@ -543,31 +543,16 @@ export const CITIES = {
         "name": "EAST Miami",
         "slug": "east-miami",
         "neighborhood": "Brickell",
-        "description": "The pool deck on the 40th floor of Brickell City Centre makes this one of Miami's most genuinely elevated positions. Downtown on one side, the bay bleeding into the horizon on the other. The infinity edge disappears into the view.",
-        "poolNote": "40th floor infinity edge · Brickell City Centre · 360° views",
+        "description": "The pool deck spreads across the fifth floor of Brickell City Centre — four pools over 20,000 square feet, with downtown Miami stacked up around you rather than below you. Sugar, the bar forty floors above, is the altitude play; this is the swim.",
+        "poolNote": "Four pools across a 5th-floor deck · Brickell City Centre · Downtown Miami views · Day passes",
         "tags": [
-          "Infinity Edge",
-          "High Floor",
-          "360 Views",
-          "Downtown"
+          "Pool Deck",
+          "Brickell",
+          "Downtown Views",
+          "Day Pass"
         ],
         "bookingUrl": "https://www.east-miami.com",
         "priceRange": "$$$"
-      },
-      {
-        "name": "Soho Beach House",
-        "slug": "soho-beach-house",
-        "neighborhood": "Mid-Beach",
-        "description": "Members club that offers hotel rooms and pool access to guests. The outdoor pool setup is extensive — multiple levels, an ocean-facing orientation, and the kind of crowd that actually swims. The beach access makes it worth the rates.",
-        "poolNote": "Multiple pools · Ocean-facing · Beach access · Members & hotel guests",
-        "tags": [
-          "Multiple Pools",
-          "Ocean",
-          "Beach Access",
-          "Exclusive"
-        ],
-        "bookingUrl": "https://www.sohobeachhouse.com",
-        "priceRange": "$$$$"
       }
     ]
   },
@@ -584,34 +569,32 @@ export const CITIES = {
     "noteBody": "The rooftop pool scene here is seasonal in a way Miami's isn't. Most pools run May through October, some close earlier. Call ahead or check current hours — the city's hospitality industry is still calibrating after rapid expansion.",
     "hotels": [
       {
-        "name": "Graduate Nashville",
+        "name": "Graduate by Hilton Nashville",
         "slug": "graduate-nashville",
         "neighborhood": "Vanderbilt / Midtown",
-        "description": "The rooftop bar and pool deck at Graduate is where the Vanderbilt crowd and the weekend visitors find each other, usually agreeably. The bar program is better than it needs to be. The downtown skyline view is a clean, low-horizon Nashville silhouette that earns the elevation.",
-        "poolNote": "Rooftop pool · Nashville skyline · Open to hotel guests and day pass",
+        "description": "The 12th-floor pool belongs to White Limozeen, the rooftop bar, rather than to the hotel — which means a reservation is required for everyone, including guests staying downstairs. Worth the planning: the bar program is better than it needs to be, and the downtown skyline reads as a clean, low-horizon Nashville silhouette that earns the elevation.",
+        "poolNote": "12th-floor pool at White Limozeen · Nashville skyline · May–September · Reservation required for everyone",
         "tags": [
-          "Day Pass",
+          "Seasonal",
           "Skyline",
           "Bar",
-          "Midtown"
+          "Reservation Required"
         ],
-        "bookingUrl": "https://www.graduatehotels.com/nashville",
         "pick": true,
         "priceRange": "$$"
       },
       {
-        "name": "Bobby Hotel",
-        "slug": "bobby-hotel-nashville",
+        "name": "The Nash",
+        "slug": "the-nash-nashville",
         "neighborhood": "Downtown",
-        "description": "The rooftop space at Bobby is a converted Airstream trailer bar perched atop the pool deck — a Nashville touch that could be tacky but somehow reads as exactly right. Views stretch toward the stadium. The pool is seasonal and genuinely swimmable.",
-        "poolNote": "Seasonal pool · Airstream bar on deck · Stadium views",
+        "description": "Rebranded from the Bobby in 2026, but the rooftop kept its best trick: a retrofitted 1956 Scenicruiser bus parked on the deck, which could be tacky and somehow reads as exactly right. The pool is seasonal, genuinely swimmable, and looks out over the Nashville skyline and the Avenue of the Arts.",
+        "poolNote": "Seasonal rooftop pool · 1956 Scenicruiser bus on deck · Nashville skyline · Hotel guests only",
         "tags": [
           "Seasonal",
           "Unique",
           "Bar",
-          "Downtown"
+          "Guests Only"
         ],
-        "bookingUrl": "https://www.bobbyhotel.com",
         "priceRange": "$$"
       }
     ]
@@ -679,7 +662,7 @@ export const CITIES = {
         "slug": "william-vale",
         "neighborhood": "Williamsburg",
         "description": "A 60-foot rooftop pool hovering over North Brooklyn, with the Manhattan skyline laid out across the water like it owes you something. The views change character with the light — blinding at noon, cinematic at dusk.",
-        "poolNote": "60-ft heated infinity edge pool · Day passes available · Elevated deck bar",
+        "poolNote": "60-ft heated infinity edge pool (80°F) · May–September · Day passes available · Deck bar",
         "tags": [
           "Infinity Edge",
           "Day Pass",
@@ -694,12 +677,13 @@ export const CITIES = {
         "name": "Arlo Williamsburg",
         "slug": "arlo-williamsburg",
         "neighborhood": "Williamsburg",
-        "description": "Compact but capable — the rooftop pool is on the smaller side but is rarely crowded at the right hours. Good for an afternoon session, especially mid-week when the deck becomes genuinely calm.",
-        "poolNote": "Seasonal heated pool · Best mid-week · Happy hour deals",
+        "description": "Compact but capable — the rooftop pool is on the smaller side but is rarely crowded at the right hours. Good for an afternoon session, especially mid-week; the operator programmes weekend DJ sets and Sunday day parties, so that is when the deck turns.",
+        "poolNote": "Seasonal heated pool · 40-ft · East River views · Day passes + cabanas available",
         "tags": [
           "Seasonal",
-          "Happy Hour",
-          "Uncrowded"
+          "Day Pass",
+          "East River Views",
+          "Boutique"
         ],
         "priceRange": "$$"
       },
@@ -707,13 +691,13 @@ export const CITIES = {
         "name": "ModernHaus SoHo",
         "slug": "jimmy-james-soho",
         "neighborhood": "SoHo",
-        "description": "Manhattan's most reliably fun rooftop pool — the Jimmy rooftop, atop what's now ModernHaus SoHo (formerly The James) — where the scene is the point and it delivers on sunny weekends. The skyline angles south, putting One World Trade in the frame from the water.",
-        "poolNote": "Day passes with food & drink minimum · Manhattan skyline · Weekend scene",
+        "description": "Manhattan's most reliably fun rooftop pool — the Jimmy rooftop, atop what's now ModernHaus SoHo (formerly The James) — where the scene is the point and it delivers on sunny weekends. Eighteen storeys up, the panorama runs from the Hudson round to Midtown and the East River bridges. Note the bar is open to the public but the pool is not.",
+        "poolNote": "18 storeys above SoHo · Hotel guests only · Memorial Day–Labor Day · 21+ after 5pm",
         "tags": [
           "Scene",
-          "Day Pass",
+          "Guests Only",
           "Manhattan",
-          "Views South"
+          "Seasonal"
         ],
         "priceRange": "$$$"
       },
@@ -721,13 +705,13 @@ export const CITIES = {
         "name": "Gansevoort Meatpacking",
         "slug": "gansevoort-meatpacking",
         "neighborhood": "Meatpacking District",
-        "description": "The rooftop pool that helped invent the Meatpacking scene — heated so the water stays swimmable while the district hums below. The Hudson sits to the west, the skyline to the east, and the crowd is exactly as seen-and-be-seen as the neighborhood promises.",
-        "poolNote": "Heated rooftop pool · Hudson + downtown skyline · Poolside bar · Day passes seasonal",
+        "description": "The rooftop pool that helped invent the Meatpacking scene — 45 feet of water held at 84°F so it stays swimmable while the district hums below. The Hudson sits to the west, the skyline to the east, and the crowd is exactly as seen-and-be-seen as the neighborhood promises. Guests and members only, which keeps it from tipping over.",
+        "poolNote": "45-ft heated rooftop pool (84°F) · Hudson + downtown skyline · Year-round · Guests & members only",
         "tags": [
           "Heated",
-          "Scene",
+          "Year-Round",
           "Skyline View",
-          "Day Pass"
+          "Members Only"
         ],
         "priceRange": "$$$"
       }
