@@ -393,8 +393,8 @@ export const CITIES = {
         "name": "Thompson Houston, by Hyatt",
         "slug": "thompson-houston",
         "neighborhood": "Fourth Ward",
-        "description": "The newest serious pool in the city, and it shows — a tiled infinity edge on a seventh-floor deck that runs close to an acre, with Buffalo Bayou Park green on one side and downtown glass on the other. Rare thing for Houston: a pool deck with actual landscape in the view, not just tower.",
-        "poolNote": "7th-floor deck · Tiled infinity edge · Buffalo Bayou Park + skyline · Cabanas · Opened 2024",
+        "description": "The newest serious pool in the city, and it shows — an infinity edge on a seventh-floor deck that runs close to an acre, with Buffalo Bayou Park green on one side and downtown glass on the other. Rare thing for Houston: a pool deck with actual landscape in the view, not just tower.",
+        "poolNote": "7th-floor deck · Infinity edge · Buffalo Bayou Park + skyline · Cabanas · Opened 2024",
         "tags": [
           "Rooftop",
           "Infinity Edge",
