@@ -1,0 +1,133 @@
+---
+import CityLayout from "../../layouts/CityLayout.astro";
+import HotelCard from "../../components/HotelCard.astro";
+import { CITIES } from "../../data/hotels.js";
+
+// One route for every city. Adding a city is a data change in
+// src/data/hotels.js — no new page file.
+export function getStaticPaths() {
+  return Object.values(CITIES).map((c) => ({
+    params: { city: c.slug },
+    props: { data: c },
+  }));
+}
+
+const { data } = Astro.props;
+const {
+  city,
+  state,
+  tagline,
+  neighborhoods,
+  heroGradient,
+  motif,
+  skyline,
+  listingsHeading,
+  listingsLede,
+  noteLabel,
+  noteBody,
+  hotels,
+} = data;
+
+// Every other city, so each city page links laterally into the rest of the set
+// rather than dead-ending back at the homepage.
+const otherCities = Object.values(CITIES).filter((c) => c.slug !== data.slug);
+
+const site = "https://skyandswim.com";
+const cityUrl = `${site}/cities/${data.slug}/`;
+
+const jsonLd = [
+  {
+    "@type": "ItemList",
+    "@id": `${cityUrl}#hotels`,
+    name: `${city} Rooftop Pool Hotels`,
+    numberOfItems: hotels.length,
+    itemListElement: hotels.map((h, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${cityUrl}${h.slug}/`,
+      name: h.name,
+    })),
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `${city} Rooftop Pool Hotels`,
+        item: cityUrl,
+      },
+    ],
+  },
+];
+---
+
+<CityLayout
+  city={city}
+  state={state}
+  tagline={tagline}
+  poolCount={hotels.length}
+  neighborhoods={neighborhoods}
+  heroGradient={heroGradient}
+  motif={motif}
+  skyline={skyline}
+  jsonLd={jsonLd}
+>
+  <section class="city-listings">
+    <div class="section-inner">
+
+      <div class="listings-header">
+        <p class="listings-kicker">{hotels.length} picks · {neighborhoods}</p>
+        <h2 class="listings-heading">{listingsHeading}</h2>
+        <p class="listings-lede">
+          {listingsLede}
+        </p>
+      </div>
+
+      <div class="hotel-grid">
+        {hotels.map((hotel) => (
+          <HotelCard {...hotel} detailHref={`/cities/${data.slug}/${hotel.slug}/`} />
+        ))}
+      </div>
+
+      <aside class="city-note">
+        <p><strong>{noteLabel}:</strong> {noteBody}</p>
+      </aside>
+
+      <nav class="other-cities" aria-labelledby="other-cities-heading">
+        <h2 id="other-cities-heading">Other cities</h2>
+        <ul>
+          {otherCities.map((c) => (
+            <li>
+              <a href={`/cities/${c.slug}/`}>
+                {c.city}
+                <span>{c.hotels.length} pools</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+    </div>
+  </section>
+</CityLayout>
+
+<style>
+  .city-listings { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem); }
+  .listings-header { max-width: 52ch; margin-bottom: 2.8rem; }
+  .listings-kicker { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: #0c4453; margin: 0 0 0.8rem; }
+  .listings-heading { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); color: #0a2a48; margin: 0 0 0.8rem; line-height: 1.05; }
+  .listings-lede { font-family: var(--font-body); font-weight: 300; font-size: 1rem; line-height: 1.6; color: rgba(10, 38, 62, 0.9); margin: 0; }
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; }
+  .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
+  .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
+  .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+
+  .other-cities { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: 2rem; }
+  .other-cities h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; color: #fff; margin: 0 0 1.1rem; }
+  .other-cities ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .other-cities a { display: inline-flex; align-items: baseline; gap: 0.5rem; font-family: var(--font-body); font-size: 0.88rem; color: rgba(220, 240, 245, 0.9); border: 1px solid rgba(168, 216, 216, 0.28); border-radius: 999px; padding: 0.45rem 0.95rem; transition: background 0.2s ease, border-color 0.2s ease; }
+  .other-cities a:hover { background: rgba(42, 191, 191, 0.12); border-color: rgba(42, 191, 191, 0.5); }
+  .other-cities a span { font-size: 0.74rem; font-weight: 300; color: rgba(220, 240, 245, 0.55); }
+</style>

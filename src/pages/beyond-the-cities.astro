@@ -10,30 +10,11 @@ import HotelCard from "../components/HotelCard.astro";
 // If a city accumulates ~3+, it graduates to its own city page.
 const hotels = [
   {
-    name: "Four Seasons Hotel Philadelphia",
-    slug: "four-seasons-philadelphia",
-    neighborhood: "Philadelphia, PA",
-    description: "The highest hotel pool in the region — a 57th-floor infinity edge atop Philadelphia's tallest tower, where you swim toward the drop with Center City lit sixty stories below and the Delaware River beyond. Adults-only early and late, and long enough for actual laps.",
-    poolNote: "57th-floor infinity pool · Center City + Delaware River · Laps possible · Adults-only hours",
-    tags: ["Rooftop", "Highest in Region", "Infinity Edge", "Skyline"],
-    pick: true,
-    priceRange: "$$$$",
-  },
-  {
-    name: "Marriott Marquis Houston",
-    slug: "marriott-marquis-houston",
-    neighborhood: "Houston, TX",
-    description: "Yes, there's a Texas-shaped lazy river — but the real draw is the 77-foot infinity pool on the 6th-floor Altitude deck, heated year-round and aimed straight at the downtown skyline over Discovery Green. A bucket-list rooftop, gimmick and all.",
-    poolNote: "6th-floor rooftop · 77-ft infinity pool + Texas lazy river · Skyline views · Year-round",
-    tags: ["Rooftop", "Infinity Edge", "Skyline", "Lazy River"],
-    priceRange: "$$$",
-  },
-  {
     name: "Conrad Fort Lauderdale Beach",
     slug: "conrad-fort-lauderdale",
     neighborhood: "Fort Lauderdale, FL",
     description: "The Sky Deck pool sits above the beachfront tower with the Atlantic filling the whole view — heated, cabana-lined, full towel-and-bar service. Fort Lauderdale's most-cited hotel pool, and it earns the billing.",
-    poolNote: "Elevated Sky Deck pool · Atlantic Ocean views · Cabanas + bar service · Heated",
+    poolNote: "6th-floor Sky Deck pool · Atlantic Ocean views · Heated · Day passes from $55",
     tags: ["Elevated", "Oceanfront", "Cabanas", "Heated"],
     priceRange: "$$$",
   },
@@ -41,27 +22,18 @@ const hotels = [
     name: "Four Seasons Hotel Seattle",
     slug: "four-seasons-seattle",
     neighborhood: "Seattle, WA",
-    description: "The Pacific Northwest barely does rooftop pools, which makes this one a standout: a 4th-floor terrace infinity pool heated to 84° year-round, open to Elliott Bay, Puget Sound, and the Olympics. Swim it in the rain — that's the whole point.",
-    poolNote: "4th-floor terrace infinity pool · Elliott Bay + Olympics · Heated 84° year-round · PNW's only one",
+    description: "The Pacific Northwest barely does rooftop pools, which makes this one a standout: a 4th-floor terrace infinity pool heated to 84° year-round, open to Elliott Bay, Puget Sound, and the Olympics. Four Seasons calls it Seattle's only infinity-edge hotel pool. Swim it in the rain — that's the whole point.",
+    poolNote: "4th-floor terrace infinity pool · Elliott Bay + Olympics · Heated 84° year-round · Guests only",
     tags: ["Rooftop", "Infinity Edge", "Water Views", "Year-Round"],
     priceRange: "$$$$",
-  },
-  {
-    name: "InterContinental Washington D.C. – The Wharf",
-    slug: "intercontinental-dc-wharf",
-    neighborhood: "Washington, DC",
-    description: "Washington has almost no true rooftop hotel pools; the WAVES deck here is the exception, looking over the Potomac waterfront and the DC skyline. Heated, guest-only, and an actual swim — not a bar with a puddle.",
-    poolNote: "Rooftop WAVES pool · Potomac waterfront + skyline · Heated · Guest-only",
-    tags: ["Rooftop", "Waterfront", "Skyline", "Rare"],
-    priceRange: "$$$",
   },
   {
     name: "Market Pavilion Hotel",
     slug: "market-pavilion-charleston",
     neighborhood: "Charleston, SC",
-    description: "Charleston's only genuine rooftop pool — a cascading pool on the 7th-floor Pavilion terrace, with the Cooper River bridge, Patriot's Point, and the steeples of the Holy City laid out for the sunset.",
-    poolNote: "7th-floor rooftop pool · Cooper River bridge + steeples · Historic district · Sunset views",
-    tags: ["Rooftop", "Historic", "Bridge Views", "Sunset"],
+    description: "Charleston's only rooftop cascading pool, by the hotel's own careful phrasing — a tiered pool on the Pavilion terrace with the Holy City's steeples laid out for the sunset. Guests only, and no swimming after 5pm.",
+    poolNote: "Rooftop cascading pool · Historic Charleston views · Guests only · No swimming after 5pm",
+    tags: ["Rooftop", "Historic", "Guests Only", "Sunset"],
     priceRange: "$$$",
   },
   {
@@ -69,7 +41,7 @@ const hotels = [
     slug: "perry-lane-savannah",
     neighborhood: "Savannah, GA",
     description: "Savannah's swankiest rooftop — a tropical-leaning pool deck beside the Peregrin bar with a panorama over the Historic District's rooftops and steeples. The poolside service is the part regulars won't stop mentioning.",
-    poolNote: "Rooftop pool · Historic District skyline · Peregrin bar · Attentive poolside service",
+    poolNote: "Rooftop pool · Sweeping Savannah views · Peregrin bar · Year-round, heated in cooler months",
     tags: ["Rooftop", "Historic", "Skyline", "Service"],
     priceRange: "$$$",
   },
@@ -77,18 +49,18 @@ const hotels = [
     name: "Omni Hotel at The Battery Atlanta",
     slug: "omni-battery-atlanta",
     neighborhood: "Atlanta (The Battery), GA",
-    description: "Not downtown — out at The Battery, where the 5th-floor pool deck looks straight into Truist Park. You can watch a Braves game from the water, which is exactly the kind of one-off this list exists for.",
-    poolNote: "5th-floor elevated pool · Truist Park + Battery views · Cabanas · Year-round",
-    tags: ["Elevated", "Stadium Views", "Cabanas", "Unique"],
+    description: "Not downtown — out at The Battery, where the 5th-floor pool deck overlooks the entertainment district wrapped around Truist Park. Day passes make it one of the easier good decks in Atlanta to get onto without a room.",
+    poolNote: "5th-floor elevated pool · The Battery views · Cabanas · Day passes · Pool bar seasonal",
+    tags: ["Elevated", "Day Pass", "Cabanas", "Unique"],
     priceRange: "$$",
   },
   {
     name: "Thompson San Antonio – Riverwalk",
     slug: "thompson-san-antonio",
     neighborhood: "San Antonio, TX",
-    description: "The Cenote pool deck juts off the 4th floor of the 20-story tower with an unobstructed sweep of the San Antonio skyline and the River Walk below — and Moon's Daughters bar one level up when you're done swimming.",
-    poolNote: "4th-floor Cenote pool deck · Skyline + River Walk · Cabanas · Rooftop bar above",
-    tags: ["Elevated", "Skyline", "River Walk", "Cabanas"],
+    description: "The Cenote pool deck juts off the 4th floor of the 20-story tower with an unobstructed sweep of the San Antonio skyline — and Moon's Daughters, sixteen floors above it at the top of the building, when you're done swimming.",
+    poolNote: "4th-floor Cenote pool deck · City views · Cabanas · Guests + residents only",
+    tags: ["Elevated", "Skyline", "Cabanas", "Guests Only"],
     priceRange: "$$$",
   },
   {
@@ -96,17 +68,17 @@ const hotels = [
     slug: "omni-louisville",
     neighborhood: "Louisville, KY",
     description: "Downtown Louisville's marquee stay, and its heated elevated pool with a rooftop bar is the city's most-cited — a clean skyline swim in a town where rooftop pools are otherwise thin.",
-    poolNote: "Elevated pool deck · Downtown skyline · Rooftop bar · Heated · Cabanas",
-    tags: ["Elevated", "Skyline", "Heated", "Rooftop Bar"],
+    poolNote: "3rd-floor pool deck · Downtown Louisville skyline · Heated · Seasonal, reopens Memorial Day",
+    tags: ["Elevated", "Skyline", "Heated", "Seasonal"],
     priceRange: "$$",
   },
   {
     name: "AC Hotel Tucson Downtown",
     slug: "ac-hotel-tucson",
     neighborhood: "Tucson, AZ",
-    description: "The rooftop pool here comes with the Catalina Mountains as a backdrop and some of Tucson's best sunsets off the deck — an easy, well-reviewed standout in a city that doesn't have many.",
-    poolNote: "Rooftop pool + lounge · Catalina Mountains · Tucson sunsets · Well-reviewed",
-    tags: ["Rooftop", "Mountain Views", "Sunset", "Value"],
+    description: "A straightforward heated rooftop pool in a city that has very few — no grand claims from the operator, and none from us. It is open early to late, it is on the roof, and in Tucson that is enough to be worth knowing about.",
+    poolNote: "Rooftop pool · Heated · Open 6am–10pm · Guests only",
+    tags: ["Rooftop", "Heated", "Value", "Guests Only"],
     priceRange: "$$",
   },
 ];
@@ -114,7 +86,37 @@ const hotels = [
 
 <BaseLayout
   title="Beyond the Cities · Standout Rooftop Pools · Sky & Swim"
-  description="Exceptional rooftop pools in cities without their own page — one standout each, from Four Seasons Philadelphia's 57th-floor infinity edge to the Marriott Marquis Houston's Texas lazy river."
+  description="Exceptional rooftop pools in cities without their own page — one standout each, from the Conrad Fort Lauderdale's Sky Deck to Market Pavilion's cascading pool over the Charleston steeples."
+  jsonLd={[
+    {
+      "@type": "ItemList",
+      "@id": "https://skyandswim.com/beyond-the-cities/#hotels",
+      name: "Standout Rooftop Pools Beyond the Cities",
+      numberOfItems: hotels.length,
+      itemListElement: hotels.map((h, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Hotel",
+          name: h.name,
+          description: h.description,
+          ...(h.priceRange ? { priceRange: h.priceRange } : {}),
+        },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://skyandswim.com/" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Beyond the Cities",
+          item: "https://skyandswim.com/beyond-the-cities/",
+        },
+      ],
+    },
+  ]}
 >
   <div class="notable-page">
     <Nav />

@@ -1,83 +1,41 @@
 ---
-const cities = [
-  {
-    name: "New York",
-    meta: "6 rooftop pools · Manhattan & Brooklyn",
-    badge: "Most covered",
-    href: "/cities/new-york",
-    area: "nyc",
-  },
-  {
-    name: "Los Angeles",
-    meta: "6 rooftop pools · Hollywood & Downtown",
-    badge: "New",
-    href: "/cities/los-angeles",
-    area: "la",
-  },
-  {
-    name: "Miami",
-    meta: "4 rooftop pools · South Beach & Brickell",
-    badge: null,
-    href: "/cities/miami",
-    area: "miami",
-  },
-  {
-    name: "Dallas",
-    meta: "6 rooftop pools · Downtown & Uptown",
-    badge: "New",
-    href: "/cities/dallas",
-    area: "dallas",
-  },
-  {
-    name: "Chicago",
-    meta: "4 rooftop pools · Gold Coast & Fulton Market",
-    badge: null,
-    href: "/cities/chicago",
-    area: "chicago",
-  },
-  {
-    name: "San Diego",
-    meta: "5 rooftop pools · Gaslamp & Bayfront",
-    badge: "New",
-    href: "/cities/san-diego",
-    area: "sandiego",
-  },
-  {
-    name: "Austin",
-    meta: "4 rooftop pools · Downtown & Rainey St",
-    badge: "Rising",
-    href: "/cities/austin",
-    area: "austin",
-  },
-  {
-    name: "Phoenix",
-    meta: "4 rooftop pools · Phoenix & Scottsdale",
-    badge: "New",
-    href: "/cities/phoenix",
-    area: "phoenix",
-  },
-  {
-    name: "Denver",
-    meta: "3 rooftop pools · Cherry Creek & Uptown",
-    badge: null,
-    href: "/cities/denver",
-    area: "denver",
-  },
-  {
-    name: "Nashville",
-    meta: "2 rooftop pools · Downtown & Midtown",
-    badge: null,
-    href: "/cities/nashville",
-    area: "nashville",
-  },
-  {
-    name: "New Orleans",
-    meta: "2 rooftop pools · Warehouse District",
-    badge: null,
-    href: "/cities/new-orleans",
-    area: "nola",
-  },
+import { CITIES } from "../data/hotels.js";
+
+// Presentation only — bento placement, badge, and a short neighborhood label
+// for the compact card. Name and pool count come from src/data/hotels.js so the
+// grid can never drift out of sync with the city pages.
+const layout = [
+  { slug: "new-york", area: "nyc", badge: "Most covered", hood: "Manhattan & Brooklyn" },
+  { slug: "los-angeles", area: "la", badge: "New", hood: "Hollywood & Downtown" },
+  { slug: "miami", area: "miami", badge: null, hood: "South Beach & Brickell" },
+  { slug: "dallas", area: "dallas", badge: "New", hood: "Downtown & Uptown" },
+  { slug: "chicago", area: "chicago", badge: null, hood: "Gold Coast & Fulton Market" },
+  { slug: "san-diego", area: "sandiego", badge: "New", hood: "Gaslamp & Bayfront" },
+  { slug: "austin", area: "austin", badge: "Rising", hood: "Downtown & Rainey St" },
+  { slug: "phoenix", area: "phoenix", badge: "New", hood: "Phoenix & Scottsdale" },
+  { slug: "denver", area: "denver", badge: null, hood: "Cherry Creek & Uptown" },
+  { slug: "philadelphia", area: "philly", badge: "New", hood: "Center City & Old City" },
+  { slug: "houston", area: "houston", badge: "New", hood: "Downtown & Montrose" },
+  { slug: "washington-dc", area: "dc", badge: "New", hood: "Capitol Hill & Logan Circle" },
+  { slug: "nashville", area: "nashville", badge: null, hood: "Downtown & Midtown" },
+  { slug: "new-orleans", area: "nola", badge: null, hood: "Warehouse District" },
 ];
+
+const cities = layout.map((l) => {
+  const c = CITIES[l.slug];
+  const count = c.hotels.length;
+  return {
+    name: c.city,
+    meta: `${count} rooftop pool${count === 1 ? "" : "s"} · ${l.hood}`,
+    badge: l.badge,
+    // Trailing slash matters: without it every homepage city link 301s.
+    href: `/cities/${l.slug}/`,
+    area: l.area,
+  };
+});
+
+const cityCount = new Intl.NumberFormat("en-US").format(cities.length);
+const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0);
 ---
 
 <section class="cities" id="cities" aria-labelledby="cities-heading">
@@ -86,8 +44,8 @@ const cities = [
       <p class="kicker">Browse by city</p>
       <h2 id="cities-heading">Pick a skyline.</h2>
       <p class="lede">
-        Eleven US cities, mapped pool by pool. Start where the water's already
-        warm.
+        {cityCount} US cities and {totalPools} pools, mapped one by one. Start
+        where the water's already warm.
       </p>
     </header>
 
@@ -167,9 +125,11 @@ const cities = [
     overflow: hidden;
   }
 
-  /* Bento placement — 11 cities in a 12-col grid.
+  /* Bento placement — 14 cities in a 12-col grid.
      Row 1-2: NYC feature (6×2) + LA (6). Row 2: Miami + Dallas (3+3 beside NYC).
-     Row 3: Chicago/San Diego/Austin/Phoenix (3 each). Row 4: Denver/Nashville/NOLA (4 each). */
+     Row 3: Chicago/San Diego/Austin/Phoenix (3 each).
+     Row 4: Denver/Philadelphia/Houston (4 each).
+     Row 5: Washington/Nashville/NOLA (4 each). */
   .card-nyc {
     grid-column: span 6;
     grid-row: span 2;
@@ -196,6 +156,15 @@ const cities = [
     grid-column: span 3;
   }
   .card-denver {
+    grid-column: span 4;
+  }
+  .card-philly {
+    grid-column: span 4;
+  }
+  .card-houston {
+    grid-column: span 4;
+  }
+  .card-dc {
     grid-column: span 4;
   }
   .card-nashville {
@@ -317,6 +286,9 @@ const cities = [
     .card-sandiego,
     .card-austin,
     .card-phoenix,
+    .card-philly,
+    .card-houston,
+    .card-dc,
     .card-nashville,
     .card-nola,
     .card-denver {

@@ -1,4 +1,6 @@
 ---
+import { AFFILIATE_HOTELS } from "../data/affiliates.js";
+
 interface Props {
   name: string;
   neighborhood: string;
@@ -9,6 +11,10 @@ interface Props {
   slug?: string; // affiliate slug (src/data/affiliates.js) → routes CTA through /go
   pick?: boolean;
   priceRange?: string; // "$" | "$$" | "$$$" | "$$$$"
+  /** Internal hotel page (/cities/<city>/<hotel>/). When set, the card title
+      links here instead of straight out, so the detail pages are crawlable
+      from the city listing and readers get our take before the booking site. */
+  detailHref?: string;
 }
 
 const {
@@ -21,15 +27,20 @@ const {
   slug,
   pick = false,
   priceRange,
+  detailHref,
 } = Astro.props;
 
 // Affiliate hotels route through the /go redirector (provider-attributed click
 // tracking + CJ wrapping); everything else uses the direct link as before.
-const ctaHref = slug ? `/go/booking/${slug}` : bookingUrl;
+// `slug` doubles as the hotel-page URL segment, so having one does NOT imply an
+// affiliate destination exists — gate on AFFILIATE_HOTELS or we emit a /go link
+// to a page that was never generated.
+const hasAffiliate = Boolean(slug && slug in AFFILIATE_HOTELS);
+const ctaHref = hasAffiliate ? `/go/booking/${slug}/` : bookingUrl;
 const isOutbound = ctaHref !== "#";
 const ctaRel = !isOutbound
   ? undefined
-  : slug
+  : hasAffiliate
     ? "noopener noreferrer sponsored"
     : "noopener noreferrer";
 ---
@@ -45,7 +56,9 @@ const ctaRel = !isOutbound
         {pick && <span class="card-pick-badge">✦ Editor's Pick</span>}
       </div>
       <h3 class="card-name">
-        {isOutbound ? (
+        {detailHref ? (
+          <a class="card-name-link" href={detailHref}>{name}</a>
+        ) : isOutbound ? (
           <a class="card-name-link" href={ctaHref} target="_blank" rel={ctaRel}>{name}</a>
         ) : (
           name
@@ -69,12 +82,19 @@ const ctaRel = !isOutbound
       </div>
     )}
 
-    <a class="card-cta" href={ctaHref} target={isOutbound ? "_blank" : undefined} rel={ctaRel}>
-      See rooms &amp; rates
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-        <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+    <div class="card-actions">
+      {detailHref && (
+        <a class="card-detail-link" href={detailHref}>Our take</a>
+      )}
+      {isOutbound && (
+        <a class="card-cta" href={ctaHref} target="_blank" rel={ctaRel}>
+          See rooms &amp; rates
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      )}
+    </div>
   </div>
 </article>
 
@@ -230,6 +250,30 @@ const ctaRel = !isOutbound
     letter-spacing: 0.08em;
   }
 
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.1rem;
+    margin-top: 0.2rem;
+  }
+
+  /* Internal link to our write-up; sits ahead of the outbound booking CTA so
+     the crawl path into the hotel pages is on every listing. */
+  .card-detail-link {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: rgba(220, 240, 245, 0.75);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+
+  .card-detail-link:hover {
+    color: #fff;
+  }
+
   .card-cta {
     display: inline-flex;
     align-items: center;
@@ -239,8 +283,6 @@ const ctaRel = !isOutbound
     font-weight: 500;
     color: var(--teal);
     transition: color 0.2s ease, gap 0.2s ease;
-    align-self: flex-start;
-    margin-top: 0.2rem;
   }
 
   .card-cta:hover {

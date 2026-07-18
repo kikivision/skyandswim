@@ -7,9 +7,29 @@ import PicksSection from "../components/PicksSection.astro";
 import StandardSection from "../components/StandardSection.astro";
 import NewsletterSection from "../components/NewsletterSection.astro";
 import Footer from "../components/Footer.astro";
+import { CITIES } from "../data/hotels.js";
+
+const site = "https://skyandswim.com";
+
+// Tells search engines the shape of the site: which cities we cover and where
+// each one's page lives.
+const jsonLd = [
+  {
+    "@type": "ItemList",
+    "@id": `${site}/#cities`,
+    name: "Rooftop Pool Hotel Guides by City",
+    numberOfItems: Object.keys(CITIES).length,
+    itemListElement: Object.values(CITIES).map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `${c.city} Rooftop Pool Hotels`,
+      url: `${site}/cities/${c.slug}/`,
+    })),
+  },
+];
 ---
 
-<BaseLayout>
+<BaseLayout jsonLd={jsonLd}>
   <HeroSection />
   <TrustBar />
   <CityGrid />
