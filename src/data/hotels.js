@@ -1026,7 +1026,11 @@ export const CITIES = {
         ],
         "pick": true,
         "priceRange": "$$$",
-        "stay": "The InterContinental is the polished, waterfront choice — a full-service luxury hotel on The Wharf, DC's redeveloped Potomac-side strip of restaurants, bars, and the Anthem music hall, with one of the only real rooftop pools in the city up top. You're on the water and walkable to the Wharf's dining and the Tidal Basin, though it's a Metro ride or a long walk from the Mall's museums. At $$$ it's fair for waterfront luxury in a city where a swimmable rooftop barely exists — the pick if the Wharf scene and the pool are the point."
+        "stay": "The InterContinental is the polished, waterfront choice — a full-service luxury hotel on The Wharf, DC's redeveloped Potomac-side strip of restaurants, bars, and the Anthem music hall, with one of the only real rooftop pools in the city up top. You're on the water and walkable to the Wharf's dining and the Tidal Basin, though it's a Metro ride or a long walk from the Mall's museums. At $$$ it's fair for waterfront luxury in a city where a swimmable rooftop barely exists — the pick if the Wharf scene and the pool are the point.",
+        "verified": {
+          "stay": "On The Wharf, DC's Potomac-side dining/nightlife strip; the Anthem music hall is at The Wharf — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "InterContinental Washington D.C. – The Wharf"
       },
       {
         "name": "YOTEL Washington DC",
@@ -1041,7 +1045,11 @@ export const CITIES = {
           "Largest on the Hill"
         ],
         "priceRange": "$$",
-        "stay": "YOTEL is the value play — a compact, tech-forward hotel where the rooms (YOTEL calls them cabins) are small and efficient by design, the trade for a Capitol Hill address and the most accessible good pool in the city. You're near Union Station and the Capitol, walkable to the Hill and a quick Metro to everywhere else. At $$ it's the cheapest way onto a genuinely good DC rooftop — the pick if location and the pool matter more than square footage; skip it if you want a spacious, traditional room."
+        "stay": "YOTEL is the value play — a compact, tech-forward hotel where the rooms (YOTEL calls them cabins) are small and efficient by design, the trade for a Capitol Hill address and the most accessible good pool in the city. You're near Union Station and the Capitol, walkable to the Hill and a quick Metro to everywhere else. At $$ it's the cheapest way onto a genuinely good DC rooftop — the pick if location and the pool matter more than square footage; skip it if you want a spacious, traditional room.",
+        "verified": {
+          "stay": "Rooms are branded 'cabins' (compact by design); Capitol Hill, near Union Station and the Capitol — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "YOTEL Washington DC"
       },
       {
         "name": "Hotel Zena Washington DC",
@@ -1056,7 +1064,11 @@ export const CITIES = {
           "Cabanas"
         ],
         "priceRange": "$$$",
-        "stay": "Zena is the design statement — a boldly art-forward hotel built around a theme of female empowerment, with a gallery's worth of work in the public spaces and a rooftop that swims by day and becomes Hedy's bar crowd after dark. It's on the 14th Street corridor in Logan Circle, one of DC's best strips for restaurants and nightlife, walkable and lively. At $$$ you're paying for the design and the location as much as the room — the pick if you want personality and a night-out neighborhood, less so if you want a quiet, classic DC stay."
+        "stay": "Zena is the design statement — a boldly art-forward hotel built around a theme of female empowerment, with a gallery's worth of work in the public spaces and a rooftop that swims by day and becomes Hedy's bar crowd after dark. It's on the 14th Street corridor in Logan Circle, one of DC's best strips for restaurants and nightlife, walkable and lively. At $$$ you're paying for the design and the location as much as the room — the pick if you want personality and a night-out neighborhood, less so if you want a quiet, classic DC stay.",
+        "verified": {
+          "stay": "Art-forward hotel themed around female empowerment; 14th Street corridor, Logan Circle — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "Hotel Zena Washington DC"
       }
     ]
   }

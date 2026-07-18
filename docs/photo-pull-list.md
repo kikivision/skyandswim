@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (14)
+## Done (17)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -34,6 +34,9 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `w-dallas-victory` — W Dallas (Dallas)
 - [x] `statler-dallas` — The Statler Dallas (Dallas)
 - [x] `the-adolphus-dallas` — The Adolphus (Dallas)
+- [x] `intercontinental-dc-wharf` — InterContinental Washington D.C. – The Wharf (Washington)
+- [x] `yotel-washington-dc` — YOTEL Washington DC (Washington)
+- [x] `hotel-zena-dc` — Hotel Zena Washington DC (Washington)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -102,13 +105,8 @@ collective credit line beneath the grid.
 - [ ] `margaritaville-san-diego` — Margaritaville Hotel San Diego Gaslamp Quarter
 - [ ] `hard-rock-san-diego` — Hard Rock Hotel San Diego
 
-### Washington, DC  (3)
-- [ ] `intercontinental-dc-wharf` — InterContinental Washington D.C. – The Wharf  **← Editor's Pick, homepage**
-- [ ] `yotel-washington-dc` — YOTEL Washington DC
-- [ ] `hotel-zena-dc` — Hotel Zena Washington DC
-
 ---
 
-**41 to pull, 9 to re-verify.** Priority: Editor's Picks first (they
+**38 to pull, 9 to re-verify.** Priority: Editor's Picks first (they
 surface on the homepage), then the cities with proven Search Console demand —
-Washington DC, Philadelphia and Houston.
+Philadelphia and Houston.
