@@ -137,8 +137,12 @@ export const AFFILIATE_HOTELS = {
   'conrad-los-angeles': {
     bookingcom: 'https://www.booking.com/hotel/us/conrad-los-angeles.html',
   },
-  'thompson-hollywood': {
-    bookingcom: 'https://www.booking.com/hotel/us/thompson-hollywood.html',
+  // Rebranded from Thompson Hollywood (Hyatt) to The Hollywood Grande,
+  // Autograph Collection (Marriott) on 2025-07-29. Booking's old
+  // thompson-hollywood URL 301s here; pointing straight at the canonical one
+  // keeps the affiliate click from taking an extra hop.
+  'hollywood-grande': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-hollywood-grande.html',
   },
   'santa-monica-proper': {
     bookingcom: 'https://www.booking.com/hotel/us/santa-monica-proper-hotel-a-member-of-design-hotels.html',

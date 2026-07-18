@@ -1,0 +1,9 @@
+# Netlify redirects. Format: <from> <to> <status>
+#
+# Hotel slug changes. A hotel's slug is its URL segment, so when a property
+# rebrands and we rename the slug, the old URL has to keep resolving — both for
+# anything already indexed and for links out in the wild.
+
+# Thompson Hollywood -> The Hollywood Grande, Autograph Collection (2025-07-29,
+# Hyatt to Marriott). Renamed 2026-07-18.
+/cities/los-angeles/thompson-hollywood/  /cities/los-angeles/hollywood-grande/  301

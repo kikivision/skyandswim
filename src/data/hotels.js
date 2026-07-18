@@ -475,7 +475,7 @@ export const CITIES = {
     "listingsHeading": "Pick your skyline.",
     "listingsLede": "The Hollywood Sign, the downtown towers, or the Pacific — every rooftop pool in LA points at a different postcard. These six point at the best ones.",
     "noteLabel": "Scene vs swim",
-    "noteBody": "several of these double as weekend party decks — for an actual swim, aim for a weekday morning. Conrad DTLA and Santa Monica Proper hold up as genuine pools any day of the week; Thompson and the Hollywood rooftops peak socially after 4pm.",
+    "noteBody": "several of these double as weekend party decks — for an actual swim, aim for a weekday morning. Conrad DTLA and Santa Monica Proper hold up as genuine pools any day of the week; the Hollywood decks peak socially after 4pm.",
     "hotels": [
       {
         "name": "Conrad Los Angeles",
@@ -498,19 +498,24 @@ export const CITIES = {
         "heroCredit": "Conrad Los Angeles"
       },
       {
-        "name": "Thompson Hollywood",
-        "slug": "thompson-hollywood",
+        "name": "The Hollywood Grande, Autograph Collection",
+        "slug": "hollywood-grande",
+        "formerName": "Thompson Hollywood",
         "neighborhood": "Hollywood",
-        "description": "The rooftop pool most likely to end up in your camera roll — Hollywood Hills and the Hollywood Sign filling the frame, with Bar Lis and its retractable roof alongside. It doubles as a scene, but the view earns it.",
-        "poolNote": "Rooftop pool · Hollywood Hills + Hollywood Sign · Bar Lis · Scene",
+        "description": "The rooftop pool most likely to end up in your camera roll — the Hollywood Sign, the Hills and downtown all in the frame from eleven floors up, with Bar Lis alongside. Know what it is before you book: a heated four-foot lounging pool, not somewhere to swim laps.",
+        "poolNote": "11th-floor rooftop pool · Hollywood Sign + Hills + Downtown · Heated year-round · ~4ft max depth · Bar Lis",
         "tags": [
           "Rooftop",
           "Hollywood Views",
           "Scene",
-          "Sunset"
+          "Year-Round"
         ],
         "priceRange": "$$$",
-        "stay": "Thompson Hollywood is the photogenic one — the rooftop that ends up in everyone's camera roll, with the Hollywood Sign in the frame and Bar Lis running alongside it. It's in the heart of Hollywood, walkable to the boulevard and the nightlife, which is the whole point of basing here rather than downtown or the coast. At $$$ it's fair for the location and the view, but know what you're buying: this deck is a scene first — come on a weekday morning if you actually want to swim."
+        "stay": "The Hollywood Grande is the photogenic one — the rooftop that ends up in everyone's camera roll, with the Hollywood Sign in the frame and Bar Lis running alongside it. It's in the heart of Hollywood, walkable to the boulevard and the nightlife, which is the whole point of basing here rather than downtown or the coast. At $$$ it's fair for the location and the view, but know what you're buying: a four-foot lounging pool on a deck that's a scene first — come on a weekday morning if you actually want to swim.",
+        "verified": {
+          "rebrand": "Converted from Thompson Hollywood (Hyatt) to The Hollywood Grande, Autograph Collection (Marriott) on 2025-07-29. Confirmed 2026-07-18 via Hotel Dive, Boutique Hotelier and The Points Guy; Booking.com's thompson-hollywood URL 301s to the-hollywood-grande. Do not revert the name.",
+          "pool": "11th-floor rooftop (the building is 11 storeys), heated year-round, ~4ft maximum depth — a lounging pool rather than a lap pool. Bar Lis still operates under the new brand. Confirmed 2026-07-18."
+        }
       },
       {
         "name": "Santa Monica Proper",
@@ -544,7 +549,7 @@ export const CITIES = {
           "Hollywood"
         ],
         "priceRange": "$$$",
-        "stay": "The Godfrey is the practical Hollywood pick — one of the biggest pool decks in the neighborhood and the most genuinely swimmable of the Hollywood rooftops, without the velvet-rope energy of its neighbors. Same Hollywood base as the Thompson and the Everly, so you're central to the boulevard and the studio side of town. At $$$ it's solid value for that 360 view — the pick if you want a big deck and a real swim rather than a scene.",
+        "stay": "The Godfrey is the practical Hollywood pick — one of the biggest pool decks in the neighborhood and the most genuinely swimmable of the Hollywood rooftops, without the velvet-rope energy of its neighbors. Same Hollywood base as the Hollywood Grande and the Everly, so you're central to the boulevard and the studio side of town. At $$$ it's solid value for that 360 view — the pick if you want a big deck and a real swim rather than a scene.",
         "heroCredit": "The Godfrey Hotel Hollywood"
       },
       {

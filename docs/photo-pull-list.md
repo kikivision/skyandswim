@@ -71,7 +71,10 @@ collective credit line beneath the grid.
 - [ ] `warwick-denver` — Warwick Denver
 
 ### Los Angeles, CA  (1)
-- [ ] `thompson-hollywood` — Thompson Hollywood  **← only LA hotel still without a photo**
+- [ ] `hollywood-grande` — The Hollywood Grande, Autograph Collection  **← only LA hotel
+  still without a photo.** Rebranded from *Thompson Hollywood* on 2025-07-29
+  (Hyatt → Marriott), which is why nothing turned up in the Portal under the old
+  name — search Fora for "The Hollywood Grande".
 
 ### Miami, FL  (2)
 - [ ] `dua-miami` — Dua Miami
