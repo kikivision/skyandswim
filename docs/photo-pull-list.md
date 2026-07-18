@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (21)
+## Done (25)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -41,6 +41,10 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `four-seasons-houston` — Four Seasons Hotel Houston (Houston)
 - [x] `la-colombe-dor-houston` — La Colombe d'Or Hotel (Houston)
 - [x] `the-laura-houston` — The Laura Hotel, Autograph Collection (Houston)
+- [x] `windsor-suites-philadelphia` — The Windsor Suites (Philadelphia)
+- [x] `w-philadelphia` — W Philadelphia (Philadelphia)
+- [x] `sonesta-rittenhouse-philadelphia` — Sonesta Philadelphia Rittenhouse Square (Philadelphia)
+- [x] `wyndham-philadelphia-historic` — Wyndham Philadelphia Historic District (Philadelphia)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -85,12 +89,6 @@ collective credit line beneath the grid.
 - [ ] `arlo-williamsburg` — Arlo Williamsburg
 - [ ] `jimmy-james-soho` — ModernHaus SoHo
 
-### Philadelphia, PA  (4)
-- [ ] `windsor-suites-philadelphia` — The Windsor Suites
-- [ ] `w-philadelphia` — W Philadelphia
-- [ ] `sonesta-rittenhouse-philadelphia` — Sonesta Philadelphia Rittenhouse Square
-- [ ] `wyndham-philadelphia-historic` — Wyndham Philadelphia Historic District
-
 ### Phoenix, AZ  (3)
 - [ ] `palomar-phoenix` — Kimpton Hotel Palomar Phoenix  **← Editor's Pick, homepage**
 - [ ] `canopy-scottsdale` — Canopy by Hilton Scottsdale Old Town
@@ -105,5 +103,8 @@ collective credit line beneath the grid.
 
 ---
 
-**34 to pull, 9 to re-verify.** Priority: the cities with proven Search Console
-demand — Philadelphia next.
+**30 to pull, 9 to re-verify.** The three proven-demand cities (Washington DC,
+Houston, Philadelphia) are done, along with Dallas. Remaining cities are ranked
+by size: Los Angeles (5 left), San Diego (5), Austin (4), Phoenix (3),
+Chicago (3), Denver (2), Miami (2), New York (2), Nashville (2),
+New Orleans (2).
