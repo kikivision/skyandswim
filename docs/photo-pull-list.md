@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (17)
+## Done (21)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -37,6 +37,10 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `intercontinental-dc-wharf` — InterContinental Washington D.C. – The Wharf (Washington)
 - [x] `yotel-washington-dc` — YOTEL Washington DC (Washington)
 - [x] `hotel-zena-dc` — Hotel Zena Washington DC (Washington)
+- [x] `thompson-houston` — Thompson Houston, by Hyatt (Houston)
+- [x] `four-seasons-houston` — Four Seasons Hotel Houston (Houston)
+- [x] `la-colombe-dor-houston` — La Colombe d'Or Hotel (Houston)
+- [x] `the-laura-houston` — The Laura Hotel, Autograph Collection (Houston)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -57,12 +61,6 @@ collective credit line beneath the grid.
 ### Denver, CO  (2)
 - [ ] `jacquard-denver` — The Jacquard, Autograph Collection
 - [ ] `warwick-denver` — Warwick Denver
-
-### Houston, TX  (4)
-- [ ] `thompson-houston` — Thompson Houston, by Hyatt
-- [ ] `four-seasons-houston` — Four Seasons Hotel Houston
-- [ ] `la-colombe-dor-houston` — La Colombe d'Or Hotel
-- [ ] `the-laura-houston` — The Laura Hotel, Autograph Collection
 
 ### Los Angeles, CA  (5)
 - [ ] `thompson-hollywood` — Thompson Hollywood
@@ -107,6 +105,5 @@ collective credit line beneath the grid.
 
 ---
 
-**38 to pull, 9 to re-verify.** Priority: Editor's Picks first (they
-surface on the homepage), then the cities with proven Search Console demand —
-Philadelphia and Houston.
+**34 to pull, 9 to re-verify.** Priority: the cities with proven Search Console
+demand — Philadelphia next.
