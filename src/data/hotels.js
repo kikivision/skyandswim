@@ -18,6 +18,11 @@
 // phone-confirmed fact gets stripped again on the next pass. Absence of an
 // operator statement is not evidence that a claim is false.
 //
+// `heroCredit` (optional, per hotel) is the property name to credit under the
+// hero image — required for Fora Portal photography. Renders as "Photo courtesy
+// of <name>." The image itself is wired by filename: src/assets/hotels/<slug>.jpg.
+// See docs/photo-pull-list.md for the source rule.
+//
 // `debunked` (optional, per hotel) is its mirror: claims that circulate widely
 // — press releases, aggregators — but are NOT true. Without it an audit finds
 // the claim in the wild, sees it missing from our copy, and adds it back.

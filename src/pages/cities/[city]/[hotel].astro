@@ -1,8 +1,24 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Footer from "../../../components/Footer.astro";
 import { CITIES } from "../../../data/hotels.js";
 import { AFFILIATE_HOTELS } from "../../../data/affiliates.js";
+
+// Hero images are keyed by hotel slug: src/assets/hotels/<slug>.jpg. Dropping a
+// correctly-named file in that directory is all it takes — no wiring. Glob so
+// they still go through Astro's optimizer (webp + responsive srcset), which a
+// runtime string path would skip.
+const heroFiles = import.meta.glob<{ default: ImageMetadata }>(
+  "../../../assets/hotels/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+const heroBySlug = Object.fromEntries(
+  Object.entries(heroFiles).map(([path, mod]) => [
+    path.split("/").pop().replace(/\.\w+$/, ""),
+    mod.default,
+  ]),
+);
 
 // A page per hotel. These target the hotel-name searches GSC already shows us
 // surfacing for ("<hotel> rooftop pool", "does <hotel> have a pool") — far
@@ -40,6 +56,14 @@ const ctaRel = !isOutbound
   : hasAffiliate
     ? "noopener noreferrer sponsored"
     : "noopener noreferrer";
+
+const hero = heroBySlug[hotel.slug];
+
+// Fora Portal photos are licensed to us as an advisor but must credit the
+// property. Same mechanism and wording as Jet & Swim's gallery_credit.
+// Source rule (see docs/photo-pull-list.md): Portal assets, our own, or free
+// stock — never lifted from a hotel's own website or from Booking.com.
+const photoCredit = hotel.heroCredit;
 
 const site = "https://skyandswim.com";
 const pageUrl = `${site}/cities/${citySlug}/${hotel.slug}/`;
@@ -109,6 +133,27 @@ const jsonLd = [
         {hotel.pick && <p class="hero-pick">✦ Sky &amp; Swim Pick</p>}
       </div>
     </header>
+
+    {hero && (
+      <figure class="hero-figure">
+        <div class="section-inner">
+          <Image
+            class="hero-img"
+            src={hero}
+            alt={`The rooftop pool at ${hotel.name}, ${city}.`}
+            widths={[640, 960, 1440]}
+            sizes="(max-width: 900px) 100vw, 1200px"
+            loading="eager"
+            fetchpriority="high"
+          />
+          {photoCredit && (
+            <figcaption class="hero-credit">
+              Photo courtesy of {photoCredit}.
+            </figcaption>
+          )}
+        </div>
+      </figure>
+    )}
 
     <div class="section-inner hotel-body">
       <section class="block" aria-labelledby="pool-heading">
@@ -226,6 +271,30 @@ const jsonLd = [
     letter-spacing: 0.14em;
     color: var(--watermelon);
     margin: 1rem 0 0;
+  }
+
+  /* Hero image — sits between the title block and the facts, so the pool is the
+     first thing you see after the name. */
+  .hero-figure {
+    margin: 0 0 clamp(2.5rem, 5vw, 3.5rem);
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 12px;
+    background: rgba(6, 26, 44, 0.4);
+  }
+  /* Discreet property credit, as required for Fora Portal photography. */
+  .hero-credit {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    color: rgba(220, 240, 245, 0.5);
+    margin: 0.7rem 0 0;
+    text-align: right;
   }
 
   .hotel-body { padding-bottom: clamp(4rem, 8vw, 7rem); }
