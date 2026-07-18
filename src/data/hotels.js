@@ -17,6 +17,10 @@
 // process flags unsourced claims for removal; without this marker, an owner- or
 // phone-confirmed fact gets stripped again on the next pass. Absence of an
 // operator statement is not evidence that a claim is false.
+//
+// `debunked` (optional, per hotel) is its mirror: claims that circulate widely
+// — press releases, aggregators — but are NOT true. Without it an audit finds
+// the claim in the wild, sees it missing from our copy, and adds it back.
 
 export const CITIES = {
   "austin": {
@@ -212,6 +216,9 @@ export const CITIES = {
         "priceRange": "$$$$",
         "verified": {
           "length": "75ft — Confirmed by Karen 2026-07-18. In the 2023 opening press release but absent from the current operator page."
+        },
+        "debunked": {
+          "infinityEdge": "Checked against rooftop photography 2026-07-18 — solid coping above the waterline, no spillover, no catch basin. The claim comes from the 2023 opening press release and was copied onward from there. Do not re-add."
         }
       },
       {
@@ -680,7 +687,10 @@ export const CITIES = {
         ],
         "bookingUrl": "https://www.thewilliamvale.com",
         "pick": true,
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "debunked": {
+          "infinityEdge": "Confirmed not an infinity edge by Karen 2026-07-18, despite the claim appearing across third-party coverage. thewilliamvale.com never uses the word. Do not re-add."
+        }
       },
       {
         "name": "Arlo Williamsburg",

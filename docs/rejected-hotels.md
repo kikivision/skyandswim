@@ -206,3 +206,13 @@ confirmed the pool is in fact heated, and it was restored.
 To stop that happening twice, hotels can carry a `verified` object in
 `src/data/hotels.js` recording the claim and where the confirmation came from.
 Check it before stripping anything an audit flags as unsourced.
+
+Its mirror is `debunked`: claims that circulate widely but are false. Two so far,
+both "infinity edge" — Hôtel Swexan (from its 2023 opening press release; rooftop
+photography shows solid coping and no spillover) and The William Vale (repeated
+across third-party coverage; the hotel itself never says it). Both were checked
+and rejected. Without the marker, an audit finds the claim in the wild, sees it
+missing from our copy, and puts it back.
+
+**Two claims, two directions.** `verified` protects true-but-unsourced facts from
+being stripped; `debunked` protects false-but-widespread ones from being added.
