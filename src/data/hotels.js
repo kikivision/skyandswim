@@ -492,6 +492,9 @@ export const CITIES = {
         "pick": true,
         "priceRange": "$$$$",
         "stay": "The Conrad is the architectural splurge — it occupies Frank Gehry's Grand LA, and the whole hotel is pitched at people who care about design, with a 16,000-square-foot terrace to match. You're in the Bunker Hill culture cluster, walking distance to the Walt Disney Concert Hall, The Broad, and MOCA, which is about as walkable as Los Angeles gets. At $$$$ it's the priciest downtown stay and you're paying for the building and the deck — worth it if architecture and the museums are your LA, less so if you came for the beach.",
+        "verified": {
+          "stay": "Occupies Frank Gehry's Grand LA on Bunker Hill; walkable to the Walt Disney Concert Hall, The Broad and MOCA — Confirmed by Karen 2026-07-18. (The deck itself is Tara Bernerd's work, not Gehry's — see the description.)"
+        },
         "heroCredit": "Conrad Los Angeles"
       },
       {
@@ -522,7 +525,11 @@ export const CITIES = {
           "Design Hotel"
         ],
         "priceRange": "$$$$",
-        "stay": "Santa Monica Proper is the beach-side design hotel — a Kelly Wearstler interior and one of the very few real rooftop pools on the Westside, aimed at the Pacific rather than a skyline. Being in Santa Monica changes the whole trip: you're walkable to the beach, the pier, and Third Street, and out of the daily downtown-to-Hollywood traffic entirely. At $$$$ it's a genuine splurge, but it's the one hotel here where the ocean is the view — the pick if you want the coast, not the city."
+        "stay": "Santa Monica Proper is the beach-side design hotel — a Kelly Wearstler interior and one of the very few real rooftop pools on the Westside, aimed at the Pacific rather than a skyline. Being in Santa Monica changes the whole trip: you're walkable to the beach, the pier, and Third Street, and out of the daily downtown-to-Hollywood traffic entirely. At $$$$ it's a genuine splurge, but it's the one hotel here where the ocean is the view — the pick if you want the coast, not the city.",
+        "verified": {
+          "stay": "Kelly Wearstler interiors; Santa Monica, walkable to the beach, the pier and Third Street — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "Santa Monica Proper"
       },
       {
         "name": "The Godfrey Hotel Hollywood",
@@ -537,7 +544,8 @@ export const CITIES = {
           "Hollywood"
         ],
         "priceRange": "$$$",
-        "stay": "The Godfrey is the practical Hollywood pick — one of the biggest pool decks in the neighborhood and the most genuinely swimmable of the Hollywood rooftops, without the velvet-rope energy of its neighbors. Same Hollywood base as the Thompson and the Everly, so you're central to the boulevard and the studio side of town. At $$$ it's solid value for that 360 view — the pick if you want a big deck and a real swim rather than a scene."
+        "stay": "The Godfrey is the practical Hollywood pick — one of the biggest pool decks in the neighborhood and the most genuinely swimmable of the Hollywood rooftops, without the velvet-rope energy of its neighbors. Same Hollywood base as the Thompson and the Everly, so you're central to the boulevard and the studio side of town. At $$$ it's solid value for that 360 view — the pick if you want a big deck and a real swim rather than a scene.",
+        "heroCredit": "The Godfrey Hotel Hollywood"
       },
       {
         "name": "Kimpton Everly Hotel",
@@ -552,7 +560,11 @@ export const CITIES = {
           "Year-Round"
         ],
         "priceRange": "$$$",
-        "stay": "The Everly is the calm one in Hollywood — design-driven and lower-key, with six named cabanas and a heated pool that runs year-round rather than a weekend party on the roof. It sits up against the Hollywood Hills near Hollywood and Vine, walkable to the Metro, which in this city is worth more than it sounds. At $$$ it's priced like its Hollywood neighbors but delivers a quieter stay — the pick if you want the location without the noise."
+        "stay": "The Everly is the calm one in Hollywood — design-driven and lower-key, with six named cabanas and a heated pool that runs year-round rather than a weekend party on the roof. It sits up against the Hollywood Hills near Hollywood and Vine, walkable to the Metro, which in this city is worth more than it sounds. At $$$ it's priced like its Hollywood neighbors but delivers a quieter stay — the pick if you want the location without the noise.",
+        "verified": {
+          "stay": "Near Hollywood and Vine, walkable to the Metro station — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "Kimpton Everly Hotel"
       },
       {
         "name": "The Hoxton, Downtown LA",
@@ -567,7 +579,11 @@ export const CITIES = {
           "Design Hotel"
         ],
         "priceRange": "$$$",
-        "stay": "The Hoxton is the design hotel that doesn't charge like one — the brand's usual good-looking, well-considered rooms, on Broadway in the middle of downtown's historic theater district. It's the value counterweight to the Conrad a few blocks away: same downtown base, considerably less money. At $$$ it's the best-priced design stay in DTLA and the pool is open year-round — the pick if you want downtown and style without the Conrad's bill."
+        "stay": "The Hoxton is the design hotel that doesn't charge like one — the brand's usual good-looking, well-considered rooms, on Broadway in the middle of downtown's historic theater district. It's the value counterweight to the Conrad a few blocks away: same downtown base, considerably less money. At $$$ it's the best-priced design stay in DTLA and the pool is open year-round — the pick if you want downtown and style without the Conrad's bill.",
+        "verified": {
+          "stay": "On Broadway in downtown's historic theater district — Confirmed by Karen 2026-07-18."
+        },
+        "heroCredit": "The Hoxton, Downtown LA"
       }
     ]
   },

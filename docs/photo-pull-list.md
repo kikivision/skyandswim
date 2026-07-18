@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (25)
+## Done (29)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -45,6 +45,10 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `w-philadelphia` — W Philadelphia (Philadelphia)
 - [x] `sonesta-rittenhouse-philadelphia` — Sonesta Philadelphia Rittenhouse Square (Philadelphia)
 - [x] `wyndham-philadelphia-historic` — Wyndham Philadelphia Historic District (Philadelphia)
+- [x] `santa-monica-proper` — Santa Monica Proper (Los Angeles)
+- [x] `godfrey-hollywood` — The Godfrey Hotel Hollywood (Los Angeles)
+- [x] `kimpton-everly-hollywood` — Kimpton Everly Hotel (Los Angeles)
+- [x] `hoxton-dtla` — The Hoxton, Downtown LA (Los Angeles)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -66,12 +70,8 @@ collective credit line beneath the grid.
 - [ ] `jacquard-denver` — The Jacquard, Autograph Collection
 - [ ] `warwick-denver` — Warwick Denver
 
-### Los Angeles, CA  (5)
-- [ ] `thompson-hollywood` — Thompson Hollywood
-- [ ] `santa-monica-proper` — Santa Monica Proper
-- [ ] `godfrey-hollywood` — The Godfrey Hotel Hollywood
-- [ ] `kimpton-everly-hollywood` — Kimpton Everly Hotel
-- [ ] `hoxton-dtla` — The Hoxton, Downtown LA
+### Los Angeles, CA  (1)
+- [ ] `thompson-hollywood` — Thompson Hollywood  **← only LA hotel still without a photo**
 
 ### Miami, FL  (2)
 - [ ] `dua-miami` — Dua Miami
@@ -103,8 +103,11 @@ collective credit line beneath the grid.
 
 ---
 
-**30 to pull, 9 to re-verify.** The three proven-demand cities (Washington DC,
+**26 to pull, 9 to re-verify.** The three proven-demand cities (Washington DC,
 Houston, Philadelphia) are done, along with Dallas. Remaining cities are ranked
-by size: Los Angeles (5 left), San Diego (5), Austin (4), Phoenix (3),
-Chicago (3), Denver (2), Miami (2), New York (2), Nashville (2),
-New Orleans (2).
+by size: San Diego (5), Austin (4), Phoenix (3), Chicago (3), Denver (2),
+Miami (2), New York (2), Nashville (2), New Orleans (2), Los Angeles (1).
+
+Note on Fora availability: LA's Portal selection was thin — if better images
+surface later, replacing one is a drop-in (the filename is the wiring, so
+overwriting `<slug>.jpg` is the whole job).
