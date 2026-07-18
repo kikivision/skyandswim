@@ -1025,7 +1025,8 @@ export const CITIES = {
           "Rare"
         ],
         "pick": true,
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "The InterContinental is the polished, waterfront choice — a full-service luxury hotel on The Wharf, DC's redeveloped Potomac-side strip of restaurants, bars, and the Anthem music hall, with one of the only real rooftop pools in the city up top. You're on the water and walkable to the Wharf's dining and the Tidal Basin, though it's a Metro ride or a long walk from the Mall's museums. At $$$ it's fair for waterfront luxury in a city where a swimmable rooftop barely exists — the pick if the Wharf scene and the pool are the point."
       },
       {
         "name": "YOTEL Washington DC",
@@ -1039,7 +1040,8 @@ export const CITIES = {
           "Day Pass",
           "Largest on the Hill"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "YOTEL is the value play — a compact, tech-forward hotel where the rooms (YOTEL calls them cabins) are small and efficient by design, the trade for a Capitol Hill address and the most accessible good pool in the city. You're near Union Station and the Capitol, walkable to the Hill and a quick Metro to everywhere else. At $$ it's the cheapest way onto a genuinely good DC rooftop — the pick if location and the pool matter more than square footage; skip it if you want a spacious, traditional room."
       },
       {
         "name": "Hotel Zena Washington DC",
@@ -1053,7 +1055,8 @@ export const CITIES = {
           "Logan Circle",
           "Cabanas"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "Zena is the design statement — a boldly art-forward hotel built around a theme of female empowerment, with a gallery's worth of work in the public spaces and a rooftop that swims by day and becomes Hedy's bar crowd after dark. It's on the 14th Street corridor in Logan Circle, one of DC's best strips for restaurants and nightlife, walkable and lively. At $$$ you're paying for the design and the location as much as the room — the pick if you want personality and a night-out neighborhood, less so if you want a quiet, classic DC stay."
       }
     ]
   }
