@@ -184,6 +184,46 @@ export const AFFILIATE_HOTELS = {
     bookingcom: 'https://www.booking.com/hotel/us/hard-rock-san-diego-san-diego.html',
   },
 
+  // --- Houston --- (verified 2026-07-18)
+  'thompson-houston': {
+    bookingcom: 'https://www.booking.com/hotel/us/thompson-houston.html',
+  },
+  'four-seasons-houston': {
+    bookingcom: 'https://www.booking.com/hotel/us/four-seasons-houston.html',
+  },
+  // Booking's slug is apostrophe-mangled but resolves to the right property.
+  'la-colombe-dor-houston': {
+    bookingcom: 'https://www.booking.com/hotel/us/la-colombe-d-39-or-amp-restaurant.html',
+  },
+  // Legacy slug: the property was Hotel Alessandra before the Laura rebrand.
+  'the-laura-houston': {
+    bookingcom: 'https://www.booking.com/hotel/us/alessandra.html',
+  },
+
+  // --- Philadelphia --- (verified 2026-07-18)
+  'w-philadelphia': {
+    bookingcom: 'https://www.booking.com/hotel/us/w-philadelphia.html',
+  },
+  'windsor-suites-philadelphia': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-windsor-suites.html',
+  },
+  'sonesta-rittenhouse-philadelphia': {
+    bookingcom: 'https://www.booking.com/hotel/us/sonesta-philadelphia-downtown-rittenhouse-square.html',
+  },
+  'wyndham-philadelphia-historic': {
+    bookingcom: 'https://www.booking.com/hotel/us/wyndham-philadelphia-historic-district.html',
+  },
+
+  // --- Washington DC --- (verified 2026-07-18)
+  // Legacy slug (and Booking's own misspelling): the property was The Liaison
+  // Capitol Hill before YOTEL took it over.
+  'yotel-washington-dc': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-liason-capitol-hill.html',
+  },
+  'hotel-zena-dc': {
+    bookingcom: 'https://www.booking.com/hotel/us/hotel-zena-a-viceroy-urban-retreat.html',
+  },
+
   // --- Beyond the Cities (one-off standouts, /beyond-the-cities) ---
   'four-seasons-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/four-seasons-philadelphia-at-comcast-center.html',
