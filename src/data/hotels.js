@@ -820,6 +820,7 @@ export const CITIES = {
         ],
         "pick": true,
         "priceRange": "$$$$",
+        "stay": "The Four Seasons is the outright splurge — it occupies the top floors of Philadelphia's tallest tower, and the 57th-floor pool is the reason people book it rather than an amenity they discover later. You're in Center City with the whole downtown underneath you, walkable to the business district and a short ride from everything else. At $$$$ it's the most expensive stay in the city and it knows it — worth it if the view is the trip, hard to justify if you mainly want a pool and a bed.",
         "heroCredit": "Four Seasons Hotel Philadelphia"
       },
       {
@@ -834,7 +835,8 @@ export const CITIES = {
           "Skyline",
           "Day Pass"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Windsor is the value play, and an all-suite one — rooms come with kitchens, which makes it the obvious pick for a longer stay or a family that doesn't want to eat every meal out. It sits on the Benjamin Franklin Parkway in Logan Square, walking distance to the art museums and a straight shot into Center City. At $$ it's the best value-to-altitude ratio in Philadelphia, and the deck runs May through October — the longest season in town — so it's the pick if you're watching the budget or traveling outside high summer."
       },
       {
         "name": "W Philadelphia",
@@ -848,7 +850,8 @@ export const CITIES = {
           "Scene",
           "Day Pass"
         ],
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "The W is the scene — high-energy, design-forward, and the WET deck is heated all year, which in Philadelphia makes it nearly a category of one. It's in Center City near City Hall, walkable to the shopping and nightlife the hotel is clearly built around. At $$$$ you're paying for the brand, the buzz, and a pool you can use in February — go midweek if the swim is the point, because on weekends the deck belongs to the party."
       },
       {
         "name": "Sonesta Philadelphia Rittenhouse Square",
@@ -862,7 +865,8 @@ export const CITIES = {
           "Swimmable Depth",
           "Day Pass"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "The Sonesta is the sensible middle — no particular scene, a pool deep enough to actually swim in, and a location that does a lot of the work. Rittenhouse Square is arguably the best neighborhood in Philadelphia to stay in: the city's densest run of good restaurants, walkable and pleasant in every direction. At $$$ it's fairly priced for the address — the pick if you want the neighborhood and a real swim, though the deck is Memorial Day to Labor Day only, so it's a summer-trip hotel."
       },
       {
         "name": "Wyndham Philadelphia Historic District",
@@ -876,7 +880,8 @@ export const CITIES = {
           "Old City",
           "Seasonal"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Wyndham is the budget, sightseeing-first choice — a straightforward hotel that doesn't pretend otherwise, with a modest rooftop pool and a location built for walking to the historic sites. Old City puts Independence Hall, the Liberty Bell, and the cobblestone blocks right outside, which is the whole reason to stay here. At $$ it's the cheapest way onto a Philadelphia rooftop and the deck is high summer only — the pick if the history trip is the point and the pool is a bonus, not the reason."
       }
     ]
   },
