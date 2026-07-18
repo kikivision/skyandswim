@@ -165,8 +165,8 @@ export const CITIES = {
         "name": "The Joule",
         "slug": "the-joule-dallas",
         "neighborhood": "Main Street District",
-        "description": "Downtown's showpiece: a rooftop pool cantilevered eight feet past the building edge behind glass, so you swim out over Main Street and look straight down. The single most distinctive pool in Texas.",
-        "poolNote": "Rooftop pool · Glass ledge over Main Street · Cabanas · Day passes Sun–Thu",
+        "description": "Downtown's showpiece: a rooftop pool cantilevered eight feet past the building edge behind glass, so you swim out over Main Street ten floors up and look straight down. The single most distinctive pool in Texas.",
+        "poolNote": "Rooftop pool · Glass ledge over Main Street · 10 floors up · Cabanas · Day passes Sun–Thu",
         "tags": [
           "Rooftop",
           "Glass Ledge",
@@ -174,49 +174,62 @@ export const CITIES = {
           "Downtown"
         ],
         "pick": true,
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "verified": {
+          "floor": "10th floor — Confirmed by Karen 2026-07-18. The operator publishes no floor number."
+        }
       },
       {
         "name": "Thompson Dallas",
         "slug": "thompson-dallas",
         "neighborhood": "Main Street District",
-        "description": "A rooftop pool atop The National tower, with an open-air sweep of the downtown skyline, private cabanas, and poolside dining. Adults-only, and the polished, grown-up end of the Dallas rooftop scene.",
-        "poolNote": "Rooftop pool · Downtown skyline · Cabanas · Adults-only · Day passes from $40",
+        "description": "A heated infinity-edge rooftop pool atop The National tower, with an open-air sweep of the downtown skyline, private cabanas, and poolside dining. Adults-only, and the polished, grown-up end of the Dallas rooftop scene.",
+        "poolNote": "Heated rooftop infinity-edge pool · Downtown skyline · Cabanas · Adults-only · Day passes from $40",
         "tags": [
           "Rooftop",
+          "Infinity Edge",
           "Adults Only",
-          "Skyline",
           "Day Pass"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "verified": {
+          "heated": "Confirmed by Karen 2026-07-18. Not stated by Hyatt or ResortPass.",
+          "infinityEdge": "Confirmed by Karen 2026-07-18. Appeared only in aggregator copy, no operator source."
+        }
       },
       {
         "name": "Hôtel Swexan",
         "slug": "hotel-swexan-dallas",
         "neighborhood": "Harwood District",
-        "description": "The top-floor pool turns a full 180 degrees across the Dallas skyline — a guests-only deck, cabanas, and the Pomelo pool bar. Among the newest and highest of the city's serious pools.",
-        "poolNote": "Top-floor pool · 180° Dallas skyline · Guests only · Pomelo pool bar",
+        "description": "The 75-foot top-floor pool turns a full 180 degrees across the Dallas skyline — a guests-only deck, cabanas, and the Pomelo pool bar. Among the newest and highest of the city's serious pools.",
+        "poolNote": "Top-floor 75-ft pool · 180° Dallas skyline · Guests only · Pomelo pool bar",
         "tags": [
           "Rooftop",
           "High Floor",
           "Guests Only",
           "Uptown"
         ],
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "verified": {
+          "length": "75ft — Confirmed by Karen 2026-07-18. In the 2023 opening press release but absent from the current operator page."
+        }
       },
       {
         "name": "W Dallas",
         "slug": "w-dallas-victory",
         "neighborhood": "Victory Park",
-        "description": "The WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. A full bar, and the Victory Park energy below.",
-        "poolNote": "Rooftop WET Deck infinity pool · Downtown skyline · Full bar · Day passes from $40",
+        "description": "The 16th-floor WET Deck puts an infinity edge and a glass wall between you and the skyline, so you can swim right up to the view. A full bar, and the Victory Park energy below.",
+        "poolNote": "16th-floor WET Deck infinity pool · Downtown skyline · Full bar · Day passes from $40",
         "tags": [
           "Rooftop",
           "Infinity Edge",
-          "Scene",
+          "High Floor",
           "Day Pass"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "verified": {
+          "floor": "16th floor — Confirmed by Karen 2026-07-18. Marriott states no floor; the only other source was the pool contractor's portfolio."
+        }
       },
       {
         "name": "The Statler Dallas",
@@ -280,15 +293,18 @@ export const CITIES = {
         "name": "The Jacquard, Autograph Collection",
         "slug": "jacquard-denver",
         "neighborhood": "Cherry Creek North",
-        "description": "A rooftop pool in Cherry Creek North with the Rockies on one side and downtown Denver on the other — the rare Denver deck where the Front Range is genuinely in the frame while you swim. Kisbee on the Roof handles the drinks.",
-        "poolNote": "Rooftop pool + hot tub · Rockies + downtown views · Kisbee on the Roof · Day passes from $29",
+        "description": "A 75-foot rooftop infinity lap pool in Cherry Creek North, with the Rockies on one side and downtown Denver on the other — the rare Denver deck where you can actually swim laps with the Front Range in the frame. Kisbee on the Roof handles the drinks.",
+        "poolNote": "75-ft rooftop infinity lap pool · Rockies + downtown views · Kisbee on the Roof · Day passes from $29",
         "tags": [
           "Rooftop",
+          "Infinity Edge",
           "Mountain Views",
-          "Day Pass",
-          "Cherry Creek"
+          "Lap Pool"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "verified": {
+          "pool": "75-ft infinity lap pool — Confirmed by Karen 2026-07-18. thejacquard.com publishes no dimensions and third-party sources disagreed on whether it is a lap pool."
+        }
       },
       {
         "name": "Warwick Denver",
