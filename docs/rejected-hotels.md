@@ -192,3 +192,17 @@ Two of our exclusivity claims were falsified against operator sites:
 distinctive") is fine and is the point of the site. Falsifiable exclusivity —
 *only, first, largest, highest, longest* — needs an operator source or a hedge,
 because a single counterexample kills it and takes credibility with it.
+
+## On "not stated by the operator"
+
+The audit flags claims the operator's own site doesn't make. That flag means
+*unsourced*, **not false** — and the two are easy to conflate when working
+through a long list.
+
+Worked example: Arlo Williamsburg's pool is heated. Neither arlohotels.com nor
+artrooftops.com says so, so the audit flagged it and it was removed. Karen then
+confirmed the pool is in fact heated, and it was restored.
+
+To stop that happening twice, hotels can carry a `verified` object in
+`src/data/hotels.js` recording the claim and where the confirmation came from.
+Check it before stripping anything an audit flags as unsourced.

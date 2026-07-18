@@ -11,6 +11,12 @@
 // URL segment: /cities/<citySlug>/<hotelSlug>/. Slugs must be globally unique.
 //
 // Pool counts are derived from hotels.length — never hardcode them.
+//
+// `verified` (optional, per hotel) records claims that are true but absent from
+// the operator's own pages, and where the confirmation came from. The fact-audit
+// process flags unsourced claims for removal; without this marker, an owner- or
+// phone-confirmed fact gets stripped again on the next pass. Absence of an
+// operator statement is not evidence that a claim is false.
 
 export const CITIES = {
   "austin": {
@@ -665,14 +671,17 @@ export const CITIES = {
         "slug": "arlo-williamsburg",
         "neighborhood": "Williamsburg",
         "description": "Compact but capable — the rooftop pool is on the smaller side but is rarely crowded at the right hours. Good for an afternoon session, especially mid-week; the operator programmes weekend DJ sets and Sunday day parties, so that is when the deck turns.",
-        "poolNote": "Seasonal rooftop pool · 40-ft · East River views · Day passes + cabanas available",
+        "poolNote": "Seasonal heated rooftop pool · 40-ft · East River views · Day passes + cabanas",
         "tags": [
           "Seasonal",
           "Day Pass",
           "East River Views",
           "Boutique"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "verified": {
+          "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com"
+        }
       },
       {
         "name": "ModernHaus SoHo",
