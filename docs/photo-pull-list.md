@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (29)
+## Done (30)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -49,6 +49,7 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `godfrey-hollywood` — The Godfrey Hotel Hollywood (Los Angeles)
 - [x] `kimpton-everly-hollywood` — Kimpton Everly Hotel (Los Angeles)
 - [x] `hoxton-dtla` — The Hoxton, Downtown LA (Los Angeles)
+- [x] `hollywood-grande` — The Hollywood Grande, Autograph Collection (Los Angeles)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -69,12 +70,6 @@ collective credit line beneath the grid.
 ### Denver, CO  (2)
 - [ ] `jacquard-denver` — The Jacquard, Autograph Collection
 - [ ] `warwick-denver` — Warwick Denver
-
-### Los Angeles, CA  (1)
-- [ ] `hollywood-grande` — The Hollywood Grande, Autograph Collection  **← only LA hotel
-  still without a photo.** Rebranded from *Thompson Hollywood* on 2025-07-29
-  (Hyatt → Marriott), which is why nothing turned up in the Portal under the old
-  name — search Fora for "The Hollywood Grande".
 
 ### Miami, FL  (2)
 - [ ] `dua-miami` — Dua Miami
@@ -106,10 +101,10 @@ collective credit line beneath the grid.
 
 ---
 
-**26 to pull, 9 to re-verify.** The three proven-demand cities (Washington DC,
-Houston, Philadelphia) are done, along with Dallas. Remaining cities are ranked
-by size: San Diego (5), Austin (4), Phoenix (3), Chicago (3), Denver (2),
-Miami (2), New York (2), Nashville (2), New Orleans (2), Los Angeles (1).
+**25 to pull, 9 to re-verify.** Five cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia and Los Angeles. Remaining cities ranked by
+size: San Diego (5), Austin (4), Phoenix (3), Chicago (3), Denver (2),
+Miami (2), New York (2), Nashville (2), New Orleans (2).
 
 Note on Fora availability: LA's Portal selection was thin — if better images
 surface later, replacing one is a drop-in (the filename is the wiring, so

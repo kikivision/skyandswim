@@ -515,7 +515,8 @@ export const CITIES = {
         "verified": {
           "rebrand": "Converted from Thompson Hollywood (Hyatt) to The Hollywood Grande, Autograph Collection (Marriott) on 2025-07-29. Confirmed 2026-07-18 via Hotel Dive, Boutique Hotelier and The Points Guy; Booking.com's thompson-hollywood URL 301s to the-hollywood-grande. Do not revert the name.",
           "pool": "11th-floor rooftop (the building is 11 storeys), heated year-round, ~4ft maximum depth — a lounging pool rather than a lap pool. Bar Lis still operates under the new brand. Confirmed 2026-07-18."
-        }
+        },
+        "heroCredit": "The Hollywood Grande, Autograph Collection"
       },
       {
         "name": "Santa Monica Proper",
