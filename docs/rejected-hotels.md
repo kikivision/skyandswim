@@ -19,6 +19,20 @@ Last updated 2026-07-18.
 | Hotel | City | Reason |
 |---|---|---|
 | **1 Hotel Brooklyn Bridge** | New York | **1hotels.com calls it a "plunge pool"** on its own rooftop page. Reviewers put it at ~3–4ft; management conceded size limits in a public reply. Fails the wade-in rule — same call as The Source. Our copy had also claimed "year-round," "heated," and a Manhattan Bridge sight-line, none of which the operator states. |
+| **Royalton Park Avenue** | New York | **Hotel is closed.** Its own homepage: *"will close its doors on July 5, 2026."* Reopens December 2026 as something "entirely new" — assume a rebrand. Not a quality judgment; revisit in December. We had it tagged "Year-Round" with a live affiliate link. |
+
+### Revisit later
+
+- **Royalton Park Avenue** (New York) — check December 2026. If the pool survives the
+  reimagining, add under whatever the new name is; don't restore this entry.
+
+### Considered and kept
+
+- **The Godfrey Hotel Hollywood** (Los Angeles) — Booking.com's amenity data tags it
+  a "plunge swimming pool" and the operator publishes no dimensions, which flagged it
+  in the audit. **Kept on editorial judgment:** the pool is modest but big enough,
+  genuinely rooftop, and has the view. Noted here so the Booking tag doesn't get
+  re-litigated every time someone re-runs the audit.
 
 ---
 

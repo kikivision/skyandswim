@@ -730,20 +730,6 @@ export const CITIES = {
           "Day Pass"
         ],
         "priceRange": "$$$"
-      },
-      {
-        "name": "Royalton Park Avenue",
-        "slug": "royalton-park-avenue",
-        "neighborhood": "NoMad",
-        "description": "A 40-foot heated pool on the 20th floor with the Empire State Building standing directly overhead — close enough it stops being a view and becomes the ceiling. The indoor-outdoor construction means it swims year-round, and the tri-level roof gives you somewhere to go between laps.",
-        "poolNote": "20th-floor heated indoor/outdoor pool · Empire State Building overhead · Tri-level rooftop · Year-round",
-        "tags": [
-          "Year-Round",
-          "Empire State View",
-          "Heated",
-          "High Floor"
-        ],
-        "priceRange": "$$$"
       }
     ]
   },

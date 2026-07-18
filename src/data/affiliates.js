@@ -116,10 +116,6 @@ export const AFFILIATE_HOTELS = {
   'gansevoort-meatpacking': {
     bookingcom: 'https://www.booking.com/hotel/us/gansevoort-manhattan.html',
   },
-  // "Royalton Park Avenue" — formerly Gansevoort Park Avenue (NoMad).
-  'royalton-park-avenue': {
-    bookingcom: 'https://www.booking.com/hotel/us/royalton-park-avenue-nyc.html',
-  },
 
   // --- Dallas ---
   'the-joule-dallas': {
@@ -226,6 +222,13 @@ export const AFFILIATE_HOTELS = {
   'ac-hotel-tucson': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
   },
+  // NOTE: "Royalton Park Avenue" was REMOVED (2026-07-18) because the hotel is
+  // CLOSED — its own site says it closed 2026-07-05, reopening December 2026 as
+  // something "entirely new," so expect a rebrand. Revisit in December; if the
+  // pool survives the reimagining it likely needs a fresh entry under the new
+  // name rather than this one restored. ResortPass still showed live-looking
+  // inventory for it after the closure, so don't trust aggregators here.
+  //
   // NOTE: "1 Hotel Brooklyn Bridge" was REMOVED (2026-07-18). 1hotels.com calls
   // it a "plunge pool" on its own rooftop page, and reviewers put it at roughly
   // 3–4ft; management conceded the size limits publicly. That fails the wade-in
