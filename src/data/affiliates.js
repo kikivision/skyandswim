@@ -105,9 +105,6 @@ export const AFFILIATE_HOTELS = {
   'william-vale': {
     bookingcom: 'https://www.booking.com/hotel/us/the-william-vale.html',
   },
-  '1-hotel-brooklyn-bridge': {
-    bookingcom: 'https://www.booking.com/hotel/us/1-brooklyn-bridge.html',
-  },
   'arlo-williamsburg': {
     bookingcom: 'https://www.booking.com/hotel/us/the-williamsburg.html',
   },
@@ -229,6 +226,12 @@ export const AFFILIATE_HOTELS = {
   'ac-hotel-tucson': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
   },
+  // NOTE: "1 Hotel Brooklyn Bridge" was REMOVED (2026-07-18). 1hotels.com calls
+  // it a "plunge pool" on its own rooftop page, and reviewers put it at roughly
+  // 3–4ft; management conceded the size limits publicly. That fails the wade-in
+  // rule, same call as The Source in Denver. Do not re-add without evidence the
+  // pool itself changed. See docs/rejected-hotels.md.
+  //
   // NOTE: "The Williamsburg Hotel" is intentionally NOT here — it is the SAME
   // building as `arlo-williamsburg` (96 Wythe Ave, rebranded 2023). And
   // "THEhotel at Mandarin Club" is omitted — no matching Booking.com property
