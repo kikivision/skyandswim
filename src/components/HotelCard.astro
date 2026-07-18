@@ -83,9 +83,6 @@ const ctaRel = !isOutbound
     )}
 
     <div class="card-actions">
-      {detailHref && (
-        <a class="card-detail-link" href={detailHref}>Our take</a>
-      )}
       {isOutbound && (
         <a class="card-cta" href={ctaHref} target="_blank" rel={ctaRel}>
           See rooms &amp; rates
@@ -269,32 +266,18 @@ const ctaRel = !isOutbound
     align-items: center;
     gap: 0.5rem 1.1rem;
     margin-top: 0.2rem;
-    /* Above the stretched overlay so the booking CTA stays independently
-       clickable rather than being swallowed by the card link. */
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Internal link to our write-up; sits ahead of the outbound booking CTA so
-     the crawl path into the hotel pages is on every listing. */
-  .card-detail-link {
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: rgba(220, 240, 245, 0.75);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-  }
-
-  .card-detail-link:hover {
-    color: #fff;
   }
 
   .card-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    /* Lifted above the stretched card overlay so the booking link stays
+       independently clickable. Scoped to the link itself rather than the row,
+       so blank space beside it still targets the detail page like the rest of
+       the card. */
+    position: relative;
+    z-index: 2;
     font-family: var(--font-body);
     font-size: 0.82rem;
     font-weight: 500;
