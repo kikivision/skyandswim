@@ -104,8 +104,20 @@ const ctaRel = !isOutbound
 </article>
 
 <style>
+  /* The card is a subgrid spanning five rows of the page's .hotel-grid: header,
+     description, pool note, tags, actions. Cards sharing a grid row therefore
+     share track heights, so the pool-note strip starts at the same height on
+     every card in the row and the CTA row sits on a common bottom line, however
+     long each description runs. Browsers without subgrid (and standalone usage
+     outside a grid) fall back to plain auto rows — the card just sizes to its
+     own content, which is the old behavior. */
   .hotel-card {
     position: relative;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 1rem;
+    padding: clamp(1.4rem, 2.5vw, 2rem);
     background: rgba(8, 30, 56, 0.75);
     border: 1px solid rgba(168, 216, 216, 0.15);
     border-radius: 12px;
@@ -143,14 +155,19 @@ const ctaRel = !isOutbound
     opacity: 0.6;
   }
 
+  /* Dissolved so the five sections become direct subgrid items of the card;
+     its old padding and gap now live on .hotel-card. */
   .card-inner {
-    padding: clamp(1.4rem, 2.5vw, 2rem);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: contents;
   }
 
-  .card-header { display: flex; flex-direction: column; gap: 0.45rem; }
+  /* Pin each section to its track so a missing section (e.g. a card with no
+     tags) leaves its row empty instead of shifting everything below it up. */
+  .card-header { grid-row: 1; display: flex; flex-direction: column; gap: 0.45rem; }
+  .card-description { grid-row: 2; }
+  .card-pool-note { grid-row: 3; align-self: start; }
+  .card-tags { grid-row: 4; align-self: start; }
+  .card-actions { grid-row: 5; align-self: end; }
 
   .card-meta-row {
     display: flex;
@@ -273,7 +290,6 @@ const ctaRel = !isOutbound
     flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem 1.1rem;
-    margin-top: 0.2rem;
   }
 
   /* Both action links are lifted above the stretched card overlay so each stays
