@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (30)
+## Done (35)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -50,6 +50,11 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `kimpton-everly-hollywood` — Kimpton Everly Hotel (Los Angeles)
 - [x] `hoxton-dtla` — The Hoxton, Downtown LA (Los Angeles)
 - [x] `hollywood-grande` — The Hollywood Grande, Autograph Collection (Los Angeles)
+- [x] `pendry-san-diego` — Pendry San Diego (San Diego)
+- [x] `andaz-san-diego` — Andaz San Diego (San Diego)
+- [x] `intercontinental-san-diego` — InterContinental San Diego (San Diego)
+- [x] `margaritaville-san-diego` — Margaritaville Hotel San Diego Gaslamp Quarter (San Diego)
+- [x] `hard-rock-san-diego` — Hard Rock Hotel San Diego (San Diego)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -92,18 +97,11 @@ collective credit line beneath the grid.
 - [ ] `canopy-scottsdale` — Canopy by Hilton Scottsdale Old Town
 - [ ] `ac-hotel-tempe` — AC Hotel Phoenix Tempe/Downtown
 
-### San Diego, CA  (5)
-- [ ] `pendry-san-diego` — Pendry San Diego  **← Editor's Pick, homepage**
-- [ ] `andaz-san-diego` — Andaz San Diego
-- [ ] `intercontinental-san-diego` — InterContinental San Diego
-- [ ] `margaritaville-san-diego` — Margaritaville Hotel San Diego Gaslamp Quarter
-- [ ] `hard-rock-san-diego` — Hard Rock Hotel San Diego
-
 ---
 
-**25 to pull, 9 to re-verify.** Five cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia and Los Angeles. Remaining cities ranked by
-size: San Diego (5), Austin (4), Phoenix (3), Chicago (3), Denver (2),
+**20 to pull, 9 to re-verify.** Six cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia, Los Angeles and San Diego. Remaining
+cities ranked by size: Austin (4), Phoenix (3), Chicago (3), Denver (2),
 Miami (2), New York (2), Nashville (2), New Orleans (2).
 
 Note on Fora availability: LA's Portal selection was thin — if better images

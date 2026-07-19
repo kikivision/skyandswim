@@ -1015,7 +1015,8 @@ export const CITIES = {
         "stay": "The Pendry is the Gaslamp's luxury flagship — the first hotel of Montage International's contemporary Pendry brand, opened in 2017 with enough in-house bars and restaurants that the evening can start and end without leaving the building. You're on J Street in the thick of the district, a few blocks from Petco Park and the convention center, with the nightlife beginning at the front door. At $$$$ it's the most expensive way to stay downtown — worth it if you want real luxury with the scene built in, less so if you'd rather sleep somewhere the street goes quiet.",
         "verified": {
           "stay": "First hotel of Montage International's Pendry brand, opened February 2017; on J Street a few blocks from Petco Park and the convention center — Confirmed 2026-07-19 via the opening press release (PR Newswire) and Times of San Diego."
-        }
+        },
+        "heroCredit": "Pendry San Diego"
       },
       {
         "name": "Andaz San Diego",
@@ -1033,7 +1034,8 @@ export const CITIES = {
         "stay": "The Andaz is the historic one behind a modern face — Hyatt's boutique brand inside a 1913 building that spent decades as the Maryland Hotel, now running in the brand's usual dark, design-forward idiom. It sits on F Street at the northern edge of the Gaslamp, so everything the district does after dark is walkable while the loudest blocks stay a little further off. At $$$ it's fairly priced for the character and the roof — the pick if you want boutique history and a genuinely swimmable pool over big-hotel polish.",
         "verified": {
           "stay": "Occupies the 1913 Sefton building (later the Maryland Hotel), reopened as Andaz in 2010; northern edge of the Gaslamp at 600 F Street — Confirmed 2026-07-19 via gaslamp.org and Fathom."
-        }
+        },
+        "heroCredit": "Andaz San Diego"
       },
       {
         "name": "InterContinental San Diego",
@@ -1051,7 +1053,8 @@ export const CITIES = {
         "stay": "The InterContinental is the bayfront choice — a glassy full-service tower from 2018 built on the site of Lane Field, where the Padres played before Petco, with the harbor rather than the Gaslamp filling the windows. You're on the Embarcadero across from the Santa Fe Depot, steps from the USS Midway and the Maritime Museum, with the Gaslamp a walk down the waterfront rather than outside the door. At $$$ it's fair for waterfront polish — the pick if the bay and the harbor light are the trip, less so if you want the nightlife at arm's reach.",
         "verified": {
           "stay": "Opened September 2018 on the former Lane Field site (the Padres' home 1936–1957), across from the Santa Fe Depot and steps from the USS Midway and the Maritime Museum — Confirmed 2026-07-19 via IHG's opening release."
-        }
+        },
+        "heroCredit": "InterContinental San Diego"
       },
       {
         "name": "Margaritaville Hotel San Diego Gaslamp Quarter",
@@ -1069,7 +1072,8 @@ export const CITIES = {
         "stay": "Margaritaville is the one that refuses to take itself seriously, on purpose — the former Kimpton Solamar, gut-renovated and rebranded in 2023 as the brand's first city-center hotel on the West Coast. It keeps the same Gaslamp corner near Petco Park, so you get the walkable downtown base without the luxury-tier bill. At $$ it's the value play of the district — the pick if you want the rooftop pool the operator bills as downtown's largest and a vacation mood over designer restraint; skip it if the island-life theming would wear thin by day two.",
         "verified": {
           "stay": "Rebranded from Kimpton Hotel Solamar in August 2023 after a reported ~$30M renovation; the brand's first city-center hotel on the West Coast — Confirmed 2026-07-19 via San Diego Magazine and Meetings & Conventions."
-        }
+        },
+        "heroCredit": "Margaritaville Hotel San Diego Gaslamp Quarter"
       },
       {
         "name": "Hard Rock Hotel San Diego",
@@ -1087,7 +1091,8 @@ export const CITIES = {
         "stay": "The Hard Rock is the wild card right now — the music-branded party hotel at the Gaslamp's Fifth Avenue entrance, across the street from the convention center, and in the middle of a change of era: new management arrived in mid-2025 with a full renovation to follow. The location is as convenient as downtown San Diego gets for a convention or a Padres game, which is exactly why people keep booking it through the disruption. At $$ it can be a genuine deal — the pick if the address matters most and you've confirmed what's open for your dates, the pool included; look elsewhere if you want a sure thing.",
         "verified": {
           "stay": "Coury Hospitality took over management July 2025 ahead of a full renovation planned for 2026; across the street from the San Diego Convention Center — Confirmed 2026-07-19 via Lodging Magazine and Fox 5 San Diego."
-        }
+        },
+        "heroCredit": "Hard Rock Hotel San Diego"
       }
     ]
   },
