@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (42)
+## Done (44)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -64,6 +64,8 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `viceroy-chicago` — Viceroy Chicago (Chicago)
 - [x] `hoxton-chicago` — The Hoxton, Chicago (Chicago)
 - [x] `doubletree-mag-mile` — DoubleTree by Hilton Chicago – Magnificent Mile (Chicago)
+- [x] `the-barnett-new-orleans` — The Barnett (New Orleans)
+- [x] `virgin-hotels-new-orleans` — Virgin Hotels New Orleans (New Orleans)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -82,10 +84,6 @@ collective credit line beneath the grid.
 - [ ] `graduate-nashville` — Graduate by Hilton Nashville
 - [ ] `the-nash-nashville` — The Nash
 
-### New Orleans, LA  (2)
-- [ ] `the-barnett-new-orleans` — The Barnett
-- [ ] `virgin-hotels-new-orleans` — Virgin Hotels New Orleans
-
 ### New York, NY  (2)
 - [ ] `arlo-williamsburg` — Arlo Williamsburg
 - [ ] `jimmy-james-soho` — ModernHaus SoHo
@@ -97,10 +95,10 @@ collective credit line beneath the grid.
 
 ---
 
-**13 to pull, 9 to re-verify.** Eight cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin and
-Chicago. Remaining cities ranked by size: Phoenix (3), Denver (2), Miami (2),
-New York (2), Nashville (2), New Orleans (2).
+**11 to pull, 9 to re-verify.** Nine cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago
+and New Orleans. Remaining cities ranked by size: Phoenix (3), Denver (2),
+Miami (2), New York (2), Nashville (2).
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's
