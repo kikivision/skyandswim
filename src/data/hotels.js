@@ -757,7 +757,11 @@ export const CITIES = {
           "Day Pass"
         ],
         "pick": true,
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Barnett is the one with the Ace's DNA — the hotel that brought lobby-scene culture to the Warehouse District, renamed and folded into Hyatt's JdV collection, still running a jazz club, a lobby bar, and a run of restaurants inside a 1920s Art Deco building on Carondelet. The Warehouse District is the right base for most New Orleans trips: galleries and restaurants around you, the French Quarter a walk away, and none of Bourbon Street's chaos outside the window. At $$ it's one of the city's better hotel values — the pick if you want personality and music in the building, with Hyatt points besides; the trade is a lobby that hums rather than hushes.",
+        "verified": {
+          "stay": "Former Ace Hotel New Orleans, rebranded The Barnett, part of JdV by Hyatt; 600 Carondelet St, a 1920s Art Deco building; retains a jazz club and the rooftop pool — Confirmed 2026-07-19 via thebarnett.com, Tablet Hotels and Booking.com's ace-new-orleans listing."
+        }
       },
       {
         "name": "Virgin Hotels New Orleans",
@@ -772,7 +776,11 @@ export const CITIES = {
           "Skyline"
         ],
         "bookingUrl": "https://virginhotels.com/new-orleans",
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Virgin is the glossy new-build — opened in 2021 at Baronne and Lafayette with the brand's usual venue stack: Commons Club on the ground floor, the Pool Club on the roof, and the Dreamboat lounge on thirteen. It sits on the CBD edge of the Warehouse District, still an easy walk to the Quarter and the convention center, with the hotel itself supplying most of the evening. At $$ it's priced like the Barnett and the choice between them is temperament — this one for programmed, sociable energy and a proper rooftop scene; and since poolside loungers are reserved for hotel guests, the room is worth more here than the day pass.",
+        "verified": {
+          "stay": "Opened August 18, 2021 at Baronne and Lafayette in the Warehouse District; Commons Club on the ground floor, Dreamboat lounge on the 13th floor, The Pool Club on the roof — Confirmed 2026-07-19 via PR Newswire (opening release) and NOLA.com."
+        }
       }
     ]
   },
