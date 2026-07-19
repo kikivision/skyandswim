@@ -53,7 +53,11 @@ export const CITIES = {
           "Premium"
         ],
         "bookingUrl": "https://www.marriott.com/w-austin",
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "The W is the music-industry anchor downtown — it shares the Block 21 development with ACL Live at the Moody Theater, the venue where Austin City Limits tapes, so on a show night the commute is an elevator ride. You're in the 2nd Street District behind City Hall, with Lady Bird Lake and its trail just south and downtown's restaurants all around. At $$$$ it's the most expensive way onto an Austin rooftop — worth it if you're timing the trip around a show or want the WET deck scene built in, less so if a quiet room is the priority.",
+        "verified": {
+          "stay": "Part of the Block 21 development with ACL Live at the Moody Theater (home of Austin City Limits); 2nd Street District behind City Hall, overlooking Lady Bird Lake — Confirmed 2026-07-19 via Andersson-Wise (the Block 21 architects) and Marriott."
+        }
       },
       {
         "name": "Hotel Van Zandt",
@@ -68,7 +72,11 @@ export const CITIES = {
           "Boutique"
         ],
         "bookingUrl": "https://www.hotelvanzandt.com",
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "The Van Zandt is the Rainey Street one, and the music theme is load-bearing rather than decorative — the hotel is named for Townes Van Zandt, and Geraldine's runs live sets most nights, jazz brunches included. The district's bungalow bars are directly below, so the nightlife is at the door while the hotel stays surprisingly composed above it, with Lady Bird Lake at the end of the street. At $$$ it's fair for the location and the personality — the pick if you want Austin's bar scene walkable and music in the building; look downtown if Rainey's weekend noise would grate.",
+        "verified": {
+          "stay": "Named for Townes Van Zandt; opened 2015 in the Rainey Street Historic District; Geraldine's (4th floor) runs live music several nights a week. No longer marketed as a Kimpton — hotelvanzandt.com makes no Kimpton/IHG mention, so do not add the brand — Confirmed 2026-07-19."
+        }
       },
       {
         "name": "Austin Proper",
@@ -83,7 +91,11 @@ export const CITIES = {
           "Guests Only"
         ],
         "bookingUrl": "https://www.properhotels.com/austin",
-        "priceRange": "$$$$"
+        "priceRange": "$$$$",
+        "stay": "The Proper is the design statement — Kelly Wearstler's interiors run through the whole building, the restaurants come from Austin's McGuire Moorman group, and it arrived in 2019 as the brand's first hotel outside California. It shares the Second Street District with the W, so you get the same walkable downtown core near City Hall and the lake, in a considerably more styled package. At $$$$ you're paying design-hotel prices for a pool that's guests-and-members only with seasonal hours — worth it if the design is the draw, less so if maximum deck time is the point.",
+        "verified": {
+          "stay": "Opened December 2019, the Proper brand's first hotel outside California; Second Street District; restaurants by McGuire Moorman Lambert — Confirmed 2026-07-19 via properhotel.com, Marriott and PaperCity."
+        }
       },
       {
         "name": "Cambria Austin Downtown",
@@ -97,7 +109,11 @@ export const CITIES = {
           "Rainey Street",
           "Value"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Cambria is the value route to the Rainey scene — a newer tower, opened late 2023, a block off Rainey Street proper, with the adults-only deck on five and the Limestone bar eleven floors above it. You're at the quieter end of the district: close enough to walk to the bungalow bars and the lake trail, far enough that the noise stays on Rainey. At $$ it's the cheapest way to stay in this corner of downtown with a real pool deck — the pick if you want Rainey access without the boutique bill.",
+        "verified": {
+          "stay": "Opened October 2023 at 68 East Ave, a block off Rainey Street; Limestone rooftop bar on the 16th floor — Confirmed 2026-07-19 via CultureMap Austin and Urbanize Austin."
+        }
       }
     ]
   },
