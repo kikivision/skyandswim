@@ -357,6 +357,10 @@ export const CITIES = {
         "bookingUrl": "https://www.halcyonhotelcherrycreek.com",
         "pick": true,
         "priceRange": "$$$",
+        "stay": "Halcyon is the settle-in one — 154 rooms and eleven suites that opened in 2016 in Cherry Creek, with Local Jones doing the all-day bistro downstairs and a Gear Garage lending outdoor gear for getting out of town. Cherry Creek is Denver at its most polished: low-rise gallery-and-boutique blocks southeast of downtown, quieter by night than the city core. At $$$ it's the grown-up base — the pick when the trip is pool, dinner, and mountain light rather than downtown nights, and the year-round heated water makes a clear January swim a real plan instead of a brochure line.",
+        "verified": {
+          "stay": "Opened 2016 in Cherry Creek; 154 rooms + 11 suites; Local Jones is the in-house restaurant; Gear Garage lending program; rooftop pool and hot tub — Confirmed 2026-07-19 via halcyonhotelcherrycreek.com, Denver Westword and Uncover Colorado."
+        },
         "heroCredit": "Halcyon, a Hotel in Cherry Creek"
       },
       {
@@ -372,8 +376,10 @@ export const CITIES = {
           "Lap Pool"
         ],
         "priceRange": "$$$",
+        "stay": "The Jacquard is Cherry Creek's newer tower — a 201-room Autograph Collection hotel that opened in October 2018 in Cherry Creek North, the gallery-and-boutique blocks just north of the shopping center, with Kisbee on the Roof running the bar beside the pool. The neighborhood trade is the same as Halcyon's — shopping afternoons over downtown nights — so choosing between the two Cherry Creek roofs comes down to the water. At $$$, book the Jacquard to actually swim: the 75-foot infinity edge is real lap water, with the Rockies filling one end of the view and downtown the other.",
         "verified": {
-          "pool": "75-ft infinity lap pool — Confirmed by Karen 2026-07-18. thejacquard.com publishes no dimensions and third-party sources disagreed on whether it is a lap pool."
+          "pool": "75-ft infinity lap pool — Confirmed by Karen 2026-07-18. thejacquard.com publishes no dimensions and third-party sources disagreed on whether it is a lap pool.",
+          "stay": "Opened October 3, 2018; 201 rooms; Kisbee on the Roof is the poolside rooftop bar, 180° Rockies-and-downtown views — Confirmed 2026-07-19 via the Cherry Creek North district, Marriott and thejacquard.com."
         }
       },
       {
@@ -388,7 +394,11 @@ export const CITIES = {
           "Heated",
           "Skyline"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Warwick is the old guard — an Uptown fixture from Denver's mid-century social scene, its onetime Playboy Club connection now a design wink after a top-to-bottom renovation of all 216 rooms, each with a genuinely large private balcony. Uptown means Grant Street a block off the 17th Avenue restaurants, with the State Capitol and downtown both a short walk — city Denver, at a calmer address than the convention blocks. At $$ it's the value play of the three: book it for a balcony, the skyline, and a roof that's heated and open all year, and skip it if you want the scene the Cherry Creek decks charge $$$ for.",
+        "verified": {
+          "stay": "216 rooms and suites, fully renovated (completed 2017), each with a large private balcony (~120 sq ft); mid-century history including the Playboy Club connection; year-round heated rooftop pool; State Capitol and 17th Ave restaurants a short walk — Confirmed 2026-07-19 via warwickhotels.com and Hotel Management."
+        }
       }
     ]
   },
