@@ -685,7 +685,11 @@ export const CITIES = {
           "Brickell",
           "Day Pass"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "Dua is Brickell's reborn scene hotel — it opened as the SLS Brickell and kept Philippe Starck's 124 rooms, balconies included, through the 2024 Autograph rebrand, with Ahu|Mar's wood-fired seafood now running the restaurant. Brickell is the reason to choose it: Miami's financial district does polished evenings rather than beach-towel afternoons, and the roof draws the neighborhood more than the tourists. At $$$ it's the boutique way into the district — book it for the two infinity pools, the jacuzzi-and-cold-plunge deck, and the skyline; the ocean is a car ride away, which is exactly what keeps the deck calm.",
+        "verified": {
+          "stay": "Formerly SLS Brickell, rebranded Dua Miami (Autograph Collection) 2024; 124 Philippe Starck-designed rooms with balconies; Ahu|Mar (wood-fired seafood) and The Lounge on site; rooftop deck holds two infinity pools, a jacuzzi and a cold plunge — Confirmed 2026-07-19 via duamiamihotel.com, Hotels.com and miamiandbeaches.com."
+        }
       },
       {
         "name": "EAST Miami",
@@ -700,7 +704,11 @@ export const CITIES = {
           "Day Pass"
         ],
         "bookingUrl": "https://www.east-miami.com",
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "EAST is the vertical-city one — Hong Kong-based Swire's first U.S. hotel, opened in May 2016 as the crown of its Brickell City Centre development, with 255 rooms and eight suites (plus 89 apartment-style residences) directly above the shopping center. Staying here means downtown Miami as a working city rather than a resort: Quinto's fire-cooked South American menu downstairs, the mall below, and Sugar's fortieth-floor garden bar above. At $$$ it's strong value for the scale — book it for the sprawling fifth-floor deck and the sky-bar nightcap, and accept that the beach is a taxi ride, not a stroll.",
+        "verified": {
+          "stay": "Opened May 31, 2016 at Brickell City Centre (Swire Properties; Swire Hotels' first U.S. property); 255 rooms + 8 suites + 89 residences; Quinto (South American, fire cooking) and Sugar, the level-40 rooftop bar — Confirmed 2026-07-19 via The Real Deal, CoStar, Appetito and easthotels.com."
+        }
       }
     ]
   },
