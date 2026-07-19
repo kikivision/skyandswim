@@ -91,9 +91,12 @@ collective credit line beneath the grid.
 ## Needed
 
 ### Nashville, TN  (1)
-- [ ] `the-nash-nashville` — The Nash (Fora has nothing; Karen deciding between
-      a permissioned crop of the opalcollection.com rooftop-gallery shot or
-      requesting an asset from her Nash partner contact)
+- [ ] `the-nash-nashville` — The Nash (Fora has nothing; Fora confirmed Karen
+      may request a photo directly. Media contact for Opal's Nashville
+      property: Nori Guevara, Hayworth PR — nori@hayworthpr.com,
+      386-677-7000 x3. Hotel direct: 615-782-7100; Regional GM per the
+      rebrand release: Milos Davidovic. Awaiting an approved asset before
+      the hero ships.)
 
 ---
 
