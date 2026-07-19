@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (39)
+## Done (42)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -61,16 +61,14 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `cambria-austin-downtown` — Cambria Austin Downtown (Austin; exterior
       shot with the podium pool deck visible — swap in a closer deck photo if
       one surfaces in the Portal)
+- [x] `viceroy-chicago` — Viceroy Chicago (Chicago)
+- [x] `hoxton-chicago` — The Hoxton, Chicago (Chicago)
+- [x] `doubletree-mag-mile` — DoubleTree by Hilton Chicago – Magnificent Mile (Chicago)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
 
 ## Needed
-
-### Chicago, IL  (3)
-- [ ] `viceroy-chicago` — Viceroy Chicago  **← Editor's Pick, homepage**
-- [ ] `hoxton-chicago` — The Hoxton, Chicago
-- [ ] `doubletree-mag-mile` — DoubleTree by Hilton Chicago – Magnificent Mile
 
 ### Denver, CO  (2)
 - [ ] `jacquard-denver` — The Jacquard, Autograph Collection
@@ -81,11 +79,11 @@ collective credit line beneath the grid.
 - [ ] `east-miami` — EAST Miami
 
 ### Nashville, TN  (2)
-- [ ] `graduate-nashville` — Graduate by Hilton Nashville  **← Editor's Pick, homepage**
+- [ ] `graduate-nashville` — Graduate by Hilton Nashville
 - [ ] `the-nash-nashville` — The Nash
 
 ### New Orleans, LA  (2)
-- [ ] `the-barnett-new-orleans` — The Barnett  **← Editor's Pick, homepage**
+- [ ] `the-barnett-new-orleans` — The Barnett
 - [ ] `virgin-hotels-new-orleans` — Virgin Hotels New Orleans
 
 ### New York, NY  (2)
@@ -93,16 +91,20 @@ collective credit line beneath the grid.
 - [ ] `jimmy-james-soho` — ModernHaus SoHo
 
 ### Phoenix, AZ  (3)
-- [ ] `palomar-phoenix` — Kimpton Hotel Palomar Phoenix  **← Editor's Pick, homepage**
+- [ ] `palomar-phoenix` — Kimpton Hotel Palomar Phoenix
 - [ ] `canopy-scottsdale` — Canopy by Hilton Scottsdale Old Town
 - [ ] `ac-hotel-tempe` — AC Hotel Phoenix Tempe/Downtown
 
 ---
 
-**16 to pull, 9 to re-verify.** Seven cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia, Los Angeles, San Diego and Austin.
-Remaining cities ranked by size: Phoenix (3), Chicago (3), Denver (2),
-Miami (2), New York (2), Nashville (2), New Orleans (2).
+**13 to pull, 9 to re-verify.** Eight cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin and
+Chicago. Remaining cities ranked by size: Phoenix (3), Denver (2), Miami (2),
+New York (2), Nashville (2), New Orleans (2).
+
+(The "Editor's Pick, homepage" markers previously on some entries were stale —
+the homepage picks grid hard-codes six hotels, all photographed; a hotel's
+city-level pick status lives in `pick: true` in src/data/hotels.js.)
 
 Note on Fora availability: LA's Portal selection was thin — if better images
 surface later, replacing one is a drop-in (the filename is the wiring, so

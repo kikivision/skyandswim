@@ -150,7 +150,8 @@ export const CITIES = {
         "stay": "The Viceroy is the polished Gold Coast boutique — a 2017 glass tower rising out of the rebuilt brick facade of the 1920s Cedar Hotel, with Somerset downstairs handling the Mediterranean cooking. The Gold Coast is the genteel way to do Chicago: Oak Street Beach and the lakefront path a few blocks one way, Rush Street's restaurants the other, and the Mag Mile close without being underneath it. At $$$ it's fairly priced for the neighborhood and the design — the pick if you want a grown-up base near the lake, with the caveat that the rooftop is guests-only and firmly seasonal.",
         "verified": {
           "stay": "Opened 2017 in the Gold Coast; glass tower above the reconstructed four-story facade of the 1922 Cedar Hotel; Somerset is the in-house restaurant — Confirmed 2026-07-19 via Chicago Magazine, Goettsch Partners (the architects) and viceroyhotelsandresorts.com."
-        }
+        },
+        "heroCredit": "Viceroy Chicago"
       },
       {
         "name": "The Hoxton, Chicago",
@@ -168,7 +169,8 @@ export const CITIES = {
         "stay": "The Hoxton is the restaurant-district one — it opened in 2019 in Fulton Market, the old meatpacking blocks that have become Chicago's most exciting eating neighborhood, and put Stephanie Izard's Peruvian rooftop Cabra upstairs beside the pool. Staying here trades the lake and the Mag Mile for the West Loop's restaurant row, which for a food-first trip is the right trade. At $$$ it's the brand's usual good value for the design — the pick if dinner reservations are the itinerary, and the $20 Sunday day pass is the cheapest way to audition the roof first.",
         "verified": {
           "stay": "Opened April 2019 at 200 N Green St in Fulton Market; Cabra is Stephanie Izard's Peruvian-inspired rooftop restaurant (Boka Restaurant Group) — Confirmed 2026-07-19 via Time Out Chicago and Block Club Chicago."
-        }
+        },
+        "heroCredit": "The Hoxton, Chicago"
       },
       {
         "name": "DoubleTree by Hilton Chicago – Magnificent Mile",
@@ -186,7 +188,8 @@ export const CITIES = {
         "stay": "The DoubleTree is the straightforward sightseeing base — an unfussy big hotel in Streeterville, two blocks off the Magnificent Mile with Navy Pier, the Water Tower, and the lakefront all on foot. Nobody books it for the design; you book it for the address and the rooftop deck, and both deliver. At $$ it's the value way into this part of downtown — the pick for a first-visit or family Chicago trip where the days are for the city and the deck is for the late afternoon, remembering the pool runs roughly Memorial Day to Labor Day.",
         "verified": {
           "stay": "300 E Ohio St in Streeterville, two blocks from the Magnificent Mile; Navy Pier and the lakefront walkable — Confirmed 2026-07-19 via Hilton and Choose Chicago."
-        }
+        },
+        "heroCredit": "DoubleTree by Hilton Chicago – Magnificent Mile"
       }
     ]
   },
