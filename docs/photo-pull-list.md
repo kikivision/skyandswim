@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (35)
+## Done (39)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -55,17 +55,17 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `intercontinental-san-diego` — InterContinental San Diego (San Diego)
 - [x] `margaritaville-san-diego` — Margaritaville Hotel San Diego Gaslamp Quarter (San Diego)
 - [x] `hard-rock-san-diego` — Hard Rock Hotel San Diego (San Diego)
+- [x] `w-austin` — W Austin (Austin)
+- [x] `hotel-van-zandt` — Hotel Van Zandt (Austin)
+- [x] `austin-proper` — Austin Proper (Austin)
+- [x] `cambria-austin-downtown` — Cambria Austin Downtown (Austin; exterior
+      shot with the podium pool deck visible — swap in a closer deck photo if
+      one surfaces in the Portal)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
 
 ## Needed
-
-### Austin, TX  (4)
-- [ ] `w-austin` — W Austin
-- [ ] `hotel-van-zandt` — Hotel Van Zandt
-- [ ] `austin-proper` — Austin Proper
-- [ ] `cambria-austin-downtown` — Cambria Austin Downtown
 
 ### Chicago, IL  (3)
 - [ ] `viceroy-chicago` — Viceroy Chicago  **← Editor's Pick, homepage**
@@ -99,9 +99,9 @@ collective credit line beneath the grid.
 
 ---
 
-**20 to pull, 9 to re-verify.** Six cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia, Los Angeles and San Diego. Remaining
-cities ranked by size: Austin (4), Phoenix (3), Chicago (3), Denver (2),
+**16 to pull, 9 to re-verify.** Seven cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia, Los Angeles, San Diego and Austin.
+Remaining cities ranked by size: Phoenix (3), Chicago (3), Denver (2),
 Miami (2), New York (2), Nashville (2), New Orleans (2).
 
 Note on Fora availability: LA's Portal selection was thin — if better images
