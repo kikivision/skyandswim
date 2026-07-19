@@ -1011,7 +1011,8 @@ export const CITIES = {
         "stay": "The Palomar is the city-Phoenix one — a 242-room Kimpton that opened in 2012 anchoring CityScape, downtown's dining-and-entertainment block, with Blue Hound Kitchen & Cocktails downstairs and the brand's nightly social hour in the lobby. Staying here means skyline over saguaro: Chase Field and the Suns' arena are on foot, and the blocks below actually have a pulse after dark, which downtown Phoenix could not always claim. At $$$ it's fairly priced for the address — the pick if the trip is games, shows, and restaurants rather than spa days, with the trade-off that the third-floor deck is an urban rooftop, not resort acreage.",
         "verified": {
           "stay": "Opened 2012 in CityScape; 242 rooms; Blue Hound Kitchen & Cocktails and Eden Rooftop Bar on site; nightly social hour; Chase Field and the Suns' arena nearby — Confirmed 2026-07-19 via IHG/Kimpton and hotelpalomar-phoenix.com."
-        }
+        },
+        "heroCredit": "Kimpton Hotel Palomar Phoenix"
       },
       {
         "name": "Canopy by Hilton Scottsdale Old Town",
@@ -1029,7 +1030,8 @@ export const CITIES = {
         "stay": "The Canopy was Old Town's first new hotel in more than a decade when it opened in October 2020 — 177 rooms of Southwest-leaning mid-century design, with Cobre Kitchen + Cocktails on the ground floor and the Outrider lounge running the seventh-floor roof. Old Town is the point of booking it: Scottsdale's galleries, restaurants, and bars start at the front door, so the car sits while the resort crowd drives in. At $$$ it's priced like its neighborhood — the pick for a night-out Scottsdale trip rather than a spa retreat, and the roof at sunset is the closing argument.",
         "verified": {
           "stay": "Opened October 1, 2020 at 7142 E 1st St — Old Town's first new hotel in over a decade; 177 rooms; Cobre Kitchen + Cocktails on the ground floor; Outrider Rooftop Lounge on the 7th floor — Confirmed 2026-07-19 via Hilton's opening release and scottsdale.org."
-        }
+        },
+        "heroCredit": "Canopy by Hilton Scottsdale Old Town"
       },
       {
         "name": "AC Hotel Phoenix Tempe/Downtown",
@@ -1047,7 +1049,8 @@ export const CITIES = {
         "stay": "The AC is the East Valley's practical one — a six-story, 159-room hotel that opened in June 2016 as the first on Tempe Town Lake, with the brand's usual Euro-minimal rooms and the AC Lounge doing tapas and cocktails off the lobby. Mill Avenue and the ASU campus are on foot and the lake path starts right outside, which covers a football weekend or a graduation without touching the car. At $$ it's the value entry on this list — book it for the address and the roof, remembering check-in is 21-and-up, so it's a grown-ups' base rather than a family one.",
         "verified": {
           "stay": "Opened June 2016; first hotel on Tempe Town Lake; six stories, 159 rooms; AC Lounge on site; Mill Avenue and ASU walkable — Confirmed 2026-07-19 via Tempe Tourism and Marriott."
-        }
+        },
+        "heroCredit": "AC Hotel Phoenix Tempe/Downtown"
       }
     ]
   },

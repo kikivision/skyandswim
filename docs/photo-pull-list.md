@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (44)
+## Done (47)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -66,6 +66,11 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `doubletree-mag-mile` — DoubleTree by Hilton Chicago – Magnificent Mile (Chicago)
 - [x] `the-barnett-new-orleans` — The Barnett (New Orleans)
 - [x] `virgin-hotels-new-orleans` — Virgin Hotels New Orleans (New Orleans)
+- [x] `palomar-phoenix` — Kimpton Hotel Palomar Phoenix (Phoenix)
+- [x] `canopy-scottsdale` — Canopy by Hilton Scottsdale Old Town (Phoenix)
+- [x] `ac-hotel-tempe` — AC Hotel Phoenix Tempe/Downtown (Phoenix; deck-level
+      shot with no stadium/lake context visible — swap in a wider rooftop angle
+      if one surfaces in the Portal)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -88,16 +93,11 @@ collective credit line beneath the grid.
 - [ ] `arlo-williamsburg` — Arlo Williamsburg
 - [ ] `jimmy-james-soho` — ModernHaus SoHo
 
-### Phoenix, AZ  (3)
-- [ ] `palomar-phoenix` — Kimpton Hotel Palomar Phoenix
-- [ ] `canopy-scottsdale` — Canopy by Hilton Scottsdale Old Town
-- [ ] `ac-hotel-tempe` — AC Hotel Phoenix Tempe/Downtown
-
 ---
 
-**11 to pull, 9 to re-verify.** Nine cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago
-and New Orleans. Remaining cities ranked by size: Phoenix (3), Denver (2),
+**8 to pull, 9 to re-verify.** Ten cities are fully photographed: Dallas,
+Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago,
+New Orleans and Phoenix. Remaining cities ranked by size: Denver (2),
 Miami (2), New York (2), Nashville (2).
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
