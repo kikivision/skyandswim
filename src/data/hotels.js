@@ -380,7 +380,8 @@ export const CITIES = {
         "verified": {
           "pool": "75-ft infinity lap pool — Confirmed by Karen 2026-07-18. thejacquard.com publishes no dimensions and third-party sources disagreed on whether it is a lap pool.",
           "stay": "Opened October 3, 2018; 201 rooms; Kisbee on the Roof is the poolside rooftop bar, 180° Rockies-and-downtown views — Confirmed 2026-07-19 via the Cherry Creek North district, Marriott and thejacquard.com."
-        }
+        },
+        "heroCredit": "The Jacquard, Autograph Collection"
       },
       {
         "name": "Warwick Denver",
@@ -398,7 +399,8 @@ export const CITIES = {
         "stay": "The Warwick is the old guard — an Uptown fixture from Denver's mid-century social scene, its onetime Playboy Club connection now a design wink after a top-to-bottom renovation of all 216 rooms, each with a genuinely large private balcony. Uptown means Grant Street a block off the 17th Avenue restaurants, with the State Capitol and downtown both a short walk — city Denver, at a calmer address than the convention blocks. At $$ it's the value play of the three: book it for a balcony, the skyline, and a roof that's heated and open all year, and skip it if you want the scene the Cherry Creek decks charge $$$ for.",
         "verified": {
           "stay": "216 rooms and suites, fully renovated (completed 2017), each with a large private balcony (~120 sq ft); mid-century history including the Playboy Club connection; year-round heated rooftop pool; State Capitol and 17th Ave restaurants a short walk — Confirmed 2026-07-19 via warwickhotels.com and Hotel Management."
-        }
+        },
+        "heroCredit": "Warwick Denver"
       }
     ]
   },

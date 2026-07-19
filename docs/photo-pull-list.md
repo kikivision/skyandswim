@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (47)
+## Done (49)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -71,15 +71,13 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `ac-hotel-tempe` — AC Hotel Phoenix Tempe/Downtown (Phoenix; deck-level
       shot with no stadium/lake context visible — swap in a wider rooftop angle
       if one surfaces in the Portal)
+- [x] `jacquard-denver` — The Jacquard, Autograph Collection (Denver)
+- [x] `warwick-denver` — Warwick Denver (Denver)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
 
 ## Needed
-
-### Denver, CO  (2)
-- [ ] `jacquard-denver` — The Jacquard, Autograph Collection
-- [ ] `warwick-denver` — Warwick Denver
 
 ### Miami, FL  (2)
 - [ ] `dua-miami` — Dua Miami
@@ -95,9 +93,9 @@ collective credit line beneath the grid.
 
 ---
 
-**8 to pull, 9 to re-verify.** Ten cities are fully photographed: Dallas,
+**6 to pull, 9 to re-verify.** Eleven cities are fully photographed: Dallas,
 Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago,
-New Orleans and Phoenix. Remaining cities ranked by size: Denver (2),
+New Orleans, Phoenix and Denver. Remaining cities ranked by size:
 Miami (2), New York (2), Nashville (2).
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
