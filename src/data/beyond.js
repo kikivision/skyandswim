@@ -27,6 +27,10 @@ export const BEYOND_HOTELS = [
     poolNote: "4th-floor terrace infinity pool · Elliott Bay + Olympics · Heated 84° year-round · Guests only",
     tags: ["Rooftop", "Infinity Edge", "Water Views", "Year-Round"],
     priceRange: "$$$$",
+    stay: "The Four Seasons is Seattle's quiet luxury standard — a full-service property on the lower floors of a downtown tower, with Goldfinch Tavern, an Ethan Stowell restaurant, handling the food. The location is the argument: the Seattle Art Museum is next door, Pike Place Market is a five-minute walk, and the waterfront sits right below, so the city's best morning — the market, coffee, the piers — starts at the front door. At $$$$ it's the city's benchmark stay — worth it for the pool, the bay, and the market at your doorstep; the trade is downtown polish over neighborhood character.",
+    verified: {
+      stay: "Occupies the lower floors of a 21-story downtown tower at 99 Union St; Seattle Art Museum adjacent, Pike Place Market ~5 minutes on foot, waterfront below; Goldfinch Tavern is an Ethan Stowell restaurant — Confirmed 2026-07-19 via fourseasons.com and Visit Seattle.",
+    },
   },
   {
     name: "Market Pavilion Hotel",

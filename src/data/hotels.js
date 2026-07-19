@@ -655,6 +655,10 @@ export const CITIES = {
         "bookingUrl": "https://www.1hotels.com/south-beach",
         "pick": true,
         "priceRange": "$$$$",
+        "stay": "1 Hotel South Beach is the flagship that launched the brand — opened in 2015 as the first 1 Hotel, with the sustainability built into the fabric of the place: living green walls, reclaimed driftwood, and rooms that average some of the most generous square footage on the beach. It sits on 600 feet of beachfront at the quieter upper end of South Beach, walkable to the middle of the action without sleeping above the clubs. At $$$$ it's one of Miami's most expensive stays and books like it — worth it if you want the four pools, the ocean, and design with a conscience; look to Brickell if the South Beach premium isn't your trip.",
+        "verified": {
+          "stay": "Opened March 2015 as the brand's first hotel; 600 feet of beachfront on Collins Avenue at the upper end of South Beach; LEED Silver certified, living-wall and reclaimed-material design — Confirmed 2026-07-19 via 1hotels.com, Haute Living and Architizer."
+        },
         "heroCredit": "1 Hotel South Beach"
       },
       {
@@ -863,6 +867,10 @@ export const CITIES = {
           "Members Only"
         ],
         "priceRange": "$$$",
+        "stay": "The Gansevoort is the Meatpacking original — the district's first luxury hotel when it opened in 2004, and still its anchor after a top-to-bottom renovation finished in 2021. The address is the win: the High Line, the Whitney, Chelsea Market, and Little Island are all a few minutes on foot, with the West Village directly south for dinner. At $$$ it's fair for the location and the year-round pool — the pick if you want downtown New York's gallery-and-dinner circuit at the door and a real swim above it; expect scene, not seclusion, on weekend evenings.",
+        "verified": {
+          "stay": "Opened 2004 as the Meatpacking District's first luxury hotel; 18 Ninth Ave at W 13th St, steps from the High Line, the Whitney, Chelsea Market and Little Island; full renovation completed 2021 — Confirmed 2026-07-19 via gansevoorthotelgroup.com and The Points Guy."
+        },
         "heroCredit": "Gansevoort Meatpacking"
       }
     ]
