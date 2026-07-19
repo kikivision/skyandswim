@@ -739,7 +739,11 @@ export const CITIES = {
           "Reservation Required"
         ],
         "pick": true,
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Graduate is the fun one — a twelve-story, 205-room hotel that opened in 2020 on West End across from Vanderbilt, running maximalist Nashville design from lobby to roof: Poindexter's all-day café, an animatronic-critter karaoke bar at street level, and full Dolly Parton worship at White Limozeen up top. Midtown is a deliberate trade — the Vanderbilt end of town instead of a room above the honky-tonks, with Lower Broadway a short ride away. At $$ it's one of Nashville's better values — book it for the kitsch done this well and the pink rooftop, and plan ahead: the pool needs a White Limozeen reservation even for hotel guests.",
+        "verified": {
+          "stay": "Opened 2020; 12 stories, 205 rooms at 101 20th Ave N on West End, across from Vanderbilt; White Limozeen is the Dolly Parton-themed rooftop (named for her album), with Poindexter café and the Cross-Eyed Critters animatronic karaoke bar downstairs — Confirmed 2026-07-19 via the Graduate opening announcement (Hospitality Net), Nashville Lifestyles and Hilton."
+        }
       },
       {
         "name": "The Nash",
@@ -753,7 +757,11 @@ export const CITIES = {
           "Bar",
           "Guests Only"
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "stay": "The Nash spent its first eight years as the Bobby — the 144-room boutique that opened in May 2018 beside Printer's Alley, nine stories of music-city design with record players in the rooms — before taking its new name and joining the Opal Collection on March 1, 2026. Downtown here means the historic speakeasy alley at the door and Lower Broadway a few blocks south, which is about as central as sleeping in Nashville gets. At $$ it's the downtown option with actual character — book it for the roof, Scenicruiser and all, and remember the pool is guests-only and seasonal, so the deck stays a hotel amenity rather than a public scene.",
+        "verified": {
+          "stay": "Opened May 2018 as the Bobby Hotel; nine stories, 144 rooms at 230 4th Ave N on Printer's Alley; record players in rooms; rebranded The Nash and joined the Opal Collection March 1, 2026 — Confirmed 2026-07-19 via bobbyhotel.com, Hotel Management, Visit Music City and opalcollection.com."
+        }
       }
     ]
   },
