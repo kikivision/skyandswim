@@ -743,7 +743,8 @@ export const CITIES = {
         "stay": "The Graduate is the fun one — a twelve-story, 205-room hotel that opened in 2020 on West End across from Vanderbilt, running maximalist Nashville design from lobby to roof: Poindexter's all-day café, an animatronic-critter karaoke bar at street level, and full Dolly Parton worship at White Limozeen up top. Midtown is a deliberate trade — the Vanderbilt end of town instead of a room above the honky-tonks, with Lower Broadway a short ride away. At $$ it's one of Nashville's better values — book it for the kitsch done this well and the pink rooftop, and plan ahead: the pool needs a White Limozeen reservation even for hotel guests.",
         "verified": {
           "stay": "Opened 2020; 12 stories, 205 rooms at 101 20th Ave N on West End, across from Vanderbilt; White Limozeen is the Dolly Parton-themed rooftop (named for her album), with Poindexter café and the Cross-Eyed Critters animatronic karaoke bar downstairs — Confirmed 2026-07-19 via the Graduate opening announcement (Hospitality Net), Nashville Lifestyles and Hilton."
-        }
+        },
+        "heroCredit": "Graduate by Hilton Nashville"
       },
       {
         "name": "The Nash",
