@@ -830,6 +830,10 @@ export const CITIES = {
         "bookingUrl": "https://www.thewilliamvale.com",
         "pick": true,
         "priceRange": "$$$",
+        "stay": "The William Vale is Williamsburg's flagship — a 2016 tower at Wythe and North 12th where all 183 rooms and suites come with floor-to-ceiling glass and a private balcony, Andrew Carmellini's Leuca does southern Italian at street level, and Westlight pours on the 22nd floor. North Williamsburg is the other half of the argument: McCarren Park a block over, the Wythe Avenue strip below, and the Manhattan skyline performing across the river. At $$$ it's priced like the landmark it has become — the pick when the trip deserves the balcony, remembering the pool itself runs May to September even though the view works year-round.",
+        "verified": {
+          "stay": "Opened 2016 at Wythe Ave & N 12th St; 183 rooms and suites, all with private balconies; Westlight on the 22nd floor; Leuca (Andrew Carmellini / NoHo Hospitality) confirmed still on site — Confirmed 2026-07-19 via thewilliamvale.com, The Points Guy and Forbes."
+        },
         "debunked": {
           "infinityEdge": "Confirmed not an infinity edge by Karen 2026-07-18, despite the claim appearing across third-party coverage. thewilliamvale.com never uses the word. Do not re-add."
         },
@@ -848,8 +852,10 @@ export const CITIES = {
           "Boutique"
         ],
         "priceRange": "$$",
+        "stay": "The Arlo is the reborn one — the eight-story brick tower at 96 Wythe opened in 2017 as the Williamsburg Hotel, then re-emerged in September 2023 under Arlo after Quadrum Global bought it out of bankruptcy: 147 rooms with floor-to-ceiling windows, and the roof's old wooden water tower rebuilt as a glass-walled cocktail bar with the skyline behind the bottles. It shares the Vale's corner of North Williamsburg at half the ceremony, which is the appeal. At $$ it's the value way into the neighborhood — book it for a midweek swim and a water-tower nightcap, and know the deck turns into a party on summer weekends.",
         "verified": {
-          "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com"
+          "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com",
+          "stay": "Building opened 2017 as the Williamsburg Hotel; reopened as Arlo Williamsburg September 12, 2023 after Quadrum Global's purchase out of bankruptcy; 147 rooms incl. 8 suites; original water tower rebuilt as a glass-walled rooftop cocktail bar — Confirmed 2026-07-19 via Crain's New York Business, Forbes and arlohotels.com."
         }
       },
       {
@@ -864,7 +870,11 @@ export const CITIES = {
           "Manhattan",
           "Seasonal"
         ],
-        "priceRange": "$$$"
+        "priceRange": "$$$",
+        "stay": "ModernHaus is the James reborn — the onetime James New York tower at Grand and Thompson closed in March 2020 and reopened in 2021 rebuilt around a serious art collection (Calder, Condo, and KAWS among them), with Selene doing modern Greek under a retractable roof and Jimmy running the 18th-floor deck. SoHo from here means the gallery-and-boutique grid at the door, with Tribeca a short walk south for dinner reservations. At $$$, book it knowing the deal: the pool is guests-only — the rare Manhattan scene pool you can only swim in by sleeping over — and that exclusivity is exactly what keeps the deck usable on a hot Saturday.",
+        "verified": {
+          "stay": "Formerly The James New York (closed March 2020); reopened April 2021 as ModernHaus SoHo at Grand & Thompson; 114 rooms; art collection incl. Calder, Condo and KAWS; Jimmy on the 18th floor; opening restaurant Veranda since replaced by Selene (modern Greek, retractable-roof atrium) — Confirmed 2026-07-19 via Tribeca Citizen, InsideHook and modernhaushotel.com."
+        }
       },
       {
         "name": "Gansevoort Meatpacking",
