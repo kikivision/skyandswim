@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (49)
+## Done (51)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -73,6 +73,12 @@ Pulled from the Fora Portal and crediting the property. Each renders
       if one surfaces in the Portal)
 - [x] `jacquard-denver` — The Jacquard, Autograph Collection (Denver)
 - [x] `warwick-denver` — Warwick Denver (Denver)
+- [x] `arlo-williamsburg` — Arlo Williamsburg (New York; Portal had no strong
+      pool shot — best-available cabana-row angle, flagged by Karen as a
+      possible edit/swap candidate)
+- [x] `jimmy-james-soho` — ModernHaus SoHo (New York; source is ~1023px wide,
+      soft in the 1200px hero slot on retina — swap for a higher-res frame if
+      one surfaces in the Portal)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
@@ -87,16 +93,12 @@ collective credit line beneath the grid.
 - [ ] `graduate-nashville` — Graduate by Hilton Nashville
 - [ ] `the-nash-nashville` — The Nash
 
-### New York, NY  (2)
-- [ ] `arlo-williamsburg` — Arlo Williamsburg
-- [ ] `jimmy-james-soho` — ModernHaus SoHo
-
 ---
 
-**6 to pull, 9 to re-verify.** Eleven cities are fully photographed: Dallas,
+**4 to pull, 9 to re-verify.** Twelve cities are fully photographed: Dallas,
 Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago,
-New Orleans, Phoenix and Denver. Remaining cities ranked by size:
-Miami (2), New York (2), Nashville (2).
+New Orleans, Phoenix, Denver and New York. Remaining cities ranked by size:
+Miami (2), Nashville (2).
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's

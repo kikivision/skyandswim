@@ -856,7 +856,8 @@ export const CITIES = {
         "verified": {
           "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com",
           "stay": "Building opened 2017 as the Williamsburg Hotel; reopened as Arlo Williamsburg September 12, 2023 after Quadrum Global's purchase out of bankruptcy; 147 rooms incl. 8 suites; original water tower rebuilt as a glass-walled rooftop cocktail bar — Confirmed 2026-07-19 via Crain's New York Business, Forbes and arlohotels.com."
-        }
+        },
+        "heroCredit": "Arlo Williamsburg"
       },
       {
         "name": "ModernHaus SoHo",
@@ -874,7 +875,8 @@ export const CITIES = {
         "stay": "ModernHaus is the James reborn — the onetime James New York tower at Grand and Thompson closed in March 2020 and reopened in 2021 rebuilt around a serious art collection (Calder, Condo, and KAWS among them), with Selene doing modern Greek under a retractable roof and Jimmy running the 18th-floor deck. SoHo from here means the gallery-and-boutique grid at the door, with Tribeca a short walk south for dinner reservations. At $$$, book it knowing the deal: the pool is guests-only — the rare Manhattan scene pool you can only swim in by sleeping over — and that exclusivity is exactly what keeps the deck usable on a hot Saturday.",
         "verified": {
           "stay": "Formerly The James New York (closed March 2020); reopened April 2021 as ModernHaus SoHo at Grand & Thompson; 114 rooms; art collection incl. Calder, Condo and KAWS; Jimmy on the 18th floor; opening restaurant Veranda since replaced by Selene (modern Greek, retractable-roof atrium) — Confirmed 2026-07-19 via Tribeca Citizen, InsideHook and modernhaushotel.com."
-        }
+        },
+        "heroCredit": "ModernHaus SoHo"
       },
       {
         "name": "Gansevoort Meatpacking",
