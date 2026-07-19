@@ -15,7 +15,7 @@ property credit but should not be presented as the hotel if it isn't.
 
 ---
 
-## Done (51)
+## Done (53)
 
 Pulled from the Fora Portal and crediting the property. Each renders
 *"Photo courtesy of &lt;property&gt;."* beneath the hero.
@@ -79,15 +79,14 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `jimmy-james-soho` — ModernHaus SoHo (New York; source is ~1023px wide,
       soft in the 1200px hero slot on retina — swap for a higher-res frame if
       one surfaces in the Portal)
+- [x] `dua-miami` — Dua Miami, Autograph Collection (Miami; the signature
+      silver-duck deck shot, but ~1024px — same low-res swap note as above)
+- [x] `east-miami` — EAST Miami (Miami; ~1023px — same low-res swap note)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
 
 ## Needed
-
-### Miami, FL  (2)
-- [ ] `dua-miami` — Dua Miami
-- [ ] `east-miami` — EAST Miami
 
 ### Nashville, TN  (2)
 - [ ] `graduate-nashville` — Graduate by Hilton Nashville
@@ -95,10 +94,9 @@ collective credit line beneath the grid.
 
 ---
 
-**4 to pull, 9 to re-verify.** Twelve cities are fully photographed: Dallas,
+**2 to pull, 9 to re-verify.** Thirteen cities are fully photographed: Dallas,
 Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago,
-New Orleans, Phoenix, Denver and New York. Remaining cities ranked by size:
-Miami (2), Nashville (2).
+New Orleans, Phoenix, Denver, New York and Miami. Remaining: Nashville (2).
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's
