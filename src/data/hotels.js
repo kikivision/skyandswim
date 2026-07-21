@@ -762,7 +762,8 @@ export const CITIES = {
         "stay": "The Nash spent its first eight years as the Bobby — the 144-room boutique that opened in May 2018 beside Printer's Alley, nine stories of music-city design with record players in the rooms — before taking its new name and joining the Opal Collection on March 1, 2026. Downtown here means the historic speakeasy alley at the door and Lower Broadway a few blocks south, which is about as central as sleeping in Nashville gets. At $$ it's the downtown option with actual character — book it for the roof, Scenicruiser and all, and remember the pool is guests-only and seasonal, so the deck stays a hotel amenity rather than a public scene.",
         "verified": {
           "stay": "Opened May 2018 as the Bobby Hotel; nine stories, 144 rooms at 230 4th Ave N on Printer's Alley; record players in rooms; rebranded The Nash and joined the Opal Collection March 1, 2026 — Confirmed 2026-07-19 via bobbyhotel.com, Hotel Management, Visit Music City and opalcollection.com."
-        }
+        },
+        "heroCredit": "The Nash Hotel"
       }
     ]
   },

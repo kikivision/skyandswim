@@ -84,25 +84,24 @@ Pulled from the Fora Portal and crediting the property. Each renders
 - [x] `east-miami` — EAST Miami (Miami; ~1023px — same low-res swap note)
 - [x] `graduate-nashville` — Graduate by Hilton Nashville (Nashville; source
       arrived as AVIF-in-.jpg, converted to real JPEG)
+- [x] `the-nash-nashville` — The Nash (Nashville; approved by Nori Guevara,
+      Hayworth PR, 2026-07-21. Credit required verbatim: "The Nash Hotel".
+      Delivered as a screen-capture — swap for the full-res original from her
+      media link when convenient)
 
 Six of these also appear in the homepage Editor's Picks, which carries its own
 collective credit line beneath the grid.
 
 ## Needed
 
-### Nashville, TN  (1)
-- [ ] `the-nash-nashville` — The Nash (Fora has nothing; Fora confirmed Karen
-      may request a photo directly. Media contact for Opal's Nashville
-      property: Nori Guevara, Hayworth PR — nori@hayworthpr.com,
-      386-677-7000 x3. Hotel direct: 615-782-7100; Regional GM per the
-      rebrand release: Milos Davidovic. Awaiting an approved asset before
-      the hero ships.)
+_None — every hotel is photographed._
 
 ---
 
-**1 to pull, 9 to re-verify.** Thirteen cities are fully photographed: Dallas,
-Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin, Chicago,
-New Orleans, Phoenix, Denver, New York and Miami. Remaining: The Nash only.
+**0 to pull, 9 to re-verify.** All fourteen cities are fully photographed:
+Dallas, Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin,
+Chicago, New Orleans, Phoenix, Denver, New York, Miami and Nashville. The Nash
+was the last hero needed.
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's
