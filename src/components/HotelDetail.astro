@@ -16,9 +16,21 @@ interface Props {
   state: string;
   citySlug?: string | null;
   siblings?: Array<Record<string, any>>;
+  /** Optional non-city parent crumb (e.g. Notable Pools) for standalone pages
+      that have no city home. Ignored when citySlug is set. */
+  parentLabel?: string | null;
+  parentHref?: string | null;
 }
 
-const { hotel, city, state, citySlug = null, siblings = [] } = Astro.props;
+const {
+  hotel,
+  city,
+  state,
+  citySlug = null,
+  siblings = [],
+  parentLabel = null,
+  parentHref = null,
+} = Astro.props;
 
 // Hero images are keyed by hotel slug: src/assets/hotels/<slug>.jpg. Same glob
 // the route used before extraction, so Astro still optimizes (webp + srcset).
@@ -57,12 +69,17 @@ const ctaRel = !isOutbound
     <div class="section-inner">
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/">Sky &amp; Swim</a>
-        {citySlug && (
+        {citySlug ? (
           <>
             <span aria-hidden="true">/</span>
             <a href={`/cities/${citySlug}/`}>{city}</a>
           </>
-        )}
+        ) : parentHref ? (
+          <>
+            <span aria-hidden="true">/</span>
+            <a href={parentHref}>{parentLabel}</a>
+          </>
+        ) : null}
         <span aria-hidden="true">/</span>
         <span aria-current="page">{hotel.name}</span>
       </nav>

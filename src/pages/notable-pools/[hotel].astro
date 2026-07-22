@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Footer from "../../components/Footer.astro";
+import HotelDetail from "../../components/HotelDetail.astro";
+import { NOTABLE_HOTELS } from "../../data/notable.js";
+
+// A detail page per Notable Pool (ground-level / waterline standouts that sit
+// outside the rooftop city lists). Shares HotelDetail with the city hotels and
+// the standalone Beyond-the-Cities pages; single-sourced from notable.js so the
+// grid and the detail never drift. No city home, so the breadcrumb parent is
+// Notable Pools rather than a city. Hero photo is drop-in by filename
+// (src/assets/hotels/<slug>.jpg) and renders once pulled.
+export function getStaticPaths() {
+  return NOTABLE_HOTELS.map((h) => ({
+    params: { hotel: h.slug },
+    props: { hotel: h },
+  }));
+}
+
+const { hotel } = Astro.props;
+const { city, state } = hotel;
+
+// The detail kicker reads "<area> · <city>, <state>", so hand HotelDetail a
+// neighborhood of just the sub-area (the grid label carries the city).
+const detailHotel = { ...hotel, neighborhood: hotel.area };
+
+const poolFacts = hotel.poolNote
+  .split("·")
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+const site = "https://skyandswim.com";
+const pageUrl = `${site}/notable-pools/${hotel.slug}/`;
+
+const title = `${hotel.name} Pool · ${city}, ${state} · Sky & Swim`;
+const description = `${hotel.name} in ${hotel.area}, ${city} — ${poolFacts.join(", ")}. Our honest take on whether the pool earns the price.`.slice(
+  0,
+  155,
+);
+
+const jsonLd = [
+  {
+    "@type": "Hotel",
+    "@id": `${pageUrl}#hotel`,
+    name: hotel.name,
+    description: hotel.description,
+    url: pageUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: city,
+      addressRegion: state,
+      addressCountry: "US",
+    },
+    ...(hotel.priceRange ? { priceRange: hotel.priceRange } : {}),
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Swimming pool", value: true },
+      ...poolFacts.map((f) => ({
+        "@type": "LocationFeatureSpecification",
+        name: f,
+        value: true,
+      })),
+    ],
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Notable Pools",
+        item: `${site}/notable-pools/`,
+      },
+      { "@type": "ListItem", position: 3, name: hotel.name, item: pageUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <HotelDetail
+    hotel={detailHotel}
+    city={city}
+    state={state}
+    parentLabel="Notable Pools"
+    parentHref="/notable-pools/"
+  />
+  <Footer />
+</BaseLayout>

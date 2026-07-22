@@ -94,14 +94,25 @@ collective credit line beneath the grid.
 
 ## Needed
 
-_None — every hotel is photographed._
+### Notable Pools  (3) — all photographed 2026-07-21
+Non-rooftop standouts with detail pages (`/notable-pools/<slug>/`). `heroCredit`
+wired in `src/data/notable.js`; heroes pulled and in `src/assets/hotels/`:
+- [x] `faena-miami-beach` — Faena Hotel Miami Beach
+- [x] `standard-spa-miami-beach` — The Standard Spa, Miami Beach
+- [x] `line-austin` — The LINE Austin (June 3 2026 foreclosure returned it to
+      lender JP Morgan; confirmed still open and LINE-branded 2026-07-21 —
+      monitor for a future rebrand, as happened to LINE DC/LA)
+
+Pulled 2026-07-21: `nautilus-sonesta-miami-beach` — closed for renovation,
+reopening late 2026 as The James Nautilus Miami Beach. Re-add on reopening.
 
 ---
 
-**0 to pull, 9 to re-verify.** All fourteen cities are fully photographed:
-Dallas, Washington DC, Houston, Philadelphia, Los Angeles, San Diego, Austin,
-Chicago, New Orleans, Phoenix, Denver, New York, Miami and Nashville. The Nash
-was the last hero needed.
+**0 to pull, 9 to re-verify.** All fourteen rooftop cities are fully
+photographed: Dallas, Washington DC, Houston, Philadelphia, Los Angeles,
+San Diego, Austin, Chicago, New Orleans, Phoenix, Denver, New York, Miami and
+Nashville — The Nash was the last rooftop hero. The three Notable Pools detail
+pages are now photographed too; Nautilus waits on its 2026 reopening.
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's
