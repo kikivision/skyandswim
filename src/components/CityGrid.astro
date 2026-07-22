@@ -6,12 +6,12 @@ import { CITIES } from "../data/hotels.js";
 // grid can never drift out of sync with the city pages.
 const layout = [
   { slug: "new-york", area: "nyc", badge: null, hood: "Manhattan & Brooklyn" },
-  { slug: "los-angeles", area: "la", badge: null, hood: "Hollywood & Downtown" },
-  { slug: "miami", area: "miami", badge: null, hood: "South Beach & Brickell" },
   { slug: "dallas", area: "dallas", badge: null, hood: "Downtown & Uptown" },
+  { slug: "miami", area: "miami", badge: null, hood: "South Beach & Brickell" },
   { slug: "chicago", area: "chicago", badge: null, hood: "Gold Coast & Fulton Market" },
   { slug: "san-diego", area: "sandiego", badge: null, hood: "Gaslamp & Bayfront" },
   { slug: "austin", area: "austin", badge: "Rising", hood: "Downtown & Rainey St" },
+  { slug: "los-angeles", area: "la", badge: null, hood: "Hollywood & Downtown" },
   { slug: "phoenix", area: "phoenix", badge: null, hood: "Phoenix & Scottsdale" },
   { slug: "denver", area: "denver", badge: null, hood: "Cherry Creek & Uptown" },
   { slug: "philadelphia", area: "philly", badge: null, hood: "Center City & Old City" },
@@ -126,21 +126,21 @@ const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0
   }
 
   /* Bento placement — 14 cities in a 12-col grid.
-     Row 1-2: NYC feature (6×2) + LA (6). Row 2: Miami + Dallas (3+3 beside NYC).
-     Row 3: Chicago/San Diego/Austin/Phoenix (3 each).
+     Row 1-2: NYC feature (6×2) + Dallas feature (6). Row 2: Miami + Chicago (3+3 beside NYC).
+     Row 3: San Diego/Austin/LA/Phoenix (3 each).
      Row 4: Denver/Philadelphia/Houston (4 each).
      Row 5: Washington/Nashville/NOLA (4 each). */
   .card-nyc {
     grid-column: span 6;
     grid-row: span 2;
   }
-  .card-la {
+  .card-dallas {
     grid-column: span 6;
   }
   .card-miami {
     grid-column: span 3;
   }
-  .card-dallas {
+  .card-la {
     grid-column: span 3;
   }
   .card-chicago {
@@ -275,10 +275,7 @@ const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0
       grid-auto-rows: 140px;
     }
 
-    .card-nyc {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
+    .card-nyc,
     .card-la,
     .card-miami,
     .card-dallas,
@@ -294,6 +291,10 @@ const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0
     .card-denver {
       grid-column: span 1;
       grid-row: span 1;
+    }
+
+    .card-nyc .card-name {
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
     }
   }
 </style>
