@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
+import { FORA_APPROVED, ADVISOR_INQUIRY_URL } from "../lib/advisor";
 
 const promises = [
   {
@@ -154,11 +155,37 @@ const promises = [
       </div>
     </section>
 
+    {FORA_APPROVED && (
+      <section class="band">
+        <div class="section-inner narrow">
+          <p class="kicker">Planning a trip?</p>
+          <h2>Want me to book it?</h2>
+          <p class="prose">
+            I'm also an independent travel advisor with Fora, which means I can
+            book the hotels in this directory for you directly. The planning costs
+            you nothing, and on partner properties you get perks I can't offer
+            through a booking link — room upgrades when available, resort credits,
+            breakfast, early check-in — at the same rate you'd pay on your own.
+          </p>
+          <p class="prose">
+            Same standards apply: I book the places I'd book myself. If you've
+            found a rooftop here worth the trip, I can take it from a tab open in
+            your browser to a reservation with perks attached.
+          </p>
+        </div>
+      </section>
+    )}
+
     <!-- Closing -->
     <section class="closing">
       <div class="section-inner">
         <h2>Your next swim with a view.</h2>
-        <a class="btn btn-primary" href="/#cities">Browse by city →</a>
+        <p class="closing-cta">
+          <a class="btn btn-primary" href="/#cities">Browse by city →</a>
+          {FORA_APPROVED && (
+            <a class="btn btn-secondary" href={ADVISOR_INQUIRY_URL}>Plan your trip with me</a>
+          )}
+        </p>
       </div>
     </section>
 
@@ -362,6 +389,13 @@ const promises = [
     text-shadow: 0 2px 24px rgba(3, 12, 28, 0.5);
   }
 
+  .closing-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+  }
+
   .btn {
     display: inline-block;
     font-family: var(--font-body);
@@ -383,6 +417,18 @@ const promises = [
   .btn-primary:hover {
     transform: translateY(-2px);
     background: #e0577a;
+  }
+
+  /* Secondary advisor CTA — coexists with the primary "Browse by city" button
+     as an outlined variant, so the directory stays the lead action. */
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
   }
 
   @media (max-width: 900px) {

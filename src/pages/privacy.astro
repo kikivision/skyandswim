@@ -1,0 +1,432 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import { FORA_APPROVED } from "../lib/advisor";
+
+const title = "Privacy Policy — Sky & Swim";
+const description =
+  "How Sky & Swim collects, uses, and protects information about visitors to skyandswim.com, including cookies, analytics, affiliate links, and your privacy rights.";
+const lastUpdated = "July 22, 2026";
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="legal">
+    <div class="section-inner narrow">
+      <header class="legal-head">
+        <p class="kicker">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="legal-updated">Last updated: {lastUpdated}</p>
+      </header>
+
+      <section>
+        <p>
+          Sky &amp; Swim ("Sky &amp; Swim," "we," "us," or "our") is a curated
+          editorial directory of rooftop pool hotels operated by <strong
+            >Sunstate Bay Ventures, LLC</strong
+          >, a Florida limited liability company doing business as Sky and Swim.
+          This Privacy Policy explains what information we collect when you visit
+          <a class="inline-link" href="https://skyandswim.com/">skyandswim.com</a>,
+          how we use it, who we share it with, and the rights you have over it.
+        </p>
+        <p>
+          By using the site, you agree to the practices described here. If you do
+          not agree, please do not use the site.
+        </p>
+      </section>
+
+      <section>
+        <h2>1. Information we collect</h2>
+        <p>We keep data collection minimal. The categories below cover everything we collect.</p>
+
+        <h3>Information you give us</h3>
+        <ul>
+          <li>
+            <strong>Email address</strong> — if you subscribe to our email list to
+            be notified about new hotels or pools added to the directory.
+          </li>
+          <li>
+            <strong>Trip details</strong> — if you use the trip-planning form on
+            our <a class="inline-link" href="/contact">Contact</a> page, such as your
+            name, email, travel dates, party size, and what you're looking for.
+          </li>
+          <li>
+            <strong>Correspondence</strong> — if you email us (for example, at
+            <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a
+            >), we receive whatever information you choose to include.
+          </li>
+        </ul>
+
+        <h3>Information collected automatically</h3>
+        <ul>
+          <li>
+            <strong>Analytics data</strong> via Google Analytics 4: pages viewed,
+            time on page, referring site, approximate location (typically
+            city/region level, derived from IP address), device type, browser, and
+            similar standard analytics signals. Google Analytics uses cookies and
+            similar technologies.
+          </li>
+          <li>
+            <strong>Affiliate link tracking</strong>: when you click a booking
+            link, our affiliate partner (see Section 3) may set cookies or use
+            other identifiers to attribute any resulting booking to Sky &amp; Swim
+            so we can earn a commission.
+          </li>
+          <li>
+            <strong>Server logs</strong>: our hosting provider (Netlify) records
+            standard request data such as IP address, user agent, and timestamp
+            for security and operational purposes.
+          </li>
+        </ul>
+
+        <h3>Information we do not collect</h3>
+        <p>
+          We do not knowingly collect information from children under 13. Sky
+          &amp; Swim is not directed at children. We do not collect payment
+          information — all bookings happen on the hotel's or booking partner's
+          own site, under their privacy policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. How we use information</h2>
+        <ul>
+          <li>To operate, maintain, and improve the site.</li>
+          <li>To understand which hotels and cities readers find most useful.</li>
+          <li>To send our email newsletter (only if you have subscribed).</li>
+          <li>
+            To respond to questions, feedback, correspondence, or trip-planning
+            inquiries.
+          </li>
+          <li>To earn affiliate commissions on qualifying bookings, which fund the site.</li>
+          <li>To comply with legal obligations and enforce our terms.</li>
+        </ul>
+        <p>
+          We do not sell your personal information. We do not use your information
+          for targeted advertising on third-party platforms.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Third-party services</h2>
+        <p>
+          We rely on a small set of third-party services to run the site. Each has
+          its own privacy policy.
+        </p>
+        <ul>
+          <li>
+            <strong>Google Analytics 4</strong> — site analytics.
+            <a class="inline-link" href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Commission Junction</strong> (on behalf of Booking.com) —
+            affiliate hotel booking links.
+            <a class="inline-link" href="https://www.cj.com/privacy-policy" rel="nofollow noopener" target="_blank">Commission Junction Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Booking.com</strong> — when you click a "Book" link, you are
+            taken to Booking.com's site, which collects and uses information under
+            its own policy.
+            <a class="inline-link" href="https://www.booking.com/content/privacy.html" rel="nofollow noopener" target="_blank">Booking.com Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Netlify</strong> — site hosting and form submissions.
+            <a class="inline-link" href="https://www.netlify.com/privacy/" rel="nofollow noopener" target="_blank">Netlify Privacy Policy</a>.
+          </li>
+        </ul>
+        <p>
+          In the future, we may run display advertising. If that happens, this
+          policy will be updated to identify the ad network(s) involved before any
+          ads run.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Affiliate disclosure</h2>
+        <p>
+          Sky &amp; Swim participates in affiliate programs. When you click a
+          booking link on our site and complete a qualifying booking, we may earn
+          a commission at no additional cost to you. Affiliate relationships do
+          not influence which hotels are included in the directory or which
+          receive an Editor's Pick — our editorial standards are set
+          independently. We disclose this relationship here, in keeping with the
+          U.S. Federal Trade Commission's guidance on endorsements.
+        </p>
+        {FORA_APPROVED && (
+          <p>
+            Sunstate Bay Ventures, LLC also operates as an independent travel
+            advisor affiliated with Fora Travel. If you book a stay through our
+            advisory service, we share the booking details you provide (such as
+            your name, contact information, travel dates, and preferences) with
+            Fora and the relevant supplier in order to arrange your reservation,
+            and we may earn a commission paid by the supplier at no additional cost
+            to you. Information handled through the advisory service is subject to
+            Fora's and the supplier's own privacy policies.
+          </p>
+        )}
+      </section>
+
+      <section>
+        <h2>5. Cookies and similar technologies</h2>
+        <p>We use a small number of cookies and similar technologies:</p>
+        <ul>
+          <li>
+            <strong>Strictly necessary</strong> — required for the site to function
+            (for example, basic security and load balancing by our host).
+          </li>
+          <li>
+            <strong>Analytics</strong> — Google Analytics cookies, used to
+            understand aggregate traffic patterns.
+          </li>
+          <li>
+            <strong>Affiliate tracking</strong> — set by Commission Junction and
+            Booking.com when you click a booking link, used to attribute
+            referrals.
+          </li>
+        </ul>
+        <p>
+          You can control cookies through your browser settings. Most browsers let
+          you block or delete cookies, and you can opt out of Google Analytics
+          specifically using
+          <a class="inline-link" href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener" target="_blank">Google's opt-out browser add-on</a>.
+        </p>
+        <p>
+          We are working on a granular cookie preference tool for visitors in the
+          European Economic Area, the United Kingdom, and other regions with
+          prior-consent rules. In the meantime, EEA/UK visitors who want us to
+          suppress analytics and affiliate tracking can email
+          <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a> and
+          we will honor the request.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Email list</h2>
+        <p>
+          If you sign up for our email list, we use your email address to send
+          updates about new hotels and pools added to the directory and occasional
+          editorial notes. You can unsubscribe at any time using the link at the
+          bottom of any email, or by emailing
+          <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a>. We do
+          not share, sell, or rent the email list.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. How we protect information</h2>
+        <p>
+          We use reasonable administrative and technical measures to protect the
+          information we collect. The site is served over HTTPS. No method of
+          transmission or storage is perfectly secure, however, and we cannot
+          guarantee absolute security.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Data retention</h2>
+        <p>
+          Analytics data is retained according to the default Google Analytics 4
+          retention period. Email subscriber records and trip-inquiry submissions
+          are kept until you unsubscribe or ask us to delete them. Correspondence
+          is kept as long as needed to address the matter it relates to.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. International visitors</h2>
+        <p>
+          Sky &amp; Swim is operated from the United States and covers hotels
+          located in the United States. If you visit from outside the U.S.,
+          information we collect will be processed in the U.S., which may have
+          different data protection rules than your home country. By using the
+          site, you understand that information will be transferred to and
+          processed in the U.S.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Your privacy rights</h2>
+
+        <h3>For visitors in the European Economic Area and the United Kingdom (GDPR / UK GDPR)</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you.</li>
+          <li>Request correction of inaccurate data.</li>
+          <li>Request deletion of your data.</li>
+          <li>Object to or restrict certain processing.</li>
+          <li>Request a copy of your data in a portable format.</li>
+          <li>Withdraw consent at any time where processing is based on consent.</li>
+          <li>Lodge a complaint with your local data protection authority.</li>
+        </ul>
+        <p>
+          Our legal bases for processing are: <em>consent</em> (for the email list
+          and non-essential cookies), <em>legitimate interests</em> (for basic
+          analytics, security, and responding to trip-planning inquiries), and
+          <em>compliance with legal obligations</em> where applicable.
+        </p>
+
+        <h3>For California residents (CCPA / CPRA)</h3>
+        <p>
+          California residents have the right to know what personal information we
+          collect, request deletion, correct inaccurate information, and opt out
+          of any "sale" or "sharing" of personal information as those terms are
+          defined under California law.
+        </p>
+        <p>
+          We do not sell personal information for money. Under the broad
+          definition of "share" in California law, some cookie-based analytics and
+          affiliate tracking may qualify as sharing for cross-context behavioral
+          advertising. To opt out, email
+          <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a> with
+          the subject line "Do Not Sell or Share My Personal Information," or set
+          the Global Privacy Control signal in your browser, which we honor.
+        </p>
+
+        <h3>How to exercise your rights</h3>
+        <p>
+          Email <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a>
+          from the address associated with the request, or describe enough
+          information for us to identify the records. We will respond within the
+          timeframes required by applicable law. We will not discriminate against
+          you for exercising any of these rights.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. When we do, we will
+          revise the "Last updated" date at the top of the page. Material changes
+          will be highlighted on the homepage or via the email list.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Contact</h2>
+        <p>Questions about this policy or your information can be sent to:</p>
+        <p class="legal-contact">
+          Sunstate Bay Ventures, LLC<br />
+          d/b/a Sky and Swim<br />
+          <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a>
+        </p>
+      </section>
+    </div>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .legal {
+    display: block;
+  }
+
+  .narrow {
+    max-width: 720px;
+  }
+
+  .legal-head {
+    padding: clamp(7rem, 16vh, 10rem) 0 clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+    text-shadow: 0 1px 10px rgba(3, 12, 28, 0.45);
+  }
+
+  .legal h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.08;
+    color: #fff;
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.5),
+      0 2px 18px rgba(3, 12, 28, 0.55);
+    margin-bottom: 0.75rem;
+  }
+
+  .legal-updated {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(220, 240, 245, 0.7);
+  }
+
+  .legal section {
+    padding: 1.4rem 0;
+  }
+
+  .legal h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    text-shadow: 0 1px 14px rgba(3, 12, 28, 0.4);
+  }
+
+  .legal h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    margin: 1.5rem 0 0.5rem;
+    text-shadow: 0 1px 12px rgba(3, 12, 28, 0.35);
+  }
+
+  .legal p,
+  .legal li {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(224, 241, 245, 0.9);
+    text-shadow: 0 1px 12px rgba(3, 12, 28, 0.3);
+  }
+
+  .legal p {
+    margin: 0 0 1rem;
+  }
+
+  .legal ul {
+    margin: 0 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal strong {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .inline-link {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(42, 191, 191, 0.4);
+    transition: border-color 0.2s ease;
+  }
+
+  .inline-link:hover {
+    border-color: var(--teal);
+  }
+
+  .legal-contact {
+    background: rgba(5, 20, 40, 0.4);
+    border-left: 3px solid var(--watermelon);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 0.5rem 0 0;
+    line-height: 1.6;
+  }
+</style>

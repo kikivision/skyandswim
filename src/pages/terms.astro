@@ -1,0 +1,448 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import { FORA_APPROVED } from "../lib/advisor";
+
+const title = "Terms of Service — Sky & Swim";
+const description =
+  "The terms that apply to your use of skyandswim.com, including editorial disclaimers, affiliate relationships, intellectual property, and limitations of liability.";
+const lastUpdated = "July 22, 2026";
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="legal">
+    <div class="section-inner narrow">
+      <header class="legal-head">
+        <p class="kicker">Legal</p>
+        <h1>Terms of Service</h1>
+        <p class="legal-updated">Last updated: {lastUpdated}</p>
+      </header>
+
+      <section>
+        <p>
+          These Terms of Service ("Terms") govern your access to and use of
+          <a class="inline-link" href="https://skyandswim.com/">skyandswim.com</a> (the
+          "Site"), operated by <strong>Sunstate Bay Ventures, LLC</strong>, a Florida
+          limited liability company doing business as Sky and Swim ("Sky &amp; Swim,"
+          "we," "us," or "our"). By accessing or using the Site, you agree to these
+          Terms. If you do not agree, please do not use the Site.
+        </p>
+      </section>
+
+      <section>
+        <h2>1. What Sky &amp; Swim is</h2>
+        <p>
+          Sky &amp; Swim is a curated editorial directory of rooftop pool hotels
+          across America. We research, review, and recommend properties based on
+          independent editorial judgment.
+          {!FORA_APPROVED && (
+            <>
+              {" "}We are <strong>not</strong> a travel agency, tour operator, online
+              travel agency (OTA), or booking platform. We do not sell, book, confirm,
+              or modify reservations. We do not handle payment for stays.
+            </>
+          )}
+        </p>
+        <p>
+          When you click a booking link on the Site, you are taken to a third-party
+          booking partner (such as Booking.com or a hotel's own website) where any
+          booking, payment, and contractual relationship is solely between you and
+          that third party, under their terms and policies.
+        </p>
+        {FORA_APPROVED && (
+          <p>
+            Separately, Sunstate Bay Ventures, LLC acts as an independent travel
+            advisor affiliated with Fora Travel. Where you choose to book a stay
+            through our advisory service rather than a booking link, your
+            reservation, payment, and contractual relationship are governed by Fora
+            and the applicable supplier (the hotel, hotel group, or their partners)
+            under their terms and policies. Editorial inclusion in the directory and
+            Editor's Picks is set independently of whether a property can be booked
+            through our advisory service.
+          </p>
+        )}
+      </section>
+
+      <section>
+        <h2>2. Editorial content</h2>
+        <p>
+          We work to keep information about hotels accurate and current, but the
+          Site is provided for general informational purposes only. Hotels change
+          ownership, renovate, modify amenities, close pools for the season, and
+          update pricing without notice. Pool access, day-pass rules, hours, and
+          other features described on the Site may differ from what is currently
+          offered.
+        </p>
+        <p>
+          <strong
+            >You are responsible for verifying all material details directly with
+            the hotel or booking partner before booking and before traveling.</strong
+          > This includes, but is not limited to, room type, pool access and hours,
+          included amenities, seasonal closures, accessibility, and total cost.
+          Editorial descriptions, "Editor's Picks," and similar designations reflect
+          our opinion at the time of publication and are not guarantees of any
+          specific experience.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Affiliate &amp; advisor relationships</h2>
+        <p>
+          Sky &amp; Swim participates in affiliate programs. When you click certain
+          booking links and complete a qualifying booking, we may earn a commission
+          at no additional cost to you. Affiliate relationships do not influence
+          which hotels appear in the directory or which receive an Editor's Pick —
+          our editorial standards are set independently of commercial relationships.
+        </p>
+        {FORA_APPROVED && (
+          <p>
+            As an independent travel advisor affiliated with Fora Travel, we may
+            also earn a commission from a hotel, hotel group, or supplier when you
+            book a stay through our advisory service. This commission is paid by the
+            supplier, not added to your rate. As with affiliate links, advisor
+            commissions do not influence editorial inclusion, Editor's Picks, or the
+            order in which properties are presented.
+          </p>
+        )}
+        <p>
+          We disclose these relationships in keeping with the U.S. Federal Trade
+          Commission's guidance on endorsements. For details on data collected by
+          affiliate partners, see our <a class="inline-link" href="/privacy">Privacy Policy</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. No travel advice</h2>
+        <p>
+          Nothing on the Site constitutes legal, medical, financial, or professional
+          travel advice. Travel involves risk, including but not limited to risks
+          related to health, safety, weather, and transportation. You are
+          responsible for assessing those risks, obtaining appropriate insurance,
+          and complying with applicable laws.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Intellectual property</h2>
+        <p>
+          The Site and its original content — including written reviews, "Editor's
+          Picks" notes, editorial commentary, photographs taken by us, branding,
+          logos, and the overall selection, arrangement, and presentation of hotels
+          — are owned by Sunstate Bay Ventures, LLC and are protected by U.S. and
+          international copyright, trademark, and other intellectual property laws.
+        </p>
+        <p>You may:</p>
+        <ul>
+          <li>View, browse, and personally use the Site for non-commercial purposes.</li>
+          <li>Share links to individual pages on social media or in private messages.</li>
+          <li>
+            Quote brief excerpts (a sentence or two) with clear attribution and a
+            link back to the source page.
+          </li>
+        </ul>
+        <p>You may not:</p>
+        <ul>
+          <li>
+            Copy, scrape, republish, syndicate, or redistribute Site content in
+            whole or in substantial part, in any medium, without our prior written
+            permission.
+          </li>
+          <li>
+            Use any automated system (including scrapers, bots, or AI training
+            pipelines) to access, copy, or extract content from the Site.
+          </li>
+          <li>
+            Use Sky &amp; Swim names, marks, logos, or branding except as expressly
+            permitted in writing.
+          </li>
+          <li>Frame, mirror, or otherwise present the Site as your own.</li>
+        </ul>
+        <p>
+          Third-party content on the Site — including hotel photographs supplied by
+          properties, booking partners, or photography sources, brand names, and
+          logos — remains the property of its respective owners and is used under
+          license, fair use, or with permission.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the Site for any unlawful purpose or in violation of these Terms.</li>
+          <li>
+            Attempt to gain unauthorized access to the Site, its servers, or related
+            systems.
+          </li>
+          <li>
+            Interfere with or disrupt the Site, introduce malware, or otherwise
+            impair the experience of other users.
+          </li>
+          <li>
+            Submit false, misleading, or fraudulent information through any contact
+            form, email signup, or other input.
+          </li>
+          <li>
+            Use the Site to harvest personal information about other users or to
+            send unsolicited communications.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. Third-party sites and services</h2>
+        <p>
+          The Site links to third-party websites and services, including booking
+          partners, affiliate networks, social media platforms, and other resources.
+          We do not control those third parties and are not responsible for their
+          content, policies, products, services, availability, or practices. Your
+          interactions with any third-party site or service are governed by that
+          third party's own terms and policies, and any transaction you enter into
+          with a third party is solely between you and that third party.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Disclaimers</h2>
+        <p>
+          <strong
+            >The Site and all content on it are provided on an "as is" and "as
+            available" basis, without warranties of any kind, whether express or
+            implied.</strong
+          > To the fullest extent permitted by applicable law, we disclaim all
+          warranties, including but not limited to warranties of merchantability,
+          fitness for a particular purpose, non-infringement, accuracy,
+          completeness, reliability, availability, and uninterrupted operation.
+        </p>
+        <p>
+          We do not warrant that hotel descriptions, prices, availability,
+          amenities, photos, or other information on the Site are accurate, current,
+          or complete. We do not warrant that the Site will be free of errors,
+          viruses, or interruptions. We do not endorse, guarantee, or assume
+          responsibility for any product or service offered by any third party
+          referenced on the Site.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Limitation of liability</h2>
+        <p>
+          <strong
+            >To the fullest extent permitted by applicable law, in no event shall
+            Sunstate Bay Ventures, LLC, its members, officers, employees,
+            contractors, or affiliates be liable for any indirect, incidental,
+            special, consequential, exemplary, or punitive damages, or for any loss
+            of profits, revenue, data, goodwill, or other intangible losses, arising
+            out of or related to your use of the Site, your inability to use the
+            Site, or any content on the Site — whether based on warranty, contract,
+            tort (including negligence), or any other legal theory, and whether or
+            not we have been advised of the possibility of such damages.</strong
+          >
+        </p>
+        <p>
+          <strong
+            >In no event shall our total cumulative liability to you for all claims
+            arising out of or related to the Site exceed one hundred U.S. dollars
+            (US$100.00).</strong
+          >
+        </p>
+        <p>
+          We are not responsible for any aspect of your travel experience, including
+          but not limited to issues with reservations, payments, refunds,
+          accommodations, transportation, illness, injury, lost or damaged property,
+          weather, natural disasters, or the acts or omissions of any hotel, booking
+          partner, or other third party.
+        </p>
+        <p>
+          Some jurisdictions do not allow the exclusion or limitation of certain
+          warranties or damages. In those jurisdictions, our liability is limited to
+          the fullest extent permitted by law.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Indemnification</h2>
+        <p>
+          You agree to defend, indemnify, and hold harmless Sunstate Bay Ventures,
+          LLC and its members, officers, employees, contractors, and affiliates from
+          and against any claims, liabilities, damages, losses, and expenses
+          (including reasonable attorneys' fees) arising out of or related to: (a)
+          your use of the Site; (b) your violation of these Terms; (c) your
+          violation of any third-party right; or (d) any content you submit through
+          the Site.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Changes to the Site and these Terms</h2>
+        <p>
+          We may modify, suspend, or discontinue any part of the Site at any time
+          without notice. We may also update these Terms from time to time. When we
+          do, we will revise the "Last updated" date at the top of this page.
+          Material changes will be highlighted on the homepage or via our email
+          list. Your continued use of the Site after changes are posted constitutes
+          acceptance of the revised Terms.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Termination</h2>
+        <p>
+          We may, in our sole discretion, restrict or terminate your access to the
+          Site at any time, with or without notice, for any reason, including any
+          violation of these Terms. Sections 5 (Intellectual Property), 8
+          (Disclaimers), 9 (Limitation of Liability), 10 (Indemnification), 13
+          (Governing Law and Disputes), and any other provisions that by their
+          nature should survive will survive termination.
+        </p>
+      </section>
+
+      <section>
+        <h2>13. Governing law and disputes</h2>
+        <p>
+          These Terms are governed by the laws of the State of Florida, without
+          regard to its conflict-of-laws principles. You agree that any dispute,
+          claim, or controversy arising out of or relating to these Terms or your
+          use of the Site will be brought exclusively in the state or federal courts
+          located in Pinellas County, Florida, and you consent to the personal
+          jurisdiction of those courts.
+        </p>
+        <p>
+          To the fullest extent permitted by applicable law, you and Sky &amp; Swim
+          each waive any right to a jury trial and any right to participate in a
+          class action with respect to any such dispute.
+        </p>
+      </section>
+
+      <section>
+        <h2>14. Severability and entire agreement</h2>
+        <p>
+          If any provision of these Terms is held to be invalid or unenforceable,
+          the remaining provisions will continue in full force and effect. These
+          Terms, together with the <a class="inline-link" href="/privacy">Privacy Policy</a>,
+          constitute the entire agreement between you and Sky &amp; Swim regarding
+          the Site and supersede any prior agreements.
+        </p>
+      </section>
+
+      <section>
+        <h2>15. Contact</h2>
+        <p>Questions about these Terms can be sent to:</p>
+        <p class="legal-contact">
+          Sunstate Bay Ventures, LLC<br />
+          d/b/a Sky and Swim<br />
+          <a class="inline-link" href="mailto:hello@skyandswim.com">hello@skyandswim.com</a>
+        </p>
+      </section>
+    </div>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .legal {
+    display: block;
+  }
+
+  .narrow {
+    max-width: 720px;
+  }
+
+  .legal-head {
+    padding: clamp(7rem, 16vh, 10rem) 0 clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+    text-shadow: 0 1px 10px rgba(3, 12, 28, 0.45);
+  }
+
+  .legal h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.08;
+    color: #fff;
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.5),
+      0 2px 18px rgba(3, 12, 28, 0.55);
+    margin-bottom: 0.75rem;
+  }
+
+  .legal-updated {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(220, 240, 245, 0.7);
+  }
+
+  .legal section {
+    padding: 1.4rem 0;
+  }
+
+  .legal h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    text-shadow: 0 1px 14px rgba(3, 12, 28, 0.4);
+  }
+
+  .legal p,
+  .legal li {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(224, 241, 245, 0.9);
+    text-shadow: 0 1px 12px rgba(3, 12, 28, 0.3);
+  }
+
+  .legal p {
+    margin: 0 0 1rem;
+  }
+
+  .legal ul {
+    margin: 0 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal strong {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .inline-link {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(42, 191, 191, 0.4);
+    transition: border-color 0.2s ease;
+  }
+
+  .inline-link:hover {
+    border-color: var(--teal);
+  }
+
+  .legal-contact {
+    background: rgba(5, 20, 40, 0.4);
+    border-left: 3px solid var(--watermelon);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 0.5rem 0 0;
+    line-height: 1.6;
+  }
+</style>

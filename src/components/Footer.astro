@@ -1,9 +1,13 @@
 ---
+import { FORA_APPROVED } from "../lib/advisor";
+
 const links = [
   { label: "Cities", href: "/#cities" },
   { label: "Editor's Picks", href: "/#picks" },
   { label: "About", href: "/about/" },
-  { label: "Affiliate Disclosure", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
+  { label: "Privacy", href: "/privacy/" },
+  { label: "Terms", href: "/terms/" },
 ];
 ---
 
@@ -42,6 +46,12 @@ const links = [
     <p class="copyright">
       © 2026 Sky &amp; Swim · A Sunstate Bay Ventures, LLC property
     </p>
+    {FORA_APPROVED && (
+      <p class="disclosure">
+        Sunstate Bay Ventures, LLC is an independent affiliate of Fora Travel, Inc.
+        Florida Seller of Travel Reg. No. ST43973.
+      </p>
+    )}
   </div>
 </footer>
 
@@ -110,6 +120,16 @@ const links = [
     font-size: 0.8rem;
     color: rgba(165, 200, 212, 0.8);
     flex-basis: 100%;
+  }
+
+  .disclosure {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: rgba(165, 200, 212, 0.55);
+    flex-basis: 100%;
+    margin-top: -0.4rem;
   }
 
   @media (max-width: 620px) {

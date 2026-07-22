@@ -1,0 +1,413 @@
+---
+import { existsSync } from "node:fs";
+import path from "node:path";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import { FORA_APPROVED } from "../lib/advisor";
+
+// General contact address. Update if the mailbox changes.
+const contactEmail = "hello@skyandswim.com";
+
+// Reuses the About page portrait — a candid "in a great rooftop pool" shot
+// beats a studio headshot here: the advisor pitch rests on being someone
+// who's actually stayed at these places.
+const portraitSrc = "/images/about/karen-rooftop.jpg";
+const hasPortrait = existsSync(path.join(process.cwd(), "public", portraitSrc.replace(/^\//, "")));
+---
+
+<BaseLayout
+  title="Contact — Sky & Swim"
+  description="Get in touch with Sky & Swim — questions about a hotel, a rooftop pool worth adding to the directory, or planning a stay."
+>
+  <div class="contact-page">
+    <!-- Intro — dark copy on the sunlit surface, matching the About page -->
+    <section class="intro">
+      <div class="section-inner narrow">
+        <p class="kicker kicker-dark">Contact</p>
+        <h1>Say hello.</h1>
+
+        {hasPortrait && (
+          <figure class="contact-figure">
+            <img
+              src={portraitSrc}
+              alt="Neck-deep in a rooftop infinity pool with a city skyline behind me."
+              width="580"
+              height="640"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
+        )}
+
+        <p class="lede">
+          I'm the one behind Sky &amp; Swim — every hotel here is hand-picked, and
+          Editor's Picks are places I've stayed myself. If you've got a question
+          about a property, spotted a rooftop pool that belongs in the directory,
+          or just want to compare notes on the best view you've swum in, I'd love
+          to hear from you.
+        </p>
+        <p class="lede">
+          The fastest way to reach me is email:
+          <a class="inline-link" href={`mailto:${contactEmail}`}>{contactEmail}</a>. I
+          read every message myself.
+        </p>
+      </div>
+    </section>
+
+    {FORA_APPROVED && (
+      <section class="band" id="plan">
+        <div class="section-inner narrow">
+          <p class="kicker">Planning a trip?</p>
+          <h2>Want me to book it?</h2>
+          <p class="prose">
+            I'm also an independent travel advisor with Fora, so I can book the
+            hotels in this directory for you directly, at the same rate you'd pay
+            on your own, with partner perks like room upgrades, resort credits, and
+            breakfast where they're available. Tell me where you're dreaming about
+            and roughly when, and I'll take it from there.
+          </p>
+
+          <form
+            name="trip-inquiry"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            id="tripForm"
+            class="contact-form"
+          >
+            <input type="hidden" name="form-name" value="trip-inquiry" />
+            <p class="contact-form-hp" hidden>
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="contact-form-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="field">
+                <label for="cf-dates">Travel dates</label>
+                <input type="text" id="cf-dates" name="travel_dates" placeholder="e.g. mid-March 2027" />
+              </div>
+              <div class="field">
+                <label for="cf-party">Who's traveling</label>
+                <input type="text" id="cf-party" name="party_size" placeholder="e.g. 2 adults" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-interest">What are you dreaming about?</label>
+              <input
+                type="text"
+                id="cf-interest"
+                name="interest"
+                placeholder="e.g. a rooftop pool in Austin, or not sure yet"
+              />
+            </div>
+
+            <div class="field">
+              <label for="cf-message">Anything else?</label>
+              <textarea
+                id="cf-message"
+                name="message"
+                placeholder="Budget, occasion, must-haves, questions — whatever helps."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary contact-form-submit">
+              Send my trip details →
+            </button>
+
+            <p class="contact-form-fallback">
+              Prefer email? Reach me directly at
+              <a class="inline-link" href={`mailto:${contactEmail}?subject=Trip%20planning%20with%20Sky%20%26%20Swim`}>{contactEmail}</a>.
+            </p>
+          </form>
+
+          <div class="contact-form-success" id="tripSuccess" hidden>
+            <h3>Got it — thank you!</h3>
+            <p class="prose">Your trip details are on their way to me. I'll be in touch personally, usually within a day.</p>
+          </div>
+
+          <p class="contact-form-legal">
+            Sunstate Bay Ventures, LLC is an independent affiliate of Fora Travel, Inc.
+            Florida Seller of Travel Reg. No. ST43973.
+          </p>
+        </div>
+      </section>
+    )}
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 720px;
+  }
+
+  /* ── Intro: dark ink on the light surface, matching About ── */
+  .intro {
+    padding: clamp(9rem, 20vh, 13rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+  }
+
+  .kicker-dark {
+    color: #0f5568;
+  }
+
+  .intro h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    line-height: 1.05;
+    color: var(--deep);
+    max-width: 18ch;
+    margin-bottom: 1.6rem;
+  }
+
+  .contact-figure {
+    max-width: 280px;
+    margin: 0 0 1.8rem;
+  }
+
+  .contact-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(5, 14, 34, 0.28);
+  }
+
+  .intro .lede {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+    line-height: 1.65;
+    color: rgba(9, 42, 68, 0.82);
+    max-width: 60ch;
+    margin-top: 1.1rem;
+  }
+
+  /* ── Band: light copy in the deeper water, matching About ── */
+  .band {
+    padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(4rem, 8vw, 6rem);
+  }
+
+  .band h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #fff;
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.5),
+      0 2px 18px rgba(3, 12, 28, 0.55);
+  }
+
+  .band .kicker {
+    text-shadow: 0 1px 10px rgba(3, 12, 28, 0.45);
+  }
+
+  .prose {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.02rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    color: rgba(224, 241, 245, 0.92);
+    max-width: 62ch;
+    margin-top: 1.1rem;
+    text-shadow: 0 1px 12px rgba(3, 12, 28, 0.35);
+  }
+
+  .inline-link {
+    color: var(--teal);
+    border-bottom: 1px solid rgba(42, 191, 191, 0.4);
+    transition: border-color 0.2s ease;
+  }
+  .inline-link:hover {
+    border-color: var(--teal);
+  }
+
+  /* ── Trip-inquiry form ── */
+  .contact-form {
+    margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    max-width: 620px;
+  }
+
+  .contact-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .field label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(220, 240, 245, 0.7);
+  }
+
+  .field input,
+  .field textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--deep);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.75rem 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.15s ease;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--teal);
+  }
+
+  .field textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .contact-form-submit {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--watermelon);
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(212, 72, 104, 0.32);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #e0577a;
+  }
+
+  .contact-form-fallback {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: rgba(220, 240, 245, 0.75);
+    margin: 0;
+  }
+
+  .contact-form-success {
+    margin-top: 1.6rem;
+    padding: 1.4rem 1.6rem;
+    border-radius: 12px;
+    background: rgba(5, 20, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 620px;
+  }
+
+  .contact-form-success h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form-success .prose {
+    margin-top: 0;
+  }
+
+  .contact-form-legal {
+    margin-top: 1.8rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: rgba(220, 240, 245, 0.55);
+    max-width: 620px;
+  }
+
+  @media (max-width: 600px) {
+    .contact-form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById("tripForm");
+  if (form) {
+    // Pre-fill "interest" from a ?interest= query param so hotel/city CTAs
+    // (e.g. /contact?interest=The%20Nash) arrive tagged.
+    const interest = new URLSearchParams(window.location.search).get("interest");
+    if (interest) {
+      const field = document.getElementById("cf-interest");
+      if (field) field.value = interest;
+    }
+
+    // Netlify Forms via AJAX: POST the encoded form to "/", then swap in the
+    // success card without a page reload.
+    const success = document.getElementById("tripSuccess");
+    const showSuccess = () => {
+      form.style.display = "none";
+      if (success) success.hidden = false;
+      // GA4: travel-advisor trip inquiry. Mark `trip_inquiry` as a key event.
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "trip_inquiry", { method: "netlify" });
+      }
+    };
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new URLSearchParams(new FormData(form)).toString();
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data,
+      })
+        .then(showSuccess)
+        .catch(showSuccess);
+    });
+  }
+</script>
