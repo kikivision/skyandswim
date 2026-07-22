@@ -106,6 +106,20 @@ wired in `src/data/notable.js`; heroes pulled and in `src/assets/hotels/`:
 Pulled 2026-07-21: `nautilus-sonesta-miami-beach` — closed for renovation,
 reopening late 2026 as The James Nautilus Miami Beach. Re-add on reopening.
 
+### Beyond the Cities  (7) — all photographed 2026-07-21
+One-off standouts with detail pages (`/beyond-the-cities/<slug>/`); `heroCredit`
+wired in `src/data/beyond.js`, heroes pulled to `src/assets/hotels/`:
+- [x] `conrad-fort-lauderdale` — Conrad Fort Lauderdale Beach
+- [x] `market-pavilion-charleston` — Market Pavilion Hotel
+- [x] `perry-lane-savannah` — Perry Lane Hotel
+- [x] `omni-battery-atlanta` — Omni Hotel at The Battery Atlanta
+- [x] `thompson-san-antonio` — Thompson San Antonio – Riverwalk (like the LINE,
+      went to its lender in a 2026 foreclosure; Hyatt still manages it — monitor)
+- [x] `omni-louisville` — Omni Louisville Hotel
+- [x] `ac-hotel-tucson` — AC Hotel Tucson Downtown
+
+(Four Seasons Seattle, the eighth Beyond entry, was already photographed.)
+
 ---
 
 **0 to pull, 9 to re-verify.** All fourteen rooftop cities are fully

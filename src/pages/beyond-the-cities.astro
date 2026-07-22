@@ -60,7 +60,16 @@ import { BEYOND_HOTELS as hotels } from "../data/beyond.js";
     <section class="city-listings">
       <div class="section-inner">
         <div class="hotel-grid">
-          {hotels.map((hotel) => <HotelCard {...hotel} />)}
+          {hotels.map((hotel) => (
+            <HotelCard
+              {...hotel}
+              detailHref={
+                hotel.slug === "four-seasons-seattle"
+                  ? "/hotels/four-seasons-seattle/"
+                  : `/beyond-the-cities/${hotel.slug}/`
+              }
+            />
+          ))}
         </div>
 
         <aside class="city-note">
