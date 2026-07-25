@@ -27,6 +27,37 @@ property URL>' }` to `affiliates.js`, then add a matching `slug` field to that
 hotel's object in its city page (`src/pages/cities/*.astro`). Clicks fire a GA4
 `affiliate_click` event (tracker in `BaseLayout.astro`, GA4 property 544338209).
 
+## Newsletter — "The Dispatch" (Netlify Forms)
+
+The signup lives in `src/components/NewsletterSection.astro` and is wired to
+**Netlify Forms** — a form-collection backend, **not** an email sender. It
+captures addresses; sending is still manual/BYO (see below).
+
+How it works:
+
+- The `<form>` carries `name="dispatch"`, `data-netlify="true"`, a hidden
+  `form-name` input, and a `bot-field` honeypot. Netlify's build bot parses these
+  from the **static HTML at deploy time** and registers a form named `dispatch`.
+- A progressive-enhancement `<script>` intercepts submit, POSTs to `/` via `fetch`,
+  and swaps the form for an inline "You're in ✓" confirmation (`.signup-status`).
+- **Submissions only record on the deployed Netlify site.** Locally, `astro dev`
+  just returns 200 — nothing is stored. Don't expect dev submits to appear.
+- Submissions collect under **Netlify dashboard → Forms → `dispatch`**, exportable
+  as CSV. Free plan allows 100 submissions/month.
+
+Gotchas:
+
+- If the form markup changes, keep `name="dispatch"` and the hidden `form-name`
+  value in sync — Netlify keys the submission store on that name.
+- **Form detection** must be enabled in Netlify site settings (Forms). On by
+  default, but verify after the first deploy or submissions silently vanish.
+- **Get notified on signup:** Netlify → Forms → Settings & usage → Form
+  notifications → add an email/Slack/webhook notification. Free, per-submission.
+
+Next step (not built): this does not *send* the Dispatch. To email subscribers,
+either send manually from the exported CSV (BCC the list) or connect an ESP
+(Mailchimp/Kit/Buttondown/etc.) and migrate the list.
+
 ## Documentation
 
 Full documentation: https://docs.astro.build

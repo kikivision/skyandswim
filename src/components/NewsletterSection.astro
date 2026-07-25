@@ -12,7 +12,20 @@
       around a deck and a view.
     </p>
 
-    <form class="signup" onsubmit="return false">
+    <form
+      class="signup"
+      name="dispatch"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="dispatch" />
+      <p class="hidden-field" hidden>
+        <label>
+          Leave this empty if you're human:
+          <input name="bot-field" tabindex="-1" autocomplete="off" />
+        </label>
+      </p>
       <label class="visually-hidden" for="email">Email address</label>
       <input
         id="email"
@@ -25,9 +38,54 @@
       <button type="submit">Subscribe</button>
     </form>
 
+    <p class="signup-status" role="status" aria-live="polite" hidden></p>
     <p class="fineprint">No spam. Unsubscribe anytime.</p>
   </div>
 </section>
+
+<script>
+  // Progressive enhancement: submit to Netlify Forms via fetch and show an
+  // inline confirmation, so the form never silently does nothing. Netlify
+  // detects the form at deploy time from the static markup; this AJAX POST
+  // (to "/") only records a real submission on the deployed site.
+  const form = document.querySelector<HTMLFormElement>("form.signup");
+  const status = document.querySelector<HTMLParagraphElement>(".signup-status");
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const button = form.querySelector("button");
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Subscribing…";
+    }
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form) as any).toString(),
+      });
+      if (!response.ok) throw new Error(`Netlify responded ${response.status}`);
+
+      form.hidden = true;
+      if (status) {
+        status.hidden = false;
+        status.classList.add("is-success");
+        status.textContent = "You're in — watch for the next dispatch. ✓";
+      }
+    } catch {
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Subscribe";
+      }
+      if (status) {
+        status.hidden = false;
+        status.classList.add("is-error");
+        status.textContent = "Something went wrong — please try again in a moment.";
+      }
+    }
+  });
+</script>
 
 <style>
   .newsletter {
@@ -114,6 +172,23 @@
   .signup button:hover {
     background: #e0577a;
     transform: translateY(-2px);
+  }
+
+  .signup-status {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin: 2rem auto 0;
+    max-width: 460px;
+  }
+
+  .signup-status.is-success {
+    color: var(--teal);
+  }
+
+  .signup-status.is-error {
+    color: var(--watermelon);
   }
 
   .fineprint {
