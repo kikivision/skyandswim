@@ -36,8 +36,13 @@ captures addresses; sending is still manual/BYO (see below).
 How it works:
 
 - The `<form>` carries `name="dispatch"`, `data-netlify="true"`, a hidden
-  `form-name` input, and a `bot-field` honeypot. Netlify's build bot parses these
-  from the **static HTML at deploy time** and registers a form named `dispatch`.
+  `form-name` input, and a `bot-field` honeypot.
+- **`public/__forms.html`** is a plain static registration form that guarantees
+  detection. Netlify's build scanner does not reliably parse Astro's compiled
+  output (hydration markers / scoped attrs), so the real form went undetected on
+  the first deploy. This file ships verbatim from `public/`, the scanner reads it
+  cleanly, and Netlify matches live submissions on the `form-name` field. Keep its
+  form name + field names in sync with `NewsletterSection.astro`.
 - A progressive-enhancement `<script>` intercepts submit, POSTs to `/` via `fetch`,
   and swaps the form for an inline "You're in ✓" confirmation (`.signup-status`).
 - **Submissions only record on the deployed Netlify site.** Locally, `astro dev`
