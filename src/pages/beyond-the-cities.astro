@@ -6,13 +6,13 @@ import { BEYOND_HOTELS as hotels } from "../data/beyond.js";
 ---
 
 <BaseLayout
-  title="Beyond the Cities · Standout Rooftop Pools · Sky & Swim"
+  title="Rooftop Pools in Smaller Cities · Beyond the Cities · Sky & Swim"
   description="One standout rooftop pool per city, in places that don't yet rate a full page — from the Conrad Fort Lauderdale's Sky Deck to Charleston's Market Pavilion."
   jsonLd={[
     {
       "@type": "ItemList",
       "@id": "https://skyandswim.com/beyond-the-cities/#hotels",
-      name: "Standout Rooftop Pools Beyond the Cities",
+      name: "Rooftop Pools in Smaller Cities",
       numberOfItems: hotels.length,
       itemListElement: hotels.map((h, i) => ({
         "@type": "ListItem",
@@ -74,6 +74,7 @@ import { BEYOND_HOTELS as hotels } from "../data/beyond.js";
 
         <aside class="city-note">
           <p><strong>How a city makes this list:</strong> the same bar as everywhere else on Sky &amp; Swim — a real, wade-in, swimmable rooftop or high-elevated pool, a genuine view, and reviews that back it up. One standout per city here; hit three and you get your own page.</p>
+          <p class="city-note-link"><a href="/rooftop-pools/">Browse every rooftop pool on Sky &amp; Swim →</a></p>
         </aside>
       </div>
     </section>
@@ -166,6 +167,9 @@ import { BEYOND_HOTELS as hotels } from "../data/beyond.js";
   .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
   .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
   .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+  .city-note-link { margin-top: 0.9rem; }
+  .city-note-link a { color: var(--teal); font-weight: 500; transition: color 0.2s ease; }
+  .city-note-link a:hover { color: #fff; }
 
   @media (max-width: 640px) {
     .np-hero { min-height: 40vh; }
