@@ -44,7 +44,7 @@ export const CITIES = {
         "name": "W Austin",
         "slug": "w-austin",
         "neighborhood": "Downtown",
-        "description": "WET deck is the W's branded pool experience, four floors up above the 2nd Street District — a real deck with cabanas, tanning shelves and a fireplace rather than a token plunge. DJs run Memorial Day to Labor Day; outside that stretch it is a considerably quieter afternoon.",
+        "description": "WET deck is the W's branded pool scene, four floors up above the 2nd Street District — a real deck with cabanas, tanning shelves and a fireplace rather than a token plunge. DJs run Memorial Day to Labor Day; outside that stretch it is a considerably quieter afternoon.",
         "poolNote": "4th-floor WET deck · Cabanas + tanning shelves · DJs Memorial Day–Labor Day · Day passes from $25",
         "tags": [
           "Scene",
@@ -104,7 +104,7 @@ export const CITIES = {
         "name": "Cambria Austin Downtown",
         "slug": "cambria-austin-downtown",
         "neighborhood": "Rainey Street",
-        "description": "The adults-only option downtown — a 5th-floor resort-style deck with cabanas, an outdoor fireplace and a view over Rainey Street, plus day passes from $35 when the bigger properties are full. The rooftop bar, Limestone, is eleven floors further up.",
+        "description": "The adults-only value pick downtown — a 5th-floor resort-style deck with cabanas, an outdoor fireplace and a view over Rainey Street, plus day passes from $35 when the bigger properties are full. The rooftop bar, Limestone, is eleven floors further up.",
         "poolNote": "5th-floor adults-only pool · Rainey Street views · Cabanas + fireplace · Day passes from $35",
         "tags": [
           "Adults Only",
@@ -495,7 +495,7 @@ export const CITIES = {
         "name": "The Laura Hotel, Autograph Collection",
         "slug": "the-laura-houston",
         "neighborhood": "Downtown",
-        "description": "The smallest pool on this list and the easiest to get into — a fifth-floor terrace above Discovery Green that sells day passes when it isn't full. Not a destination swim, but a genuinely good place to spend a Houston afternoon without booking a room.",
+        "description": "The smallest pool on this list and the easiest to get into — a fifth-floor terrace above Discovery Green that sells day passes when it isn't full. Not a destination swim, but a genuinely good-value place to spend a Houston afternoon without booking a room.",
         "poolNote": "5th-floor terrace pool · Downtown skyline · Daybeds + cabanas · Day passes available",
         "tags": [
           "Elevated",
@@ -1081,7 +1081,7 @@ export const CITIES = {
         "name": "AC Hotel Phoenix Tempe/Downtown",
         "slug": "ac-hotel-tempe",
         "neighborhood": "Downtown Tempe",
-        "description": "A rooftop pool and sun terrace looking over Tempe and ASU's stadium — the Valley's East Side entry, swimmable and well-served, with the Sun Devil skyline for company.",
+        "description": "A rooftop pool and sun terrace looking over Tempe and ASU's stadium — the Valley's East Side value pick, swimmable and well-served, with the Sun Devil skyline for company.",
         "poolNote": "Rooftop pool · Downtown Tempe · 21+ to check in",
         "tags": [
           "Rooftop",

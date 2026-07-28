@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Netlify form registration</title>
+  </head>
+  <body>
+    <!--
+      Static registration form so Netlify reliably detects the "dispatch"
+      newsletter form at deploy time. Netlify's build-time scanner does not
+      always parse Astro's framework output (hydration markers, scoped
+      attributes), so the real form in src/components/NewsletterSection.astro
+      can go undetected. This plain HTML file is copied verbatim from public/
+      into the build, where the scanner reads it cleanly.
+
+      The visible form submits via AJAX (fetch POST to "/") and Netlify matches
+      the submission to this form on the `form-name` field. Keep the form name
+      and field names in sync with NewsletterSection.astro. Not linked anywhere.
+    -->
+    <form name="dispatch" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="dispatch" />
+      <input type="hidden" name="source" value="Dispatch signup" />
+      <input type="email" name="email" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
