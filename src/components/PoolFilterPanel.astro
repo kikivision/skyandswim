@@ -1,0 +1,173 @@
+---
+// Filter sidebar for the /rooftop-pools hub. Presentational only — all matching
+// happens client-side in src/scripts/pool-filter.js, keyed off data-filter-group
+// + value on each checkbox. Styled in the Sky & Swim palette (dark glass + teal).
+interface Facet {
+  value: string;
+  label: string;
+  count: number;
+}
+interface Props {
+  states: Facet[];
+  features: Facet[];
+  access: Facet[];
+  prices: Facet[];
+}
+const { states, features, access, prices } = Astro.props;
+
+const groups = [
+  { key: "feature", title: "Pool features", facets: features },
+  { key: "access", title: "Access", facets: access },
+  { key: "state", title: "State", facets: states },
+  { key: "price", title: "Price", facets: prices },
+].filter((g) => g.facets.length > 0);
+---
+
+<aside class="filter-panel" id="filter-panel" aria-label="Filter rooftop pools">
+  <div class="filter-panel__inner">
+    <div class="filter-panel__header">
+      <h2 class="filter-panel__title">Filters</h2>
+      <button type="button" class="filter-panel__close" data-filter-close aria-label="Close filters">×</button>
+    </div>
+
+    <button type="button" class="filter-panel__clear" data-filter-clear hidden>Clear all filters</button>
+
+    {groups.map((group) => (
+      <fieldset class="filter-group">
+        <legend class="filter-group__title">{group.title}</legend>
+        {group.facets.map((f) => (
+          <label class="filter-check">
+            <input type="checkbox" data-filter-group={group.key} value={f.value} />
+            <span class="filter-check__label">{f.label}</span>
+            <span class="filter-check__count">{f.count}</span>
+          </label>
+        ))}
+      </fieldset>
+    ))}
+  </div>
+</aside>
+
+<div class="filter-backdrop" data-filter-backdrop hidden></div>
+
+<style>
+  .filter-panel {
+    background: rgba(8, 30, 56, 0.75);
+    border: 1px solid rgba(168, 216, 216, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+  }
+
+  .filter-panel__inner { display: flex; flex-direction: column; gap: 1.6rem; }
+
+  .filter-panel__header { display: flex; justify-content: space-between; align-items: center; }
+
+  .filter-panel__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  .filter-panel__close {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: rgba(220, 240, 245, 0.7);
+    padding: 0 0.4rem;
+    cursor: pointer;
+  }
+
+  .filter-panel__clear {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: var(--teal);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .filter-panel__clear[hidden] { display: none; }
+
+  .filter-group { border: none; padding: 0; margin: 0; }
+
+  .filter-group__title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--teal);
+    margin-bottom: 0.7rem;
+    padding: 0;
+  }
+
+  .filter-check {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.32rem 0;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: rgba(220, 240, 245, 0.85);
+    cursor: pointer;
+  }
+
+  .filter-check input {
+    accent-color: var(--teal);
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .filter-check__label { flex: 1; }
+
+  .filter-check__count {
+    font-size: 0.75rem;
+    color: rgba(168, 216, 216, 0.55);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .filter-check:hover .filter-check__label { color: #fff; }
+
+  .filter-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 14, 34, 0.55);
+    z-index: 90;
+  }
+  .filter-backdrop[data-open="true"] { display: block; }
+
+  /* Mobile: the panel becomes a slide-out drawer. */
+  @media (max-width: 860px) {
+    .filter-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(330px, 88vw);
+      max-height: 100vh;
+      border-radius: 0;
+      border: none;
+      border-right: 1px solid rgba(168, 216, 216, 0.2);
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+      z-index: 100;
+      background: rgba(7, 24, 44, 0.98);
+      backdrop-filter: blur(8px);
+    }
+    .filter-panel[data-open="true"] { transform: translateX(0); }
+    .filter-panel__close { display: inline-block; }
+  }
+</style>

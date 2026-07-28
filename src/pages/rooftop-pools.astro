@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import HotelCard from "../components/HotelCard.astro";
+import PoolFilterPanel from "../components/PoolFilterPanel.astro";
+import { POOLS, buildPoolFacets } from "../lib/pool-catalog.js";
+
+const facets = buildPoolFacets(POOLS);
+const { states, features, access, prices, totalCount } = facets;
+
+const site = "https://skyandswim.com";
+const pageUrl = `${site}/rooftop-pools/`;
+---
+
+<BaseLayout
+  title="The Best Rooftop Pool Hotels in the US · Sky & Swim"
+  description={`Every rooftop pool hotel on Sky & Swim in one place — browse ${totalCount} heated, infinity-edge, and year-round rooftop pools and filter by state, feature, and day-pass access.`}
+  jsonLd={[
+    {
+      "@type": "CollectionPage",
+      "@id": `${pageUrl}#page`,
+      name: "The Best Rooftop Pool Hotels in the US",
+      description:
+        "Every rooftop pool hotel on Sky & Swim, filterable by state, feature, access, and price.",
+      url: pageUrl,
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#pools`,
+      name: "Rooftop Pool Hotels Across America",
+      numberOfItems: POOLS.length,
+      itemListElement: POOLS.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Hotel",
+          name: p.name,
+          description: p.description,
+          url: `${site}${p.detailHref}`,
+          ...(p.priceRange ? { priceRange: p.priceRange } : {}),
+        },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+        { "@type": "ListItem", position: 2, name: "Rooftop Pools", item: pageUrl },
+      ],
+    },
+  ]}
+>
+  <div class="hub">
+    <section class="hub-hero">
+      <div class="hub-hero-bg" aria-hidden="true"></div>
+      <div class="section-inner hub-hero-inner">
+        <p class="hub-kicker">Sky &amp; Swim · The Directory</p>
+        <h1 class="hub-title">The best rooftop pool hotels in America.</h1>
+        <p class="hub-lede">
+          Every rooftop pool we've found worth swimming — {totalCount} of them
+          across {states.length} states, each vetted for a real, wade-in pool, a
+          genuine view, and reviews that back it up. Filter by feature, access,
+          and price to find yours.
+        </p>
+      </div>
+    </section>
+
+    <section class="hub-body">
+      <div class="section-inner hub-layout">
+        <PoolFilterPanel states={states} features={features} access={access} prices={prices} />
+
+        <div class="hub-main">
+          <div class="hub-toolbar">
+            <button type="button" class="filter-trigger" data-filter-trigger aria-controls="filter-panel">
+              <span aria-hidden="true">≡</span> Filters
+            </button>
+            <p class="hub-count" data-result-count>{totalCount} pools</p>
+          </div>
+
+          <div class="rooftop-grid">
+            {POOLS.map((pool) => (
+              <div
+                class="pool-item"
+                data-state={pool.state}
+                data-tags={pool.tagSlugs.join(",")}
+                data-price={String(pool.priceLevel)}
+              >
+                <HotelCard {...pool} neighborhood={pool.cityLabel} />
+              </div>
+            ))}
+          </div>
+
+          <div class="hub-empty" data-empty-state hidden>
+            <p>No pools match these filters.</p>
+            <p>Try removing one, or clear them all to see every pool.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<!-- Filtered views (?state=, ?feature=, …) are the same content re-sliced, so
+     keep them out of the index and let the canonical /rooftop-pools/ rank. -->
+<script is:inline>
+  if (location.search) {
+    const m = document.createElement("meta");
+    m.name = "robots";
+    m.content = "noindex, follow";
+    document.head.appendChild(m);
+  }
+</script>
+
+<script src="../scripts/pool-filter.js"></script>
+
+<style>
+  .hub { min-height: 100vh; }
+
+  .hub-hero {
+    position: relative;
+    padding: 7rem 0 clamp(2.5rem, 5vw, 4rem);
+    overflow: hidden;
+  }
+  .hub-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(42, 191, 191, 0.18) 0%, rgba(20, 74, 104, 0.32) 60%, transparent 100%);
+  }
+  .hub-hero-inner { position: relative; z-index: 1; }
+  .hub-kicker {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    margin: 0 0 0.9rem;
+  }
+  .hub-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin: 0;
+    max-width: 16ch;
+  }
+  .hub-lede {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1rem, 1.7vw, 1.2rem);
+    line-height: 1.6;
+    color: rgba(220, 240, 245, 0.82);
+    margin: 1.2rem 0 0;
+    max-width: 60ch;
+  }
+
+  .hub-body { position: relative; z-index: 1; padding-bottom: clamp(4rem, 8vw, 7rem); }
+
+  .hub-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .hub-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .hub-count {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(220, 240, 245, 0.72);
+    margin: 0;
+  }
+
+  .filter-trigger {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(42, 191, 191, 0.12);
+    border: 1px solid rgba(42, 191, 191, 0.35);
+    border-radius: 999px;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.1rem;
+    cursor: pointer;
+  }
+
+  .rooftop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+    gap: 1.25rem;
+  }
+
+  /* Each pool is wrapped so the filter script has one element to read data
+     attributes from and to hide. display:contents lets the HotelCard itself
+     become the grid item, so the cards' subgrid row-alignment still works. */
+  .pool-item { display: contents; }
+  .pool-item[hidden] { display: none; }
+
+  .hub-empty {
+    margin-top: 2.5rem;
+    padding: 1.6rem 2rem;
+    border-left: 2px solid rgba(42, 191, 191, 0.3);
+    background: rgba(42, 191, 191, 0.05);
+    border-radius: 0 8px 8px 0;
+    max-width: 60ch;
+  }
+  .hub-empty[hidden] { display: none; }
+  .hub-empty p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(220, 240, 245, 0.8);
+    margin: 0;
+  }
+  .hub-empty p + p { margin-top: 0.3rem; color: rgba(220, 240, 245, 0.6); }
+
+  @media (max-width: 860px) {
+    .hub-layout { grid-template-columns: 1fr; gap: 0; }
+    .filter-trigger { display: inline-flex; }
+  }
+</style>

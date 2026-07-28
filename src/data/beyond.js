@@ -37,6 +37,8 @@ export const BEYOND_HOTELS = [
     slug: "four-seasons-seattle",
     heroCredit: "Four Seasons Hotel Seattle",
     neighborhood: "Seattle, WA",
+    city: "Seattle",
+    state: "WA",
     description: "The Pacific Northwest barely does rooftop pools, which makes this one a standout: a 4th-floor terrace infinity pool heated to 84° year-round, open to Elliott Bay, Puget Sound, and the Olympics. Four Seasons calls it Seattle's only infinity-edge hotel pool. Swim it in the rain — that's the whole point.",
     poolNote: "4th-floor terrace infinity pool · Elliott Bay + Olympics · Heated 84° year-round · Guests only",
     tags: ["Rooftop", "Infinity Edge", "Water Views", "Year-Round"],
