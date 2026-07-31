@@ -178,6 +178,15 @@ const graph = [
         --watermelon: #d44868;
         --teal: #2abfbf;
 
+        /* Layering scale. The fixed nav is the baseline; anything that must
+           cover it (drawers, overlays) goes above --z-nav. Keep full-page
+           overlays on these tokens rather than ad-hoc numbers — and remember a
+           positioned ancestor with its own z-index traps them regardless of
+           how high they go. */
+        --z-nav: 100;
+        --z-backdrop: 200;
+        --z-drawer: 210;
+
         --font-display: "Cormorant Garamond", Georgia, serif;
         --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
       }

@@ -71,7 +71,7 @@ const pageUrl = `${site}/rooftop-pools/`;
 
         <div class="hub-main">
           <div class="hub-toolbar">
-            <button type="button" class="filter-trigger" data-filter-trigger aria-controls="filter-panel">
+            <button type="button" class="filter-trigger" data-filter-trigger aria-controls="filter-panel" aria-expanded="false">
               <span aria-hidden="true">≡</span> Filters
             </button>
             <p class="hub-count" data-result-count>{totalCount} pools</p>
@@ -159,7 +159,12 @@ const pageUrl = `${site}/rooftop-pools/`;
     max-width: 60ch;
   }
 
-  .hub-body { position: relative; z-index: 1; padding-bottom: clamp(4rem, 8vw, 7rem); }
+  /* No z-index here on purpose: a positioned ancestor with a numeric z-index
+     creates a stacking context, which would trap the mobile filter drawer below
+     the fixed nav no matter how high the drawer's own z-index is. .hub-hero-bg
+     is clipped inside .hub-hero (overflow: hidden), so this section already
+     paints above it on DOM order alone. */
+  .hub-body { position: relative; padding-bottom: clamp(4rem, 8vw, 7rem); }
 
   .hub-layout {
     display: grid;
