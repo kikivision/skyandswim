@@ -97,6 +97,15 @@ function setupDrawer() {
   if (!panel || !trigger) return;
 
   let lastFocused = null;
+  const desktop = window.matchMedia("(min-width: 861px)");
+
+  // A closed drawer is only pushed off-canvas by a transform, so it stays in the
+  // tab order — mobile keyboard users would tab through every filter checkbox
+  // while it sits invisible. inert removes it deterministically (no dependence
+  // on a transition firing). The desktop sidebar is never inert.
+  const syncInert = () => {
+    panel.inert = !desktop.matches && panel.dataset.open !== "true";
+  };
 
   const open = () => {
     lastFocused = document.activeElement;
@@ -106,6 +115,8 @@ function setupDrawer() {
       backdrop.hidden = false;
     }
     document.body.style.overflow = "hidden";
+    trigger.setAttribute("aria-expanded", "true");
+    syncInert(); // must clear inert before focusing — focus() on inert is a no-op
     const focusable = panel.querySelectorAll(FOCUSABLE);
     if (focusable[0]) focusable[0].focus();
   };
@@ -117,7 +128,11 @@ function setupDrawer() {
       backdrop.hidden = true;
     }
     document.body.style.overflow = "";
+    trigger.setAttribute("aria-expanded", "false");
+    // Restore focus before inerting, so focus leaves the subtree under its own
+    // power rather than being dropped to <body> by inert.
     if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    syncInert();
   };
 
   trigger.addEventListener("click", open);
@@ -136,6 +151,13 @@ function setupDrawer() {
       if (focusable.length === 0) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
+      // If focus has escaped the drawer (a stray click on the backdrop, say),
+      // pull it back rather than letting Tab walk into the nav behind the scrim.
+      if (!panel.contains(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+        return;
+      }
       if (e.shiftKey && document.activeElement === first) {
         e.preventDefault();
         last.focus();
@@ -146,10 +168,12 @@ function setupDrawer() {
     }
   });
 
-  const mql = window.matchMedia("(min-width: 861px)");
-  mql.addEventListener("change", (e) => {
+  desktop.addEventListener("change", (e) => {
     if (e.matches && panel.dataset.open === "true") close();
+    else syncInert();
   });
+
+  syncInert();
 }
 
 function init() {

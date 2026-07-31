@@ -145,7 +145,7 @@ const groups = [
     position: fixed;
     inset: 0;
     background: rgba(5, 14, 34, 0.55);
-    z-index: 90;
+    z-index: var(--z-backdrop);
   }
   .filter-backdrop[data-open="true"] { display: block; }
 
@@ -163,7 +163,7 @@ const groups = [
       border-right: 1px solid rgba(168, 216, 216, 0.2);
       transform: translateX(-100%);
       transition: transform 0.25s ease;
-      z-index: 100;
+      z-index: var(--z-drawer);
       background: rgba(7, 24, 44, 0.98);
       backdrop-filter: blur(8px);
     }
