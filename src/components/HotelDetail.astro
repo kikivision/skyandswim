@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { AFFILIATE_HOTELS } from "../data/affiliates.js";
+import { POOLS, STATE_NAMES } from "../lib/pool-catalog.js";
 
 // Shared hotel-detail view. Rendered by the per-city route
 // (src/pages/cities/[city]/[hotel].astro) and by standalone hotel pages that
@@ -31,6 +32,18 @@ const {
   parentLabel = null,
   parentHref = null,
 } = Astro.props;
+
+// Contextual link up to the /rooftop-pools hub. Every page already carries a
+// nav link to it, but nav links are sitewide boilerplate and get discounted —
+// this one sits in the content and varies its anchor by state.
+//
+// Prefer the catalog's stateName, then the raw code map — Notable Pools aren't
+// in POOLS, so without the second hop they'd render "in FL and across America".
+const totalPools = POOLS.length;
+const stateName =
+  POOLS.find((p) => p.slug === hotel.slug)?.stateName ||
+  STATE_NAMES[state] ||
+  state;
 
 // Hero images are keyed by hotel slug: src/assets/hotels/<slug>.jpg. Same glob
 // the route used before extraction, so Astro still optimizes (webp + srcset).
@@ -182,6 +195,16 @@ const ctaRel = !isOutbound
         </a>
       </section>
     )}
+
+    <section class="block hub-link">
+      <p class="take">
+        {hotel.name} is one of {totalPools} rooftop pools in our directory.{" "}
+        <a class="all-link" href="/rooftop-pools/">
+          Compare it against every rooftop pool hotel in {stateName} and across
+          America →
+        </a>
+      </p>
+    </section>
   </div>
 </article>
 
@@ -332,6 +355,8 @@ const ctaRel = !isOutbound
   }
 
   .siblings { border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: clamp(2rem, 4vw, 2.8rem); }
+  .hub-link { border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: clamp(2rem, 4vw, 2.8rem); }
+  .hub-link .take { font-size: 0.95rem; }
   .sibling-list { list-style: none; margin: 0 0 1.4rem; padding: 0; display: grid; gap: 1px; background: rgba(168, 216, 216, 0.16); border: 1px solid rgba(168, 216, 216, 0.16); border-radius: 10px; overflow: hidden; }
   .sibling-list a {
     display: flex;

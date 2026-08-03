@@ -10,7 +10,7 @@ import { BEYOND_HOTELS } from "../data/beyond.js";
 
 // US state/territory code → display name. Fallback to the raw code for anything
 // not listed, so a new state never renders blank.
-const STATE_NAMES = {
+export const STATE_NAMES = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas",
   CA: "California", CO: "Colorado", CT: "Connecticut", DE: "Delaware",
   DC: "Washington, D.C.", FL: "Florida", GA: "Georgia", HI: "Hawaii",

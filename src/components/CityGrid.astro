@@ -1,5 +1,6 @@
 ---
 import { CITIES } from "../data/hotels.js";
+import { POOLS } from "../lib/pool-catalog.js";
 
 // Presentation only — bento placement, badge, and a short neighborhood label
 // for the compact card. Name and pool count come from src/data/hotels.js so the
@@ -36,6 +37,11 @@ const cities = layout.map((l) => {
 
 const cityCount = new Intl.NumberFormat("en-US").format(cities.length);
 const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0);
+
+// totalPools above counts CITY pools only. The hub is the superset — it also
+// carries Beyond the Cities and the standalone picks — so the note below needs
+// the catalog count, not that one. Keeping both named distinctly on purpose.
+const catalogCount = POOLS.length;
 ---
 
 <section class="cities" id="cities" aria-labelledby="cities-heading">
@@ -64,6 +70,13 @@ const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0
         ))
       }
     </div>
+
+    <p class="grid-note">
+      The city guides cover {totalPools} of them.{" "}
+      <a href="/rooftop-pools/">
+        Browse all {catalogCount} rooftop pool hotels in America →
+      </a>
+    </p>
   </div>
 </section>
 
@@ -113,6 +126,29 @@ const totalPools = Object.values(CITIES).reduce((n, c) => n + c.hotels.length, 0
     color: rgba(220, 240, 245, 0.75);
     margin-top: 0.9rem;
   }
+  .grid-note {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(220, 240, 245, 0.78);
+    margin-top: 2rem;
+    max-width: 60ch;
+    /* Same shadow the heading uses — this section sits over imagery. */
+    text-shadow:
+      0 1px 2px rgba(3, 12, 28, 0.6),
+      0 2px 16px rgba(3, 12, 28, 0.72);
+  }
+  .grid-note a {
+    font-weight: 500;
+    /* White, not var(--teal): this section sits high in the body gradient where
+       the background is light, and teal only scores 3.4:1 there. White is 7.8:1
+       and matches the section heading. Teal is fine further down the page. */
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .grid-note a:hover { color: #a8d8d8; }
 
   .grid {
     display: grid;

@@ -2,6 +2,7 @@
 import CityLayout from "../../layouts/CityLayout.astro";
 import HotelCard from "../../components/HotelCard.astro";
 import { CITIES } from "../../data/hotels.js";
+import { POOLS } from "../../lib/pool-catalog.js";
 
 // One route for every city. Adding a city is a data change in
 // src/data/hotels.js — no new page file.
@@ -31,6 +32,14 @@ const {
 // Every other city, so each city page links laterally into the rest of the set
 // rather than dead-ending back at the homepage.
 const otherCities = Object.values(CITIES).filter((c) => c.slug !== data.slug);
+
+// Contextual link up to the /rooftop-pools hub — the nav link on every page is
+// sitewide boilerplate, so this in-content one carries the weight. stateName
+// comes from the catalog ("PA" → "Pennsylvania"); fall back to the raw code.
+const cityCount = Object.values(CITIES).length;
+const totalPools = POOLS.length;
+const stateName =
+  POOLS.find((p) => p.citySlug === data.slug)?.stateName || state;
 
 const site = "https://skyandswim.com";
 const cityUrl = `${site}/cities/${data.slug}/`;
@@ -95,6 +104,16 @@ const jsonLd = [
         <p><strong>{noteLabel}:</strong> {noteBody}</p>
       </aside>
 
+      <aside class="hub-link">
+        <p>
+          {city} is one of {cityCount} cities we cover in depth.{" "}
+          <a href="/rooftop-pools/">
+            Browse all {totalPools} rooftop pool hotels in America, including
+            the rest of {stateName} →
+          </a>
+        </p>
+      </aside>
+
       <nav class="other-cities" aria-labelledby="other-cities-heading">
         <h2 id="other-cities-heading">Other cities</h2>
         <ul>
@@ -123,6 +142,11 @@ const jsonLd = [
   .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
   .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
   .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+
+  .hub-link { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: 2rem; max-width: 72ch; }
+  .hub-link p { font-family: var(--font-body); font-weight: 300; font-size: 0.95rem; line-height: 1.65; color: rgba(220, 240, 245, 0.85); margin: 0; }
+  .hub-link a { font-weight: 500; color: var(--teal); text-decoration: underline; text-underline-offset: 4px; }
+  .hub-link a:hover { color: #fff; }
 
   .other-cities { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: 2rem; }
   .other-cities h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; color: #fff; margin: 0 0 1.1rem; }
