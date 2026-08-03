@@ -10,18 +10,22 @@ const { states, features, access, prices, totalCount } = facets;
 
 const site = "https://skyandswim.com";
 const pageUrl = `${site}/rooftop-pools/`;
+
+// Meta description leads with the count (highest-CTR element) and closes on
+// stay intent — we earn on bookings, so the snippet must not court day-pass
+// traffic. Kept under ~155 chars so Google doesn't truncate the close.
+const metaDescription = `${totalCount} rooftop pool hotels across America, ranked by view, water, and whether the moment earns the price — so you can book the one worth the stay.`;
 ---
 
 <BaseLayout
   title="The Best Rooftop Pool Hotels in the US · Sky & Swim"
-  description={`Every rooftop pool hotel on Sky & Swim in one place — browse ${totalCount} heated, infinity-edge, and year-round rooftop pools and filter by state, feature, and day-pass access.`}
+  description={metaDescription}
   jsonLd={[
     {
       "@type": "CollectionPage",
       "@id": `${pageUrl}#page`,
       name: "The Best Rooftop Pool Hotels in the US",
-      description:
-        "Every rooftop pool hotel on Sky & Swim, filterable by state, feature, access, and price.",
+      description: metaDescription,
       url: pageUrl,
     },
     {
