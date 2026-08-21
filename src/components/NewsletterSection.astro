@@ -74,6 +74,15 @@
         status.classList.add("is-success");
         status.textContent = "You're in — watch for the next dispatch. ✓";
       }
+      // GA4: newsletter sign-up. Only fires on a confirmed-ok Netlify response,
+      // never in the catch below, so a failed POST can't be counted as a signup.
+      // Same event name as jetandswim uses, so both sites report together.
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "newsletter_signup", {
+          method: "netlify",
+          location: "home_dispatch",
+        });
+      }
     } catch {
       if (button) {
         button.disabled = false;
