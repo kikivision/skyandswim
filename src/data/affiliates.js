@@ -27,6 +27,10 @@ export const AFFILIATE_HOTELS = {
   'the-betsy-south-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/the-betsy.html',
   },
+  // --- New York ---
+  'margaritaville-times-square': {
+    bookingcom: 'https://www.booking.com/hotel/us/margaritaville-resort-times-square.html',
+  },
   'the-tony-hotel-south-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/thetonyhotelsouthbeach.html',
   },

@@ -905,7 +905,7 @@ export const CITIES = {
     "city": "New York",
     "state": "NY",
     "tagline": "Manhattan on one side, Brooklyn on the other, the East River between them — every rooftop pool in this city has an opinion about which view is worth more.",
-    "neighborhoods": "Manhattan & Brooklyn",
+    "neighborhoods": "Midtown, Downtown & Brooklyn",
     "heroGradient": "linear-gradient(180deg, rgba(26,80,110,0.5) 0%, rgba(10,42,72,0.75) 100%)",
     "skyline": true,
     "listingsHeading": "Every pool, ranked honestly.",
@@ -994,6 +994,28 @@ export const CITIES = {
           "stay": "Opened 2004 as the Meatpacking District's first luxury hotel; 18 Ninth Ave at W 13th St, steps from the High Line, the Whitney, Chelsea Market and Little Island; full renovation completed 2021 — Confirmed 2026-07-19 via gansevoorthotelgroup.com and The Points Guy."
         },
         "heroCredit": "Gansevoort Meatpacking"
+      },
+      {
+        "name": "Margaritaville Resort Times Square",
+        "slug": "margaritaville-times-square",
+        "neighborhood": "Times Square",
+        "description": "A genuine lap pool running the length of a narrow 6th-floor deck in Midtown. The view is one direction only — down the street corridor off the short end, buildings tight on both long sides — so come for the water, not the outlook. Heated and open in all seasons, which in this city is rare enough to be the reason to know about it.",
+        "poolNote": "6th-floor rooftop pool · Heated, open all seasons · One-direction street view · Daily 8am–8pm · Guests + limited day passes · Cabanas from $500",
+        "tags": [
+          "Rooftop",
+          "Heated",
+          "Year-Round",
+          "Cabanas"
+        ],
+        "priceRange": "$$$",
+        "stay": "Margaritaville Times Square is the one you can actually swim in during January. New York's rooftop pools are overwhelmingly summer — the Vale, the Arlo and ModernHaus all shut after Labor Day, and the Gansevoort's year-round deck is guests-and-members-only — which leaves this 6th-floor pool as the city's most available winter swim. Be clear about what you are buying: it is a Jimmy Buffett resort dropped into Midtown, the LandShark Bar & Grill is right on the deck with its neon lit and tables full, and the outlook is a single sightline down a Midtown street rather than a panorama. At $$$ that is a fair trade if you want a heated pool and a Broadway address in the same block — and a bad one if you came for quiet.",
+        "verified": {
+          "stay": "Operator states an open-air pool on a 6th-floor rooftop deck, \"temperature-regulated\" and \"heated when it is chilly and refreshing when it is hot\", with the \"rooftop deck open in all seasons\"; open daily 8am-8pm with hours changing seasonally; access primarily for hotel guests with a limited number of day passes on select dates, resort wristband required; private cabanas from $500 per day — Confirmed 2026-08-25 via margaritavilleresorts.com. Hero pulled 2026-08-25 (night close-up, 1000x646 — LOW RES for the 1200px slot). The daylight and long-axis frames used to settle the view question were shown for judgement only — NOT Fora assets and not ours, so they are unpublishable and must not be sought out as a hero. Any upgrade has to come from the Portal. VERIFY: depth is not published and no marking is visible in the hero, unlike Angler's and The Tony; room count and review tier not checked."
+        },
+        "debunked": {
+          "panoramicViews": "The operator advertises \"panoramic views of Midtown Manhattan\". It is not panoramic. Karen reviewed three frames on 2026-08-25 — a night close-up, a daylight deck shot and a long-axis view — and the geometry is unambiguous: a narrow deck six floors up with buildings tight against both long sides, and a sightline that opens in ONE direction only, down the street corridor off the short end. So it is not a panorama, but it is not a sealed box either — an earlier draft of this copy called it a canyon and that overstated the enclosure. The accurate description, used above, is a one-direction street view. Do not restore either the panoramic claim or the canyon framing."
+        },
+        "heroCredit": "Margaritaville Resort Times Square"
       }
     ]
   },

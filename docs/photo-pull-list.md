@@ -152,6 +152,16 @@ to turn those CTAs on — **plain `https://www.booking.com/hotel/us/<property>.h
 only**; strip any `aid`, `label`, `sid` or date parameters, since /go applies our
 own CJ property ID and a foreign `aid` would divert the commission.
 
+### New York  (1) — added 2026-08-25
+- [x] `margaritaville-times-square` — Margaritaville Resort Times Square
+      (**night close-up, 1000x646 — LOW RES** for the 1200px hero slot.
+      Two better frames — a daylight deck shot and a long-axis view — were
+      shown to Claude on 2026-08-25 **for judgement only. They are NOT Fora
+      assets and NOT ours, so they cannot be published**; they were used to
+      settle what the view actually is and nothing more. Do not go looking for
+      them to use as a hero. If a better frame is wanted it has to come from
+      the Portal like everything else. Affiliate wired.)
+
 ## Galleries — BUILT 2026-08-25
 
 A hotel can now carry extra frames beyond its hero. Same drop-in rule:
