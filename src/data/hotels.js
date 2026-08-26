@@ -195,12 +195,12 @@ export const CITIES = {
     "slug": "dallas",
     "city": "Dallas",
     "state": "TX",
-    "tagline": "Dallas builds tall and looks good doing it — the city's rooftop pools sit high enough to make the flat Texas horizon feel like a feature, and a couple of them hang right out over the street.",
+    "tagline": "Dallas builds tall and looks good doing it — the city's rooftop pools sit high enough to make the flat Texas horizon feel like a feature, and one of them hangs right out over the street.",
     "neighborhoods": "Downtown & Uptown",
     "heroGradient": "linear-gradient(180deg, rgba(96,124,170,0.8) 0%, rgba(20,58,130,0.88) 42%, rgba(10,30,74,0.94) 100%)",
     "listingsHeading": "High, and hanging over Main Street.",
     "noteLabel": "Downtown vs Uptown",
-    "noteBody": "the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. The Texas heat keeps most of them usable well past summer, though the Adolphus runs its rooftop season through Labor Day and Swexan is the reliable year-round one.",
+    "noteBody": "the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. The Texas heat keeps most of them usable well past summer, though the Adolphus runs its rooftop season through Labor Day, and Thompson is the only one of the six that publishes a heated pool — none of the others states a season, so confirm before a winter booking.",
     "hotels": [
       {
         "name": "The Joule",
@@ -331,12 +331,12 @@ export const CITIES = {
     "slug": "denver",
     "city": "Denver",
     "state": "CO",
-    "tagline": "At 5,280 feet, every pool in Denver is technically a mile high — but the ones worth visiting earn that designation not with altitude but with mountains on the horizon and water warm enough to stay in through a thin-air afternoon.",
+    "tagline": "At 5,280 feet, every pool in Denver is technically a mile high — but the ones worth visiting earn that designation not with altitude but with mountains on the horizon and, at most of them, water warm enough to stay in through a thin-air afternoon.",
     "neighborhoods": "Cherry Creek & Uptown",
     "heroGradient": "linear-gradient(180deg, rgba(140,158,168,0.68) 0%, rgba(74,102,126,0.8) 46%, rgba(18,34,58,0.92) 100%)",
     "listingsHeading": "The Rockies, framed in water.",
     "noteLabel": "Year-round is meaningful here",
-    "noteBody": "Denver averages 300 days of sunshine a year, but the altitude means summer afternoons can drop 30 degrees between 2pm and 8pm. Halcyon and a few others heat their pools year-round, which means a clear January afternoon with Rockies visible is genuinely on the table. Pack a towel in both seasons.",
+    "noteBody": "Denver averages 300 days of sunshine a year, but the altitude means summer afternoons can drop 30 degrees between 2pm and 8pm. Halcyon and Warwick both heat year-round — the Jacquard publishes no heating at all — which means a clear January afternoon with the Rockies visible is genuinely on the table at two of the three. Pack a towel in both seasons.",
     "hotels": [
       {
         "name": "Halcyon, a Hotel in Cherry Creek",
