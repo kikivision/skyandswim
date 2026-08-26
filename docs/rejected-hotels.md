@@ -112,6 +112,7 @@ are not re-walked.
 |---|---|
 | **The Hoxton, Williamsburg** | **No pool at all.** Hoxton's own site lists pools at Vienna, Chicago, Paris, LA and Barcelona; Williamsburg is absent from that list and from its own amenities. Worth recording because Hoxton Chicago and Hoxton DTLA are both ON the site, which makes a Williamsburg pool a natural and wrong assumption. |
 | **Dream Downtown** ("The Beach" / Dream Beach Club) | **Fails elevation.** The signature glass-bottom pool is visible *from the lobby lounge below* — it sits one level above the lobby, not on a roof. Same call as Pendry DC's second-floor river terrace and Radisson Blu Aqua's third-level podium deck. Also run by Tao Group as a seasonal nightlife venue with imported sand, which is a beach club, not a hotel pool. |
+| **Renaissance New York Chelsea** ("Somewhere Nowhere") | **No rooftop pool shown in either the Fora Portal or Booking.com** — checked by Karen 2026-08-25. Both carry the property with full hotel-supplied photo sets, and a rooftop pool is a headline amenity that would be in them. marriott.com 403s to automated access, so the photo sets are the evidence. The pool the listicles refer to belongs to **Somewhere Nowhere**, the rooftop bar/nightclub venue, not to the hotel — the same shape as Mr. Purple below. Nice hotel; not a rooftop pool hotel. |
 | **Ravel Hotel** (Long Island City) | **The operator's own site describes no pool.** ravelhotel.com details a 6th-floor Penthouse event space with a retractable roof and a "large outdoor seasonal rooftop" for weddings — no pool anywhere. The "Summer Club NYC" rooftop pool appears only in aggregators and event listings. Secondary sources also say seasonal access is limited *and charged* even for hotel guests, and it scores 8.2 — the number that excluded The Ven at Embassy Row. |
 
 **Borderline, excluded:**
@@ -135,11 +136,6 @@ are not re-walked.
 
 **Unverified, blocked:**
 
-- **Renaissance New York Chelsea** ("Somewhere Nowhere") — widely described as
-  a real open-air rooftop pool. **Could not verify:** marriott.com returns HTTP
-  403 to automated access (`Retry-After: 28800`), as do all Marriott, Hilton and
-  IHG corporate pages. Needs a Portal or manual check, and remains the most
-  likely missed Manhattan candidate.
 - **The Rockaway Hotel** (Queens) — its own site confirms a pool, day passes and
   cabanas but **never states the level**, and the property is low-rise beachside,
   so ground level is the likely answer. Ask before assuming.
@@ -217,6 +213,23 @@ list will 403.
   loosen the neighborhood criterion.
 
 ---
+
+## Checking a chain hotel when its own site 403s
+
+Marriott, Hilton and IHG corporate pages all refuse automated access, which
+blocks operator verification on a large share of candidates. **The way round it
+is the photo set.** Booking.com and the Fora Portal both carry hotel-supplied
+imagery, and a rooftop pool is a headline amenity no hotel omits from its own
+photos. Absence across both is strong evidence the hotel does not offer one —
+that is what settled Renaissance New York Chelsea on 2026-08-25 after the
+operator site could not be read.
+
+It cuts the other way too: a photo is often the ONLY source for depth, because
+almost no operator publishes it. Angler's (4 FT), The Tony (3 FT 6 IN) and The
+Betsy were all settled off the hero. See "On reading depth off a photograph".
+
+Karen can see both sources; Claude can see neither. So on any chain property,
+the fastest path is to ask her to look rather than to keep fetching.
 
 ## Sourcing notes
 
