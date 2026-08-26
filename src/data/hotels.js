@@ -36,9 +36,9 @@ export const CITIES = {
     "neighborhoods": "Downtown & Rainey St",
     "heroGradient": "linear-gradient(180deg, rgba(191,79,8,0.9) 0%, rgba(150,56,24,0.72) 28%, rgba(40,64,80,0.6) 60%, rgba(6,22,50,0.84) 100%)",
     "listingsHeading": "The city that built up fast.",
-    "listingsLede": "Austin's rooftop pool scene punches above its size. The best ones have views of the lake, the Capitol, or the Congress Avenue corridor — and most are warm enough year-round to use on a January whim.",
-    "noteLabel": "Year-round pool weather",
-    "noteBody": "Austin averages 228 sunny days a year, and the decks here stay usable far later than Nashville's or Denver's — but note that none of these four operators publishes a year-round or heated pool, and Austin Proper states outright that hours vary seasonally. October through February is the underrated window when they are open: warm afternoons, thinner crowds, and the full skyline without the August heat. Confirm before you plan a winter trip around one.",
+    "listingsLede": "Austin's rooftop pool scene punches above its size — four decks on the fourth and fifth floors, looking at Lady Bird Lake or the Rainey Street corridor. None of the four publishes a heated or year-round pool, so check the season before you count on one.",
+    "noteLabel": "When these decks are open",
+    "noteBody": "Austin averages 228 sunny days a year, and the decks here stay usable far later than Nashville's or Denver's — but note that none of these four operators publishes a year-round or heated pool, and Austin Proper states outright that hours vary seasonally. October and early November are the underrated window: warm afternoons, thinner crowds, and the full skyline without the August heat. January and February are not — Austin gets hard freezes and the occasional snow, and these unheated decks are shut for it. Confirm before you plan a cool-season trip around one.",
     "hotels": [
       {
         "name": "W Austin",
@@ -863,7 +863,7 @@ export const CITIES = {
     "heroGradient": "linear-gradient(180deg, rgba(70,140,64,0.9) 0%, rgba(150,120,44,0.72) 38%, rgba(96,52,128,0.72) 70%, rgba(10,24,50,0.9) 100%)",
     "motif": "fleur-de-lis",
     "listingsHeading": "Two pools, no argument.",
-    "listingsLede": "New Orleans has just two rooftop pools worth recommending. We picked both. The city compensates by making the bars better than they need to be.",
+    "listingsLede": "New Orleans has just two rooftop pools worth recommending, and we picked both. The Virgin's is heated; the Barnett's runs seasonally and weather permitting — so the time of year decides this one for you.",
     "noteLabel": "Why the Warehouse District",
     "noteBody": "The French Quarter's historic building stock doesn't allow for rooftop development in the same way. The Warehouse District has absorbed the city's new boutique hotel inventory, and the two pools here are a short walk apart — easy to compare, easier to commit to.",
     "hotels": [
@@ -1014,7 +1014,7 @@ export const CITIES = {
     "neighborhoods": "Center City & Old City",
     "heroGradient": "linear-gradient(180deg, rgba(126,152,186,0.78) 0%, rgba(78,104,148,0.76) 40%, rgba(24,48,96,0.9) 74%, rgba(8,22,52,0.95) 100%)",
     "listingsHeading": "One tower, then everyone else.",
-    "listingsLede": "The Four Seasons pool is 57 floors up and effectively uncontested in the region. What's interesting is the tier below it — a 24th-floor infinity edge, a year-round heated deck, and two seasonal rooftops that are better than they need to be.",
+    "listingsLede": "The Four Seasons pool is 57 floors up and effectively uncontested in the region. What matters below it is the calendar: the W's deck is heated year-round, while the Windsor's 24th-floor infinity edge and both 8th-floor rooftops are summer only.",
     "noteLabel": "Seasonality is the whole story here",
     "noteBody": "Unlike the Sun Belt cities on this list, most Philadelphia rooftop pools run Memorial Day to Labor Day and nothing more — the Windsor stretches to October, the Sonesta and the Wyndham do not. Only the Four Seasons and the W's WET deck are genuinely year-round. If you're planning anything outside high summer, confirm the pool is open before you book the room.",
     "hotels": [
@@ -1299,7 +1299,7 @@ export const CITIES = {
     "slug": "washington-dc",
     "city": "Washington",
     "state": "DC",
-    "tagline": "The height limit means Washington will never have a skyline pool, and that turns out to be the interesting part — eleven floors is the top of the world here, and the view is the Capitol dome rather than a wall of glass.",
+    "tagline": "The height limit means Washington will never have a skyline pool, and that turns out to be the interesting part — fourteen floors is the top of the world here, and the view is the Capitol dome rather than a wall of glass.",
     "neighborhoods": "Capitol Hill & Logan Circle",
     "heroGradient": "linear-gradient(180deg, rgba(108,92,100,0.9) 0%, rgba(78,78,104,0.86) 34%, rgba(38,54,96,0.86) 66%, rgba(8,20,48,0.95) 100%)",
     "listingsHeading": "Three that clear the cornice.",
