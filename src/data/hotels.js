@@ -36,7 +36,6 @@ export const CITIES = {
     "neighborhoods": "Downtown & Rainey St",
     "heroGradient": "linear-gradient(180deg, rgba(191,79,8,0.9) 0%, rgba(150,56,24,0.72) 28%, rgba(40,64,80,0.6) 60%, rgba(6,22,50,0.84) 100%)",
     "listingsHeading": "The city that built up fast.",
-    "listingsLede": "Austin's rooftop pool scene punches above its size — four decks on the fourth and fifth floors, looking at Lady Bird Lake or the Rainey Street corridor. None of the four publishes a heated or year-round pool, so check the season before you count on one.",
     "noteLabel": "When these decks are open",
     "noteBody": "Austin averages 228 sunny days a year, and the decks here stay usable far later than Nashville's or Denver's — but note that none of these four operators publishes a year-round or heated pool, and Austin Proper states outright that hours vary seasonally. October and early November are the underrated window: warm afternoons, thinner crowds, and the full skyline without the August heat. January and February are not — Austin gets hard freezes and the occasional snow, and these unheated decks are shut for it. Confirm before you plan a cool-season trip around one.",
     "hotels": [
@@ -129,7 +128,6 @@ export const CITIES = {
     "neighborhoods": "Gold Coast & Fulton Market",
     "heroGradient": "linear-gradient(180deg, rgba(90,180,225,0.8) 0%, rgba(42,120,175,0.78) 42%, rgba(10,44,84,0.92) 100%)",
     "listingsHeading": "Architecture from the water.",
-    "listingsLede": "Chicago's rooftop pools compete with what may be the finest collection of buildings any American skyline has produced. The three here have the views to justify the comparison.",
     "noteLabel": "Chicago is seasonal",
     "noteBody": "Chicago rooftop pools are firmly seasonal, and the published dates vary more than you would expect: the Viceroy opens May 1, the Hoxton runs early May through October, and the DoubleTree tracks roughly Memorial Day to Labor Day. If you are planning a spring or autumn trip, check the specific hotel rather than the season — nothing deflates a Chicago weekend like a drained rooftop.",
     "hotels": [
@@ -201,7 +199,6 @@ export const CITIES = {
     "neighborhoods": "Downtown & Uptown",
     "heroGradient": "linear-gradient(180deg, rgba(96,124,170,0.8) 0%, rgba(20,58,130,0.88) 42%, rgba(10,30,74,0.94) 100%)",
     "listingsHeading": "High, and hanging over Main Street.",
-    "listingsLede": "Downtown Dallas stacked its best pools up top — infinity edges, glass ledges, and one that swims right out over the street. Six that earn the elevation.",
     "noteLabel": "Downtown vs Uptown",
     "noteBody": "the Main Street District clusters the historic-tower rooftops — Joule, Thompson, Statler, Adolphus — within a few blocks of each other; Uptown's Swexan and Victory Park's W trade walkability for sheer height. The Texas heat keeps most of them usable well past summer, though the Adolphus runs its rooftop season through Labor Day and Swexan is the reliable year-round one.",
     "hotels": [
@@ -338,7 +335,6 @@ export const CITIES = {
     "neighborhoods": "Cherry Creek & Uptown",
     "heroGradient": "linear-gradient(180deg, rgba(140,158,168,0.68) 0%, rgba(74,102,126,0.8) 46%, rgba(18,34,58,0.92) 100%)",
     "listingsHeading": "The Rockies, framed in water.",
-    "listingsLede": "Denver's best rooftop pools face west — which means the Rocky Mountains are in the frame, and the afternoon light eventually turns the snowcaps pink. The three here have the views to prove it.",
     "noteLabel": "Year-round is meaningful here",
     "noteBody": "Denver averages 300 days of sunshine a year, but the altitude means summer afternoons can drop 30 degrees between 2pm and 8pm. Halcyon and a few others heat their pools year-round, which means a clear January afternoon with Rockies visible is genuinely on the table. Pack a towel in both seasons.",
     "hotels": [
@@ -412,7 +408,6 @@ export const CITIES = {
     "neighborhoods": "Downtown & Montrose",
     "heroGradient": "linear-gradient(180deg, rgba(206,148,72,0.86) 0%, rgba(150,110,70,0.7) 30%, rgba(56,84,88,0.6) 62%, rgba(8,26,52,0.9) 100%)",
     "listingsHeading": "Getting above the sprawl.",
-    "listingsLede": "Houston's best pools are podium decks — fourth, fifth, seventh floor — which sounds modest until you remember there's nothing else in the way. Five that clear the tree line and earn the climb.",
     "noteLabel": "On the season",
     "noteBody": "Houston pools run essentially year-round, but the calculus flips in summer: from June through September the deck is unusable between about eleven and four, and the water stops being refreshing. Spring and late fall are the real window — and the heated ones (Four Seasons, Marriott Marquis) stay good straight through January.",
     "hotels": [
@@ -520,7 +515,6 @@ export const CITIES = {
     "neighborhoods": "Hollywood & Downtown",
     "heroGradient": "linear-gradient(180deg, rgba(242,188,96,0.9) 0%, rgba(226,150,84,0.66) 30%, rgba(122,82,98,0.55) 62%, rgba(14,30,64,0.85) 100%)",
     "listingsHeading": "Pick your skyline.",
-    "listingsLede": "The Hollywood Sign, the downtown towers, or the Pacific — every rooftop pool in LA points at a different postcard. These six point at the best ones.",
     "noteLabel": "Scene vs swim",
     "noteBody": "several of these double as weekend party decks — for an actual swim, aim for a weekday morning. Conrad DTLA and Santa Monica Proper hold up as genuine pools any day of the week; the Hollywood decks peak socially after 4pm.",
     "hotels": [
@@ -648,7 +642,6 @@ export const CITIES = {
     "neighborhoods": "South Beach, Sunset Harbour & Brickell",
     "heroGradient": "linear-gradient(180deg, rgba(233,116,112,0.9) 0%, rgba(172,72,80,0.7) 28%, rgba(42,76,94,0.6) 60%, rgba(10,42,72,0.84) 100%)",
     "listingsHeading": "Pools that earn the sun.",
-    "listingsLede": "Miami has more poolside options than anywhere else on this list — we picked the rooftop and elevated pools where the setting, not the scene, is the reason to be there.",
     "noteLabel": "South Beach vs Brickell",
     "noteBody": "South Beach pools trend toward the theatrical; the crowd and the energy are part of what you're paying for. Brickell pools are newer, higher up, and more likely to give you the city-and-water view with less ambient noise. Neither is wrong — they're just different afternoons.",
     "hotels": [
@@ -809,7 +802,6 @@ export const CITIES = {
     "neighborhoods": "Downtown & Midtown",
     "heroGradient": "linear-gradient(180deg, rgba(214,54,132,0.9) 0%, rgba(150,40,116,0.74) 34%, rgba(44,44,92,0.72) 66%, rgba(10,24,50,0.88) 100%)",
     "listingsHeading": "A skyline still worth watching.",
-    "listingsLede": "Nashville's pool scene is smaller than the hype might suggest — but the two we've picked are genuinely good, and rarely as crowded as the honky-tonks below.",
     "noteLabel": "Timing matters in Nashville",
     "noteBody": "The rooftop pool scene here is seasonal in a way Miami's isn't. Most pools run May through October, some close earlier. Call ahead or check current hours — the city's hospitality industry is still calibrating after rapid expansion.",
     "hotels": [
@@ -863,7 +855,6 @@ export const CITIES = {
     "heroGradient": "linear-gradient(180deg, rgba(70,140,64,0.9) 0%, rgba(150,120,44,0.72) 38%, rgba(96,52,128,0.72) 70%, rgba(10,24,50,0.9) 100%)",
     "motif": "fleur-de-lis",
     "listingsHeading": "Two pools, no argument.",
-    "listingsLede": "New Orleans has just two rooftop pools worth recommending, and we picked both. The Virgin's is heated; the Barnett's runs seasonally and weather permitting — so the time of year decides this one for you.",
     "noteLabel": "Why the Warehouse District",
     "noteBody": "The French Quarter's historic building stock doesn't allow for rooftop development in the same way. The Warehouse District has absorbed the city's new boutique hotel inventory, and the two pools here are a short walk apart — easy to compare, easier to commit to.",
     "hotels": [
@@ -1014,7 +1005,6 @@ export const CITIES = {
     "neighborhoods": "Center City & Old City",
     "heroGradient": "linear-gradient(180deg, rgba(126,152,186,0.78) 0%, rgba(78,104,148,0.76) 40%, rgba(24,48,96,0.9) 74%, rgba(8,22,52,0.95) 100%)",
     "listingsHeading": "One tower, then everyone else.",
-    "listingsLede": "The Four Seasons pool is 57 floors up and effectively uncontested in the region. What matters below it is the calendar: the W's deck is heated year-round, while the Windsor's 24th-floor infinity edge and both 8th-floor rooftops are summer only.",
     "noteLabel": "Seasonality is the whole story here",
     "noteBody": "Unlike the Sun Belt cities on this list, most Philadelphia rooftop pools run Memorial Day to Labor Day and nothing more — the Windsor stretches to October, the Sonesta and the Wyndham do not. Only the Four Seasons and the W's WET deck are genuinely year-round. If you're planning anything outside high summer, confirm the pool is open before you book the room.",
     "hotels": [
@@ -1121,7 +1111,6 @@ export const CITIES = {
     "neighborhoods": "Downtown Phoenix & Scottsdale",
     "heroGradient": "linear-gradient(180deg, rgba(229,96,32,0.92) 0%, rgba(158,58,110,0.8) 42%, rgba(41,20,110,0.9) 80%, rgba(14,20,54,0.96) 100%)",
     "listingsHeading": "Downtown one way, Camelback the other.",
-    "listingsLede": "Skip the ground-level resort sprawl — these three put you on a roof with a real view and water warm enough to use most of the year.",
     "noteLabel": "Rooftop, not resort",
     "noteBody": "Arizona is full of gorgeous ground-level resort pools — these three are the genuine elevated ones, chosen for the view. The Valley's summer highs mean early or evening is the move; Camelback from the Canopy deck is best right at sunset.",
     "hotels": [
@@ -1193,7 +1182,6 @@ export const CITIES = {
     "neighborhoods": "Gaslamp Quarter & Bayfront",
     "heroGradient": "linear-gradient(180deg, rgba(38,180,182,0.74) 0%, rgba(26,124,148,0.6) 44%, rgba(10,44,84,0.84) 100%)",
     "listingsHeading": "Swim toward the bay.",
-    "listingsLede": "San Diego's rooftops trade scene for setting — the Gaslamp skyline, the harbor, the Coronado Bridge, all from water you can actually swim in. Five that deliver.",
     "noteLabel": "Gaslamp vs Bayfront",
     "noteBody": "the Gaslamp rooftops — Pendry, Andaz, Solamar, Hard Rock — put you over the nightlife with skyline views; the InterContinental trades that for a straight bay-and-harbor panorama. All are a short walk from the Embarcadero, so it comes down to skyline or water.",
     "hotels": [
@@ -1303,7 +1291,6 @@ export const CITIES = {
     "neighborhoods": "Capitol Hill & Logan Circle",
     "heroGradient": "linear-gradient(180deg, rgba(108,92,100,0.9) 0%, rgba(78,78,104,0.86) 34%, rgba(38,54,96,0.86) 66%, rgba(8,20,48,0.95) 100%)",
     "listingsHeading": "Three that clear the cornice.",
-    "listingsLede": "Washington's building-height act caps most of the city around thirteen floors, so there is no infinity edge over a canyon here — and genuinely few hotel pools at all. These three are the real ones; almost everything else marketed as a DC rooftop pool is a bar.",
     "noteLabel": "Why the list is short",
     "noteBody": "We looked at more than twenty DC properties and cut nearly all of them: the Watergate, Mandarin Oriental and Salamander pools are indoor; the LINE, Eaton, Riggs, Conrad and Thompson have rooftop bars and no pool at all; the Capitol Skyline and Palomar pools sit at ground level. In a city this height-restricted, three genuine elevated swims is the honest number.",
     "hotels": [

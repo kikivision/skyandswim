@@ -7,6 +7,14 @@ import { POOLS } from "../../lib/pool-catalog.js";
 
 // One route for every city. Adding a city is a data change in
 // src/data/hotels.js — no new page file.
+//
+// `listingsLede` is OPTIONAL and deliberately absent from most cities. It used
+// to run on all 14 and mostly restated the hero tagline in different words —
+// two scene-setting paragraphs before the reader reached a single hotel, ~100px
+// of a 375px screen, saying nothing the cards below did not. Only New York
+// keeps one, because it explains how the list is ORDERED, which is information
+// that exists nowhere else on the page. If you add one back, that is the test:
+// does it tell the reader something the cards cannot?
 export function getStaticPaths() {
   return Object.values(CITIES).map((c) => ({
     params: { city: c.slug },
@@ -114,9 +122,7 @@ const jsonLd = [
       <div class="listings-header">
         <p class="listings-kicker">{hotels.length} picks · {neighborhoods}</p>
         <h2 class="listings-heading">{listingsHeading}</h2>
-        <p class="listings-lede">
-          {listingsLede}
-        </p>
+        {listingsLede && <p class="listings-lede">{listingsLede}</p>}
       </div>
 
       <div class="hotel-grid">
