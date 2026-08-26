@@ -95,22 +95,70 @@ field is genuinely thin. Three qualified; everything below did not.
 
 ## New York
 
-Never given a full candidate sweep — unlike DC, Philadelphia and Houston below,
-the New York entries here are ad-hoc removals only. Treat this section as
-incomplete.
+Swept 2026-08-25. Two candidates cleared the bar and are NOT yet added (they
+need heroes and Booking.com URLs); the rest are recorded below so the dead ends
+are not re-walked.
+
+**Cleared the bar — add when photographed:**
+
+| Hotel | Why it qualifies |
+|---|---|
+| **Margaritaville Resort Times Square** | Operator-verified: open-air pool on a **6th-floor rooftop deck**, "temperature-regulated", "rooftop deck open in all seasons", panoramic Midtown Manhattan views, daily 8am-8pm, guests plus a limited number of day passes, cabanas from $500. Fills the biggest gap in the city — the current four are two in Williamsburg, one SoHo, one Meatpacking, and **nothing in Manhattan's core**. Brand precedent already on the site (Margaritaville San Diego). Depth not published; check the hero. |
+| **Hotel Indigo Williamsburg** | **4th-floor, 70-foot heated pool** with a shallow children's area and a sundeck over the Brooklyn cityscape and Manhattan skyline. Guest access is real and generous — free Mon-Tue 9am-6pm, Wed-Sun 9am-9:30pm; non-guests $160 weekday / $190 weekend per four-hour block. 4th floor is well within precedent (W Austin, Hotel Van Zandt, Four Seasons Houston and InterContinental San Diego are all 4th-floor decks). **ihg.com 403s to automated access**, so this rests on ResortPass plus consistent secondary sources — confirm the floor and length before publishing. |
+
+**Rejected:**
 
 | Hotel | Reason |
 |---|---|
-| **The Hoxton, Williamsburg** | **No pool at all.** Hoxton's own site lists pools at Vienna, Chicago, Paris, LA and Barcelona; Williamsburg is absent from that list and from its own amenities. Worth recording because Hoxton Chicago and Hoxton DTLA are both ON the site, which makes a Williamsburg pool a natural and wrong assumption. Checked 2026-08-25 via thehoxton.com. |
+| **The Hoxton, Williamsburg** | **No pool at all.** Hoxton's own site lists pools at Vienna, Chicago, Paris, LA and Barcelona; Williamsburg is absent from that list and from its own amenities. Worth recording because Hoxton Chicago and Hoxton DTLA are both ON the site, which makes a Williamsburg pool a natural and wrong assumption. |
+| **Dream Downtown** ("The Beach" / Dream Beach Club) | **Fails elevation.** The signature glass-bottom pool is visible *from the lobby lounge below* — it sits one level above the lobby, not on a roof. Same call as Pendry DC's second-floor river terrace and Radisson Blu Aqua's third-level podium deck. Also run by Tao Group as a seasonal nightlife venue with imported sand, which is a beach club, not a hotel pool. |
+| **Ravel Hotel** (Long Island City) | **The operator's own site describes no pool.** ravelhotel.com details a 6th-floor Penthouse event space with a retractable roof and a "large outdoor seasonal rooftop" for weddings — no pool anywhere. The "Summer Club NYC" rooftop pool appears only in aggregators and event listings. Secondary sources also say seasonal access is limited *and charged* even for hotel guests, and it scores 8.2 — the number that excluded The Ven at Embassy Row. |
+
+**Borderline, excluded:**
+
+- **Hotel Indigo Lower East Side** (Mr. Purple) — the pool itself qualifies on
+  paper: **15th floor, open-air, heated, real skyline views.** Excluded on
+  access. A hotel guest swims free only **Saturday and Sunday 9am-1pm**; any
+  other time is reservation-only through the bar with a **$150 per person food
+  and beverage minimum plus a $50 per person pool fee**, capped at two hours.
+  That is a rooftop bar that contains a pool, which rule 1 at the top of this
+  file excludes, and it is the same shape as Soho Beach House — the water is
+  there and you cannot really use it. Revisit if the access model changes.
+
+**Not a new candidate — same property under an old name:**
+
+- **"The Williamsburg Hotel"** appears on most NYC rooftop-pool listicles as a
+  separate hotel. It is not. `thewilliamsburghotel.com` **301s to
+  `arlohotels.com/williamsburg/`** — it is **Arlo Williamsburg**, already on the
+  site, rebranded in September 2023 after Quadrum Global bought it out of
+  bankruptcy (already recorded in that hotel's stay copy). Do not add it twice.
 
 **Unverified, blocked:**
 
 - **Renaissance New York Chelsea** ("Somewhere Nowhere") — widely described as
   a real open-air rooftop pool. **Could not verify:** marriott.com returns HTTP
-  403 to automated access (`Retry-After: 28800`), as do all Marriott and Hilton
-  properties. Needs a Portal or manual check.
-- **Penny Williamsburg** — domain did not resolve. **Sixty LES** — operator page
-  is JS-rendered and returned no amenity content.
+  403 to automated access (`Retry-After: 28800`), as do all Marriott, Hilton and
+  IHG corporate pages. Needs a Portal or manual check, and remains the most
+  likely missed Manhattan candidate.
+- **The Rockaway Hotel** (Queens) — its own site confirms a pool, day passes and
+  cabanas but **never states the level**, and the property is low-rise beachside,
+  so ground level is the likely answer. Ask before assuming.
+- **TWA Hotel** (JFK) — markets its rooftop water as a **"pool-cuzzi"**, which is
+  the operator itself describing a pool/jacuzzi hybrid and probably fails the
+  plunge rule. Separately it is at an airport, so it would also test the
+  core-urban-neighborhood criterion that held back the Westin Houston.
+- **Soho House New York** — members-only rooftop, the exact ground on which Soho
+  Beach House Miami was cut.
+- **Penny Williamsburg** — domain did not resolve. **Sixty LES** and **The
+  Dominick** — operator pages are JS-rendered and returned no amenity content.
+- **Equinox Hotel Hudson Yards** — indoor/outdoor pool, elevation and open-air
+  status unconfirmed.
+
+**Superlative to keep OUT of the copy:** aggregators repeatedly call The William
+Vale's 60-ft pool the longest hotel rooftop pool in New York City. **Hotel Indigo
+Williamsburg publishes 70 feet.** Our William Vale copy correctly never makes the
+claim — do not let an audit add it. (The Vale already carries a `debunked` entry
+for the infinity-edge claim, same pattern.)
 
 ## Miami / Miami Beach
 
