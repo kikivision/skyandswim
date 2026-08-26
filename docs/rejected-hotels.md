@@ -10,7 +10,7 @@ a view worth naming, at a currently-operating hotel with solid reviews. Rooftop
 Ground-level and courtyard pools don't count. Indoor pools don't count unless
 genuinely elevated with a view — and none so far have been.
 
-Last updated 2026-07-18.
+Last updated 2026-08-25.
 
 ---
 
@@ -92,6 +92,44 @@ field is genuinely thin. Three qualified; everything below did not.
   marketed as the largest high-rise outdoor pool on the East Coast. Excluded
   because it's an apartment-hotel aimed at weekly/monthly stays, and no primary
   source confirms a floor number or any view from the deck.
+
+## New York
+
+Never given a full candidate sweep — unlike DC, Philadelphia and Houston below,
+the New York entries here are ad-hoc removals only. Treat this section as
+incomplete.
+
+| Hotel | Reason |
+|---|---|
+| **The Hoxton, Williamsburg** | **No pool at all.** Hoxton's own site lists pools at Vienna, Chicago, Paris, LA and Barcelona; Williamsburg is absent from that list and from its own amenities. Worth recording because Hoxton Chicago and Hoxton DTLA are both ON the site, which makes a Williamsburg pool a natural and wrong assumption. Checked 2026-08-25 via thehoxton.com. |
+
+**Unverified, blocked:**
+
+- **Renaissance New York Chelsea** ("Somewhere Nowhere") — widely described as
+  a real open-air rooftop pool. **Could not verify:** marriott.com returns HTTP
+  403 to automated access (`Retry-After: 28800`), as do all Marriott and Hilton
+  properties. Needs a Portal or manual check.
+- **Penny Williamsburg** — domain did not resolve. **Sixty LES** — operator page
+  is JS-rendered and returned no amenity content.
+
+## Miami / Miami Beach
+
+Also never fully swept. Four Miami Beach rooftops were confirmed and ADDED
+2026-08-25 (The Betsy, Kimpton Angler's, Kimpton Palomar South Beach, The Tony)
+— see `src/data/hotels.js`. Held or unresolved:
+
+| Hotel | Status |
+|---|---|
+| **Kimpton EPIC Hotel** (Downtown/Miami River) | **Held 2026-08-25, not rejected.** Operator confirms two open-air pools on a 16th-floor terrace with Brickell/Biscayne Bay/Miami River views, cabanas and ResortPass day passes. Qualifies on the pool; deferred because Miami Beach was the priority — Miami's largest query is "hotel with rooftop pool south beach miami" and EPIC does not serve it. Revisit when downtown coverage is wanted. |
+| **SLS LUX Brickell** | **Held 2026-08-25, not rejected.** Operator: "Altitude Pool & Lounge" on "an expansive 9th floor terrace overlooking the colorful Brickell skyline." Same reason as EPIC. Note its pool name, "Altitude," already draws impressions we cannot serve ("altitude pool miami"). |
+| **Hotel Greystone** | **EXCLUDED 2026-08-25, on size.** Karen: has a rooftop pool, but "a little small. Not terrible, but a little small." Called out FOR it rather than kept despite it — the same judgment as Viceroy DC and Rosewood DC, not the Godfrey Hollywood exception. Decided, not pending: do not re-raise without new information about the pool itself. |
+| **The James Nautilus Miami Beach** | Still closed as of 2026-08-25 (confirmed by Karen). Re-add on reopening, per the Notable Pools note. |
+
+**Not yet checked in Miami Beach:** Uma House by Yurbban, Mondrian South Beach,
+Marriott Stanton, Moxy Miami South Beach, Esme, Gale South Beach, Lennox Miami
+Beach, Bentley Hotel South Beach (this last one already draws impressions —
+"bentley hotel south beach rooftop pool"). Marriott/Hilton properties in that
+list will 403.
 
 ## Houston
 

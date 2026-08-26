@@ -20,6 +20,13 @@ export const AFFILIATE_HOTELS = {
   },
   // Faena is a ground-level oceanfront pool — featured on /notable-pools,
   // not the Miami rooftop list.
+  // Plain property URL only. Karen supplied a full Booking.com search link on
+  // 2026-08-25 carrying a session id, a third-party `aid`/`label` pair, and
+  // fixed check-in dates — all stripped, because /go/[provider] applies OUR CJ
+  // property ID and a foreign aid would hand the commission elsewhere.
+  'the-betsy-south-beach': {
+    bookingcom: 'https://www.booking.com/hotel/us/the-betsy.html',
+  },
   'faena-miami-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/faena-miami-beach.html',
   },

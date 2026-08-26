@@ -2,6 +2,7 @@
 import CityLayout from "../../layouts/CityLayout.astro";
 import HotelCard from "../../components/HotelCard.astro";
 import { CITIES } from "../../data/hotels.js";
+import { NOTABLE_HOTELS } from "../../data/notable.js";
 import { POOLS } from "../../lib/pool-catalog.js";
 
 // One route for every city. Adding a city is a data change in
@@ -40,6 +41,30 @@ const cityCount = Object.values(CITIES).length;
 const totalPools = POOLS.length;
 const stateName =
   POOLS.find((p) => p.citySlug === data.slug)?.stateName || state;
+
+// Pools in this state that are NOT in this city. When zero, "including the rest
+// of <state>" is a promise the hub can't keep — Philadelphia's five pools ARE
+// all of Pennsylvania, so the link sent readers to a national list with no other
+// PA hotel in it. Seven of fourteen city pages claimed it falsely. Counting also
+// fixes Washington, D.C., which was offering "the rest of Washington, D.C." to
+// someone already on the Washington page. Beyond-the-cities pools have no
+// citySlug; a Beyond pool in a metro we already cover carries `metroOf` and is
+// excluded too (Conrad Fort Lauderdale is ~30 miles from Miami — statewide
+// breadth it is not).
+const restOfState = POOLS.filter(
+  (p) =>
+    (p.stateName || p.state) === stateName &&
+    p.citySlug !== data.slug &&
+    p.metroOf !== data.slug,
+).length;
+
+// Notable Pools in this metro — ground-level/waterline standouts that are NOT
+// rooftop and so are absent from `hotels` and from the POOLS catalog. Surfacing
+// them here is the only path from a city page to those listings; before this the
+// two Miami Beach entries were reachable only via the sitewide nav. They must
+// stay visibly separated from the rooftop grid — they do not qualify as rooftop
+// and the site says so on their own pages.
+const notableHere = NOTABLE_HOTELS.filter((h) => h.citySlug === data.slug);
 
 const site = "https://skyandswim.com";
 const cityUrl = `${site}/cities/${data.slug}/`;
@@ -104,12 +129,35 @@ const jsonLd = [
         <p><strong>{noteLabel}:</strong> {noteBody}</p>
       </aside>
 
+      {notableHere.length > 0 && (
+        <section class="notable-here" aria-labelledby="notable-here-heading">
+          <h2 id="notable-here-heading">
+            Not on a roof, but worth knowing about in {city}
+          </h2>
+          <p class="notable-lede">
+            {notableHere.length === 1 ? "This one is" : "These are"} ground-level
+            — we keep {notableHere.length === 1 ? "it" : "them"} because the pool
+            earns the trip anyway.
+          </p>
+          <ul class="notable-list">
+            {notableHere.map((h) => (
+              <li>
+                <a href={`/notable-pools/${h.slug}/`}>
+                  <span class="nb-name">{h.name}</span>
+                  <span class="nb-hood">{h.area}, {h.city}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <aside class="hub-link">
         <p>
           {city} is one of {cityCount} cities we cover in depth.{" "}
           <a href="/rooftop-pools/">
-            Browse all {totalPools} rooftop pool hotels in America, including
-            the rest of {stateName} →
+            Browse all {totalPools} rooftop pool hotels in America
+            {restOfState > 0 && <>, including the rest of {stateName}</>} →
           </a>
         </p>
       </aside>
@@ -142,6 +190,15 @@ const jsonLd = [
   .city-note { margin-top: 3rem; padding: 1.6rem 2rem; border-left: 2px solid rgba(42, 191, 191, 0.3); background: rgba(42, 191, 191, 0.05); border-radius: 0 8px 8px 0; max-width: 72ch; }
   .city-note p { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0; }
   .city-note strong { font-weight: 500; color: rgba(220, 240, 245, 0.95); }
+
+  .notable-here { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: 2rem; max-width: 72ch; }
+  .notable-here h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; color: #fff; margin: 0 0 0.6rem; }
+  .notable-lede { font-family: var(--font-body); font-weight: 300; font-size: 0.95rem; line-height: 1.65; color: rgba(220, 240, 245, 0.75); margin: 0 0 1.1rem; }
+  .notable-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+  .notable-list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; font-family: var(--font-body); color: rgba(220, 240, 245, 0.9); border: 1px solid rgba(168, 216, 216, 0.28); border-radius: 8px; padding: 0.7rem 1rem; transition: background 0.2s ease, border-color 0.2s ease; }
+  .notable-list a:hover { background: rgba(42, 191, 191, 0.12); border-color: rgba(42, 191, 191, 0.5); }
+  .nb-name { font-size: 0.95rem; font-weight: 500; }
+  .nb-hood { font-size: 0.78rem; font-weight: 300; color: rgba(220, 240, 245, 0.55); }
 
   .hub-link { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid rgba(168, 216, 216, 0.18); padding-top: 2rem; max-width: 72ch; }
   .hub-link p { font-family: var(--font-body); font-weight: 300; font-size: 0.95rem; line-height: 1.65; color: rgba(220, 240, 245, 0.85); margin: 0; }

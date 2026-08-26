@@ -23,6 +23,11 @@ export const BEYOND_HOTELS = [
     area: "Fort Lauderdale Beach",
     city: "Fort Lauderdale",
     state: "FL",
+    // Same metro as our Miami city page (~30 miles), so it does NOT count as
+    // "the rest of Florida" on that page's hub link — offering it as statewide
+    // breadth would promise a different part of the state than it delivers.
+    // Set this on any Beyond pool that sits in a metro we already cover.
+    metroOf: "miami",
     description: "The Sky Deck pool sits above the beachfront tower with the Atlantic filling the whole view — heated, cabana-lined, full towel-and-bar service. Fort Lauderdale's most-cited hotel pool, and it earns the billing.",
     poolNote: "6th-floor Sky Deck pool · Atlantic Ocean views · Heated · Day passes from $55",
     tags: ["Elevated", "Oceanfront", "Cabanas", "Heated"],

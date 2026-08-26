@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Footer from "../../components/Footer.astro";
 import HotelDetail from "../../components/HotelDetail.astro";
 import { NOTABLE_HOTELS } from "../../data/notable.js";
+import { CITIES } from "../../data/hotels.js";
 
 // A detail page per Notable Pool (ground-level / waterline standouts that sit
 // outside the rooftop city lists). Shares HotelDetail with the city hotels and
@@ -19,6 +20,13 @@ export function getStaticPaths() {
 
 const { hotel } = Astro.props;
 const { city, state } = hotel;
+
+// A Notable Pool has no city home of its own, but most sit in a metro we cover
+// for rooftops. Hand that across as `nearbyCity` — NOT as `citySlug`, which
+// would repoint the breadcrumb parent away from Notable Pools. CITIES is keyed
+// by slug, so an unknown/absent citySlug simply yields null and renders nothing.
+const nearby = hotel.citySlug ? CITIES[hotel.citySlug] : null;
+const nearbyCity = nearby ? { slug: nearby.slug, name: nearby.city } : null;
 
 // The detail kicker reads "<area> · <city>, <state>", so hand HotelDetail a
 // neighborhood of just the sub-area (the grid label carries the city).
@@ -84,6 +92,8 @@ const jsonLd = [
     state={state}
     parentLabel="Notable Pools"
     parentHref="/notable-pools/"
+    isRooftop={false}
+    nearbyCity={nearbyCity}
   />
   <Footer />
 </BaseLayout>

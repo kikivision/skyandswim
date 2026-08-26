@@ -120,13 +120,60 @@ wired in `src/data/beyond.js`, heroes pulled to `src/assets/hotels/`:
 
 (Four Seasons Seattle, the eighth Beyond entry, was already photographed.)
 
+### Miami Beach rooftops  (4) — added 2026-08-25, ALL FOUR NEED A HERO
+Four new Miami city-page entries (`src/data/hotels.js`). Detail pages render
+without a hero until the file exists, so these are live but unillustrated:
+- [x] `the-betsy-south-beach` — The Betsy Hotel, South Beach (Ocean Drive;
+      pulled 2026-08-25, 1600x1058, the rooftop pool at deck level with the
+      Atlantic over the rail. Five further Betsy frames were supplied — room,
+      exterior, ocean view, penthouse, cafe — and have no home: the schema is
+      one hero per hotel. See the gallery note at the foot of this file.)
+- [ ] `kimpton-anglers-south-beach` — Kimpton Angler's Hotel South Beach
+- [ ] `kimpton-palomar-south-beach` — Kimpton Hotel Palomar South Beach
+      (Sunset Harbour — bay side, NOT the oceanfront; a beach shot would
+      misrepresent it)
+- [ ] `the-tony-hotel-south-beach` — The Tony Hotel South Beach
+
+Affiliate status: **The Betsy is wired** (`the-betsy-south-beach` in
+`src/data/affiliates.js`, plain property URL). The other three still have no
+`bookingUrl` and no affiliate entry, so their booking CTA stays hidden on both
+card and detail page (the `isOutbound` guard). Add the Booking.com property URLs
+to turn those CTAs on — **plain `https://www.booking.com/hotel/us/<property>.html`
+only**; strip any `aid`, `label`, `sid` or date parameters, since /go applies our
+own CJ property ID and a foreign `aid` would divert the commission.
+
+## Galleries — BUILT 2026-08-25
+
+A hotel can now carry extra frames beyond its hero. Same drop-in rule:
+
+- Hero stays `src/assets/hotels/<slug>.jpg`.
+- Every extra frame is `src/assets/hotels/<slug>-<descriptor>.jpg`. The glob in
+  `HotelDetail.astro` picks them up automatically; a hotel with no extra files
+  renders no gallery section at all, so nothing else changed.
+- **Keep Karen's descriptor from the dropped filename verbatim** — change only
+  the prefix. Those descriptors carry real information: `royal-ocean-view` and
+  `skyline-penthouse` are the hotel's own room-category names, and renaming them
+  to `ocean-view-room` / `penthouse` threw that away (caught and reverted on
+  2026-08-25).
+- Alt text is authored in `galleryAlt` on the hotel object in
+  `src/data/hotels.js`, **keyed by that descriptor**, so the filename is the
+  lookup key. Key order sets display order; a file with no `galleryAlt` entry
+  still renders, sorted last, with a generic fallback alt.
+- Frames lazy-load and share the hero's `heroCredit` via one "Photos courtesy
+  of ..." line.
+
+The Betsy is the only hotel with a gallery so far (5 frames). Adding one to
+another hotel is purely a matter of dropping files plus a `galleryAlt` block.
+
 ---
 
-**0 to pull, 9 to re-verify.** All fourteen rooftop cities are fully
-photographed: Dallas, Washington DC, Houston, Philadelphia, Los Angeles,
-San Diego, Austin, Chicago, New Orleans, Phoenix, Denver, New York, Miami and
-Nashville — The Nash was the last rooftop hero. The three Notable Pools detail
-pages are now photographed too; Nautilus waits on its 2026 reopening.
+**4 to pull, 9 to re-verify.** Thirteen of the fourteen rooftop cities are
+fully photographed: Dallas, Washington DC, Houston, Philadelphia, Los Angeles,
+San Diego, Austin, Chicago, New Orleans, Phoenix, Denver, New York and
+Nashville — The Nash was the last of that round. **Miami is now the exception:**
+its three original entries are photographed, but the four Miami Beach hotels
+added 2026-08-25 are not (see the section above). The three Notable Pools detail
+pages are photographed too; Nautilus waits on its 2026 reopening.
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
 the homepage picks grid hard-codes six hotels, all photographed; a hotel's

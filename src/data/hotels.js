@@ -645,10 +645,10 @@ export const CITIES = {
     "city": "Miami",
     "state": "FL",
     "tagline": "Ocean on one side, Biscayne Bay on the other, sun 363 days a year — Miami's rooftop pool scene is less about the infrastructure and more about choosing which version of the light you want.",
-    "neighborhoods": "South Beach & Brickell",
+    "neighborhoods": "South Beach, Sunset Harbour & Brickell",
     "heroGradient": "linear-gradient(180deg, rgba(233,116,112,0.9) 0%, rgba(172,72,80,0.7) 28%, rgba(42,76,94,0.6) 60%, rgba(10,42,72,0.84) 100%)",
     "listingsHeading": "Pools that earn the sun.",
-    "listingsLede": "Miami has more poolside options than anywhere else on this list — we picked the three rooftop and elevated pools where the setting, not the scene, is the reason to be there.",
+    "listingsLede": "Miami has more poolside options than anywhere else on this list — we picked the rooftop and elevated pools where the setting, not the scene, is the reason to be there.",
     "noteLabel": "South Beach vs Brickell",
     "noteBody": "South Beach pools trend toward the theatrical; the crowd and the energy are part of what you're paying for. Brickell pools are newer, higher up, and more likely to give you the city-and-water view with less ambient noise. Neither is wrong — they're just different afternoons.",
     "hotels": [
@@ -711,6 +711,93 @@ export const CITIES = {
           "stay": "Opened May 31, 2016 at Brickell City Centre (Swire Properties; Swire Hotels' first U.S. property); 255 rooms + 8 suites + 89 residences; Quinto (South American, fire cooking) and Sugar, the level-40 rooftop bar — Confirmed 2026-07-19 via The Real Deal, CoStar, Appetito and easthotels.com."
         },
         "heroCredit": "EAST Miami"
+      },
+      {
+        "name": "The Betsy Hotel, South Beach",
+        "slug": "the-betsy-south-beach",
+        "neighborhood": "Ocean Drive",
+        "description": "Two pools, and the one that matters is on the roof — a deck looking out over the Atlantic on one side and the city on the other, with a full bar and food service alongside. The courtyard pool downstairs is the quiet alternative when the roof fills up.",
+        "poolNote": "Rooftop pool · Ocean + city views · Full bar with food service · Second courtyard pool · Direct beach access",
+        "tags": [
+          "Rooftop",
+          "Oceanfront",
+          "Multiple Pools",
+          "Cabanas"
+        ],
+        "priceRange": "$$$$",
+        "stay": "The Betsy is the grown-up one on Ocean Drive — 130 rooms and suites across a pair of joined buildings, orchids and original art in every room, and a literary-and-jazz programme that no other hotel on this strip attempts. That matters more than it sounds: Ocean Drive is the loudest address in Miami Beach, and The Betsy is the one that lets you sleep on it. The rooftop deck is the reason to book — pool, loungers, ocean on one side and the skyline on the other, with the bar running food service through the day. At $$$$ you are paying Ocean Drive prices for genuine calm; take it if you want the address without the noise that usually comes attached.",
+        "debunked": {
+          "infinity": "Aggregators describe the rooftop pool as an INFINITY pool and as \"suspended in mid-air\" (kiwicollection, travelmyth and others). Both are false. The operator claims neither, and the Fora hero pulled 2026-08-25 (src/assets/hotels/the-betsy-south-beach.jpg) shows solid coping with a visible overflow channel along the deck edge and a guardrail beyond it — there is no spillover edge. Same failure mode as Hotel Swexan and The William Vale. Do not reinstate."
+        },
+        "verified": {
+          "stay": "1440 Ocean Drive, South Beach; 130 rooms and suites; two pools — a ground-level courtyard pool and a rooftop pool with ocean and city views, full bar with food service; direct beach access; Carlton Room lounge and cafe; rooms with fresh orchids and original art — Confirmed 2026-08-25 via thebetsyhotel.com amenities, miamiandbeaches.com and Kiwi Collection. Pool qualifies per Karen 2026-08-25 (\"definitely qualifies, nice pool\"). Hero pulled from the Fora Portal 2026-08-25; it confirms a full-length rectangular pool with two ladder sets, a deck bar and the Atlantic over the rail. The infinity claim is DEBUNKED — see the `debunked` field above. Still unconfirmed: floor number, whether the rooftop pool is heated, and the hotel's opening/renovation dates."
+        },
+        "heroCredit": "The Betsy Hotel, South Beach",
+        "galleryAlt": {
+          "hotel-exterior": "The Betsy's Colonial-revival facade on Ocean Drive, cream-painted with a columned arcade and the original \"The Betsy Ross\" lettering still on the pediment, cafe tables and umbrellas along the sidewalk.",
+          "ocean-front": "The hotel's sun deck looking east over Lummus Park — a few rows of palms and a strip of lawn, then the sand and the Atlantic directly beyond, with teak loungers and canvas umbrellas in the foreground.",
+          "gelato-coffee": "The Alley, the hotel's walk-up gelato, coffee and pizza counter on the side street, beneath the Betsy Poetry Rail — a perforated steel stair and bridge engraved with lines of poetry.",
+          "royal-ocean-view": "A Royal Ocean View room's sitting area, with white plantation shutters folded back from a sash window, a fresh orchid on the table, and palm tops and a strip of the Atlantic beyond the glass.",
+          "balcony-room": "A Balcony room in white and blue, opening through full-height curtains onto a private terrace with planted trellises and rattan armchairs.",
+          "skyline-penthouse": "The Skyline Penthouse bedroom under a crystal chandelier, flanked by built-in bookshelves and doors to a private deck on either side of the bed."
+        }
+      },
+      {
+        "name": "Kimpton Angler's Hotel South Beach",
+        "slug": "kimpton-anglers-south-beach",
+        "neighborhood": "South Beach",
+        "description": "Two pools on a property built out of four surviving 1930s villas — a quiet courtyard pool at ground level, and the rooftop pool that is the reason it is on this list. Two blocks back from Lummus Park, which keeps the Ocean Drive noise at a distance.",
+        "poolNote": "Rooftop pool · Second ground-floor courtyard pool · Guests only · Sunrise to sunset",
+        "tags": [
+          "Rooftop",
+          "Multiple Pools",
+          "Guests Only",
+          "Historic"
+        ],
+        "priceRange": "$$$",
+        "stay": "The Angler's is the historic one — built in 1939 by Henry Maloney, left to rot for decades, and brought back in 2007 as a 46-room boutique by architects Allan Shulman and Ralph Choeff, with interiors by Wallace Tutt, who had done Versace's mansion up the street. An 85-room addition in May 2018 took it to 132. The result is Mediterranean rather than Deco, built around courtyards and four original villas, and it sits on the south end of Washington Avenue — two blocks from the sand, one street back from the part of South Beach that never stops. At $$$ it is the pick for anyone who wants South Beach without living inside it; the rooftop pool is the draw, and the courtyard pool downstairs is there when you want nobody around.",
+        "verified": {
+          "stay": "660 Washington Ave, South Beach, two blocks from Lummus Park Beach; originally built 1939 by Henry Maloney; four original 1930s buildings retained; 46-room reopening in 2007 after remodel by Allan Shulman and Ralph Choeff, interiors by Wallace Tutt; 85-room addition opened May 2018 for 132 total. Operator confirms TWO pools: a ground-floor courtyard pool reserved for hotel guests, sunrise to sunset, towels and suncream provided, plus a rooftop pool — Confirmed 2026-08-25 via anglershotelmiami.com, Oyster, US News Travel and Hospitality Interiors. Pool qualifies per Karen 2026-08-25. VERIFY: the operator publishes NO detail on the rooftop pool itself — floor, heating, views, hours and access are all unstated, and the rooftop page did not render. Confirm before the poolNote above is treated as complete."
+        },
+        "heroCredit": "Kimpton Angler\u2019s Hotel South Beach"
+      },
+      {
+        "name": "Kimpton Hotel Palomar South Beach",
+        "slug": "kimpton-palomar-south-beach",
+        "neighborhood": "Sunset Harbour",
+        "description": "A tiered rooftop deck on the bay side of the island, looking across the water at the Miami skyline rather than out at the Atlantic. The operator is explicit that this is a swimming pool rather than something to stand in, which on a roof is rarer than it should be.",
+        "poolNote": "Rooftop pool · Skyline + waterway views · Tiered deck with cabanas · Poolside bar and food service",
+        "tags": [
+          "Rooftop",
+          "Skyline View",
+          "Water Views",
+          "Cabanas"
+        ],
+        "priceRange": "$$$",
+        "stay": "The Palomar is the quiet-side one — 96 rooms on Alton Road in Sunset Harbour, on the Biscayne Bay flank of the island rather than the ocean flank, which is the whole character of the place. You trade the Atlantic for the skyline, and Ocean Drive for a neighbourhood people actually live in. The rooftop is genuinely a deck rather than a token plunge: tiered seating, cabanas, oversized loungers, a corner built to look like a ship's prow, and a bartender on duty through the afternoon. At $$$ it is the value pick of South Beach's rooftops — take it if the view you want is the city across the water, and note that the signature restaurant is mid-transformation, so dinner is currently a walk rather than a lift ride.",
+        "verified": {
+          "stay": "1750 Alton Rd, Sunset Harbour, on the Collins Canal / Biscayne Bay side of Miami Beach; 96 guestrooms. Operator describes the rooftop pool as open-air and a full swimming pool rather than a plunge, with panoramic views of Miami's skyline and waterways, a tiered deck, cabanas, oversized loungers, a ship's-prow corner, plus poolside food and beverage with a bartender on duty (Mon-Thu 1-7pm, Fri-Sun 11am-7pm) — Confirmed 2026-08-25 via hotelpalomar-southbeach.com pool page and miamiandbeaches.com. Pool qualifies per Karen 2026-08-25. VERIFY: signature restaurant is described by the operator as undergoing transformation with temporary offerings (Palomar Cafe breakfast) — recheck before the stay copy ships. Floor number and heating unstated. NOTE the branding: it is named South Beach but sits in Sunset Harbour on the bay, not on the oceanfront."
+        },
+        "heroCredit": "Kimpton Hotel Palomar South Beach"
+      },
+      {
+        "name": "The Tony Hotel South Beach",
+        "slug": "the-tony-hotel-south-beach",
+        "neighborhood": "Art Deco District",
+        "description": "A preserved 1930s Art Deco building on Collins with a rooftop pool that looks out over the district on one side and the Atlantic on the other. Day passes start at $25, which makes it the most accessible rooftop swim on this list by a distance.",
+        "poolNote": "Rooftop pool · Atlantic + Art Deco district views · Day passes from $25 · Cabanas from $150",
+        "tags": [
+          "Rooftop",
+          "Oceanfront",
+          "Day Pass",
+          "Historic"
+        ],
+        "priceRange": "$$",
+        "stay": "The Tony is the cheap seat with the good view — a meticulously preserved 1930s Art Deco building at 801 Collins, running three food and beverage concepts across four outlets, with a rooftop pool over the top of it. It is not trying to be the Betsy and does not price like it. What it has is the roof: the Atlantic in one direction, the Deco district in the other, day passes from $25 and cabanas from $150 for four, which is the cheapest legitimate way onto a South Beach rooftop we have found. At $$ take it as a base rather than a destination — you are buying the address and the deck, not the service.",
+        "verified": {
+          "stay": "801 Collins Avenue, Miami Beach Art Deco District; operator describes meticulously preserved 1930s Art Deco architecture and three food and beverage concepts across four outlets; rooftop pool overlooking the surrounding streets and the Atlantic; day passes from $25, cabanas from $150 for four, complimentary beach chairs and towels — Confirmed 2026-08-25 via thetonyhotel.com. Pool qualifies per Karen 2026-08-25. VERIFY: room count, opening/renovation date and F&B outlet names are not published by the operator. REVIEW-TIER CHECK OUTSTANDING: the site's bar includes solid reviews and a property tier, and The Ven at Embassy Row was excluded on reviews alone despite its pool qualifying. Review sentiment could not be gathered (TripAdvisor and Booking both block automated access)."
+        },
+        "heroCredit": "The Tony Hotel South Beach"
       }
     ]
   },

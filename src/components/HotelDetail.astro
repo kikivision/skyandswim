@@ -21,6 +21,14 @@ interface Props {
       that have no city home. Ignored when citySlug is set. */
   parentLabel?: string | null;
   parentHref?: string | null;
+  /** False for Notable Pools — ground-level/waterline standouts that are NOT in
+      the rooftop catalog. Drives the hero alt text and the hub-link sentence,
+      both of which otherwise assert "rooftop" on a page that says the opposite. */
+  isRooftop?: boolean;
+  /** For a pool with no city home of its own that still sits in a city we cover:
+      links across to that city's rooftop hub without claiming the pool is one of
+      them. Separate from citySlug so the breadcrumb parent stays put. */
+  nearbyCity?: { slug: string; name: string } | null;
 }
 
 const {
@@ -31,6 +39,8 @@ const {
   siblings = [],
   parentLabel = null,
   parentHref = null,
+  isRooftop = true,
+  nearbyCity = null,
 } = Astro.props;
 
 // Contextual link up to the /rooftop-pools hub. Every page already carries a
@@ -59,6 +69,29 @@ const heroBySlug = Object.fromEntries(
 );
 const hero = heroBySlug[hotel.slug];
 const photoCredit = hotel.heroCredit;
+
+// Gallery: any extra frame named `<slug>-<descriptor>.jpg` in the same folder.
+// The filename stays the wiring — drop a file in and it appears — while the
+// authored alt text lives in `galleryAlt` on the hotel, keyed by descriptor.
+// Guard against one slug being a dash-prefix of another (none today, but a
+// future slug could be) by refusing any file that IS another hotel's hero.
+const knownSlugs = new Set(Object.keys(heroBySlug));
+const galleryAlt = hotel.galleryAlt || {};
+const altOrder = Object.keys(galleryAlt);
+const gallery = Object.entries(heroBySlug)
+  .filter(([slug]) => slug.startsWith(`${hotel.slug}-`))
+  .map(([slug, img]) => ({ key: slug.slice(hotel.slug.length + 1), slug, img }))
+  // A descriptor that is itself a hotel slug means the prefix guard caught a
+  // collision, not a gallery frame.
+  .filter(({ slug }) => !(slug !== hotel.slug && knownSlugs.has(slug) && altOrder.length === 0))
+  .sort((a, b) => {
+    const ia = altOrder.indexOf(a.key);
+    const ib = altOrder.indexOf(b.key);
+    if (ia !== -1 && ib !== -1) return ia - ib;
+    if (ia !== -1) return -1;
+    if (ib !== -1) return 1;
+    return a.key.localeCompare(b.key);
+  });
 
 // poolNote is authored as a "·"-separated run of facts — split it back out.
 const poolFacts = hotel.poolNote
@@ -112,7 +145,7 @@ const ctaRel = !isOutbound
         <Image
           class="hero-img"
           src={hero}
-          alt={`The rooftop pool at ${hotel.name}, ${city}.`}
+          alt={`The ${isRooftop ? "rooftop pool" : "pool"} at ${hotel.name}, ${city}.`}
           widths={[640, 960, 1440]}
           sizes="(max-width: 900px) 100vw, 1200px"
           loading="eager"
@@ -196,9 +229,49 @@ const ctaRel = !isOutbound
       </section>
     )}
 
+    {gallery.length > 0 && (
+      <section class="block gallery" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">More of {hotel.name}</h2>
+        <ul class="gallery-grid">
+          {gallery.map(({ key, img }) => (
+            <li>
+              <Image
+                src={img}
+                alt={galleryAlt[key] || `${hotel.name}, ${city}.`}
+                widths={[400, 800]}
+                sizes="(max-width: 700px) 100vw, 380px"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+          ))}
+        </ul>
+        {photoCredit && (
+          <p class="gallery-credit">Photos courtesy of {photoCredit}.</p>
+        )}
+      </section>
+    )}
+
+    {nearbyCity && (
+      <section class="block siblings" aria-labelledby="nearby-heading">
+        <h2 id="nearby-heading">Rooftop pools in {nearbyCity.name}</h2>
+        <p class="take">
+          This one isn't on a roof. If that's what you came for, {nearbyCity.name}
+          {" "}has its own set.
+        </p>
+        <a class="all-link" href={`/cities/${nearbyCity.slug}/`}>
+          All {nearbyCity.name} rooftop pool hotels →
+        </a>
+      </section>
+    )}
+
     <section class="block hub-link">
       <p class="take">
-        {hotel.name} is one of {totalPools} rooftop pools in our directory.{" "}
+        {isRooftop ? (
+          <>{hotel.name} is one of {totalPools} rooftop pools in our directory.</>
+        ) : (
+          <>{hotel.name} isn't a rooftop pool — it's one of our Notable Pools.</>
+        )}{" "}
         <a class="all-link" href="/rooftop-pools/">
           Compare it against every rooftop pool hotel in {stateName} and across
           America →
@@ -209,6 +282,11 @@ const ctaRel = !isOutbound
 </article>
 
 <style>
+  .gallery-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 0.75rem; }
+  .gallery-grid li { margin: 0; }
+  .gallery-grid img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; display: block; }
+  .gallery-credit { font-family: var(--font-body); font-weight: 300; font-size: 0.78rem; color: rgba(220, 240, 245, 0.55); margin: 0.9rem 0 0; }
+
   .hotel-hero {
     padding: 8rem 0 clamp(2rem, 5vw, 3.5rem);
   }

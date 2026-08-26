@@ -10,7 +10,13 @@
 //
 // Hero photos are drop-in by filename: src/assets/hotels/<slug>.jpg, plus a
 // `heroCredit` here (the property name) — same wiring as the rooftop hotels.
-// None are pulled yet; the detail pages render without a hero until they are.
+// All three were pulled 2026-07-21; a detail page renders without a hero until
+// its file exists, so a future entry needs no code change.
+//
+// `citySlug` points at the rooftop city hub for the same metro, so the city page
+// can surface these and they can link back. It is deliberately NOT passed to
+// HotelDetail as the `citySlug` prop — that would move the breadcrumb parent off
+// Notable Pools. These are not rooftop pools and must never be listed as one.
 
 export const NOTABLE_HOTELS = [
   {
@@ -20,6 +26,7 @@ export const NOTABLE_HOTELS = [
     area: "Mid-Beach",
     city: "Miami Beach",
     state: "FL",
+    citySlug: "miami",
     description: "Alan Faena's maximalist monument to another era — the pool runs at garden level between the hotel and the sand, flanked by candy-striped cabanas that are gloriously over the top. Not a rooftop, but one of the most theatrical pools in the country.",
     poolNote: "Ground-level oceanfront pool · Striped cabanas · Hotel guests · Direct beach access",
     tags: ["Oceanfront", "Cabanas", "Theatrical", "Ground Level"],
@@ -37,6 +44,7 @@ export const NOTABLE_HOTELS = [
     area: "Belle Isle",
     city: "Miami Beach",
     state: "FL",
+    citySlug: "miami",
     description: "An adults-only bayfront hideout on Belle Isle where the infinity pool meets Biscayne Bay at grade, wrapped in gardens with a full hydrotherapy circuit alongside. Not rooftop — waterline — and that's exactly the point of it.",
     poolNote: "Ground-level bayfront infinity pool · Hydrotherapy circuit · Adults-only · Gardens",
     tags: ["Bayfront", "Adults-Only", "Spa", "Ground Level"],
@@ -57,6 +65,7 @@ export const NOTABLE_HOTELS = [
     area: "Lady Bird Lake",
     city: "Austin",
     state: "TX",
+    citySlug: "austin",
     description: "The pool sits at the water's edge on Lady Bird Lake with downtown Austin's skyline cresting above the treeline — a lakeside infinity pool, not a rooftop one, looking straight out at the Congress Avenue Bridge and the bats that pour off it at dusk.",
     poolNote: "Lakeside infinity pool · Lady Bird Lake + Congress Avenue Bridge · Heated · Day passes from $40",
     tags: ["Lake Views", "Infinity Edge", "Sunset", "Ground Level"],
