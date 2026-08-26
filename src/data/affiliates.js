@@ -28,6 +28,9 @@ export const AFFILIATE_HOTELS = {
     bookingcom: 'https://www.booking.com/hotel/us/the-betsy.html',
   },
   // --- New York ---
+  'hotel-indigo-williamsburg': {
+    bookingcom: 'https://www.booking.com/hotel/us/indigo-williamsburg-brooklyn.html',
+  },
   'margaritaville-times-square': {
     bookingcom: 'https://www.booking.com/hotel/us/margaritaville-resort-times-square.html',
   },

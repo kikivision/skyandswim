@@ -1016,6 +1016,25 @@ export const CITIES = {
           "panoramicViews": "The operator advertises \"panoramic views of Midtown Manhattan\". It is not panoramic. Karen reviewed three frames on 2026-08-25 — a night close-up, a daylight deck shot and a long-axis view — and the geometry is unambiguous: a narrow deck six floors up with buildings tight against both long sides, and a sightline that opens in ONE direction only, down the street corridor off the short end. So it is not a panorama, but it is not a sealed box either — an earlier draft of this copy called it a canyon and that overstated the enclosure. The accurate description, used above, is a one-direction street view. Do not restore either the panoramic claim or the canyon framing."
         },
         "heroCredit": "Margaritaville Resort Times Square"
+      },
+      {
+        "name": "Hotel Indigo Williamsburg",
+        "slug": "hotel-indigo-williamsburg",
+        "neighborhood": "Williamsburg",
+        "description": "The best actual swimming pool in this list — seventy feet on a fourth-floor terrace, marked four feet deep the whole way, with wide entry steps and a lifeguard on the chair. The hotel around it is unremarkable and the Manhattan skyline is a long way off, but nobody else in New York gives you this much water.",
+        "poolNote": "4th-floor terrace · 70-ft heated pool · Marked 4 ft · Wide shallow entry · Lifeguard on duty · Day passes",
+        "tags": [
+          "Elevated",
+          "Heated",
+          "Skyline View",
+          "Day Pass"
+        ],
+        "priceRange": "$$",
+        "stay": "The Indigo is the swimmer's pick, and not much else. It reads as a value hotel — the building is plain, the deck is plain, and the skyline it looks at is distant rather than dramatic. What it has is the pool: seventy feet of it on the fourth-floor terrace, a uniform four feet deep so you can push off and actually swim rather than wade around, with a shallow stepped entry that makes it workable with children and a lifeguard actually on duty. Guest access is generous where most New York decks ration it — free 9am to 6pm Monday and Tuesday, to 9:30pm the rest of the week — and non-guests can buy a four-hour block. At $$ book it if the swim is the point of the day; book the Vale two streets over if the view and the room are.",
+        "verified": {
+          "stay": "70-foot heated pool on the 4th-floor terrace with a shallow area for children and a sundeck over the Brooklyn cityscape; pool club access free to hotel guests Mon-Tue 9am-6pm and Wed-Sun 9am-9:30pm, non-guests $160 weekday / $190 weekend per four-hour block; private cabanas by reservation — Confirmed 2026-08-25 via ResortPass and consistent secondary coverage. **ihg.com 403s to automated access**, so the operator page could not be read directly; Karen confirmed the 4th-floor terrace and that the Manhattan view is distant. The Fora hero pulled 2026-08-25 settles the depth the way Angler\'s and The Tony were settled: the coping reads 4 FEET DEEP beside a NO DIVING sign, and the frame shows a long rectangular pool with wide stepped entry and a staffed lifeguard chair. VERIFY: whether the pool is heated YEAR-ROUND — sources say heated \"according to the outdoor temperature\", which is not a year-round claim, so the copy does not make one. Room count and review tier unchecked."
+        },
+        "heroCredit": "Hotel Indigo Williamsburg"
       }
     ]
   },

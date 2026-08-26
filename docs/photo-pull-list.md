@@ -152,7 +152,12 @@ to turn those CTAs on — **plain `https://www.booking.com/hotel/us/<property>.h
 only**; strip any `aid`, `label`, `sid` or date parameters, since /go applies our
 own CJ property ID and a foreign `aid` would divert the commission.
 
-### New York  (1) — added 2026-08-25
+### New York  (2) — added 2026-08-25
+- [x] `hotel-indigo-williamsburg` — Hotel Indigo Williamsburg (1600x1067,
+      daylight, the full 70-ft pool with its stepped entry, lifeguard chair and
+      the "4 FEET DEEP" coping legible on the far side — the frame that settled
+      the depth. Affiliate wired.)
+
 - [x] `margaritaville-times-square` — Margaritaville Resort Times Square
       (**night close-up, 1000x646 — LOW RES** for the 1200px hero slot.
       Two better frames — a daylight deck shot and a long-axis view — were
