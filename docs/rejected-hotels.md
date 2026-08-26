@@ -235,6 +235,26 @@ distinctive") is fine and is the point of the site. Falsifiable exclusivity —
 *only, first, largest, highest, longest* — needs an operator source or a hedge,
 because a single counterexample kills it and takes credibility with it.
 
+## On reading depth off a photograph
+
+Operators mostly do not publish pool depth, so the hero photo is often the only
+source — Angler's (4 FT), The Tony (3 FT 6 IN) and The Betsy were all settled
+that way in August 2026. Two rules learned by getting it wrong on The Tony:
+
+1. **A depth marking states the depth AT THAT MARKING.** Two markings reading
+   the same number do not establish a uniform depth — they may both sit at the
+   shallow end, with the far end unmarked or out of frame. Record it as "marked
+   X at the visible markings," never as the pool's uniform or maximum depth.
+2. **Judge depth against the category, not against the deepest pool on the
+   site.** A rooftop pool in South Beach is a lounging-and-cooling pool; 3 ft
+   6 in is a normal and good depth for one. Measuring it against a lap pool
+   like Sonesta Rittenhouse's 3-8 ft and calling it shallow is the wrong
+   standard, and reads as a knock on a pool that is fine.
+
+The bar the depth actually has to clear is the one at the top of this file —
+wade-in and swimmable, not a plunge or dipping pool. 3 ft 6 in clears it
+comfortably. That is the whole test.
+
 ## On "not stated by the operator"
 
 The audit flags claims the operator's own site doesn't make. That flag means
