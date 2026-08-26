@@ -125,6 +125,10 @@ Also never fully swept. Four Miami Beach rooftops were confirmed and ADDED
 | **Hotel Greystone** | **EXCLUDED 2026-08-25, on size.** Karen: has a rooftop pool, but "a little small. Not terrible, but a little small." Called out FOR it rather than kept despite it — the same judgment as Viceroy DC and Rosewood DC, not the Godfrey Hollywood exception. Decided, not pending: do not re-raise without new information about the pool itself. |
 | **The James Nautilus Miami Beach** | Still closed as of 2026-08-25 (confirmed by Karen). Re-add on reopening, per the Notable Pools note. |
 
+The Tony Hotel South Beach cleared its review-tier check on 2026-08-25 at 8.4
+("Very good") on Booking.com, against the 8.2 that excluded The Ven at Embassy
+Row. A pass, but a narrow one — and only on score; rank was not captured.
+
 **Not yet checked in Miami Beach:** Uma House by Yurbban, Mondrian South Beach,
 Marriott Stanton, Moxy Miami South Beach, Esme, Gale South Beach, Lennox Miami
 Beach, Bentley Hotel South Beach (this last one already draws impressions —

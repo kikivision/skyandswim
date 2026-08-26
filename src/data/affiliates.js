@@ -27,6 +27,16 @@ export const AFFILIATE_HOTELS = {
   'the-betsy-south-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/the-betsy.html',
   },
+  'the-tony-hotel-south-beach': {
+    bookingcom: 'https://www.booking.com/hotel/us/thetonyhotelsouthbeach.html',
+  },
+  // Booking's slug encodes the apostrophe as -39- (&#39;). Not a typo.
+  'kimpton-anglers-south-beach': {
+    bookingcom: 'https://www.booking.com/hotel/us/kimpton-angler-39-s-hotel.html',
+  },
+  'kimpton-palomar-south-beach': {
+    bookingcom: 'https://www.booking.com/hotel/us/kimpton-palomar-south-beach.html',
+  },
   'faena-miami-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/faena-miami-beach.html',
   },

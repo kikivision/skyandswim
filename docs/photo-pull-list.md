@@ -128,16 +128,26 @@ without a hero until the file exists, so these are live but unillustrated:
       Atlantic over the rail. Five further Betsy frames were supplied — room,
       exterior, ocean view, penthouse, cafe — and have no home: the schema is
       one hero per hotel. See the gallery note at the foot of this file.)
-- [ ] `kimpton-anglers-south-beach` — Kimpton Angler's Hotel South Beach
-- [ ] `kimpton-palomar-south-beach` — Kimpton Hotel Palomar South Beach
+- [x] `kimpton-anglers-south-beach` — Kimpton Angler's Hotel South Beach
+      (pulled 2026-08-25, 1024x683 — SOFT in the 1200px hero slot, same swap
+      note as dua-miami and jimmy-james-soho. Correctly the ROOFTOP pool, not
+      the ground-floor courtyard one; the coping reads 4 FT, which is what
+      finally established a swimmable depth the operator never published.)
+- [x] `kimpton-palomar-south-beach` — Kimpton Hotel Palomar South Beach
       (Sunset Harbour — bay side, NOT the oceanfront; a beach shot would
-      misrepresent it)
-- [ ] `the-tony-hotel-south-beach` — The Tony Hotel South Beach
+      misrepresent it. Pulled 2026-08-25, 1024x683 — same low-res swap note.
+      Shows curtained cabanas and a low-rise treeline, no ocean: correct.)
+- [x] `the-tony-hotel-south-beach` — The Tony Hotel South Beach (pulled
+      2026-08-25, 1600x1068, sunrise on the rooftop deck with the Atlantic on
+      the horizon; coping marked 3 FT 6 IN, the shallowest pool on the Miami
+      list)
 
-Affiliate status: **The Betsy is wired** (`the-betsy-south-beach` in
-`src/data/affiliates.js`, plain property URL). The other three still have no
-`bookingUrl` and no affiliate entry, so their booking CTA stays hidden on both
-card and detail page (the `isOutbound` guard). Add the Booking.com property URLs
+Fora note: Angler's was hard to find in the Portal — it is listed under the
+full "Kimpton Angler's Hotel South Beach" and searching for the apostrophe form
+can fail. It has NOT rebranded (verified 2026-08-25).
+
+Affiliate status: **all four Miami Beach hotels are wired** (`the-betsy-south-beach` in
+`src/data/affiliates.js`, plain property URL). Nothing is left unwired. Add the Booking.com property URLs
 to turn those CTAs on — **plain `https://www.booking.com/hotel/us/<property>.html`
 only**; strip any `aid`, `label`, `sid` or date parameters, since /go applies our
 own CJ property ID and a foreign `aid` would divert the commission.
@@ -167,12 +177,11 @@ another hotel is purely a matter of dropping files plus a `galleryAlt` block.
 
 ---
 
-**4 to pull, 9 to re-verify.** Thirteen of the fourteen rooftop cities are
+**0 to pull, 11 to re-verify.** Thirteen of the fourteen rooftop cities are
 fully photographed: Dallas, Washington DC, Houston, Philadelphia, Los Angeles,
 San Diego, Austin, Chicago, New Orleans, Phoenix, Denver, New York and
-Nashville — The Nash was the last of that round. **Miami is now the exception:**
-its three original entries are photographed, but the four Miami Beach hotels
-added 2026-08-25 are not (see the section above). The three Notable Pools detail
+Nashville — The Nash was the last of that round. All four Miami Beach hotels added
+2026-08-25 are photographed too, so every rooftop city is complete again. The three Notable Pools detail
 pages are photographed too; Nautilus waits on its 2026 reopening.
 
 (The "Editor's Pick, homepage" markers previously on some entries were stale —
