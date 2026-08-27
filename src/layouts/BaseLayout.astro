@@ -4,6 +4,13 @@ import Nav from "../components/Nav.astro";
 interface Props {
   title?: string;
   description?: string;
+  /** Open Graph type. Editorial pages (city guides, hotel write-ups, the
+      rooftop-pools hub) pass "article" so Pinterest treats a saved pin as an
+      Article Rich Pin — it pulls the page's own title and description onto the
+      pin and refreshes them when we edit the page. "website" is right for the
+      homepage and for the utility pages (about, contact, terms, privacy),
+      which have nothing to enrich. */
+  ogType?: "website" | "article";
   /** JSON-LD graph nodes for this page (Hotel, ItemList, BreadcrumbList, …).
       Emitted as a single @graph so one script tag covers the whole page. */
   jsonLd?: Record<string, unknown>[];
@@ -12,6 +19,7 @@ interface Props {
 const {
   title = "Sky & Swim · Rooftop Pool Hotels Across America",
   description = "Curated rooftop pool hotels across America — ranked by the view, the water, and whether the moment earns the price of admission.",
+  ogType = "website",
   jsonLd = [],
 } = Astro.props;
 
@@ -67,7 +75,7 @@ const graph = [
     <meta name="p:domain_verify" content="747a6e674399ecafffa835b95c07b71b" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Sky & Swim" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
