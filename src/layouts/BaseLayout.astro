@@ -136,7 +136,7 @@ const graph = [
       <slot />
     </main>
 
-    <!-- Affiliate & outbound click tracking → GA4 -->
+    <!-- Affiliate, advisor & outbound click tracking → GA4 -->
     <script>
       // Fire a GA4 `affiliate_click` event whenever a booking or transfer link is
       // clicked. Catches the internal /go/<provider>/<slug> redirectors (Hotels.com
@@ -159,6 +159,21 @@ const graph = [
       document.addEventListener('click', (e) => {
         const a = e.target.closest && e.target.closest('a[href]');
         if (!a || typeof window.gtag !== 'function') return;
+
+        // Travel-advisor CTAs. Opt-in via data-advisor-cta="<placement>" rather
+        // than sniffing for /contact hrefs — the footer's plain "Contact" nav
+        // link is navigation, not a CTA, and counting it would inflate this
+        // into meaninglessness. `interest` comes off the href's query string
+        // (author-written, e.g. /contact?interest=The%20Nash), never from
+        // anything a reader typed.
+        const placement = a.getAttribute('data-advisor-cta');
+        if (placement) {
+          let interest;
+          try { interest = new URL(a.href, location.origin).searchParams.get('interest') || undefined; } catch {}
+          window.gtag('event', 'advisor_cta_click', { placement, interest });
+          return;
+        }
+
         const hit = classifyAffiliate(a);
         if (hit) {
           let domain;
