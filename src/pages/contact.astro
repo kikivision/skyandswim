@@ -395,8 +395,18 @@ const hasPortrait = existsSync(path.join(process.cwd(), "public", portraitSrc.re
       form.style.display = "none";
       if (success) success.hidden = false;
       // GA4: travel-advisor trip inquiry. Mark `trip_inquiry` as a key event.
+      //
+      // `interest` carries ONLY the ?interest= value from the linking page, not
+      // whatever the reader typed into the field. The field is free text — a
+      // typed answer can contain a name, a phone number, or anything else, and
+      // GA4 must not receive personal data. The query param is author-written
+      // (a hotel or city name from a CTA we control), so it is bounded and safe
+      // to report on. Absent until something on the site links in with it.
       if (typeof window.gtag === "function") {
-        window.gtag("event", "trip_inquiry", { method: "netlify" });
+        window.gtag("event", "trip_inquiry", {
+          method: "netlify",
+          interest: interest || undefined,
+        });
       }
     };
     form.addEventListener("submit", (e) => {
