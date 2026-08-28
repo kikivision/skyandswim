@@ -88,6 +88,7 @@ export const AFFILIATE_HOTELS = {
   },
   'doubletree-mag-mile': {
     bookingcom: 'https://www.booking.com/hotel/us/doubletree-chicago-magnificent-mile.html',
+    expedia: 'https://www.expedia.com/Chicago-Hotels-DoubleTree-By-Hilton-Chicago-Magnificent-Mile.h21152.Hotel-Information',
   },
 
   // --- Denver ---
@@ -124,6 +125,7 @@ export const AFFILIATE_HOTELS = {
   // --- New York ---
   'william-vale': {
     bookingcom: 'https://www.booking.com/hotel/us/the-william-vale.html',
+    expedia: 'https://www.expedia.com/New-York-Hotels-The-William-Vale.h11971622.Hotel-Information',
   },
   'arlo-williamsburg': {
     bookingcom: 'https://www.booking.com/hotel/us/the-williamsburg.html',
@@ -140,6 +142,7 @@ export const AFFILIATE_HOTELS = {
   // --- Dallas ---
   'the-joule-dallas': {
     bookingcom: 'https://www.booking.com/hotel/us/the-joule.html',
+    expedia: 'https://www.expedia.com/Dallas-Hotels-The-Joule.h2004999.Hotel-Information',
   },
   'thompson-dallas': {
     bookingcom: 'https://www.booking.com/hotel/us/thompson-dallas.html',
@@ -187,6 +190,7 @@ export const AFFILIATE_HOTELS = {
   },
   'canopy-scottsdale': {
     bookingcom: 'https://www.booking.com/hotel/us/canopy-by-hilton-scottsdale-old-town.html',
+    expedia: 'https://www.expedia.com/Phoenix-Hotels-Canopy-By-Hilton-Scottsdale-Old-Town.h54159544.Hotel-Information',
   },
   'ac-hotel-tempe': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-by-marriott-phoenix-tempe-downtown.html',
@@ -201,6 +205,7 @@ export const AFFILIATE_HOTELS = {
   },
   'intercontinental-san-diego': {
     bookingcom: 'https://www.booking.com/hotel/us/intercontinental-hotels-san-diego.html',
+    expedia: 'https://www.expedia.com/San-Diego-Hotels-InterContinental-San-Diego.h26984236.Hotel-Information',
   },
   // "Margaritaville Hotel San Diego Gaslamp Quarter" — rebranded from Kimpton
   // Solamar in Aug 2023. Booking.com URL below is the legacy Kimpton slug and
@@ -215,6 +220,7 @@ export const AFFILIATE_HOTELS = {
   // --- Houston --- (verified 2026-07-18)
   'thompson-houston': {
     bookingcom: 'https://www.booking.com/hotel/us/thompson-houston.html',
+    expedia: 'https://www.expedia.com/Houston-Hotels-Thompson-Houston.h93257980.Hotel-Information',
   },
   'four-seasons-houston': {
     bookingcom: 'https://www.booking.com/hotel/us/four-seasons-houston.html',
@@ -231,15 +237,19 @@ export const AFFILIATE_HOTELS = {
   // --- Philadelphia --- (verified 2026-07-18)
   'w-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/w-philadelphia.html',
+    expedia: 'https://www.expedia.com/Philadelphia-Hotels-W-Philadelphia.h45967702.Hotel-Information',
   },
   'windsor-suites-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/the-windsor-suites.html',
+    expedia: 'https://www.expedia.com/Philadelphia-Hotels-The-Windsor-Suites.h201099.Hotel-Information',
   },
   'sonesta-rittenhouse-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/sonesta-philadelphia-downtown-rittenhouse-square.html',
+    expedia: 'https://www.expedia.com/Philadelphia-Hotels-Sonesta-Philadelphia-Rittenhouse-Square.h4470.Hotel-Information',
   },
   'wyndham-philadelphia-historic': {
     bookingcom: 'https://www.booking.com/hotel/us/wyndham-philadelphia-historic-district.html',
+    expedia: 'https://www.expedia.com/Philadelphia-Hotels-Wyndham-Philadelphia-Historic-District.h15646.Hotel-Information',
   },
 
   // --- Washington DC --- (verified 2026-07-18)
@@ -255,9 +265,11 @@ export const AFFILIATE_HOTELS = {
   // --- Beyond the Cities (one-off standouts, /beyond-the-cities) ---
   'four-seasons-philadelphia': {
     bookingcom: 'https://www.booking.com/hotel/us/four-seasons-philadelphia-at-comcast-center.html',
+    expedia: 'https://www.expedia.com/Philadelphia-Hotels-Four-Seasons-Hotel-Philadelphia-At-Comcast-Center.h27430045.Hotel-Information',
   },
   'marriott-marquis-houston': {
     bookingcom: 'https://www.booking.com/hotel/us/marriott-marquis-houston.html',
+    expedia: 'https://www.expedia.com/Houston-Hotels-Marriott-Marquis-Houston.h14986044.Hotel-Information',
   },
   'conrad-fort-lauderdale': {
     bookingcom: 'https://www.booking.com/hotel/us/conrad-fort-lauderdale-beach.html',
@@ -276,6 +288,7 @@ export const AFFILIATE_HOTELS = {
   },
   'omni-battery-atlanta': {
     bookingcom: 'https://www.booking.com/hotel/us/omni-at-the-battery-atlanta.html',
+    expedia: 'https://www.expedia.com/Atlanta-Hotels-Omni-Hotel-At-The-Battery-Atlanta.h19780605.Hotel-Information',
   },
   'thompson-san-antonio': {
     bookingcom: 'https://www.booking.com/hotel/us/thompson-san-antonio.html',
@@ -285,6 +298,7 @@ export const AFFILIATE_HOTELS = {
   },
   'ac-hotel-tucson': {
     bookingcom: 'https://www.booking.com/hotel/us/ac-tucson-downtown.html',
+    expedia: 'https://www.expedia.com/Tucson-Hotels-AC-Hotel-By-Marriott-Tucson-Downtown.h19218413.Hotel-Information',
   },
   // NOTE: "Cambria Downtown Phoenix" was REMOVED (2026-07-18). Its own amenity
   // list says "Sun Deck" with no pool; the only pool claim anywhere is a Dec

@@ -100,14 +100,22 @@ const poolFacts = hotel.poolNote
   .filter(Boolean);
 
 // Only hotels with an entry in affiliates.js get a /go link.
-const hasAffiliate = Boolean(hotel.slug && hotel.slug in AFFILIATE_HOTELS);
-const ctaHref = hasAffiliate ? `/go/booking/${hotel.slug}/` : (hotel.bookingUrl ?? "#");
-const isOutbound = ctaHref !== "#";
-const ctaRel = !isOutbound
-  ? undefined
-  : hasAffiliate
-    ? "noopener noreferrer sponsored"
-    : "noopener noreferrer";
+const affiliate = hotel.slug ? AFFILIATE_HOTELS[hotel.slug] : undefined;
+const hasAffiliate = Boolean(affiliate);
+
+// Expedia first — see the note in HotelCard.astro. Booking.com's window is
+// session-only; Expedia's is longer, so it earns on the reader who comes back.
+const providerCtas = [];
+if (affiliate?.expedia) providerCtas.push({ label: "Expedia", href: `/go/expedia/${hotel.slug}/` });
+if (affiliate?.bookingcom) providerCtas.push({ label: "Booking.com", href: `/go/booking/${hotel.slug}/` });
+
+// With one destination the hotel name carries the button, as before. With two,
+// the provider name has to, and repeating the hotel name on both would be
+// absurd on a page that is already about that hotel.
+const named = providerCtas.length > 1;
+const directHref = providerCtas.length === 0 ? (hotel.bookingUrl ?? "#") : null;
+const showDirect = Boolean(directHref && directHref !== "#");
+const isOutbound = providerCtas.length > 0 || showDirect;
 ---
 
 <article class="hotel-page">
@@ -195,12 +203,24 @@ const ctaRel = !isOutbound
 
     {isOutbound && (
       <section class="cta-block">
-        <a class="cta" href={ctaHref} target="_blank" rel={ctaRel}>
-          See rooms &amp; rates at {hotel.name}
-          <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+        <div class="cta-row">
+          {providerCtas.map((c) => (
+            <a class="cta" href={c.href} target="_blank" rel="noopener noreferrer sponsored">
+              See rooms &amp; rates{named ? ` on ${c.label}` : ` at ${hotel.name}`}
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
             <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </a>
+            </a>
+          ))}
+          {showDirect && (
+            <a class="cta" href={directHref} target="_blank" rel="noopener noreferrer">
+              See rooms &amp; rates at {hotel.name}
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+            </a>
+          )}
+        </div>
         {hasAffiliate && (
           <p class="cta-note">
             We may earn a commission if you book through this link — it never
@@ -408,6 +428,9 @@ const ctaRel = !isOutbound
   }
 
   .cta-block { margin: 0 0 clamp(2.5rem, 5vw, 3.5rem); max-width: 72ch; }
+  /* Two provider buttons sit side by side and wrap to their own lines on
+     narrow screens rather than shrinking. */
+  .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
   .cta {
     display: inline-flex;
     align-items: center;
