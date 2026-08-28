@@ -48,10 +48,28 @@ export function getStaticPaths() {
   return paths;
 }
 
-const { provider } = Astro.params;
+const { provider, slug } = Astro.params;
 const { url } = Astro.props;
 const base = CJ_BASE[provider];
-const target = base ? `${base}?url=${encodeURIComponent(url)}` : url;
+
+// CJ SID ("Site ID") — publisher-side sub-tracking that comes back in the
+// Commission Detail report. We pass the hotel slug, so a commission names the
+// page that earned it instead of arriving as an anonymous "Booking.com, $197".
+//
+// Added 2026-08-27 after the account's first commission took a GA4
+// cross-reference to attribute — and got attributed WRONG twice on the way,
+// because the CJ balance screen shows the account name, not the earning site.
+// PID already tells us which site; SID tells us which page.
+//
+// CJ's constraints: it must be a query parameter at the END of the click URL,
+// kept separate from `url`, and 64 characters or fewer. Longest slug here is 32.
+//
+// This supersedes the "no extra params" note above — that was about not
+// carrying a foreign aid/sid from a pasted Booking.com link, which would fight
+// our own attribution. This sid is ours.
+const target = base
+  ? `${base}?url=${encodeURIComponent(url)}&sid=${encodeURIComponent(slug)}`
+  : url;
 ---
 
 <!doctype html>
