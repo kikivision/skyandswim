@@ -5,7 +5,6 @@ interface Props {
   name: string;
   neighborhood: string;
   description: string;
-  poolNote: string;
   tags: string[];
   bookingUrl?: string;
   slug?: string; // affiliate slug (src/data/affiliates.js) → routes CTA through /go
@@ -21,7 +20,6 @@ const {
   name,
   neighborhood,
   description,
-  poolNote,
   tags,
   bookingUrl = "#",
   slug,
@@ -67,8 +65,6 @@ const showDirect = Boolean(directHref && directHref !== "#");
       <h3 class="card-name">
         {detailHref ? (
           <a class="card-name-link card-name-link--stretched" href={detailHref} data-pool-cta="card_body">{name}</a>
-        ) : isOutbound ? (
-          <a class="card-name-link" href={ctaHref} target="_blank" rel={ctaRel}>{name}</a>
         ) : (
           name
         )}
@@ -77,13 +73,6 @@ const showDirect = Boolean(directHref && directHref !== "#");
 
     <p class="card-description">{description}</p>
 
-    <div class="card-pool-note">
-      <svg class="pool-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-        <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M4 8.5 C5.5 6.5 8.5 6.5 10 8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-      </svg>
-      <span>{poolNote}</span>
-    </div>
 
     {tags.length > 0 && (
       <div class="card-tags" aria-label="Tags">
@@ -121,18 +110,18 @@ const showDirect = Boolean(directHref && directHref !== "#");
 </article>
 
 <style>
-  /* The card is a subgrid spanning five rows of the page's .hotel-grid: header,
-     description, pool note, tags, actions. Cards sharing a grid row therefore
-     share track heights, so the pool-note strip starts at the same height on
-     every card in the row and the CTA row sits on a common bottom line, however
-     long each description runs. Browsers without subgrid (and standalone usage
+  /* The card is a subgrid spanning four rows of the page's .hotel-grid: header,
+     description, tags, actions. Cards sharing a grid row therefore share track
+     heights, so the tag row starts at the same height on every card in the row
+     and the CTA row sits on a common bottom line, however long each description
+     runs. Browsers without subgrid (and standalone usage
      outside a grid) fall back to plain auto rows — the card just sizes to its
      own content, which is the old behavior. */
   .hotel-card {
     position: relative;
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 5;
+    grid-row: span 4;
     row-gap: 1rem;
     padding: clamp(1.4rem, 2.5vw, 2rem);
     background: rgba(8, 30, 56, 0.75);
@@ -172,7 +161,7 @@ const showDirect = Boolean(directHref && directHref !== "#");
     opacity: 0.6;
   }
 
-  /* Dissolved so the five sections become direct subgrid items of the card;
+  /* Dissolved so the four sections become direct subgrid items of the card;
      its old padding and gap now live on .hotel-card. */
   .card-inner {
     display: contents;
@@ -182,9 +171,8 @@ const showDirect = Boolean(directHref && directHref !== "#");
      tags) leaves its row empty instead of shifting everything below it up. */
   .card-header { grid-row: 1; display: flex; flex-direction: column; gap: 0.45rem; }
   .card-description { grid-row: 2; }
-  .card-pool-note { grid-row: 3; align-self: start; }
-  .card-tags { grid-row: 4; align-self: start; }
-  .card-actions { grid-row: 5; align-self: end; }
+  .card-tags { grid-row: 3; align-self: start; }
+  .card-actions { grid-row: 4; align-self: end; }
 
   .card-meta-row {
     display: flex;
@@ -247,27 +235,6 @@ const showDirect = Boolean(directHref && directHref !== "#");
     line-height: 1.65;
     color: rgba(220, 240, 245, 0.78);
     margin: 0;
-  }
-
-  .card-pool-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: rgba(168, 216, 216, 0.75);
-    line-height: 1.4;
-    padding: 0.7rem 0.9rem;
-    background: rgba(42, 191, 191, 0.08);
-    border-radius: 6px;
-    border-left: 2px solid rgba(42, 191, 191, 0.4);
-  }
-
-  .pool-icon {
-    flex-shrink: 0;
-    margin-top: 1px;
-    color: var(--teal);
   }
 
   .card-tags {
