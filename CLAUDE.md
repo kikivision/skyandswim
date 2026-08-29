@@ -8,24 +8,42 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
-## Affiliate links (Booking.com via /go)
+## Affiliate links (Booking.com + Expedia via /go)
 
 Hotel booking CTAs are Commission Junction (CJ) affiliate links. Sky & Swim's CJ
 promotional property ID is **101819827** — its own; do NOT reuse jetandswim's
-(101767900). **Booking.com only** (Expedia deliberately excluded).
+(101767900). Booking.com AID 17293132, Expedia AID 10581071.
 
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
-  booking.com property URL.
+  `bookingcom` and (optionally) `expedia` property URLs.
 - `src/pages/go/[provider]/[slug].astro` — wraps that URL in the CJ deep link and
-  redirects. `noindex,nofollow`; excluded from the sitemap (see `astro.config.mjs`).
-- `src/components/HotelCard.astro` — a hotel with a `slug` prop routes its name +
-  CTA through `/go/booking/<slug>` (tracked, `rel=sponsored`); no slug → falls back
-  to its direct `bookingUrl`, unchanged.
+  redirects, passing the slug as the CJ `sid` so commissions name their source.
+  `noindex,nofollow`; excluded from the sitemap (see `astro.config.mjs`).
+- `src/components/HotelDetail.astro` — renders the booking buttons, Expedia first.
+  Two providers → two buttons labelled by provider; one → a single button named
+  for the hotel.
+- `src/components/HotelCard.astro` — renders the same buttons on the listing
+  cards, beneath the "See the pool" link to the hotel page. Both components read
+  `affiliates.js` directly, so adding a provider key lights up the card and the
+  detail page at once.
 
-**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<booking.com
-property URL>' }` to `affiliates.js`, then add a matching `slug` field to that
-hotel's object in its city page (`src/pages/cities/*.astro`). Clicks fire a GA4
-`affiliate_click` event (tracker in `BaseLayout.astro`, GA4 property 544338209).
+**Card anatomy** (in order): meta row → name → prose → pills → actions. The prose
+is the elevated layer and is capped at **340 characters**; the pills are what
+readers scan; the CTAs are what they click, choosing the OTA they trust. Each
+description must carry every point its `poolNote` lists, because the pool-note
+strip does not render on the card — it still feeds the detail page's "The pool"
+list, the meta description and the JSON-LD.
+
+**Expedia coverage: 71 of 72.** The holdout is `dua-miami`, which has no findable
+Expedia listing under its current name or its former one (SLS Brickell). Property
+IDs must be read off the live listing, never derived from the name — watch for
+legacy slugs after a rebrand (The Tony still sits on `The-Hotel-Of-South-Beach`)
+and for zero-review duplicate listings (take the one holding the review history).
+
+**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<url>' }`
+to `affiliates.js`, then add a matching `slug` field to that hotel's object in its
+city page (`src/pages/cities/*.astro`). Clicks fire a GA4 `affiliate_click` event
+(tracker in `BaseLayout.astro`, GA4 property 544338209), attributed by provider.
 
 ## Newsletter — "The Dispatch" (Netlify Forms)
 
