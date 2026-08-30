@@ -12,8 +12,7 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 
 Hotel booking CTAs are Commission Junction (CJ) affiliate links. Sky & Swim's CJ
 promotional property ID is **101819827** — its own; do NOT reuse jetandswim's
-(101767900). Two providers: **Booking.com** (AID 17293132) on every affiliate
-hotel, **Expedia** (AID 10581071) on the subset that has an Expedia property ID.
+(101767900). Booking.com AID 17293132, Expedia AID 10581071.
 
 **No redirect page of ours sits in the click path.** Both providers' CTAs carry
 the CJ click URL directly on the anchor, and the reader goes straight from our
@@ -27,17 +26,33 @@ Do not reintroduce a redirector for either provider. The CJ hop from
 mechanism; the interstitial was ours, and that was the problem.
 
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
-  `bookingcom` and (optionally) `expedia` property URLs, unwrapped.
+  `bookingcom` and (optionally) `expedia` property URLs.
 - `src/lib/affiliate-links.js` — the only place that builds CJ deep links
-  (`cjDeepLink`) and assembles a hotel's CTAs (`affiliateCtas`).
-- `src/components/HotelCard.astro` / `HotelDetail.astro` — render whatever
-  `affiliateCtas(slug)` returns, `rel=sponsored`. Expedia is listed first (its
-  attribution window is longer than Booking's session-only one). No affiliate
-  entry → falls back to the direct `bookingUrl`, unchanged.
+  (`cjDeepLink`, which passes the slug as the CJ `sid` so commissions name their
+  source) and assembles a hotel's CTAs (`affiliateCtas`).
+- `src/components/HotelDetail.astro` — renders the booking buttons, Expedia first.
+  Two providers → two buttons labelled by provider; one → a single button named
+  for the hotel.
+- `src/components/HotelCard.astro` — renders the same buttons on the listing
+  cards, beneath the "See the pool" link to the hotel page. Both components call
+  `affiliateCtas()`, so adding a provider key lights up the card and the detail
+  page at once.
 
-**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<plain
-booking.com property URL>', expedia: '<plain expedia property URL>' }` to
-`affiliates.js` (Expedia optional), then add a matching `slug` field to that
+**Card anatomy** (in order): meta row → name → prose → pills → actions. The prose
+is the elevated layer and is capped at **340 characters**; the pills are what
+readers scan; the CTAs are what they click, choosing the OTA they trust. Each
+description must carry every point its `poolNote` lists, because the pool-note
+strip does not render on the card — it still feeds the detail page's "The pool"
+list, the meta description and the JSON-LD.
+
+**Expedia coverage: 71 of 72.** The holdout is `dua-miami`, which has no findable
+Expedia listing under its current name or its former one (SLS Brickell). Property
+IDs must be read off the live listing, never derived from the name — watch for
+legacy slugs after a rebrand (The Tony still sits on `The-Hotel-Of-South-Beach`)
+and for zero-review duplicate listings (take the one holding the review history).
+
+**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<url>',
+expedia: '<url>' }` to `affiliates.js`, then add a matching `slug` field to that
 hotel's object in its city page (`src/pages/cities/*.astro`). Strip any `aid`,
 `label`, or session params off pasted URLs — a foreign aid hands the commission
 elsewhere.
@@ -47,8 +62,7 @@ which the tracker in `BaseLayout.astro` reads to fire a GA4 `affiliate_click`
 event (property 544338209). Attribution keys on those attributes, not on the
 href — required, since every affiliate href is now a bare `jdoqocy.com` click URL
 with no readable path to match. Keep the attributes on any new booking CTA or the
-click degrades to an anonymous `outbound_click`. The CJ `sid` carries the hotel
-slug so a commission names the page that earned it.
+click degrades to an anonymous `outbound_click`.
 
 ## Newsletter — "The Dispatch" (Netlify Forms)
 

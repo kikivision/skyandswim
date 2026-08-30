@@ -178,6 +178,28 @@ const graph = [
           return;
         }
 
+        // Clicks through to a hotel's own pool page. Internal, so nothing else
+        // in this handler would ever record them — without this the only read on
+        // "did the card work" was detail-page views minus session entrances,
+        // which also counts the pick rail, related links and repeat views.
+        // Opt-in via data-pool-cta="<placement>": `card` is the explicit "See
+        // the pool" link, `card_body` the stretched title overlay covering the
+        // rest of the card, `pick`/`pick_name` the same pair on the picks rail.
+        // Splitting them keeps the CTA's own number honest while still showing
+        // how much of the clickthrough the card body carries.
+        const poolCta = a.getAttribute('data-pool-cta');
+        if (poolCta) {
+          let slug;
+          try {
+            // /cities/<city>/<hotel>/, /hotels/<hotel>/ and the rest all end on
+            // the hotel segment, so the last path part is the slug — the same
+            // `item_slug` the affiliate events use, comparable side by side.
+            slug = new URL(a.href, location.origin).pathname.replace(/\/+$/, '').split('/').pop() || undefined;
+          } catch {}
+          window.gtag('event', 'see_the_pool', { placement: poolCta, item_slug: slug });
+          return;
+        }
+
         const hit = classifyAffiliate(a);
         if (hit) {
           let domain;
