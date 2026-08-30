@@ -7,3 +7,12 @@
 # Thompson Hollywood -> The Hollywood Grande, Autograph Collection (2025-07-29,
 # Hyatt to Marriott). Renamed 2026-07-18.
 /cities/los-angeles/thompson-hollywood/  /cities/los-angeles/hollywood-grande/  301
+
+# Retired affiliate redirectors. /go/<provider>/<slug> was an interstitial that
+# auto-forwarded to the Commission Junction click URL; removed 2026-08-30
+# because an affiliate click may not pass through an auto-forwarding page of
+# ours (ref. policy 5.1.1). The pages were noindex,nofollow and sitemap-excluded,
+# so little should point here — but browser history and any stray shared link
+# would otherwise 404. Sent home rather than on to CJ: forwarding these would
+# recreate the exact hop that was removed.
+/go/*  /  301

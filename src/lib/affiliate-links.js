@@ -1,19 +1,21 @@
-// Affiliate CTA construction — the one place that decides, per provider, what a
-// booking button's href actually is.
+// Affiliate CTA construction — the one place that turns a hotel slug into
+// booking buttons.
 //
-// Two shapes, deliberately different:
+// Both providers link the same way: the anchor carries the Commission Junction
+// click URL directly, and the reader goes straight from our page to CJ.
 //
-//   Booking.com → /go/booking/<slug>/  (our interstitial, which auto-forwards)
-//   Expedia     → the CJ click URL itself, straight off the button
+// There used to be an interstitial at /go/<provider>/<slug> — a page of ours
+// that auto-forwarded (meta refresh + location.replace). It was removed
+// 2026-08-30: routing an affiliate click through an auto-forwarding page of
+// ours is out of policy (ref. 5.1.1). Expedia was the flagged case; Booking.com
+// followed because both run through the same CJ property and the interstitial
+// had, by then, stopped earning its keep — click tracking moved onto data
+// attributes and CJ wrapping moved into this file, so the page was doing
+// nothing except adding a hop.
 //
-// Expedia does NOT go through /go. Routing an Expedia click through a page that
-// auto-forwards (meta refresh + location.replace) is out of policy for the
-// program — flagged 2026-08-30, ref. policy 5.1.1 — so the reader's click has to
-// land on the CJ click URL directly, with no page of ours in between. The CJ
-// redirect from jdoqocy.com to expedia.com is CJ's own tracking hop and is the
-// sanctioned mechanism; the interstitial was ours, and is what had to go.
-//
-// Booking.com keeps the interstitial, unchanged.
+// Do not reintroduce a redirector for either provider. The CJ hop from
+// jdoqocy.com to the booking site is CJ's own tracking redirect and is the
+// sanctioned mechanism; the interstitial was ours, and that was the problem.
 import { AFFILIATE_HOTELS } from '../data/affiliates.js';
 
 // CJ deep-link click bases for the Sky & Swim promotional property — Property ID
@@ -47,9 +49,9 @@ export function cjDeepLink(provider, url, sid) {
  * The booking CTAs for one hotel slug, in display order.
  *
  * Each entry is { provider, label, href } — `provider` is also written onto the
- * anchor as data-affiliate-provider so GA4 attribution no longer depends on the
- * href's shape (it used to key on the /go/<provider>/ path, which the direct
- * Expedia link does not have).
+ * anchor as data-affiliate-provider, which is how GA4 attributes the click.
+ * That has to come off an attribute rather than the href, because every href
+ * here is now a bare jdoqocy.com click URL with no readable shape to match on.
  *
  * Expedia first. Booking.com's CJ attribution is session-only — the reader has
  * to book before the tab closes — while Expedia's window is materially longer,
@@ -72,7 +74,7 @@ export function affiliateCtas(slug) {
     ctas.push({
       provider: 'booking',
       label: 'Booking.com',
-      href: `/go/booking/${slug}/`,
+      href: cjDeepLink('booking', affiliate.bookingcom, slug),
     });
   }
   return ctas;

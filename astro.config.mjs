@@ -6,8 +6,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://skyandswim.com',
   integrations: [
-    // Keep the affiliate redirectors (/go/**) out of the sitemap — they're
-    // noindex,nofollow bounce pages, not content.
-    sitemap({ filter: (page) => !page.includes('/go/') }),
+    // No filter needed: the /go/** affiliate redirectors it used to exclude were
+    // removed 2026-08-30 (booking CTAs now link straight to CJ), and every
+    // remaining page is content we want indexed.
+    sitemap(),
   ],
 });

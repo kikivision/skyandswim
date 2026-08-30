@@ -1,4 +1,4 @@
-// Affiliate destinations — single source of truth for the /go redirector.
+// Affiliate destinations — single source of truth for the booking CTAs.
 //
 // Each entry maps a hotel `slug` (passed to HotelCard) to PLAIN provider
 // property URLs — `bookingcom` always, `expedia` where we have the property ID.
@@ -12,9 +12,11 @@
 // in its city page. No entry → HotelCard falls back to the direct link, so
 // non-migrated hotels are unaffected.
 //
-// NOTE on link shape: Booking.com CTAs route through /go/booking/<slug>, Expedia
-// CTAs do NOT — an Expedia click may not pass through an auto-forwarding page of
-// ours (ref. policy 5.1.1). See src/lib/affiliate-links.js.
+// NOTE: neither provider is routed through a redirect page of ours — an
+// affiliate click may not pass through an auto-forwarding page we host (ref.
+// policy 5.1.1), so both CTAs carry the CJ click URL directly. The old
+// /go/<provider>/<slug> route was removed 2026-08-30. See
+// src/lib/affiliate-links.js.
 
 export const AFFILIATE_HOTELS = {
   // --- Miami ---
@@ -25,8 +27,8 @@ export const AFFILIATE_HOTELS = {
   // not the Miami rooftop list.
   // Plain property URL only. Karen supplied a full Booking.com search link on
   // 2026-08-25 carrying a session id, a third-party `aid`/`label` pair, and
-  // fixed check-in dates — all stripped, because /go/[provider] applies OUR CJ
-  // property ID and a foreign aid would hand the commission elsewhere.
+  // fixed check-in dates — all stripped, because affiliate-links.js applies OUR
+  // CJ property ID and a foreign aid would hand the commission elsewhere.
   'the-betsy-south-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/the-betsy.html',
   },

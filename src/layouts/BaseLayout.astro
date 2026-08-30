@@ -139,21 +139,19 @@ const graph = [
     <!-- Affiliate, advisor & outbound click tracking → GA4 -->
     <script>
       // Fire a GA4 `affiliate_click` event whenever a booking or transfer link is
-      // clicked. Catches the internal /go/<provider>/<slug> redirectors (Hotels.com
-      // and Booking.com CTAs) as well as direct in-body partner links (USA Transfers,
-      // Stay22 short links). Mark `affiliate_click` as a key event in the GA4 UI.
+      // clicked. Catches the hotel booking CTAs as well as direct in-body partner
+      // links (USA Transfers, Stay22 short links). Mark `affiliate_click` as a
+      // key event in the GA4 UI.
       function classifyAffiliate(a) {
-        // Explicit opt-in wins. Hotel CTAs stamp data-affiliate-provider/-slug
-        // via affiliateCtas(), so attribution no longer depends on the href's
-        // shape — which matters because the Expedia button now carries a raw CJ
-        // click URL (jdoqocy.com) instead of a /go/ path, and would otherwise
-        // fall through to the anonymous `outbound_click` branch below.
+        // Hotel CTAs stamp data-affiliate-provider/-slug via affiliateCtas().
+        // Attribution has to come off the attribute rather than the href: both
+        // providers now link straight to a bare CJ click URL (jdoqocy.com), so
+        // there is no readable /go/<provider>/<slug> path left to match, and
+        // without this they would fall through to the anonymous `outbound_click`
+        // branch below.
         const provider = a.getAttribute('data-affiliate-provider');
         if (provider) return { provider, slug: a.getAttribute('data-affiliate-slug') || '' };
 
-        const href = a.getAttribute('href') || '';
-        const go = href.match(/^\/go\/(hotelscom|booking)\/([^/?#]+)/);
-        if (go) return { provider: go[1], slug: go[2] };
         let host = '';
         try { host = new URL(a.href).hostname; } catch { return null; }
         if (host.includes('usa-transfers')) return { provider: 'usa_transfers', slug: '' };

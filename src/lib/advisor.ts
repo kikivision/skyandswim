@@ -1,7 +1,7 @@
 // Fora travel-advisor program — single source of truth.
 //
 // Sky & Swim currently runs as a pure affiliate directory: readers click out
-// to Booking.com (via the Commission Junction /go/booking/<slug> redirector)
+// to Booking.com and Expedia (via Commission Junction affiliate links)
 // and we earn a referral commission. Sunstate Bay Ventures, LLC is also an
 // independent travel advisor affiliated with Fora Travel — able to book the
 // hotels in the directory directly and pass guests Fora preferred-partner

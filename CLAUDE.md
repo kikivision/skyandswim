@@ -15,22 +15,21 @@ promotional property ID is **101819827** — its own; do NOT reuse jetandswim's
 (101767900). Two providers: **Booking.com** (AID 17293132) on every affiliate
 hotel, **Expedia** (AID 10581071) on the subset that has an Expedia property ID.
 
-**The two providers link differently, and this is not cosmetic:**
+**No redirect page of ours sits in the click path.** Both providers' CTAs carry
+the CJ click URL directly on the anchor, and the reader goes straight from our
+page to CJ. An affiliate click may not pass through an auto-forwarding page we
+host (ref. policy 5.1.1) — so the old `/go/<provider>/<slug>` interstitial was
+removed 2026-08-30 (Expedia first, then Booking.com), along with its sitemap
+exclusion. `public/_redirects` sends any surviving `/go/*` URL home.
 
-| Provider | CTA href | Why |
-| --- | --- | --- |
-| Booking.com | `/go/booking/<slug>/` — our interstitial, which auto-forwards | Keeps affiliate hygiene + click tracking in one page |
-| Expedia | the CJ click URL itself, directly on the anchor | An Expedia click may **not** pass through a page of ours that auto-forwards — out of policy for that program (flagged 2026-08-30, ref. policy 5.1.1) |
-
-Do not "tidy" Expedia back onto `/go`. The `getStaticPaths` in the redirector
-generates Booking.com paths only, on purpose.
+Do not reintroduce a redirector for either provider. The CJ hop from
+`jdoqocy.com` onward is CJ's own tracking redirect and is the sanctioned
+mechanism; the interstitial was ours, and that was the problem.
 
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
   `bookingcom` and (optionally) `expedia` property URLs, unwrapped.
 - `src/lib/affiliate-links.js` — the only place that builds CJ deep links
-  (`cjDeepLink`) and decides each provider's CTA href (`affiliateCtas`).
-- `src/pages/go/[provider]/[slug].astro` — the Booking.com interstitial.
-  `noindex,nofollow`; excluded from the sitemap (see `astro.config.mjs`).
+  (`cjDeepLink`) and assembles a hotel's CTAs (`affiliateCtas`).
 - `src/components/HotelCard.astro` / `HotelDetail.astro` — render whatever
   `affiliateCtas(slug)` returns, `rel=sponsored`. Expedia is listed first (its
   attribution window is longer than Booking's session-only one). No affiliate
@@ -46,9 +45,10 @@ elsewhere.
 **Click tracking:** CTAs carry `data-affiliate-provider` / `data-affiliate-slug`,
 which the tracker in `BaseLayout.astro` reads to fire a GA4 `affiliate_click`
 event (property 544338209). Attribution keys on those attributes, not on the
-href's shape — required, since the Expedia href is a bare `jdoqocy.com` click URL
-with no `/go/` path to match. The CJ `sid` carries the hotel slug so a commission
-names the page that earned it.
+href — required, since every affiliate href is now a bare `jdoqocy.com` click URL
+with no readable path to match. Keep the attributes on any new booking CTA or the
+click degrades to an anonymous `outbound_click`. The CJ `sid` carries the hotel
+slug so a commission names the page that earned it.
 
 ## Newsletter — "The Dispatch" (Netlify Forms)
 
