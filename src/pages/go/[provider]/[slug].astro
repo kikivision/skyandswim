@@ -1,36 +1,23 @@
 ---
-// Affiliate outbound redirector. One static page per hotel × provider.
+// Affiliate outbound redirector. One static page per hotel — Booking.com ONLY.
 //
-// Card CTAs point at /go/<provider>/<slug> (an internal path) instead of the
+// Booking.com CTAs point at /go/booking/<slug> (an internal path) instead of the
 // raw CJ link. This (a) lets the GA4 click tracker in BaseLayout fire a
-// provider-attributed `affiliate_click` event — it keys on the /go/<provider>/
-// path — and (b) keeps affiliate hygiene (noindex + rel=sponsored) in one place.
+// provider-attributed `affiliate_click` event and (b) keeps affiliate hygiene
+// (noindex + rel=sponsored) in one place.
 //
-// The destination is a plain provider URL from src/data/affiliates.js; this
-// page wraps it in the CJ (Commission Junction) deep link for the Sky & Swim
-// promotional property — Property ID 101819827, its OWN id, distinct from
-// jetandswim's 101767900, so commissions attribute to skyandswim.com. The
-// format mirrors CJ's Link Tools output verbatim (no extra params).
+// EXPEDIA IS NOT ROUTED HERE. An Expedia click may not pass through a page of
+// ours that auto-forwards (the meta refresh + location.replace below) — out of
+// policy for that program, flagged 2026-08-30, ref. policy 5.1.1. Expedia CTAs
+// therefore carry the CJ click URL directly in the anchor; see
+// `affiliateCtas()` in src/lib/affiliate-links.js. Do not re-add an
+// `expedia` branch to getStaticPaths without that policy changing first.
+//
+// The destination is a plain provider URL from src/data/affiliates.js, wrapped
+// in the CJ deep link by the shared `cjDeepLink()` helper so the property/AID
+// details live in exactly one file.
 import { AFFILIATE_HOTELS } from '../../../data/affiliates.js';
-
-// Provider param → CJ deep-link click base (empty = forward the URL verbatim).
-// Both bases come from generated CJ Link Tools links for property 101819827
-// (skyandswim.com) · Booking.com AID 17293132 · Expedia AID 10581071.
-//
-// Expedia added 2026-08-27. Booking.com's attribution is session-only — the
-// reader has to book in the same session or the click earns nothing — while
-// Expedia's window is materially longer, so a second button is a second chance
-// on the same visit AND a longer tail. On Jet & Swim, where both buttons have
-// run side by side, Expedia takes roughly 2 clicks to Booking's 1.
-//
-// CJ hands out interchangeable click domains (jdoqocy.com, dpbolvw.net,
-// anrdoezrs.net...). Link Tools returned all three across these two links; both
-// are normalised to jdoqocy.com here so the pair reads as a pair. The PID/AID
-// path is what carries the attribution, not the hostname.
-const CJ_BASE = {
-  booking: 'https://www.jdoqocy.com/click-101819827-17293132',
-  expedia: 'https://www.jdoqocy.com/click-101819827-10581071',
-};
+import { cjDeepLink } from '../../../lib/affiliate-links.js';
 
 export function getStaticPaths() {
   const paths = [];
@@ -38,38 +25,14 @@ export function getStaticPaths() {
     if (providers.bookingcom) {
       paths.push({ params: { provider: 'booking', slug }, props: { url: providers.bookingcom } });
     }
-    // Not every hotel has an Expedia property ID yet — each one has to be read
-    // off the live listing rather than derived from the name, so they land in
-    // batches. A missing expedia key just means no second button on that card.
-    if (providers.expedia) {
-      paths.push({ params: { provider: 'expedia', slug }, props: { url: providers.expedia } });
-    }
+    // No expedia branch — see the policy note above.
   }
   return paths;
 }
 
 const { provider, slug } = Astro.params;
 const { url } = Astro.props;
-const base = CJ_BASE[provider];
-
-// CJ SID ("Site ID") — publisher-side sub-tracking that comes back in the
-// Commission Detail report. We pass the hotel slug, so a commission names the
-// page that earned it instead of arriving as an anonymous "Booking.com, $197".
-//
-// Added 2026-08-27 after the account's first commission took a GA4
-// cross-reference to attribute — and got attributed WRONG twice on the way,
-// because the CJ balance screen shows the account name, not the earning site.
-// PID already tells us which site; SID tells us which page.
-//
-// CJ's constraints: it must be a query parameter at the END of the click URL,
-// kept separate from `url`, and 64 characters or fewer. Longest slug here is 32.
-//
-// This supersedes the "no extra params" note above — that was about not
-// carrying a foreign aid/sid from a pasted Booking.com link, which would fight
-// our own attribution. This sid is ours.
-const target = base
-  ? `${base}?url=${encodeURIComponent(url)}&sid=${encodeURIComponent(slug)}`
-  : url;
+const target = cjDeepLink(provider, url, slug);
 ---
 
 <!doctype html>

@@ -8,24 +8,47 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
-## Affiliate links (Booking.com via /go)
+## Affiliate links (Booking.com + Expedia, via CJ)
 
 Hotel booking CTAs are Commission Junction (CJ) affiliate links. Sky & Swim's CJ
 promotional property ID is **101819827** — its own; do NOT reuse jetandswim's
-(101767900). **Booking.com only** (Expedia deliberately excluded).
+(101767900). Two providers: **Booking.com** (AID 17293132) on every affiliate
+hotel, **Expedia** (AID 10581071) on the subset that has an Expedia property ID.
+
+**The two providers link differently, and this is not cosmetic:**
+
+| Provider | CTA href | Why |
+| --- | --- | --- |
+| Booking.com | `/go/booking/<slug>/` — our interstitial, which auto-forwards | Keeps affiliate hygiene + click tracking in one page |
+| Expedia | the CJ click URL itself, directly on the anchor | An Expedia click may **not** pass through a page of ours that auto-forwards — out of policy for that program (flagged 2026-08-30, ref. policy 5.1.1) |
+
+Do not "tidy" Expedia back onto `/go`. The `getStaticPaths` in the redirector
+generates Booking.com paths only, on purpose.
 
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
-  booking.com property URL.
-- `src/pages/go/[provider]/[slug].astro` — wraps that URL in the CJ deep link and
-  redirects. `noindex,nofollow`; excluded from the sitemap (see `astro.config.mjs`).
-- `src/components/HotelCard.astro` — a hotel with a `slug` prop routes its name +
-  CTA through `/go/booking/<slug>` (tracked, `rel=sponsored`); no slug → falls back
-  to its direct `bookingUrl`, unchanged.
+  `bookingcom` and (optionally) `expedia` property URLs, unwrapped.
+- `src/lib/affiliate-links.js` — the only place that builds CJ deep links
+  (`cjDeepLink`) and decides each provider's CTA href (`affiliateCtas`).
+- `src/pages/go/[provider]/[slug].astro` — the Booking.com interstitial.
+  `noindex,nofollow`; excluded from the sitemap (see `astro.config.mjs`).
+- `src/components/HotelCard.astro` / `HotelDetail.astro` — render whatever
+  `affiliateCtas(slug)` returns, `rel=sponsored`. Expedia is listed first (its
+  attribution window is longer than Booking's session-only one). No affiliate
+  entry → falls back to the direct `bookingUrl`, unchanged.
 
-**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<booking.com
-property URL>' }` to `affiliates.js`, then add a matching `slug` field to that
-hotel's object in its city page (`src/pages/cities/*.astro`). Clicks fire a GA4
-`affiliate_click` event (tracker in `BaseLayout.astro`, GA4 property 544338209).
+**To add a hotel to the affiliate program:** add `slug: { bookingcom: '<plain
+booking.com property URL>', expedia: '<plain expedia property URL>' }` to
+`affiliates.js` (Expedia optional), then add a matching `slug` field to that
+hotel's object in its city page (`src/pages/cities/*.astro`). Strip any `aid`,
+`label`, or session params off pasted URLs — a foreign aid hands the commission
+elsewhere.
+
+**Click tracking:** CTAs carry `data-affiliate-provider` / `data-affiliate-slug`,
+which the tracker in `BaseLayout.astro` reads to fire a GA4 `affiliate_click`
+event (property 544338209). Attribution keys on those attributes, not on the
+href's shape — required, since the Expedia href is a bare `jdoqocy.com` click URL
+with no `/go/` path to match. The CJ `sid` carries the hotel slug so a commission
+names the page that earned it.
 
 ## Newsletter — "The Dispatch" (Netlify Forms)
 

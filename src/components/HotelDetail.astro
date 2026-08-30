@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { AFFILIATE_HOTELS } from "../data/affiliates.js";
+import { affiliateCtas } from "../lib/affiliate-links.js";
 import { POOLS, STATE_NAMES } from "../lib/pool-catalog.js";
 
 // Shared hotel-detail view. Rendered by the per-city route
@@ -99,15 +99,12 @@ const poolFacts = hotel.poolNote
   .map((s) => s.trim())
   .filter(Boolean);
 
-// Only hotels with an entry in affiliates.js get a /go link.
-const affiliate = hotel.slug ? AFFILIATE_HOTELS[hotel.slug] : undefined;
-const hasAffiliate = Boolean(affiliate);
-
-// Expedia first — see the note in HotelCard.astro. Booking.com's window is
-// session-only; Expedia's is longer, so it earns on the reader who comes back.
-const providerCtas = [];
-if (affiliate?.expedia) providerCtas.push({ label: "Expedia", href: `/go/expedia/${hotel.slug}/` });
-if (affiliate?.bookingcom) providerCtas.push({ label: "Booking.com", href: `/go/booking/${hotel.slug}/` });
+// Affiliate CTAs come from the shared builder — Booking.com through our /go
+// redirector, Expedia straight to the CJ click URL (it may not be
+// auto-forwarded through a page of ours). Empty when the hotel has no entry
+// in affiliates.js.
+const providerCtas = affiliateCtas(hotel.slug);
+const hasAffiliate = providerCtas.length > 0;
 
 // With one destination the hotel name carries the button, as before. With two,
 // the provider name has to, and repeating the hotel name on both would be
@@ -205,7 +202,14 @@ const isOutbound = providerCtas.length > 0 || showDirect;
       <section class="cta-block">
         <div class="cta-row">
           {providerCtas.map((c) => (
-            <a class="cta" href={c.href} target="_blank" rel="noopener noreferrer sponsored">
+            <a
+              class="cta"
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              data-affiliate-provider={c.provider}
+              data-affiliate-slug={hotel.slug}
+            >
               See rooms &amp; rates{named ? ` on ${c.label}` : ` at ${hotel.name}`}
               <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
             <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />

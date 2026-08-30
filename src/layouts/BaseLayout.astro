@@ -142,11 +142,17 @@ const graph = [
       // clicked. Catches the internal /go/<provider>/<slug> redirectors (Hotels.com
       // and Booking.com CTAs) as well as direct in-body partner links (USA Transfers,
       // Stay22 short links). Mark `affiliate_click` as a key event in the GA4 UI.
-      // Until the affiliate links land, only the generic `outbound_click` fallback
-      // fires (on the current direct hotel links).
       function classifyAffiliate(a) {
+        // Explicit opt-in wins. Hotel CTAs stamp data-affiliate-provider/-slug
+        // via affiliateCtas(), so attribution no longer depends on the href's
+        // shape — which matters because the Expedia button now carries a raw CJ
+        // click URL (jdoqocy.com) instead of a /go/ path, and would otherwise
+        // fall through to the anonymous `outbound_click` branch below.
+        const provider = a.getAttribute('data-affiliate-provider');
+        if (provider) return { provider, slug: a.getAttribute('data-affiliate-slug') || '' };
+
         const href = a.getAttribute('href') || '';
-        const go = href.match(/^\/go\/(hotelscom|booking|expedia)\/([^/?#]+)/);
+        const go = href.match(/^\/go\/(hotelscom|booking)\/([^/?#]+)/);
         if (go) return { provider: go[1], slug: go[2] };
         let host = '';
         try { host = new URL(a.href).hostname; } catch { return null; }

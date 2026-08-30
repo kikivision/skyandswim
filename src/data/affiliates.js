@@ -1,17 +1,20 @@
 // Affiliate destinations — single source of truth for the /go redirector.
 //
-// Each entry maps a hotel `slug` (used in /go/booking/<slug> and passed to
-// HotelCard) to the PLAIN Booking.com property URL. The CJ affiliate wrapping
-// (publisher property ID) is applied in src/pages/go/[provider]/[slug].astro,
-// so the raw booking.com URLs live here untouched and the affiliate account
-// details stay in one place.
+// Each entry maps a hotel `slug` (passed to HotelCard) to PLAIN provider
+// property URLs — `bookingcom` always, `expedia` where we have the property ID.
+// The CJ affiliate wrapping is applied in src/lib/affiliate-links.js, so the raw
+// URLs live here untouched and the account details stay in one place. Strip any
+// `aid`, `label`, or session params off pasted URLs — a foreign aid hands the
+// commission elsewhere.
 //
-// To add a hotel to the affiliate program: add its slug here with a `bookingcom`
-// property URL, then give the matching hotel object a
-// `slug` field in its city page. No slug → HotelCard falls back to the direct
-// link, so non-migrated hotels are unaffected.
+// To add a hotel to the affiliate program: add its slug here with at least a
+// `bookingcom` property URL, then give the matching hotel object a `slug` field
+// in its city page. No entry → HotelCard falls back to the direct link, so
+// non-migrated hotels are unaffected.
 //
-// Sky & Swim runs Booking.com only.
+// NOTE on link shape: Booking.com CTAs route through /go/booking/<slug>, Expedia
+// CTAs do NOT — an Expedia click may not pass through an auto-forwarding page of
+// ours (ref. policy 5.1.1). See src/lib/affiliate-links.js.
 
 export const AFFILIATE_HOTELS = {
   // --- Miami ---
