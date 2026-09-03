@@ -38,11 +38,38 @@ export const CJ_BASE = {
  * page that earned it instead of arriving as an anonymous "Booking.com, $197".
  * CJ's constraints: it must be a query parameter at the END of the click URL,
  * kept separate from `url`, and 64 characters or fewer. Longest slug here is 32.
+ *
+ * BOOKING.COM ONLY. Expedia deeplinks go out unmodified — added 2026-09-02.
+ *
+ * Expedia's affiliate policy 8.2 reads:
+ *
+ *   "If Expedia provides you with access to the Deeplink Generator, you agree
+ *    not alter, modify or otherwise change the Deeplinks created by the tool."
+ *
+ * Appending `sid` changes the generated deeplink. The argument for keeping it
+ * was that 8.1's stated concern is obscuring the destination ("you may not use
+ * a URL shortener that obscures that the Program Link links to the Expedia
+ * Sites"), which a trailing `sid` plainly does not do — but 8.1's example does
+ * not govern 8.2, and 8.2 carries no such softener. It is a flat prohibition on
+ * modifying a generated deeplink, and of everything in the program terms it is
+ * the clearest text against us.
+ *
+ * Booking.com KEEPS its `sid`: its terms carry no equivalent clause, and it is
+ * the provider whose commissions are hardest to attribute without one.
+ *
+ * The cost is per-page attribution inside CJ's Commission Detail report, for
+ * Expedia only. GA4 is unaffected — click attribution keys on the
+ * data-affiliate-provider / data-affiliate-slug attributes, not the href.
+ *
+ * Do not reintroduce `sid` on Expedia without written confirmation from the
+ * Expedia affiliate manager. The same change was made on jetandswim (PR #34).
  */
 export function cjDeepLink(provider, url, sid) {
   const base = CJ_BASE[provider];
   if (!base) return url;
-  return `${base}?url=${encodeURIComponent(url)}&sid=${encodeURIComponent(sid)}`;
+  const link = `${base}?url=${encodeURIComponent(url)}`;
+  if (provider === 'expedia') return link;
+  return `${link}&sid=${encodeURIComponent(sid)}`;
 }
 
 /**
