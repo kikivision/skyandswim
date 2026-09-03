@@ -24,6 +24,7 @@ export function getStaticPaths() {
 
 const { hotel, cityData, siblings } = Astro.props;
 const { city, state, slug: citySlug } = cityData;
+const cityDisplay = cityData.cityDisplay || city;
 
 // poolNote is a "·"-separated run of facts — split it back out for the meta
 // description and the JSON-LD amenity list. (HotelDetail splits it again for
@@ -37,7 +38,7 @@ const site = "https://skyandswim.com";
 const pageUrl = `${site}/cities/${citySlug}/${hotel.slug}/`;
 
 const title = `${hotel.name} Rooftop Pool · ${city}, ${state} · Sky & Swim`;
-const description = `${hotel.name} in ${hotel.neighborhood}, ${city} — ${poolFacts.join(", ")}. Our honest take on whether the pool earns the price.`.slice(
+const description = `${hotel.name} in ${hotel.neighborhood}, ${cityDisplay} — ${poolFacts.join(", ")}. Our honest take on whether the pool earns the price.`.slice(
   0,
   155,
 );
@@ -72,7 +73,7 @@ const jsonLd = [
       {
         "@type": "ListItem",
         position: 2,
-        name: `${city} Rooftop Pool Hotels`,
+        name: `${cityDisplay} Rooftop Pool Hotels`,
         item: `${site}/cities/${citySlug}/`,
       },
       { "@type": "ListItem", position: 3, name: hotel.name, item: pageUrl },
@@ -82,6 +83,6 @@ const jsonLd = [
 ---
 
 <BaseLayout title={title} description={description} ogType="article" jsonLd={jsonLd}>
-  <HotelDetail hotel={hotel} city={city} state={state} citySlug={citySlug} siblings={siblings} />
+  <HotelDetail hotel={hotel} city={city} cityDisplay={cityDisplay} state={state} citySlug={citySlug} siblings={siblings} />
   <Footer />
 </BaseLayout>

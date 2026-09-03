@@ -5,6 +5,9 @@ import CityMotif from "../components/CityMotif.astro";
 
 interface Props {
   city: string;
+  /** Standalone form of the city name — see `cityName` in src/data/hotels.js.
+      Defaults to `city`; only DC currently differs ("Washington DC"). */
+  cityDisplay?: string;
   state: string;
   tagline: string;
   poolCount: number;
@@ -17,6 +20,7 @@ interface Props {
 
 const {
   city,
+  cityDisplay = city,
   state,
   tagline,
   poolCount,
@@ -29,7 +33,7 @@ const {
 ---
 
 <BaseLayout
-  title={`${city} Rooftop Pool Hotels · Sky & Swim`}
+  title={`${cityDisplay} Rooftop Pool Hotels · Sky & Swim`}
   description={`The best rooftop pool hotels in ${city}, ${state} — ranked by view, water, and whether the moment earns the price. ${poolCount} curated picks across ${neighborhoods}.`}
   ogType="article"
   jsonLd={jsonLd}
@@ -68,7 +72,7 @@ const {
           <!-- The H1 carries the full query phrase ("Austin Rooftop Pool
                Hotels") while keeping the city name as the display element. -->
           <h1 class="hero-city">
-            {city}<span class="hero-qualifier">Rooftop Pool Hotels</span>
+            {cityDisplay}<span class="hero-qualifier">Rooftop Pool Hotels</span>
           </h1>
           <p class="hero-tagline">{tagline}</p>
           <div class="hero-stats">

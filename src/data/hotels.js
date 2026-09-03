@@ -1358,6 +1358,7 @@ export const CITIES = {
   "washington-dc": {
     "slug": "washington-dc",
     "city": "Washington",
+    "cityDisplay": "Washington DC",
     "state": "DC",
     "tagline": "The height limit means Washington will never have a skyline pool, and that turns out to be the interesting part — fourteen floors is the top of the world here, and the view is the Capitol dome rather than a wall of glass.",
     "neighborhoods": "Capitol Hill & Logan Circle",
@@ -1440,8 +1441,26 @@ export const CITY_SLUGS = Object.keys(CITIES);
 
 /** Flat list of every hotel, tagged with the city it belongs to. */
 export const ALL_HOTELS = Object.values(CITIES).flatMap((c) =>
-  c.hotels.map((h) => ({ ...h, citySlug: c.slug, city: c.city, state: c.state })),
+  c.hotels.map((h) => ({
+    ...h,
+    citySlug: c.slug,
+    city: c.city,
+    cityDisplay: c.cityDisplay,
+    state: c.state,
+  })),
 );
+
+/**
+ * The city name to use where it stands ALONE — a heading, an H1, a breadcrumb,
+ * a page title. Most cities read correctly on their own ("Chicago"), but
+ * "Washington" alone reads as the state, so DC carries an explicit
+ * `cityDisplay` of "Washington DC".
+ *
+ * Do NOT use this where the city is already paired with its state. Those read
+ * "Washington, DC" today and would become "Washington DC, DC" — keep `city`
+ * there. Same for JSON-LD `addressLocality`, where the bare city is correct.
+ */
+export const cityName = (c) => c?.cityDisplay || c?.city || "";
 
 /** Look up one hotel by its globally-unique slug. */
 export const hotelBySlug = (slug) => ALL_HOTELS.find((h) => h.slug === slug);

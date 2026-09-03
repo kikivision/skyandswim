@@ -14,6 +14,10 @@ import { POOLS, STATE_NAMES } from "../lib/pool-catalog.js";
 interface Props {
   hotel: Record<string, any>;
   city: string;
+  /** Standalone form of the city name — see `cityName` in src/data/hotels.js.
+      Defaults to `city`. Used for the breadcrumb and the "More rooftop pools
+      in <city>" heading; the meta row stays "<city>, <state>". */
+  cityDisplay?: string;
   state: string;
   citySlug?: string | null;
   siblings?: Array<Record<string, any>>;
@@ -34,6 +38,7 @@ interface Props {
 const {
   hotel,
   city,
+  cityDisplay = city,
   state,
   citySlug = null,
   siblings = [],
@@ -123,7 +128,7 @@ const isOutbound = providerCtas.length > 0 || showDirect;
         {citySlug ? (
           <>
             <span aria-hidden="true">/</span>
-            <a href={`/cities/${citySlug}/`}>{city}</a>
+            <a href={`/cities/${citySlug}/`}>{cityDisplay}</a>
           </>
         ) : parentHref ? (
           <>
@@ -150,7 +155,7 @@ const isOutbound = providerCtas.length > 0 || showDirect;
         <Image
           class="hero-img"
           src={hero}
-          alt={`The ${isRooftop ? "rooftop pool" : "pool"} at ${hotel.name}, ${city}.`}
+          alt={`The ${isRooftop ? "rooftop pool" : "pool"} at ${hotel.name}, ${cityDisplay}.`}
           widths={[640, 960, 1440]}
           sizes="(max-width: 900px) 100vw, 1200px"
           loading="eager"
@@ -236,7 +241,7 @@ const isOutbound = providerCtas.length > 0 || showDirect;
 
     {siblings.length > 0 && (
       <section class="block siblings" aria-labelledby="more-heading">
-        <h2 id="more-heading">More rooftop pools in {city}</h2>
+        <h2 id="more-heading">More rooftop pools in {cityDisplay}</h2>
         <ul class="sibling-list">
           {siblings.map((s) => (
             <li>
@@ -248,7 +253,7 @@ const isOutbound = providerCtas.length > 0 || showDirect;
           ))}
         </ul>
         <a class="all-link" href={`/cities/${citySlug}/`}>
-          All {city} rooftop pool hotels →
+          All {cityDisplay} rooftop pool hotels →
         </a>
       </section>
     )}
@@ -261,7 +266,7 @@ const isOutbound = providerCtas.length > 0 || showDirect;
             <li>
               <Image
                 src={img}
-                alt={galleryAlt[key] || `${hotel.name}, ${city}.`}
+                alt={galleryAlt[key] || `${hotel.name}, ${cityDisplay}.`}
                 widths={[400, 800]}
                 sizes="(max-width: 700px) 100vw, 380px"
                 loading="lazy"

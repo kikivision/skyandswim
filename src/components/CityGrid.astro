@@ -1,5 +1,5 @@
 ---
-import { CITIES } from "../data/hotels.js";
+import { CITIES, cityName } from "../data/hotels.js";
 import { POOLS } from "../lib/pool-catalog.js";
 
 // Presentation only — bento placement, badge, and a short neighborhood label
@@ -26,7 +26,7 @@ const cities = layout.map((l) => {
   const c = CITIES[l.slug];
   const count = c.hotels.length;
   return {
-    name: c.city,
+    name: cityName(c),
     meta: `${count} rooftop pool${count === 1 ? "" : "s"} · ${l.hood}`,
     badge: l.badge,
     // Trailing slash matters: without it every homepage city link 301s.
