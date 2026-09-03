@@ -1134,7 +1134,12 @@ export const CITIES = {
         ],
         "priceRange": "$$$",
         "stay": "The Sonesta is the sensible middle — no particular scene, a pool deep enough to actually swim in, and a location that does a lot of the work. Rittenhouse Square is arguably the best neighborhood in Philadelphia to stay in: the city's densest run of good restaurants, walkable and pleasant in every direction. At $$$ it's fairly priced for the address — the pick if you want the neighborhood and a real swim, though the deck is Memorial Day to Labor Day only, so it's a summer-trip hotel.",
-        "heroCredit": "Sonesta Philadelphia Rittenhouse Square"
+        "heroCredit": "Sonesta Philadelphia Rittenhouse Square",
+        "galleryAlt": {
+          "exterior": "The Sonesta's tower at dusk, its lower floors clad in dark panels under a lit SONESTA sign, with pavement tables under red umbrellas and the glass frontage of the hotel's street-level bar running along the block.",
+          "bar": "The hotel's indoor bar — a long white counter with black leather stools on a black-and-white tiled floor, crystal chandeliers overhead and a painted American flag on exposed brick behind the spirits shelves.",
+          "guest-room": "A king guest room in grey and red, the bed beneath a long backlit panel of a stylised city map, with a cushioned window bench under striped curtains and a work desk alongside."
+        }
       },
       {
         "name": "Wyndham Philadelphia Historic District",
@@ -1281,7 +1286,15 @@ export const CITIES = {
         "verified": {
           "stay": "Occupies the 1913 Sefton building (later the Maryland Hotel), reopened as Andaz in 2010; northern edge of the Gaslamp at 600 F Street — Confirmed 2026-07-19 via gaslamp.org and Fathom."
         },
-        "heroCredit": "Andaz San Diego"
+        "heroCredit": "Andaz San Diego",
+        "galleryAlt": {
+          "exterior": "The Andaz's 1913 brick building at dusk on F Street, red awnings over the ground-floor windows and light trails from passing traffic, with the Gaslamp's lit signage further down the block.",
+          "lobby": "The lobby in the brand's dark idiom — basket-weave clad columns lit from their bases in orange and blue, a dark wood floor, and a round upholstered banquette under a starburst chandelier facing the street doors.",
+          "rooftop": "The rooftop deck at dusk, round wicker daybeds with orange cushions and candles on low tables, the downtown skyline along one side and a covered lounge glowing warm beneath its canopy on the other.",
+          "onsite-bar": "The rooftop bar beside the pool, its backlit spirits shelves running under a band of ivy, wicker stools along the counter, and the pool, striped daybeds and open sky past the shade line.",
+          "guest-room": "A guest room with a teal upholstered headboard beneath a wood panel, a grey sofa at the foot of the bed and a writing desk by corner windows looking over downtown rooftops.",
+          "suite": "A suite's living room, a long teal sofa and a low oval table on a blue rug, with an exposed brick wall behind a dining table under a globe pendant and a wet-bar counter along the side."
+        }
       },
       {
         "name": "InterContinental San Diego",
@@ -1371,7 +1384,15 @@ export const CITIES = {
         "verified": {
           "stay": "On The Wharf, DC's Potomac-side dining/nightlife strip; the Anthem music hall is at The Wharf — Confirmed by Karen 2026-07-18."
         },
-        "heroCredit": "InterContinental Washington D.C. – The Wharf"
+        "heroCredit": "InterContinental Washington D.C. – The Wharf",
+        "galleryAlt": {
+          "exterior": "The InterContinental seen from the water, a red-brick and glass block stepping up to a glazed rooftop pavilion, with the Wharf's timber bulkhead, moored boats and a covered waterfront terrace along its base.",
+          "lobby": "The lobby's twin staircases rising either side of a stone wall beneath a long cascade of teardrop pendants, with brass rails and balustrades and a velvet sofa at a marble table below.",
+          "checkin": "The reception desks, a pair of backlit banded-onyx counters under fabric drum pendants, with a flock of small gilded birds climbing the pale panel on the wall between them.",
+          "view": "The rooftop terrace looking out over the marina — a glass balustrade above ranked motor yachts, with the channel running away to parkland and open water beyond.",
+          "guest-room": "A king room with a padded cream headboard wall lit from above, a marbled stone console opposite, and glazed balcony doors opening onto the water with the skyline low on the far bank.",
+          "bath": "A marble bathroom, a freestanding oval tub set against a floor-to-ceiling slab of grey-veined stone, with a lit mirror over the washstand and a glass-walled shower alongside."
+        }
       },
       {
         "name": "YOTEL Washington DC",
