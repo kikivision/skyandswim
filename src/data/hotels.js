@@ -221,7 +221,15 @@ export const CITIES = {
           "floor": "10th floor — Confirmed by Karen 2026-07-18. The operator publishes no floor number.",
           "stay": "Art-forward downtown property (notable contemporary art collection), landmark building on Main Street ~0.5mi from the Arts District — Confirmed by Karen 2026-07-18."
         },
-        "heroCredit": "The Joule"
+        "heroCredit": "The Joule",
+        "galleryAlt": {
+          "exterior": "The Joule's Gothic-revival stone facade at dusk, a deep carved arch over the lit entrance and a tracery oriel window above it, with the hotel's modern glass-and-marble extension alongside and clipped bay trees along the Main Street sidewalk.",
+          "check-in": "The Joule's reception desk in dark wood and bronze, lit from within, under a square chandelier hung with strands of crystal, and a large backlit mural of two robed figures and a longhorn in gold and teal filling the wall beyond.",
+          "lobby": "The Joule's lobby in pale polished marble — a coiled gold sculpture at one end, a blue crystal-encrusted engine block in a clear vitrine at the other, and the bar with its row of leather stools between them.",
+          "premier-king": "A Premier King room, the bed under a cream leather headboard flanked by pendant lamps, a velvet bench at its foot, and a marble-topped console stacked with art books along the far wall.",
+          "premier-room-double": "A Premier double room with two beds against a lacquered wood headboard wall, a pair of navy tub chairs on a chevron rug, and a long desk beside a frosted-glass bathroom partition.",
+          "penthouse-loft": "The Penthouse Loft, its bed on a red grid carpet between floor-to-ceiling windows hung with crimson and sheer curtains, a sofa at the foot of the bed and a plum velvet armchair and ottoman by the glass."
+        }
       },
       {
         "name": "Thompson Dallas",
@@ -1140,7 +1148,12 @@ export const CITIES = {
         "verified": {
           "stay": "Old City, walkable to Independence Hall and the Liberty Bell — Confirmed by Karen 2026-07-18."
         },
-        "heroCredit": "Wyndham Philadelphia Historic District"
+        "heroCredit": "Wyndham Philadelphia Historic District",
+        "galleryAlt": {
+          "exterior": "The Wyndham's mid-century block at dusk, banded ranks of windows above a low glazed lobby, the blue Wyndham sign lit on the corner and a pink-streaked sky behind it.",
+          "checkin": "The lobby in pale tile and grey, a long reception counter down one side beneath a black-and-white mural of the Constitution's \"We the People\" preamble, with a seating area and revolving door beyond.",
+          "king": "A king room at night, the bed facing a low dresser and television, a small desk and an olive armchair by the window, and a suspension bridge lit blue across the river outside."
+        }
       }
     ]
   },
