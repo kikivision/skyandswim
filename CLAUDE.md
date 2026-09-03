@@ -28,8 +28,19 @@ mechanism; the interstitial was ours, and that was the problem.
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
   `bookingcom` and (optionally) `expedia` property URLs.
 - `src/lib/affiliate-links.js` — the only place that builds CJ deep links
-  (`cjDeepLink`, which passes the slug as the CJ `sid` so commissions name their
-  source) and assembles a hotel's CTAs (`affiliateCtas`).
+  (`cjDeepLink`) and assembles a hotel's CTAs (`affiliateCtas`).
+
+**`sid` goes on Booking.com links only — never Expedia** (changed 2026-09-02).
+CJ's "Site ID" sub-tracking names the page that earned a commission in the
+Commission Detail report, but Expedia policy 8.2 says "you agree not alter,
+modify or otherwise change the Deeplinks created by the tool," and appending a
+parameter modifies one. 8.1's softer wording is about *obscuring* the
+destination and does not govern 8.2. Booking.com's terms carry no equivalent
+clause, so it keeps its `sid`. The cost is Expedia per-page attribution inside
+CJ only — GA4 is unaffected, because click attribution keys on the
+`data-affiliate-provider` / `data-affiliate-slug` attributes rather than the
+href. Do not put `sid` back on Expedia without written confirmation from the
+Expedia affiliate manager; jetandswim made the same change.
 - `src/components/HotelDetail.astro` — renders the booking buttons, Expedia first.
   Two providers → two buttons labelled by provider; one → a single button named
   for the hotel.
