@@ -168,7 +168,12 @@ export const CITIES = {
         "verified": {
           "stay": "Opened April 2019 at 200 N Green St in Fulton Market; Cabra is Stephanie Izard's Peruvian-inspired rooftop restaurant (Boka Restaurant Group) — Confirmed 2026-07-19 via Time Out Chicago and Block Club Chicago."
         },
-        "heroCredit": "The Hoxton, Chicago"
+        "heroCredit": "The Hoxton, Chicago",
+        "galleryAlt": {
+          "exterior": "The Hoxton's dark metal-framed tower in Fulton Market, rising from a red-brick base with its top storey glazed behind an open steel frame, and the elevated railway tracks crossing the street below.",
+          "guest-room": "A guest room under a bare concrete ceiling, the bed against a tall panelled tan leather headboard with brass swing-arm lamps either side, a pale blue dado running the walls and a Marshall speaker on the bedside table.",
+          "bathroom": "The bathroom in sage and grey square tile, a walk-in shower behind a black steel frame with the toiletries on a ledge, and a marble washstand with brass tumblers beneath an arched mirror."
+        }
       },
       {
         "name": "DoubleTree by Hilton Chicago – Magnificent Mile",
