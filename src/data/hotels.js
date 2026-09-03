@@ -192,7 +192,12 @@ export const CITIES = {
         "verified": {
           "stay": "300 E Ohio St in Streeterville, two blocks from the Magnificent Mile; Navy Pier and the lakefront walkable — Confirmed 2026-07-19 via Hilton and Choose Chicago."
         },
-        "heroCredit": "DoubleTree by Hilton Chicago – Magnificent Mile"
+        "heroCredit": "DoubleTree by Hilton Chicago – Magnificent Mile",
+        "galleryAlt": {
+          "exterior": "The porte-cochere entrance, a row of round wood-clad columns under a concrete canopy, with the DoubleTree by Hilton sign lit on the brick wall beyond and street trees along the sidewalk.",
+          "rooftop": "A games corner of the rooftop deck, cafe tables and a table-tennis table under string lights, a Chicago skyline mural painted along the low wall and a white umbrella from the pool-side seating just visible beyond it.",
+          "guest-room": "A guest room with a floor-to-ceiling window looking straight into the tower canyon, a teal armchair in the corner and the bed dressed in white beside a dark desk and TV console."
+        }
       }
     ]
   },
