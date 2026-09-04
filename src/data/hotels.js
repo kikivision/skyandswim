@@ -37,7 +37,7 @@ export const CITIES = {
     "heroGradient": "linear-gradient(180deg, rgba(191,79,8,0.9) 0%, rgba(150,56,24,0.72) 28%, rgba(40,64,80,0.6) 60%, rgba(6,22,50,0.84) 100%)",
     "listingsHeading": "The city that built up fast.",
     "noteLabel": "When these decks are open",
-    "noteBody": "Austin averages 228 sunny days a year, and the decks here stay usable far later than Nashville's or Denver's — but note that none of these four operators publishes a year-round or heated pool, and Austin Proper states outright that hours vary seasonally. October and early November are the underrated window: warm afternoons, thinner crowds, and the full skyline without the August heat. January and February are not — Austin gets hard freezes and the occasional snow, and these unheated decks are shut for it. Confirm before you plan a cool-season trip around one.",
+    "noteBody": "Two of these four swim year-round — Van Zandt and Cambria, both heated. Austin Proper is heated too, but its swim hours change with the season and the water is closed or restricted through late autumn and winter, even though the deck stays open. The W is unheated and seasonal outright: time that one for May to September. Austin averages 228 sunny days a year, so the decks stay usable far later than Nashville's or Denver's. October and early November are the underrated window: warm afternoons, thinner crowds, the full skyline without the August heat. January and February bring hard freezes and the occasional snow — Van Zandt and Cambria should still swim, but confirm before you build a cool-season trip around one.",
     "hotels": [
       {
         "name": "W Austin",
@@ -45,6 +45,14 @@ export const CITIES = {
         "neighborhood": "Downtown",
         "description": "WET deck is the W's branded pool scene, four floors up above the 2nd Street District — a real deck with cabanas, tanning shelves and a fireplace rather than a token plunge. DJs run Memorial Day to Labor Day; outside that stretch it is a considerably quieter afternoon. Non-guests can buy a day pass in.",
         "poolNote": "4th-floor WET deck · Cabanas + tanning shelves · DJs Memorial Day–Labor Day · Day passes from $25",
+        "pool": {
+          "lengthFt": 100,
+          "level": "4th floor",
+          "heated": false,
+          "tempF": null,
+          "season": "May–September",
+          "access": "Day passes from $25"
+        },
         "tags": [
           "Scene",
           "Day Pass",
@@ -55,6 +63,7 @@ export const CITIES = {
         "priceRange": "$$$$",
         "stay": "The W is the music-industry anchor downtown — it shares the Block 21 development with ACL Live at the Moody Theater, the venue where Austin City Limits tapes, so on a show night the commute is an elevator ride. You're in the 2nd Street District behind City Hall, with Lady Bird Lake and its trail just south and downtown's restaurants all around. At $$$$ it's the most expensive way onto an Austin rooftop — worth it if you're timing the trip around a show or want the WET deck scene built in, less so if a quiet room is the priority.",
         "verified": {
+          "pool": "100 ft, unheated, open May–September. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "Part of the Block 21 development with ACL Live at the Moody Theater (home of Austin City Limits); 2nd Street District behind City Hall, overlooking Lady Bird Lake — Confirmed 2026-07-19 via Andersson-Wise (the Block 21 architects) and Marriott."
         },
         "heroCredit": "W Austin"
@@ -65,6 +74,14 @@ export const CITIES = {
         "neighborhood": "Rainey Street",
         "description": "Named for the songwriter, and the hotel carries the music-city energy well — though the live music is downstairs at Geraldine's, not poolside. The 4th-floor deck looks out over Lady Bird Lake, with Rainey Street humming below without intruding. Non-guests get in through ResortPass.",
         "poolNote": "4th-floor rooftop pool · Lady Bird Lake views · Rainey Street · Day passes via ResortPass",
+        "pool": {
+          "lengthFt": 50,
+          "level": "4th-floor rooftop",
+          "heated": true,
+          "tempF": null,
+          "season": "Year-round",
+          "access": "Day passes via ResortPass"
+        },
         "tags": [
           "Lake View",
           "Rainey Street",
@@ -75,6 +92,7 @@ export const CITIES = {
         "priceRange": "$$$",
         "stay": "The Van Zandt is the Rainey Street one, and the music theme is load-bearing rather than decorative — the hotel is named for Townes Van Zandt, and Geraldine's runs live sets most nights, jazz brunches included. The district's bungalow bars are directly below, so the nightlife is at the door while the hotel stays surprisingly composed above it, with Lady Bird Lake at the end of the street. At $$$ it's fair for the location and the personality — the pick if you want Austin's bar scene walkable and music in the building; look downtown if Rainey's weekend noise would grate.",
         "verified": {
+          "pool": "50 ft, HEATED, open year-round. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04. NOTE: this contradicts the Austin city noteBody, which states that none of the four Austin properties is heated or year-round. The note needs correcting; do not resolve the conflict by reverting this entry.",
           "stay": "Named for Townes Van Zandt; opened 2015 in the Rainey Street Historic District; Geraldine's (4th floor) runs live music several nights a week. No longer marketed as a Kimpton — hotelvanzandt.com makes no Kimpton/IHG mention, so do not add the brand — Confirmed 2026-07-19."
         },
         "heroCredit": "Hotel Van Zandt"
@@ -85,6 +103,14 @@ export const CITIES = {
         "neighborhood": "Second Street",
         "description": "Kelly Wearstler designed the hotel and it shows — the 5th-floor rooftop pool is saltwater, framed like a set piece, and it is a very good one. La Piscina handles the bar. Guests and weekday Proper Club members only, no day passes, and the hours move with the season.",
         "poolNote": "5th-floor saltwater rooftop pool · La Piscina pool bar · Guests + members only · Hours vary seasonally",
+        "pool": {
+          "lengthFt": 35,
+          "level": "5th-floor rooftop",
+          "heated": true,
+          "tempF": null,
+          "season": "Varies seasonally",
+          "access": "Guests & members only"
+        },
         "tags": [
           "Saltwater",
           "Design Hotel",
@@ -95,6 +121,7 @@ export const CITIES = {
         "priceRange": "$$$$",
         "stay": "The Proper is the design statement — Kelly Wearstler's interiors run through the whole building, the restaurants come from Austin's McGuire Moorman group, and it arrived in 2019 as the brand's first hotel outside California. It shares the Second Street District with the W, so you get the same walkable downtown core near City Hall and the lake, in a considerably more styled package. At $$$$ you're paying design-hotel prices for a pool that's guests-and-members only with seasonal hours — worth it if the design is the draw, less so if maximum deck time is the point.",
         "verified": {
+          "pool": "35 ft and heated, but NOT year-round for swimming. The operator changes the policy seasonally: swim hours vary and the water is closed or restricted through late autumn and winter, while the rooftop deck itself stays open all year — properhotel.com/austin/rooftop-pool, Karen Dailey, 2026-09-04. The length is not stated in the site copy and was supplied directly. Do NOT simplify this to year-round; the deck and the pool have different seasons.",
           "stay": "Opened December 2019, the Proper brand's first hotel outside California; Second Street District; restaurants by McGuire Moorman Lambert — Confirmed 2026-07-19 via properhotel.com, Marriott and PaperCity."
         },
         "heroCredit": "Austin Proper"
@@ -105,6 +132,14 @@ export const CITIES = {
         "neighborhood": "Rainey Street",
         "description": "The adults-only value pick downtown — a 5th-floor resort-style deck with cabanas, an outdoor fireplace and a view over Rainey Street, plus day passes from $35 when the bigger properties are full. The rooftop bar, Limestone, is eleven floors further up.",
         "poolNote": "5th-floor adults-only pool · Rainey Street views · Cabanas + fireplace · Day passes from $35",
+        "pool": {
+          "lengthFt": 35,
+          "level": "5th floor",
+          "heated": true,
+          "tempF": null,
+          "season": "Year-round",
+          "access": "Day passes from $35"
+        },
         "tags": [
           "Adults Only",
           "Day Pass",
@@ -114,6 +149,7 @@ export const CITIES = {
         "priceRange": "$$",
         "stay": "The Cambria is the value route to the Rainey scene — a newer tower, opened late 2023, a block off Rainey Street proper, with the adults-only deck on five and the Limestone bar eleven floors above it. You're at the quieter end of the district: close enough to walk to the bungalow bars and the lake trail, far enough that the noise stays on Rainey. At $$ it's the cheapest way to stay in this corner of downtown with a real pool deck — the pick if you want Rainey access without the boutique bill.",
         "verified": {
+          "pool": "35 ft, HEATED, open year-round. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04. Third of the four Austin properties that contradicts the city noteBody claim that none is heated or year-round; only the W is unheated and seasonal.",
           "stay": "Opened October 2023 at 68 East Ave, a block off Rainey Street; Limestone rooftop bar on the 16th floor — Confirmed 2026-07-19 via CultureMap Austin and Urbanize Austin."
         },
         "heroCredit": "Cambria Austin Downtown"
@@ -986,7 +1022,7 @@ export const CITIES = {
         "priceRange": "$$",
         "stay": "The Arlo is the reborn one — the eight-story brick tower at 96 Wythe opened in 2017 as the Williamsburg Hotel, then re-emerged in September 2023 under Arlo after Quadrum Global bought it out of bankruptcy: 147 rooms with floor-to-ceiling windows, and the roof's old wooden water tower rebuilt as a glass-walled cocktail bar with the skyline behind the bottles. It shares the Vale's corner of North Williamsburg at half the ceremony, which is the appeal. At $$ it's the value way into the neighborhood — book it for a midweek swim and a water-tower nightcap, and know the deck turns into a party on summer weekends.",
         "verified": {
-          "pool": "Open May–September. The operator states only \"seasonal\" — Editorial, Karen Dailey, 2026-09-04.",
+          "pool": "Open May–September. The card copy said only \"seasonal\"; dates supplied directly — Editorial, Karen Dailey, 2026-09-04.",
           "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com",
           "stay": "Building opened 2017 as the Williamsburg Hotel; reopened as Arlo Williamsburg September 12, 2023 after Quadrum Global's purchase out of bankruptcy; 147 rooms incl. 8 suites; original water tower rebuilt as a glass-walled rooftop cocktail bar — Confirmed 2026-07-19 via Crain's New York Business, Forbes and arlohotels.com."
         },
@@ -1015,7 +1051,7 @@ export const CITIES = {
         "priceRange": "$$$",
         "stay": "ModernHaus is the James reborn — the onetime James New York tower at Grand and Thompson closed in March 2020 and reopened in 2021 rebuilt around a serious art collection (Calder, Condo, and KAWS among them), with Selene doing modern Greek under a retractable roof and Jimmy running the 18th-floor deck. SoHo from here means the gallery-and-boutique grid at the door, with Tribeca a short walk south for dinner reservations. At $$$, book it knowing the deal: the pool is guests-only — the rare Manhattan scene pool you can only swim in by sleeping over — and that exclusivity is exactly what keeps the deck usable on a hot Saturday.",
         "verified": {
-          "pool": "Season stated by the operator as Memorial Day–Labor Day; normalized to May–September in the comparison table so the season column is comparable across hotels. The card copy keeps the operator's dates. The pool is 18 ft and is NOT heated — small enough to read as a large hot tub rather than a lap pool. The operator publishes neither fact — Editorial, Karen Dailey, 2026-09-04.",
+          "pool": "Season given in the card copy as Memorial Day–Labor Day; normalized to May–September in the comparison table so the season column is comparable across hotels. The card copy keeps the original dates. The pool is 18 ft and is NOT heated — small enough to read as a large hot tub rather than a lap pool. Neither fact was stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "Formerly The James New York (closed March 2020); reopened April 2021 as ModernHaus SoHo at Grand & Thompson; 114 rooms; art collection incl. Calder, Condo and KAWS; Jimmy on the 18th floor; opening restaurant Veranda since replaced by Selene (modern Greek, retractable-roof atrium) — Confirmed 2026-07-19 via Tribeca Citizen, InsideHook and modernhaushotel.com."
         },
         "heroCredit": "ModernHaus SoHo"
@@ -1070,7 +1106,7 @@ export const CITIES = {
         "priceRange": "$$$",
         "stay": "Margaritaville Times Square is the one you can actually swim in during January. New York's rooftop pools are overwhelmingly summer — the Vale, the Arlo and ModernHaus all shut after Labor Day, and the Gansevoort's year-round deck is guests-and-members-only — which leaves this 6th-floor pool as the city's most available winter swim. Be clear about what you are buying: it is a Jimmy Buffett resort dropped into Midtown, the LandShark Bar & Grill is right on the deck with its neon lit and tables full, and the outlook is a single sightline down a Midtown street rather than a panorama. At $$$ that is a fair trade if you want a heated pool and a Broadway address in the same block — and a bad one if you came for quiet.",
         "verified": {
-          "pool": "The pool is 60 ft. The operator does not publish the dimension — Editorial, Karen Dailey, 2026-09-04.",
+          "pool": "The pool is 60 ft. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "Operator states an open-air pool on a 6th-floor rooftop deck, \"temperature-regulated\" and \"heated when it is chilly and refreshing when it is hot\", with the \"rooftop deck open in all seasons\"; open daily 8am-8pm with hours changing seasonally; access primarily for hotel guests with a limited number of day passes on select dates, resort wristband required; private cabanas from $500 per day — Confirmed 2026-08-25 via margaritavilleresorts.com. Hero pulled 2026-08-25 (night close-up, 1000x646 — LOW RES for the 1200px slot). The daylight and long-axis frames used to settle the view question were shown for judgement only — NOT Fora assets and not ours, so they are unpublishable and must not be sought out as a hero. Any upgrade has to come from the Portal. VERIFY: depth is not published and no marking is visible in the hero, unlike Angler's and The Tony; room count and review tier not checked."
         },
         "debunked": {
@@ -1101,7 +1137,7 @@ export const CITIES = {
         "priceRange": "$$",
         "stay": "The Indigo is the swimmer's pick, and not much else. It reads as a value hotel — the building is plain, the deck is plain, and the skyline it looks at is distant rather than dramatic. What it has is the pool: seventy feet of it on the fourth-floor terrace, a uniform four feet deep so you can push off and actually swim rather than wade around, with a shallow stepped entry that makes it workable with children and a lifeguard actually on duty. Guest access is generous where most New York decks ration it — free 9am to 6pm Monday and Tuesday, to 9:30pm the rest of the week — and non-guests can buy a four-hour block. At $$ book it if the swim is the point of the day; book the Vale two streets over if the view and the room are.",
         "verified": {
-          "pool": "Open May–September. The operator does not publish the season — Editorial, Karen Dailey, 2026-09-04.",
+          "pool": "Open May–September. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "70-foot heated pool on the 4th-floor terrace with a shallow area for children and a sundeck over the Brooklyn cityscape; pool club access free to hotel guests Mon-Tue 9am-6pm and Wed-Sun 9am-9:30pm, non-guests $160 weekday / $190 weekend per four-hour block; private cabanas by reservation — Confirmed 2026-08-25 via ResortPass and consistent secondary coverage. **ihg.com 403s to automated access**, so the operator page could not be read directly; Karen confirmed the 4th-floor terrace and that the Manhattan view is distant. The Fora hero pulled 2026-08-25 settles the depth the way Angler\'s and The Tony were settled: the coping reads 4 FEET DEEP beside a NO DIVING sign, and the frame shows a long rectangular pool with wide stepped entry and a staffed lifeguard chair. VERIFY: whether the pool is heated YEAR-ROUND — sources say heated \"according to the outdoor temperature\", which is not a year-round claim, so the copy does not make one. Room count and review tier unchecked."
         },
         "heroCredit": "Hotel Indigo Williamsburg"
