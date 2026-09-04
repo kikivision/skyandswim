@@ -170,9 +170,9 @@ export const CITIES = {
         },
         "heroCredit": "The Hoxton, Chicago",
         "galleryAlt": {
-          "exterior": "The Hoxton's dark metal-framed tower in Fulton Market, rising from a red-brick base with its top storey glazed behind an open steel frame, and the elevated railway tracks crossing the street below.",
+          "exterior": "The Hoxton's dark metal-framed tower in Fulton Market, rising from a red-brick base with its top story glazed behind an open steel frame, and the elevated railway tracks crossing the street below.",
           "guest-room": "A guest room under a bare concrete ceiling, the bed against a tall panelled tan leather headboard with brass swing-arm lamps either side, a pale blue dado running the walls and a Marshall speaker on the bedside table.",
-          "bathroom": "The bathroom in sage and grey square tile, a walk-in shower behind a black steel frame with the toiletries on a ledge, and a marble washstand with brass tumblers beneath an arched mirror."
+          "bathroom": "The bathroom in sage and gray square tile, a walk-in shower behind a black steel frame with the toiletries on a ledge, and a marble washstand with brass tumblers beneath an arched mirror."
         }
       },
       {
@@ -573,7 +573,7 @@ export const CITIES = {
         "stay": "The Hollywood Grande is the photogenic one — the rooftop that ends up in everyone's camera roll, with the Hollywood Sign in the frame and Bar Lis running alongside it. It's in the heart of Hollywood, walkable to the boulevard and the nightlife, which is the whole point of basing here rather than downtown or the coast. At $$$ it's fair for the location and the view, but know what you're buying: a four-foot lounging pool on a deck that's a scene first — come on a weekday morning if you actually want to swim.",
         "verified": {
           "rebrand": "Converted from Thompson Hollywood (Hyatt) to The Hollywood Grande, Autograph Collection (Marriott) on 2025-07-29. Confirmed 2026-07-18 via Hotel Dive, Boutique Hotelier and The Points Guy; Booking.com's thompson-hollywood URL 301s to the-hollywood-grande. Do not revert the name.",
-          "pool": "11th-floor rooftop (the building is 11 storeys), heated year-round, ~4ft maximum depth — a lounging pool rather than a lap pool. Bar Lis still operates under the new brand. Confirmed 2026-07-18."
+          "pool": "11th-floor rooftop (the building is 11 stories), heated year-round, ~4ft maximum depth — a lounging pool rather than a lap pool. Bar Lis still operates under the new brand. Confirmed 2026-07-18."
         },
         "heroCredit": "The Hollywood Grande, Autograph Collection"
       },
@@ -667,7 +667,7 @@ export const CITIES = {
         "name": "1 Hotel South Beach",
         "slug": "1-hotel-south-beach",
         "neighborhood": "South Beach",
-        "description": "The hotel that made sustainable design feel genuinely aspirational. Four pools on property and all of them open year-round, including a sprawling oceanfront one that runs parallel to the Atlantic — the water-meets-water effect on a clear day is difficult to improve on. The adults-only swim is the rooftop, eighteen storeys up.",
+        "description": "The hotel that made sustainable design feel genuinely aspirational. Four pools on property and all of them open year-round, including a sprawling oceanfront one that runs parallel to the Atlantic — the water-meets-water effect on a clear day is difficult to improve on. The adults-only swim is the rooftop, eighteen stories up.",
         "poolNote": "4 pools · Oceanfront · 18th-floor adults-only rooftop pool (21+) · Year-round",
         "tags": [
           "Multiple Pools",
@@ -736,7 +736,7 @@ export const CITIES = {
           "Cabanas"
         ],
         "priceRange": "$$$$",
-        "stay": "The Betsy is the grown-up one on Ocean Drive — 130 rooms and suites across a pair of joined buildings, orchids and original art in every room, and a literary-and-jazz programme that no other hotel on this strip attempts. That matters more than it sounds: Ocean Drive is the loudest address in Miami Beach, and The Betsy is the one that lets you sleep on it. The rooftop deck is the reason to book — pool, loungers, ocean on one side and the skyline on the other, with the bar running food service through the day. At $$$$ you are paying Ocean Drive prices for genuine calm; take it if you want the address without the noise that usually comes attached.",
+        "stay": "The Betsy is the grown-up one on Ocean Drive — 130 rooms and suites across a pair of joined buildings, orchids and original art in every room, and a literary-and-jazz program that no other hotel on this strip attempts. That matters more than it sounds: Ocean Drive is the loudest address in Miami Beach, and The Betsy is the one that lets you sleep on it. The rooftop deck is the reason to book — pool, loungers, ocean on one side and the skyline on the other, with the bar running food service through the day. At $$$$ you are paying Ocean Drive prices for genuine calm; take it if you want the address without the noise that usually comes attached.",
         "debunked": {
           "infinity": "Aggregators describe the rooftop pool as an INFINITY pool and as \"suspended in mid-air\" (kiwicollection, travelmyth and others). Both are false. The operator claims neither, and the Fora hero pulled 2026-08-25 (src/assets/hotels/the-betsy-south-beach.jpg) shows solid coping with a visible overflow channel along the deck edge and a guardrail beyond it — there is no spillover edge. Same failure mode as Hotel Swexan and The William Vale. Do not reinstate."
         },
@@ -785,7 +785,7 @@ export const CITIES = {
           "Cabanas"
         ],
         "priceRange": "$$$",
-        "stay": "The Palomar is the quiet-side one — 96 rooms on Alton Road in Sunset Harbour, on the Biscayne Bay flank of the island rather than the ocean flank, which is the whole character of the place. You trade the Atlantic for the skyline, and Ocean Drive for a neighbourhood people actually live in. The rooftop is genuinely a deck rather than a token plunge: tiered seating, cabanas, oversized loungers, a corner built to look like a ship's prow, and a bartender on duty through the afternoon. At $$$ it is the value pick of South Beach's rooftops — take it if the view you want is the city across the water, and note that the signature restaurant is mid-transformation, so dinner is currently a walk rather than a lift ride.",
+        "stay": "The Palomar is the quiet-side one — 96 rooms on Alton Road in Sunset Harbour, on the Biscayne Bay flank of the island rather than the ocean flank, which is the whole character of the place. You trade the Atlantic for the skyline, and Ocean Drive for a neighborhood people actually live in. The rooftop is genuinely a deck rather than a token plunge: tiered seating, cabanas, oversized loungers, a corner built to look like a ship's prow, and a bartender on duty through the afternoon. At $$$ it is the value pick of South Beach's rooftops — take it if the view you want is the city across the water, and note that the signature restaurant is mid-transformation, so dinner is currently a walk rather than a lift ride.",
         "verified": {
           "stay": "1750 Alton Rd, Sunset Harbour, on the Collins Canal / Biscayne Bay side of Miami Beach; 96 guestrooms. Operator describes the rooftop pool as open-air and a full swimming pool rather than a plunge, with panoramic views of Miami's skyline and waterways, a tiered deck, cabanas, oversized loungers, a ship's-prow corner, plus poolside food and beverage with a bartender on duty (Mon-Thu 1-7pm, Fri-Sun 11am-7pm) — Confirmed 2026-08-25 via hotelpalomar-southbeach.com pool page and miamiandbeaches.com. Pool qualifies per Karen 2026-08-25. VERIFY: signature restaurant is described by the operator as undergoing transformation with temporary offerings (Palomar Cafe breakfast) — recheck before the stay copy ships. Floor number and heating unstated. NOTE the branding: it is named South Beach but sits in Sunset Harbour on the bay, not on the oceanfront — the Fora hero pulled 2026-08-25 corroborates this, showing curtained cabanas, palms and a low-rise treeline over the rail with NO ocean in frame. Do not swap in a beach shot."
         },
@@ -937,6 +937,14 @@ export const CITIES = {
         "neighborhood": "Williamsburg",
         "description": "A 60-foot rooftop pool hovering over North Brooklyn, held at 80°F from May to September, with the Manhattan skyline laid out across the water like it owes you something. A deck bar runs alongside and day passes are sold to non-guests. The views change character with the light — blinding at noon, cinematic at dusk.",
         "poolNote": "60-ft heated pool (80°F) · May–September · Day passes available · Deck bar",
+        "pool": {
+          "lengthFt": 60,
+          "level": "Rooftop",
+          "heated": true,
+          "tempF": 80,
+          "season": "May–September",
+          "access": "Day passes"
+        },
         "tags": [
           "Day Pass",
           "Skyline View",
@@ -959,8 +967,16 @@ export const CITIES = {
         "name": "Arlo Williamsburg",
         "slug": "arlo-williamsburg",
         "neighborhood": "Williamsburg",
-        "description": "Compact but capable — forty feet of water on a rooftop rarely crowded at the right hours, with the East River and the skyline beyond it. Day passes and cabanas are both available. Good for a mid-week afternoon; the operator programmes weekend DJ sets and Sunday day parties, so that is when the deck turns.",
+        "description": "Compact but capable — forty feet of water on a rooftop rarely crowded at the right hours, with the East River and the skyline beyond it. Day passes and cabanas are both available. Good for a mid-week afternoon; the operator programs weekend DJ sets and Sunday day parties, so that is when the deck turns.",
         "poolNote": "Seasonal heated rooftop pool · 40-ft · East River views · Day passes + cabanas",
+        "pool": {
+          "lengthFt": 40,
+          "level": "Rooftop",
+          "heated": true,
+          "tempF": null,
+          "season": "May–September",
+          "access": "Day passes"
+        },
         "tags": [
           "Seasonal",
           "Day Pass",
@@ -970,6 +986,7 @@ export const CITIES = {
         "priceRange": "$$",
         "stay": "The Arlo is the reborn one — the eight-story brick tower at 96 Wythe opened in 2017 as the Williamsburg Hotel, then re-emerged in September 2023 under Arlo after Quadrum Global bought it out of bankruptcy: 147 rooms with floor-to-ceiling windows, and the roof's old wooden water tower rebuilt as a glass-walled cocktail bar with the skyline behind the bottles. It shares the Vale's corner of North Williamsburg at half the ceremony, which is the appeal. At $$ it's the value way into the neighborhood — book it for a midweek swim and a water-tower nightcap, and know the deck turns into a party on summer weekends.",
         "verified": {
+          "pool": "Open May–September. The operator states only \"seasonal\" — Editorial, Karen Dailey, 2026-09-04.",
           "heated": "Confirmed directly by Karen, 2026-07-18 — not stated on arlohotels.com or artrooftops.com",
           "stay": "Building opened 2017 as the Williamsburg Hotel; reopened as Arlo Williamsburg September 12, 2023 after Quadrum Global's purchase out of bankruptcy; 147 rooms incl. 8 suites; original water tower rebuilt as a glass-walled rooftop cocktail bar — Confirmed 2026-07-19 via Crain's New York Business, Forbes and arlohotels.com."
         },
@@ -979,8 +996,16 @@ export const CITIES = {
         "name": "ModernHaus SoHo",
         "slug": "jimmy-james-soho",
         "neighborhood": "SoHo",
-        "description": "Manhattan's most reliably fun rooftop pool — the Jimmy, atop what's now ModernHaus SoHo — where the scene is the point and it delivers on sunny weekends. Eighteen storeys up, the panorama runs from the Hudson round to Midtown and the East River bridges. Memorial Day to Labor Day, 21 and over after five. The bar is public; the pool is not.",
-        "poolNote": "18 storeys above SoHo · Hotel guests only · Memorial Day–Labor Day · 21+ after 5pm",
+        "description": "Manhattan's most reliably fun rooftop pool — the Jimmy, atop what's now ModernHaus SoHo — where the scene is the point and it delivers on sunny weekends. Eighteen stories up, the panorama runs from the Hudson round to Midtown and the East River bridges. Memorial Day to Labor Day, 21 and over after five. The bar is public; the pool is not.",
+        "poolNote": "18 stories above SoHo · Hotel guests only · Memorial Day–Labor Day · 21+ after 5pm",
+        "pool": {
+          "lengthFt": 18,
+          "level": "18th floor",
+          "heated": false,
+          "tempF": null,
+          "season": "May–September",
+          "access": "Guests only"
+        },
         "tags": [
           "Scene",
           "Guests Only",
@@ -990,6 +1015,7 @@ export const CITIES = {
         "priceRange": "$$$",
         "stay": "ModernHaus is the James reborn — the onetime James New York tower at Grand and Thompson closed in March 2020 and reopened in 2021 rebuilt around a serious art collection (Calder, Condo, and KAWS among them), with Selene doing modern Greek under a retractable roof and Jimmy running the 18th-floor deck. SoHo from here means the gallery-and-boutique grid at the door, with Tribeca a short walk south for dinner reservations. At $$$, book it knowing the deal: the pool is guests-only — the rare Manhattan scene pool you can only swim in by sleeping over — and that exclusivity is exactly what keeps the deck usable on a hot Saturday.",
         "verified": {
+          "pool": "Season stated by the operator as Memorial Day–Labor Day; normalized to May–September in the comparison table so the season column is comparable across hotels. The card copy keeps the operator's dates. The pool is 18 ft and is NOT heated — small enough to read as a large hot tub rather than a lap pool. The operator publishes neither fact — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "Formerly The James New York (closed March 2020); reopened April 2021 as ModernHaus SoHo at Grand & Thompson; 114 rooms; art collection incl. Calder, Condo and KAWS; Jimmy on the 18th floor; opening restaurant Veranda since replaced by Selene (modern Greek, retractable-roof atrium) — Confirmed 2026-07-19 via Tribeca Citizen, InsideHook and modernhaushotel.com."
         },
         "heroCredit": "ModernHaus SoHo"
@@ -1000,6 +1026,14 @@ export const CITIES = {
         "neighborhood": "Meatpacking District",
         "description": "The rooftop pool that helped invent the Meatpacking scene — 45 feet of water held at 84°F all year, so it stays swimmable while the district hums below. The Hudson sits to the west, the skyline to the east, and the crowd is exactly as seen-and-be-seen as the neighborhood promises. Guests and members only, which keeps it from tipping over.",
         "poolNote": "45-ft heated rooftop pool (84°F) · Hudson + downtown skyline · Year-round · Guests & members only",
+        "pool": {
+          "lengthFt": 45,
+          "level": "Rooftop",
+          "heated": true,
+          "tempF": 84,
+          "season": "Year-round",
+          "access": "Guests & members"
+        },
         "tags": [
           "Heated",
           "Year-Round",
@@ -1018,7 +1052,15 @@ export const CITIES = {
         "slug": "margaritaville-times-square",
         "neighborhood": "Times Square",
         "description": "A genuine lap pool running the length of a narrow 6th-floor deck in Midtown, cabanas down one side, open 8am to 8pm to guests and a few day passes. The view is one direction only — down the street corridor, buildings tight on both long sides — so come for the water, not the outlook. Heated in all seasons, rare enough here to be the point.",
-        "poolNote": "6th-floor rooftop pool · Heated, open all seasons · One-direction street view · Daily 8am–8pm · Guests + limited day passes · Cabanas from $500",
+        "poolNote": "60-ft 6th-floor rooftop pool · Heated, open all seasons · One-direction street view · Daily 8am–8pm · Guests + limited day passes · Cabanas from $500",
+        "pool": {
+          "lengthFt": 60,
+          "level": "6th-floor rooftop",
+          "heated": true,
+          "tempF": null,
+          "season": "Year-round",
+          "access": "Guests + limited day passes"
+        },
         "tags": [
           "Rooftop",
           "Heated",
@@ -1028,6 +1070,7 @@ export const CITIES = {
         "priceRange": "$$$",
         "stay": "Margaritaville Times Square is the one you can actually swim in during January. New York's rooftop pools are overwhelmingly summer — the Vale, the Arlo and ModernHaus all shut after Labor Day, and the Gansevoort's year-round deck is guests-and-members-only — which leaves this 6th-floor pool as the city's most available winter swim. Be clear about what you are buying: it is a Jimmy Buffett resort dropped into Midtown, the LandShark Bar & Grill is right on the deck with its neon lit and tables full, and the outlook is a single sightline down a Midtown street rather than a panorama. At $$$ that is a fair trade if you want a heated pool and a Broadway address in the same block — and a bad one if you came for quiet.",
         "verified": {
+          "pool": "The pool is 60 ft. The operator does not publish the dimension — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "Operator states an open-air pool on a 6th-floor rooftop deck, \"temperature-regulated\" and \"heated when it is chilly and refreshing when it is hot\", with the \"rooftop deck open in all seasons\"; open daily 8am-8pm with hours changing seasonally; access primarily for hotel guests with a limited number of day passes on select dates, resort wristband required; private cabanas from $500 per day — Confirmed 2026-08-25 via margaritavilleresorts.com. Hero pulled 2026-08-25 (night close-up, 1000x646 — LOW RES for the 1200px slot). The daylight and long-axis frames used to settle the view question were shown for judgement only — NOT Fora assets and not ours, so they are unpublishable and must not be sought out as a hero. Any upgrade has to come from the Portal. VERIFY: depth is not published and no marking is visible in the hero, unlike Angler's and The Tony; room count and review tier not checked."
         },
         "debunked": {
@@ -1041,6 +1084,14 @@ export const CITIES = {
         "neighborhood": "Williamsburg",
         "description": "The best actual swimming pool in this list — seventy heated feet on a fourth-floor terrace, marked four feet the whole way, with wide entry steps and a lifeguard on the chair. Day passes for non-guests. The hotel around it is unremarkable and the skyline is far off, but nobody gives you this much water.",
         "poolNote": "4th-floor terrace · 70-ft heated pool · Marked 4 ft · Wide shallow entry · Lifeguard on duty · Day passes",
+        "pool": {
+          "lengthFt": 70,
+          "level": "4th-floor terrace",
+          "heated": true,
+          "tempF": null,
+          "season": "May–September",
+          "access": "Day passes"
+        },
         "tags": [
           "Elevated",
           "Heated",
@@ -1050,6 +1101,7 @@ export const CITIES = {
         "priceRange": "$$",
         "stay": "The Indigo is the swimmer's pick, and not much else. It reads as a value hotel — the building is plain, the deck is plain, and the skyline it looks at is distant rather than dramatic. What it has is the pool: seventy feet of it on the fourth-floor terrace, a uniform four feet deep so you can push off and actually swim rather than wade around, with a shallow stepped entry that makes it workable with children and a lifeguard actually on duty. Guest access is generous where most New York decks ration it — free 9am to 6pm Monday and Tuesday, to 9:30pm the rest of the week — and non-guests can buy a four-hour block. At $$ book it if the swim is the point of the day; book the Vale two streets over if the view and the room are.",
         "verified": {
+          "pool": "Open May–September. The operator does not publish the season — Editorial, Karen Dailey, 2026-09-04.",
           "stay": "70-foot heated pool on the 4th-floor terrace with a shallow area for children and a sundeck over the Brooklyn cityscape; pool club access free to hotel guests Mon-Tue 9am-6pm and Wed-Sun 9am-9:30pm, non-guests $160 weekday / $190 weekend per four-hour block; private cabanas by reservation — Confirmed 2026-08-25 via ResortPass and consistent secondary coverage. **ihg.com 403s to automated access**, so the operator page could not be read directly; Karen confirmed the 4th-floor terrace and that the Manhattan view is distant. The Fora hero pulled 2026-08-25 settles the depth the way Angler\'s and The Tony were settled: the coping reads 4 FEET DEEP beside a NO DIVING sign, and the frame shows a long rectangular pool with wide stepped entry and a staffed lifeguard chair. VERIFY: whether the pool is heated YEAR-ROUND — sources say heated \"according to the outdoor temperature\", which is not a year-round claim, so the copy does not make one. Room count and review tier unchecked."
         },
         "heroCredit": "Hotel Indigo Williamsburg"
@@ -1143,7 +1195,7 @@ export const CITIES = {
         "galleryAlt": {
           "exterior": "The Sonesta's tower at dusk, its lower floors clad in dark panels under a lit SONESTA sign, with pavement tables under red umbrellas and the glass frontage of the hotel's street-level bar running along the block.",
           "bar": "The hotel's indoor bar — a long white counter with black leather stools on a black-and-white tiled floor, crystal chandeliers overhead and a painted American flag on exposed brick behind the spirits shelves.",
-          "guest-room": "A king guest room in grey and red, the bed beneath a long backlit panel of a stylised city map, with a cushioned window bench under striped curtains and a work desk alongside."
+          "guest-room": "A king guest room in gray and red, the bed beneath a long backlit panel of a stylized city map, with a cushioned window bench under striped curtains and a work desk alongside."
         }
       },
       {
@@ -1166,7 +1218,7 @@ export const CITIES = {
         "heroCredit": "Wyndham Philadelphia Historic District",
         "galleryAlt": {
           "exterior": "The Wyndham's mid-century block at dusk, banded ranks of windows above a low glazed lobby, the blue Wyndham sign lit on the corner and a pink-streaked sky behind it.",
-          "checkin": "The lobby in pale tile and grey, a long reception counter down one side beneath a black-and-white mural of the Constitution's \"We the People\" preamble, with a seating area and revolving door beyond.",
+          "checkin": "The lobby in pale tile and gray, a long reception counter down one side beneath a black-and-white mural of the Constitution's \"We the People\" preamble, with a seating area and revolving door beyond.",
           "king": "A king room at night, the bed facing a low dresser and television, a small desk and an olive armchair by the window, and a suspension bridge lit blue across the river outside."
         }
       }
@@ -1297,7 +1349,7 @@ export const CITIES = {
           "lobby": "The lobby in the brand's dark idiom — basket-weave clad columns lit from their bases in orange and blue, a dark wood floor, and a round upholstered banquette under a starburst chandelier facing the street doors.",
           "rooftop": "The rooftop deck at dusk, round wicker daybeds with orange cushions and candles on low tables, the downtown skyline along one side and a covered lounge glowing warm beneath its canopy on the other.",
           "onsite-bar": "The rooftop bar beside the pool, its backlit spirits shelves running under a band of ivy, wicker stools along the counter, and the pool, striped daybeds and open sky past the shade line.",
-          "guest-room": "A guest room with a teal upholstered headboard beneath a wood panel, a grey sofa at the foot of the bed and a writing desk by corner windows looking over downtown rooftops.",
+          "guest-room": "A guest room with a teal upholstered headboard beneath a wood panel, a gray sofa at the foot of the bed and a writing desk by corner windows looking over downtown rooftops.",
           "suite": "A suite's living room, a long teal sofa and a low oval table on a blue rug, with an exposed brick wall behind a dining table under a globe pendant and a wet-bar counter along the side."
         }
       },
@@ -1305,7 +1357,7 @@ export const CITIES = {
         "name": "InterContinental San Diego",
         "slug": "intercontinental-san-diego",
         "neighborhood": "Embarcadero",
-        "description": "The Layover rooftop pool sits four floors up on the Embarcadero with San Diego Bay filling the view — cabanas, a proper bar, and the harbour traffic going by below. Pool access is included in the guest amenity fee.",
+        "description": "The Layover rooftop pool sits four floors up on the Embarcadero with San Diego Bay filling the view — cabanas, a proper bar, and the harbor traffic going by below. Pool access is included in the guest amenity fee.",
         "poolNote": "4th-floor rooftop pool · San Diego Bay views · Layover bar · Cabanas",
         "tags": [
           "Rooftop",
@@ -1343,7 +1395,7 @@ export const CITIES = {
         "name": "Hard Rock Hotel San Diego",
         "slug": "hard-rock-san-diego",
         "neighborhood": "Gaslamp Quarter",
-        "description": "FLOAT is the fourth-floor rooftop pool and lounge, looking over the harbour, the Gaslamp and the Coronado Bridge. It runs seasonally and weather permitting — and the hotel is mid-renovation under new management, so confirm before you plan around it.",
+        "description": "FLOAT is the fourth-floor rooftop pool and lounge, looking over the harbor, the Gaslamp and the Coronado Bridge. It runs seasonally and weather permitting — and the hotel is mid-renovation under new management, so confirm before you plan around it.",
         "poolNote": "Rooftop pool (FLOAT) · Harbor + Coronado Bridge · Seasonal, weather permitting",
         "tags": [
           "Rooftop",
@@ -1397,7 +1449,7 @@ export const CITIES = {
           "checkin": "The reception desks, a pair of backlit banded-onyx counters under fabric drum pendants, with a flock of small gilded birds climbing the pale panel on the wall between them.",
           "view": "The rooftop terrace looking out over the marina — a glass balustrade above ranked motor yachts, with the channel running away to parkland and open water beyond.",
           "guest-room": "A king room with a padded cream headboard wall lit from above, a marbled stone console opposite, and glazed balcony doors opening onto the water with the skyline low on the far bank.",
-          "bath": "A marble bathroom, a freestanding oval tub set against a floor-to-ceiling slab of grey-veined stone, with a lit mirror over the washstand and a glass-walled shower alongside."
+          "bath": "A marble bathroom, a freestanding oval tub set against a floor-to-ceiling slab of gray-veined stone, with a lit mirror over the washstand and a glass-walled shower alongside."
         }
       },
       {
