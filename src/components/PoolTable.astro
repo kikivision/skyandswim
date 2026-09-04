@@ -1,0 +1,211 @@
+---
+// A real <table> of the pool facts for one city.
+//
+// Why it exists: three runs of the GEO citation panel (see the Jet & Swim repo,
+// scripts/geo-panel.mjs) showed that every rank-1 citation either site earned
+// came from holding one specific checkable fact — a pool temperature, a season,
+// a length. Sky & Swim already knows these things; they were buried in the prose
+// of each card's poolNote, where an answer engine has to infer them rather than
+// lift them. A table is the most extractable form there is.
+//
+// It renders ONLY where the data supports it (see MIN_ROWS below). A table that
+// is mostly "Not published" teaches a reader nothing and an answer engine less,
+// so a thin city is better served by the cards alone. Add `pool` blocks to more
+// hotels in src/data/hotels.js and the table appears on that city automatically.
+//
+// Every value comes from the hotel's own `pool` object, transcribed from its
+// poolNote. Null renders as "Not published" — which is a claim we can stand
+// behind, and is often the useful answer. Never fill a gap with a guess; the
+// fact-audit process in this repo exists precisely to catch that.
+interface Props {
+  city: string;
+  hotels: any[];
+}
+const { city, hotels } = Astro.props;
+
+// Below this, the cards say it better.
+const MIN_ROWS = 3;
+
+const rows = hotels.filter((h) => h.pool);
+const show = rows.length >= MIN_ROWS;
+
+// Length and level are separate claims and get separate columns. Collapsing
+// them into one "Pool" cell produced "70 ft · floor 4", which reads as though
+// the two numbers measure the same thing.
+// A figure where one is published; otherwise the qualitative answer if we have
+// one. "Not published" is the last resort, not the first — it is accurate but
+// tells a reader nothing when the size is actually known.
+const length = (p: any) => (p.lengthFt ? `${p.lengthFt} ft` : (p.lengthNote ?? null));
+
+// false and null are different claims: false means we confirmed it is not
+// heated, null means nobody has said. Collapsing them would report a known
+// answer as a gap — and "is this pool heated" is exactly the kind of narrow
+// question that earns a citation, including when the answer is no.
+const heat = (p: any) =>
+  p.heated && p.tempF ? `Heated to ${p.tempF}°F`
+  : p.heated ? "Heated"
+  : p.heated === false ? "Not heated"
+  : null;
+
+const NP = "Not published";
+---
+{show && (
+  <section class="pool-table" aria-labelledby="pool-table-heading">
+    <h2 id="pool-table-heading">Every {city} rooftop pool, side by side</h2>
+    <p class="pt-lede">
+      The details that decide a trip, in one place — how long the pool is, which
+      level it sits on, whether the water is heated, when the deck is open, and
+      whether you can get in without a room. "Not published" means the operator
+      does not state it, not that we could not be bothered to look.
+    </p>
+
+    <div class="pt-scroll">
+      <table>
+        <caption class="visually-hidden">
+          Pool length, level, heating, season and non-guest access for {rows.length} {city} rooftop pool hotels.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Hotel</th>
+            <th scope="col">Pool length</th>
+            <th scope="col">Level</th>
+            <th scope="col">Heated</th>
+            <th scope="col">Open</th>
+            <th scope="col">Non-guests</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((h) => (
+            <tr>
+              <th scope="row">
+                <span class="pt-name">{h.name}</span>
+                <span class="pt-hood">{h.neighborhood}</span>
+              </th>
+              <td>{length(h.pool) ?? <span class="pt-np">{NP}</span>}</td>
+              <td>{h.pool.level ?? <span class="pt-np">{NP}</span>}</td>
+              <td>{heat(h.pool) ?? <span class="pt-np">{NP}</span>}</td>
+              <td>{h.pool.season ?? <span class="pt-np">{NP}</span>}</td>
+              <td>{h.pool.access ?? <span class="pt-np">{NP}</span>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+)}
+
+<style>
+  /* Sits between .hotel-grid and .city-note, which is the DARK half of the
+     listings section — .city-note's light text is the giveaway. So the table
+     takes the card treatment (same navy surface, same robin's-egg hairline)
+     rather than a light one, and reads as another object in the same system
+     instead of a white slab dropped between two dark ones. */
+  .pool-table {
+    margin: 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pool-table h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.1;
+    color: rgba(220, 240, 245, 0.95);
+    margin: 0;
+  }
+
+  .pt-lede {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: rgba(220, 240, 245, 0.72);
+    max-width: 68ch;
+    margin: 0 0 0.6rem;
+  }
+
+  /* Wide content scrolls in its own container — the page body never does. */
+  .pt-scroll {
+    overflow-x: auto;
+    background: rgba(8, 30, 56, 0.75);
+    border: 1px solid rgba(168, 216, 216, 0.15);
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    min-width: 52rem;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(168, 216, 216, 0.85);
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid rgba(168, 216, 216, 0.2);
+    white-space: nowrap;
+  }
+
+  tbody th,
+  tbody td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid rgba(168, 216, 216, 0.08);
+    vertical-align: top;
+    color: rgba(220, 240, 245, 0.92);
+    font-variant-numeric: tabular-nums;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td { border-bottom: 0; }
+
+  tbody th {
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 12.5rem;
+  }
+
+  .pt-name { font-size: 0.95rem; }
+
+  .pt-hood {
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    color: rgba(168, 216, 216, 0.7);
+  }
+
+  .pt-np {
+    color: rgba(220, 240, 245, 0.42);
+    font-style: italic;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 40rem) {
+    .pool-table { margin-top: 2.25rem; }
+    table { font-size: 0.86rem; }
+    thead th, tbody th, tbody td { padding: 0.75rem 0.85rem; }
+  }
+</style>

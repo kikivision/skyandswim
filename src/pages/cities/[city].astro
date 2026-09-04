@@ -1,6 +1,7 @@
 ---
 import CityLayout from "../../layouts/CityLayout.astro";
 import HotelCard from "../../components/HotelCard.astro";
+import PoolTable from "../../components/PoolTable.astro";
 import { CITIES, cityName } from "../../data/hotels.js";
 import { NOTABLE_HOTELS } from "../../data/notable.js";
 import { POOLS } from "../../lib/pool-catalog.js";
@@ -132,6 +133,8 @@ const jsonLd = [
           <HotelCard {...hotel} detailHref={`/cities/${data.slug}/${hotel.slug}/`} />
         ))}
       </div>
+
+      <PoolTable city={cityDisplay} hotels={hotels} />
 
       <aside class="city-note">
         <p><strong>{noteLabel}:</strong> {noteBody}</p>
