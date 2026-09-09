@@ -22,9 +22,10 @@
 // margaritaville-times-square, godfrey-hollywood) — when two ids share a name,
 // take the one holding the review history.
 //
-// Coverage: 71 of 72 as of 2026-08-29. The Booking-only holdout is dua-miami,
-// which has no findable Expedia listing under either its current name or its
-// former one (SLS Brickell) — it falls back to a single Booking button.
+// Coverage: 72 of 72 as of 2026-09-09. dua-miami was the last Booking-only
+// holdout; its Expedia listing was eventually found under a THIRD name — neither
+// "Dua Miami" nor "SLS Brickell" but "Autograph Collection Brickell" — which is
+// why earlier searches under the current and former names came up empty.
 //
 // NOTE on link shape: neither provider is routed through a redirect page of
 // ours — an affiliate click may not pass through an auto-forwarding page we
@@ -81,6 +82,11 @@ export const AFFILIATE_HOTELS = {
   // building). Booking.com's URL slug is still the old `sls-brickell`.
   'dua-miami': {
     bookingcom: 'https://www.booking.com/hotel/us/sls-brickell.html',
+    // Generated in CJ's Deep Link Generator (SID field included) and stored
+    // verbatim — see the `expediaCjUrl` note in src/lib/affiliate-links.js.
+    // Expedia lists this property as "Autograph Collection Brickell".
+    expediaCjUrl:
+      'https://www.dpbolvw.net/click-101819827-10581071?sid=dua-miami&url=https%3A%2F%2Fwww.expedia.com%2FMiami-Hotels-Autograph-Collection-Brickell.h15469124.Hotel-Information',
   },
   'standard-spa-miami-beach': {
     bookingcom: 'https://www.booking.com/hotel/us/the-standard.html',

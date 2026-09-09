@@ -26,21 +26,37 @@ Do not reintroduce a redirector for either provider. The CJ hop from
 mechanism; the interstitial was ours, and that was the problem.
 
 - `src/data/affiliates.js` — single source of truth: hotel `slug` → plain
-  `bookingcom` and (optionally) `expedia` property URLs.
+  `bookingcom` and (optionally) `expedia` property URLs, OR a pre-generated
+  `bookingcomCjUrl` / `expediaCjUrl` click URL (see below).
 - `src/lib/affiliate-links.js` — the only place that builds CJ deep links
   (`cjDeepLink`) and assembles a hotel's CTAs (`affiliateCtas`).
 
-**`sid` goes on Booking.com links only — never Expedia** (changed 2026-09-02).
-CJ's "Site ID" sub-tracking names the page that earned a commission in the
-Commission Detail report, but Expedia policy 8.2 says "you agree not alter,
-modify or otherwise change the Deeplinks created by the tool," and appending a
-parameter modifies one. 8.1's softer wording is about *obscuring* the
-destination and does not govern 8.2. Booking.com's terms carry no equivalent
-clause, so it keeps its `sid`. The cost is Expedia per-page attribution inside
-CJ only — GA4 is unaffected, because click attribution keys on the
-`data-affiliate-provider` / `data-affiliate-slug` attributes rather than the
-href. Do not put `sid` back on Expedia without written confirmation from the
-Expedia affiliate manager; jetandswim made the same change.
+**OUR CODE never appends `sid` to an Expedia link — but a CJ-GENERATED link may
+carry one** (rule set 2026-09-02, clarified 2026-09-09).
+
+Expedia policy 8.2 says "you agree not alter, modify or otherwise change the
+Deeplinks created by the tool." The act it prohibits is *us modifying the
+generator's output*, which is exactly what `cjDeepLink` used to do by appending
+`&sid=`. That append is gone and stays gone. 8.1's softer wording is about
+*obscuring* the destination and does not govern 8.2.
+
+It does NOT prohibit an SID that CJ's own Deep Link Generator produced. The
+generator has an SID field; a link that comes out of it with `sid=` already in
+place is the tool's output, not an altered link. So a generator-made Expedia
+URL is pasted VERBATIM into `expediaCjUrl` and used as-is — never rebuilt,
+re-ordered, or domain-normalised. (Generator output puts `sid` FIRST,
+`?sid=…&url=…`; the old append put it last. That ordering difference is the
+tell for which one you are looking at.)
+
+Booking.com's terms carry no equivalent clause, so `cjDeepLink` still adds its
+`sid` freely. GA4 is unaffected either way — click attribution keys on the
+`data-affiliate-provider` / `data-affiliate-slug` attributes, not the href.
+
+Do not reintroduce an `sid` append inside `cjDeepLink` for Expedia without
+written confirmation from the Expedia affiliate manager; jetandswim made the
+same change. Pasting more generator-made links into `expediaCjUrl` needs no such
+confirmation — Karen is generating them in CJ as she gets to them, and each one
+restores that hotel's per-page attribution in the Commission Detail report.
 - `src/components/HotelDetail.astro` — renders the booking buttons, Expedia first.
   Two providers → two buttons labelled by provider; one → a single button named
   for the hotel.

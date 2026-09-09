@@ -84,25 +84,42 @@ export function cjDeepLink(provider, url, sid) {
  * to book before the tab closes — while Expedia's window is materially longer,
  * so it is both the likelier earner and the better default. On Jet & Swim, where
  * both have run side by side, Expedia takes ~2 clicks to Booking's 1.
+ *
+ * A hotel may instead carry `expediaCjUrl` / `bookingcomCjUrl` — a click URL
+ * pasted straight out of CJ's own Deep Link Generator. When present it is used
+ * VERBATIM, in preference to the plain property URL, and cjDeepLink() never
+ * touches it.
+ *
+ * That distinction is the whole point. Expedia policy 8.2 forbids altering a
+ * deeplink the generator created; it does not forbid the generator's own output.
+ * CJ's generator has an SID field, so an SID that CJ put into the link is part
+ * of what the tool made, not something we appended — which is the act 8.2
+ * actually prohibits, and the one removed from cjDeepLink() on 2026-09-02.
+ *
+ * So: paste generator output here exactly as CJ emits it. Do not hand-edit it,
+ * do not re-order its parameters, and do not normalise its click domain —
+ * dpbolvw.net, jdoqocy.com and the rest are interchangeable, and the
+ * attribution rides in the PID/AID path rather than the hostname.
  */
 export function affiliateCtas(slug) {
   const affiliate = slug ? AFFILIATE_HOTELS[slug] : undefined;
   if (!affiliate) return [];
 
   const ctas = [];
-  if (affiliate.expedia) {
-    ctas.push({
-      provider: 'expedia',
-      label: 'Expedia',
-      href: cjDeepLink('expedia', affiliate.expedia, slug),
-    });
+
+  const expediaHref =
+    affiliate.expediaCjUrl ||
+    (affiliate.expedia ? cjDeepLink('expedia', affiliate.expedia, slug) : null);
+  if (expediaHref) {
+    ctas.push({ provider: 'expedia', label: 'Expedia', href: expediaHref });
   }
-  if (affiliate.bookingcom) {
-    ctas.push({
-      provider: 'booking',
-      label: 'Booking.com',
-      href: cjDeepLink('booking', affiliate.bookingcom, slug),
-    });
+
+  const bookingHref =
+    affiliate.bookingcomCjUrl ||
+    (affiliate.bookingcom ? cjDeepLink('booking', affiliate.bookingcom, slug) : null);
+  if (bookingHref) {
+    ctas.push({ provider: 'booking', label: 'Booking.com', href: bookingHref });
   }
+
   return ctas;
 }
