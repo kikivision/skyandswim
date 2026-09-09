@@ -369,10 +369,21 @@ const isOutbound = providerCtas.length > 0 || showDirect;
     // Upscaling a 480px source ~2.9x is visibly soft; that is a known and
     // accepted trade for consistent sizing. Better originals remain the real
     // fix. To cap it, clamp `w` against `img.naturalWidth * <factor>`.
+    // Upscaling is CAPPED. Filling the viewport unconditionally made a 480px
+    // source render ~2.9x and visibly mushy -- worse than being small. 1.6x is
+    // the point where softness stops reading as a fault. Sources now run
+    // 750-1540px, so the cap rarely binds and the frames still land within a
+    // few percent of each other.
+    const MAX_UPSCALE = 1.6;
+
     function fit() {
       const r = img.naturalWidth / img.naturalHeight;
       if (!r) return;
-      const w = Math.min(window.innerWidth * 0.96, window.innerHeight * 0.82 * r);
+      const w = Math.min(
+        window.innerWidth * 0.96,
+        window.innerHeight * 0.82 * r,
+        img.naturalWidth * MAX_UPSCALE,
+      );
       frame.style.width = w + 'px';
       frame.style.height = w / r + 'px';
     }
