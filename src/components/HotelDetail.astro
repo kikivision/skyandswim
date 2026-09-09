@@ -359,13 +359,37 @@ const isOutbound = providerCtas.length > 0 || showDirect;
         .sort((a, b) => b.w - a.w)[0].url;
     }
 
+    // Scale every photo up to fill the viewport box, not just down to fit.
+    // Sources vary from 480px to 1600px, and at natural size the small ones
+    // rendered about a third the width of the large ones -- the gallery looked
+    // broken rather than modest. The frame is sized to the photo's own ratio so
+    // the close/prev/next controls keep hugging the image instead of floating
+    // at the corners of a letterboxed box.
+    //
+    // Upscaling a 480px source ~2.9x is visibly soft; that is a known and
+    // accepted trade for consistent sizing. Better originals remain the real
+    // fix. To cap it, clamp `w` against `img.naturalWidth * <factor>`.
+    function fit() {
+      const r = img.naturalWidth / img.naturalHeight;
+      if (!r) return;
+      const w = Math.min(window.innerWidth * 0.96, window.innerHeight * 0.82 * r);
+      frame.style.width = w + 'px';
+      frame.style.height = w / r + 'px';
+    }
+
     function show(n) {
       i = (n + shots.length) % shots.length;
       const src = shots[i].querySelector('img');
+      // Clear the old box first, or a portrait briefly wears a landscape frame.
+      frame.style.width = frame.style.height = '';
       img.src = widest(src);
       img.alt = src.alt;
       cap.textContent = src.alt;
+      if (img.complete) fit();
     }
+
+    img.addEventListener('load', fit);
+    window.addEventListener('resize', fit);
 
     shots.forEach((btn, n) => {
       btn.addEventListener('click', () => { show(n); dlg.showModal(); });
@@ -396,8 +420,11 @@ const isOutbound = providerCtas.length > 0 || showDirect;
     max-width: 96vw; max-height: 96vh; overflow: visible;
   }
   .lightbox::backdrop { background: rgba(5, 14, 34, 0.9); }
-  .lb-frame { position: relative; display: block; }
-  .lightbox img { display: block; max-width: 96vw; max-height: 82vh; width: auto; height: auto; border-radius: 10px; }
+  .lb-frame { position: relative; display: block; max-width: 96vw; max-height: 82vh; }
+  /* The script sets .lb-frame to the photo's own ratio, so the image simply
+     fills it. `contain` is belt-and-braces for the frame's first paint, before
+     naturalWidth is known. */
+  .lightbox img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
   .lb-cap {
     color: rgba(220, 240, 245, 0.9); font-family: var(--font-body); font-weight: 300;
     font-size: 0.85rem; text-align: center; margin: 0.75rem auto 0; max-width: 70ch;
