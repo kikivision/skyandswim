@@ -936,6 +936,12 @@ export const CITIES = {
         "verified": {
           "stay": "Former Ace Hotel New Orleans, rebranded The Barnett, part of JdV by Hyatt; 600 Carondelet St, a 1920s Art Deco building; retains a jazz club and the rooftop pool — Confirmed 2026-07-19 via thebarnett.com, Tablet Hotels and Booking.com's ace-new-orleans listing."
         },
+        "galleryAlt": {
+          "pool-deck": "The rooftop deck, slatted chairs and loungers against the New Orleans skyline.",
+          "checkin-desk": "The check-in desk in black lacquer, an art-deco pendant lamp above.",
+          "guest-room": "A guest room with a tall upholstered headboard and shuttered windows.",
+          "seaworthy": "Seaworthy's long communal table under bentwood chairs and leather club armchairs."
+        },
         "heroCredit": "The Barnett"
       },
       {
