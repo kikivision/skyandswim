@@ -110,19 +110,23 @@ export const BEYOND_HOTELS = [
     heroCredit: "Thompson San Antonio – Riverwalk",
     // Key order sets the display order: the pool and the building first, then
     // arrival, then what a room actually looks like.
+    // Short by intent. Alt is read aloud in full by screen readers AND shown
+    // as the lightbox caption, so it has to work as visible copy — a paragraph
+    // fails at both. Google asks for descriptive but concise; length is not a
+    // ranking signal.
     galleryAlt: {
       aerial:
-        "Looking straight down on the Thompson at dusk — the tower's gray herringbone roof and curved green-glass stair shaft at center, the lit turquoise rectangle of the Cenote pool on its terrace below, and the San Antonio River curving past in dark water between stone walkways, with a footbridge, lamplit paths, palms and the red-tiled roofs of neighboring buildings on either side.",
+        "The Cenote pool deck from above, the San Antonio River curving past below.",
       "hotel-exterior":
-        "The Thompson at dusk seen from across downtown: a cream stone tower banded with green-tinted glass, a curved blue-glass spine running the full height of one corner, and a black-tiled podium slit with narrow lit windows at street level. The San Antonio skyline stands behind it against an orange sunset, the Tower of the Americas needle to the left and the lit USAA and BBVA towers to the right.",
+        "The tower at dusk, green glass and a curved blue spine above downtown.",
       entry:
-        "Looking up at the entrance from the sidewalk: THOMPSON in tall, widely spaced white capitals across a facade of overlapping charcoal tiles, downlights burning under the canopy, and the glass storefront below throwing back teal reflections, with the cream tower and its blue-glass spine receding into a clear sky above.",
+        "THOMPSON in white capitals across the dark tiled entrance.",
       "guest-room":
-        "A king room in deep teal, the bed set against a brown leather headboard tufted into a grid that runs the width of the wall, white bedding with a tan band across the foot and a rust bolster. Three gold-framed abstracts hang above it, amber bulbs glow on swing-arm sconces, and a round wood nightstand holds a retro radio. A cowhide rug lies over wide-plank floors, a dark desk and upholstered chair sit under tall windows at left, and the balcony door opens onto the city at right.",
+        "A king room in deep teal, leather grid headboard, windows onto the city.",
       "guest-room-balcony":
-        "A long private balcony with a concrete floor and a glass railing on white posts — a gray upholstered sofa in the foreground, two wood-framed armchairs further along, and the room's glass wall throwing back the towers opposite. Downtown San Antonio fills the view: a pink granite high-rise, tan brick and dark glass buildings, and the streets and low rooftops below under an overcast sky.",
+        "A private balcony with lounge seating, looking out over downtown San Antonio.",
       bath:
-        "A freestanding white oval tub on dark slate, filled by a floor-mounted chrome spout, with a wall of dark wood wardrobes fronted in hammered glass on one side and floor-to-ceiling glass on the other. The balcony door stands open onto a wood-framed chair with blue cushions and a round gray drum table, with treetops and low rooftops beyond.",
+        "A freestanding oval tub beside floor-to-ceiling glass and the balcony.",
     },
     neighborhood: "San Antonio, TX",
     area: "River Walk",
