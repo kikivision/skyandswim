@@ -108,6 +108,26 @@ export const BEYOND_HOTELS = [
     name: "Thompson San Antonio – Riverwalk",
     slug: "thompson-san-antonio",
     heroCredit: "Thompson San Antonio – Riverwalk",
+    // Key order sets the display order: the pool and the building first, then
+    // arrival, then what a room actually looks like.
+    // Short by intent. Alt is read aloud in full by screen readers AND shown
+    // as the lightbox caption, so it has to work as visible copy — a paragraph
+    // fails at both. Google asks for descriptive but concise; length is not a
+    // ranking signal.
+    galleryAlt: {
+      aerial:
+        "The Cenote pool deck from above, the San Antonio River curving past below.",
+      "hotel-exterior":
+        "The tower at dusk, green glass and a curved blue spine above downtown.",
+      entry:
+        "THOMPSON in white capitals across the dark tiled entrance.",
+      "guest-room":
+        "A king room in deep teal, leather grid headboard, windows onto the city.",
+      "guest-room-balcony":
+        "A private balcony with lounge seating, looking out over downtown San Antonio.",
+      bath:
+        "A freestanding oval tub beside floor-to-ceiling glass and the balcony.",
+    },
     neighborhood: "San Antonio, TX",
     area: "River Walk",
     city: "San Antonio",

@@ -206,9 +206,9 @@ export const CITIES = {
         },
         "heroCredit": "The Hoxton, Chicago",
         "galleryAlt": {
-          "exterior": "The Hoxton's dark metal-framed tower in Fulton Market, rising from a red-brick base with its top story glazed behind an open steel frame, and the elevated railway tracks crossing the street below.",
-          "guest-room": "A guest room under a bare concrete ceiling, the bed against a tall panelled tan leather headboard with brass swing-arm lamps either side, a pale blue dado running the walls and a Marshall speaker on the bedside table.",
-          "bathroom": "The bathroom in sage and gray square tile, a walk-in shower behind a black steel frame with the toiletries on a ledge, and a marble washstand with brass tumblers beneath an arched mirror."
+          "exterior": "The Hoxton's dark metal tower above its red-brick base, elevated tracks crossing below.",
+          "guest-room": "A room under bare concrete, tan leather headboard and brass swing-arm lamps.",
+          "bathroom": "Sage and gray tile, a black-framed walk-in shower and an arched mirror.",
         }
       },
       {
@@ -230,9 +230,9 @@ export const CITIES = {
         },
         "heroCredit": "DoubleTree by Hilton Chicago – Magnificent Mile",
         "galleryAlt": {
-          "exterior": "The porte-cochere entrance, a row of round wood-clad columns under a concrete canopy, with the DoubleTree by Hilton sign lit on the brick wall beyond and street trees along the sidewalk.",
-          "rooftop": "A games corner of the rooftop deck, cafe tables and a table-tennis table under string lights, a Chicago skyline mural painted along the low wall and a white umbrella from the pool-side seating just visible beyond it.",
-          "guest-room": "A guest room with a floor-to-ceiling window looking straight into the tower canyon, a teal armchair in the corner and the bed dressed in white beside a dark desk and TV console."
+          "exterior": "The porte-cochere entrance, wood-clad columns under a concrete canopy.",
+          "rooftop": "The rooftop games corner, table tennis under string lights and a skyline mural.",
+          "guest-room": "A room facing straight into the tower canyon, teal armchair in the corner.",
         }
       }
     ]
@@ -269,12 +269,12 @@ export const CITIES = {
         },
         "heroCredit": "The Joule",
         "galleryAlt": {
-          "exterior": "The Joule's Gothic-revival stone facade at dusk, a deep carved arch over the lit entrance and a tracery oriel window above it, with the hotel's modern glass-and-marble extension alongside and clipped bay trees along the Main Street sidewalk.",
-          "check-in": "The Joule's reception desk in dark wood and bronze, lit from within, under a square chandelier hung with strands of crystal, and a large backlit mural of two robed figures and a longhorn in gold and teal filling the wall beyond.",
-          "lobby": "The Joule's lobby in pale polished marble — a coiled gold sculpture at one end, a blue crystal-encrusted engine block in a clear vitrine at the other, and the bar with its row of leather stools between them.",
-          "premier-king": "A Premier King room, the bed under a cream leather headboard flanked by pendant lamps, a velvet bench at its foot, and a marble-topped console stacked with art books along the far wall.",
-          "premier-room-double": "A Premier double room with two beds against a lacquered wood headboard wall, a pair of navy tub chairs on a chevron rug, and a long desk beside a frosted-glass bathroom partition.",
-          "penthouse-loft": "The Penthouse Loft, its bed on a red grid carpet between floor-to-ceiling windows hung with crimson and sheer curtains, a sofa at the foot of the bed and a plum velvet armchair and ottoman by the glass."
+          "exterior": "The Joule's Gothic-revival stone facade at dusk, a carved arch over the entrance.",
+          "check-in": "The reception desk in dark wood and bronze under a crystal chandelier.",
+          "lobby": "The marble lobby, a coiled gold sculpture and the bar's row of leather stools.",
+          "premier-king": "A Premier King under a cream leather headboard, velvet bench at its foot.",
+          "premier-room-double": "Two beds against a lacquered wood wall, navy chairs on a chevron rug.",
+          "penthouse-loft": "The Penthouse Loft, bed on a red grid carpet between full-height windows.",
         }
       },
       {
@@ -781,12 +781,12 @@ export const CITIES = {
         },
         "heroCredit": "The Betsy Hotel, South Beach",
         "galleryAlt": {
-          "hotel-exterior": "The Betsy's Colonial-revival facade on Ocean Drive, cream-painted with a columned arcade and the original \"The Betsy Ross\" lettering still on the pediment, cafe tables and umbrellas along the sidewalk.",
-          "ocean-front": "The hotel's sun deck looking east over Lummus Park — a few rows of palms and a strip of lawn, then the sand and the Atlantic directly beyond, with teak loungers and canvas umbrellas in the foreground.",
-          "gelato-coffee": "The Alley, the hotel's walk-up gelato, coffee and pizza counter on the side street, beneath the Betsy Poetry Rail — a perforated steel stair and bridge engraved with lines of poetry.",
-          "royal-ocean-view": "A Royal Ocean View room's sitting area, with white plantation shutters folded back from a sash window, a fresh orchid on the table, and palm tops and a strip of the Atlantic beyond the glass.",
-          "balcony-room": "A Balcony room in white and blue, opening through full-height curtains onto a private terrace with planted trellises and rattan armchairs.",
-          "skyline-penthouse": "The Skyline Penthouse bedroom under a crystal chandelier, flanked by built-in bookshelves and doors to a private deck on either side of the bed."
+          "hotel-exterior": "The Betsy's cream Colonial-revival facade on Ocean Drive, columned arcade and sidewalk tables.",
+          "ocean-front": "The sun deck over Lummus Park, teak loungers with the Atlantic beyond.",
+          "gelato-coffee": "The Alley walk-up counter beneath the steel Poetry Rail.",
+          "royal-ocean-view": "A Royal Ocean View sitting area, shutters folded back to palms and sea.",
+          "balcony-room": "A white-and-blue room opening onto a private terrace with rattan armchairs.",
+          "skyline-penthouse": "The Skyline Penthouse bedroom under a crystal chandelier, between built-in bookshelves.",
         }
       },
       {
@@ -1229,9 +1229,9 @@ export const CITIES = {
         "stay": "The Sonesta is the sensible middle — no particular scene, a pool deep enough to actually swim in, and a location that does a lot of the work. Rittenhouse Square is arguably the best neighborhood in Philadelphia to stay in: the city's densest run of good restaurants, walkable and pleasant in every direction. At $$$ it's fairly priced for the address — the pick if you want the neighborhood and a real swim, though the deck is Memorial Day to Labor Day only, so it's a summer-trip hotel.",
         "heroCredit": "Sonesta Philadelphia Rittenhouse Square",
         "galleryAlt": {
-          "exterior": "The Sonesta's tower at dusk, its lower floors clad in dark panels under a lit SONESTA sign, with pavement tables under red umbrellas and the glass frontage of the hotel's street-level bar running along the block.",
-          "bar": "The hotel's indoor bar — a long white counter with black leather stools on a black-and-white tiled floor, crystal chandeliers overhead and a painted American flag on exposed brick behind the spirits shelves.",
-          "guest-room": "A king guest room in gray and red, the bed beneath a long backlit panel of a stylized city map, with a cushioned window bench under striped curtains and a work desk alongside."
+          "exterior": "The Sonesta tower at dusk, red umbrellas and the lit street-level bar.",
+          "bar": "The indoor bar, black leather stools on checkered tile under crystal chandeliers.",
+          "guest-room": "A king room in gray and red, a backlit city-map panel above the bed.",
         }
       },
       {
@@ -1253,9 +1253,9 @@ export const CITIES = {
         },
         "heroCredit": "Wyndham Philadelphia Historic District",
         "galleryAlt": {
-          "exterior": "The Wyndham's mid-century block at dusk, banded ranks of windows above a low glazed lobby, the blue Wyndham sign lit on the corner and a pink-streaked sky behind it.",
-          "checkin": "The lobby in pale tile and gray, a long reception counter down one side beneath a black-and-white mural of the Constitution's \"We the People\" preamble, with a seating area and revolving door beyond.",
-          "king": "A king room at night, the bed facing a low dresser and television, a small desk and an olive armchair by the window, and a suspension bridge lit blue across the river outside."
+          "exterior": "The Wyndham's mid-century block at dusk, banded windows and a pink-streaked sky.",
+          "checkin": "The pale lobby, reception under a mural of the Constitution's preamble.",
+          "king": "A king room at night, a suspension bridge lit blue across the river outside.",
         }
       }
     ]
@@ -1381,12 +1381,12 @@ export const CITIES = {
         },
         "heroCredit": "Andaz San Diego",
         "galleryAlt": {
-          "exterior": "The Andaz's 1913 brick building at dusk on F Street, red awnings over the ground-floor windows and light trails from passing traffic, with the Gaslamp's lit signage further down the block.",
-          "lobby": "The lobby in the brand's dark idiom — basket-weave clad columns lit from their bases in orange and blue, a dark wood floor, and a round upholstered banquette under a starburst chandelier facing the street doors.",
-          "rooftop": "The rooftop deck at dusk, round wicker daybeds with orange cushions and candles on low tables, the downtown skyline along one side and a covered lounge glowing warm beneath its canopy on the other.",
-          "onsite-bar": "The rooftop bar beside the pool, its backlit spirits shelves running under a band of ivy, wicker stools along the counter, and the pool, striped daybeds and open sky past the shade line.",
-          "guest-room": "A guest room with a teal upholstered headboard beneath a wood panel, a gray sofa at the foot of the bed and a writing desk by corner windows looking over downtown rooftops.",
-          "suite": "A suite's living room, a long teal sofa and a low oval table on a blue rug, with an exposed brick wall behind a dining table under a globe pendant and a wet-bar counter along the side."
+          "exterior": "The Andaz's 1913 brick building at dusk, red awnings over F Street.",
+          "lobby": "Basket-weave columns lit orange and blue above a round upholstered banquette.",
+          "rooftop": "The rooftop at dusk, wicker daybeds and candles against the downtown skyline.",
+          "onsite-bar": "The rooftop bar beside the pool, backlit shelves under a band of ivy.",
+          "guest-room": "A room with a teal headboard and corner windows over downtown rooftops.",
+          "suite": "A suite living room, a teal sofa on a blue rug against exposed brick.",
         }
       },
       {
@@ -1480,12 +1480,12 @@ export const CITIES = {
         },
         "heroCredit": "InterContinental Washington D.C. – The Wharf",
         "galleryAlt": {
-          "exterior": "The InterContinental seen from the water, a red-brick and glass block stepping up to a glazed rooftop pavilion, with the Wharf's timber bulkhead, moored boats and a covered waterfront terrace along its base.",
-          "lobby": "The lobby's twin staircases rising either side of a stone wall beneath a long cascade of teardrop pendants, with brass rails and balustrades and a velvet sofa at a marble table below.",
-          "checkin": "The reception desks, a pair of backlit banded-onyx counters under fabric drum pendants, with a flock of small gilded birds climbing the pale panel on the wall between them.",
-          "view": "The rooftop terrace looking out over the marina — a glass balustrade above ranked motor yachts, with the channel running away to parkland and open water beyond.",
-          "guest-room": "A king room with a padded cream headboard wall lit from above, a marbled stone console opposite, and glazed balcony doors opening onto the water with the skyline low on the far bank.",
-          "bath": "A marble bathroom, a freestanding oval tub set against a floor-to-ceiling slab of gray-veined stone, with a lit mirror over the washstand and a glass-walled shower alongside."
+          "exterior": "The hotel from the water, brick and glass stepping to a rooftop pavilion.",
+          "lobby": "Twin staircases under a long cascade of teardrop pendants.",
+          "checkin": "Backlit onyx reception counters, gilded birds climbing the panel between them.",
+          "view": "The rooftop terrace over the marina, ranked yachts and open water beyond.",
+          "guest-room": "A king room with a lit cream headboard, balcony doors onto the water.",
+          "bath": "A freestanding oval tub against gray-veined marble, a glass shower alongside.",
         }
       },
       {

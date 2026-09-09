@@ -264,14 +264,19 @@ const isOutbound = providerCtas.length > 0 || showDirect;
         <ul class="gallery-grid">
           {gallery.map(({ key, img }) => (
             <li>
-              <Image
-                src={img}
-                alt={galleryAlt[key] || `${hotel.name}, ${cityDisplay}.`}
-                widths={[400, 800]}
-                sizes="(max-width: 700px) 100vw, 380px"
-                loading="lazy"
-                decoding="async"
-              />
+              {/* A real <button> around a real <img>: with JS off the photo
+                  still renders and still gets indexed, and the button simply
+                  does nothing. The lightbox is pure enhancement. */}
+              <button class="shot" type="button" aria-label="Open photo full size">
+                <Image
+                  src={img}
+                  alt={galleryAlt[key] || `${hotel.name}, ${cityDisplay}.`}
+                  widths={[400, 800, 1600]}
+                  sizes="(max-width: 700px) 100vw, 340px"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
             </li>
           ))}
         </ul>
@@ -310,10 +315,146 @@ const isOutbound = providerCtas.length > 0 || showDirect;
   </div>
 </article>
 
+<!-- Gallery lightbox. Native <dialog> does the heavy lifting: Esc to close,
+     focus trap, inert background, and focus restored to the trigger on close --
+     all free, and all things a hand-rolled overlay usually gets wrong. Ported
+     from CancunToGo's assets/js/lightbox.js; see the notes there. -->
+<script>
+  const shots = Array.from(document.querySelectorAll('.gallery .shot'));
+  if (shots.length && window.HTMLDialogElement) {
+    const dlg = document.createElement('dialog');
+    dlg.className = 'lightbox';
+    dlg.innerHTML =
+      '<div class="lb-frame">' +
+        '<img alt="">' +
+        '<button class="lb-close" type="button" aria-label="Close">&times;</button>' +
+        '<button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#8249;</button>' +
+        '<button class="lb-btn lb-next" type="button" aria-label="Next photo">&#8250;</button>' +
+      '</div>' +
+      '<p class="lb-cap"></p>';
+    document.body.appendChild(dlg);
+
+    const frame = dlg.querySelector('.lb-frame');
+    const img = dlg.querySelector('img');
+    const cap = dlg.querySelector('.lb-cap');
+    const prev = dlg.querySelector('.lb-prev');
+    const next = dlg.querySelector('.lb-next');
+    let i = 0;
+
+    if (shots.length < 2) { prev.hidden = true; next.hidden = true; }
+
+    // Astro emits a srcset, and currentSrc holds whichever THUMBNAIL variant
+    // the grid loaded -- 400w or 800w. Blowing that up to 96vw is exactly the
+    // blur the lightbox exists to avoid, so take the widest candidate instead.
+    // (Astro caps generated widths at the source, so a 1023px original simply
+    // tops out there rather than upscaling.)
+    function widest(el) {
+      const set = el.getAttribute('srcset');
+      if (!set) return el.currentSrc || el.src;
+      return set.split(',')
+        .map((part) => {
+          const bits = part.trim().split(/\s+/);
+          return { url: bits[0], w: parseInt(bits[1], 10) || 0 };
+        })
+        .sort((a, b) => b.w - a.w)[0].url;
+    }
+
+    function show(n) {
+      i = (n + shots.length) % shots.length;
+      const src = shots[i].querySelector('img');
+      img.src = widest(src);
+      img.alt = src.alt;
+      cap.textContent = src.alt;
+    }
+
+    shots.forEach((btn, n) => {
+      btn.addEventListener('click', () => { show(n); dlg.showModal(); });
+    });
+    next.addEventListener('click', () => show(i + 1));
+    prev.addEventListener('click', () => show(i - 1));
+    dlg.querySelector('.lb-close').addEventListener('click', () => dlg.close());
+
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(i + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1); }
+    });
+
+    // Click off the photo closes. A backdrop click reports the dialog itself as
+    // the target, and the dialog has no padding, so target === dlg is reliable
+    // -- unlike comparing pointer coordinates against its box.
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg || e.target === frame || e.target === cap) dlg.close();
+    });
+  }
+</script>
+
+<style is:global>
+  /* The dialog is appended to <body> by the script above, so it never receives
+     Astro's scoped-style attribute -- these rules must be global to reach it. */
+  .lightbox {
+    margin: auto; border: 0; padding: 0; background: transparent;
+    max-width: 96vw; max-height: 96vh; overflow: visible;
+  }
+  .lightbox::backdrop { background: rgba(5, 14, 34, 0.9); }
+  .lb-frame { position: relative; display: block; }
+  .lightbox img { display: block; max-width: 96vw; max-height: 82vh; width: auto; height: auto; border-radius: 10px; }
+  .lb-cap {
+    color: rgba(220, 240, 245, 0.9); font-family: var(--font-body); font-weight: 300;
+    font-size: 0.85rem; text-align: center; margin: 0.75rem auto 0; max-width: 70ch;
+  }
+  .lb-btn, .lb-close {
+    position: absolute; z-index: 2; border: 0; cursor: pointer; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10, 42, 72, 0.55); backdrop-filter: blur(3px);
+    transition: background 0.15s;
+  }
+  .lb-btn:hover, .lb-close:hover { background: rgba(10, 42, 72, 0.85); }
+  .lb-btn:focus-visible, .lb-close:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+  .lb-btn { top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; font-size: 27px; line-height: 1; }
+  .lb-prev { left: 12px; }
+  .lb-next { right: 12px; }
+  .lb-close { top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; font-size: 21px; line-height: 1; }
+
+  @media (max-width: 560px) {
+    .lb-btn { width: 40px; height: 40px; font-size: 23px; }
+    .lb-prev { left: 8px; }
+    .lb-next { right: 8px; }
+    .lb-close { top: 8px; right: 8px; }
+  }
+</style>
+
 <style>
-  .gallery-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 0.75rem; }
+  /* 340px minimum, up from 240px. At 240 the frames read as thumbnails rather
+     than photographs -- on a 1280px viewport they landed at 255x170. The pool
+     is the reason anyone is on this page, so the photos should be looked at,
+     not scanned past. Matches CancunToGo, which uses the same 340. */
+  .gallery-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 0.75rem; }
   .gallery-grid li { margin: 0; }
   .gallery-grid img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; display: block; }
+
+  /* 3/2, not CancunToGo's 4/3: every gallery source here is 3:2, so 4/3 would
+     crop them. */
+  .shot {
+    position: relative; display: block; width: 100%; padding: 0; margin: 0; border: 0;
+    aspect-ratio: 3 / 2; background: var(--deep); border-radius: 8px; overflow: hidden;
+    cursor: zoom-in; font: inherit;
+  }
+  .shot img { transition: transform 0.25s ease; }
+  .shot:hover img, .shot:focus-visible img { transform: scale(1.04); }
+  .shot:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+  /* Expand affordance -- without it nothing signals the shots are clickable. */
+  .shot::after {
+    content: ''; position: absolute; right: 10px; bottom: 10px; width: 30px; height: 30px;
+    border-radius: 7px; background: rgba(5, 14, 34, 0.62) no-repeat center/15px 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7'/%3E%3C/svg%3E");
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .shot:hover::after, .shot:focus-visible::after { opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shot img { transition: none; }
+    .shot:hover img, .shot:focus-visible img { transform: none; }
+  }
   .gallery-credit { font-family: var(--font-body); font-weight: 300; font-size: 0.78rem; color: rgba(220, 240, 245, 0.55); margin: 0.9rem 0 0; }
 
   .hotel-hero {
