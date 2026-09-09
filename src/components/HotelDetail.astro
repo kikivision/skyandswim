@@ -348,59 +348,79 @@ const isOutbound = providerCtas.length > 0 || showDirect;
     // blur the lightbox exists to avoid, so take the widest candidate instead.
     // (Astro caps generated widths at the source, so a 1023px original simply
     // tops out there rather than upscaling.)
+    // The widest srcset candidate, as { url, w }. Astro emits a responsive
+    // srcset and currentSrc holds whichever THUMBNAIL the grid loaded -- 400w
+    // or 800w. Enlarging that is exactly the blur the lightbox exists to avoid.
+    // The `w` descriptor is also the full image's true pixel width, which the
+    // upscale cap needs BEFORE the image has loaded.
     function widest(el) {
       const set = el.getAttribute('srcset');
-      if (!set) return el.currentSrc || el.src;
+      if (!set) return { url: el.currentSrc || el.src, w: el.naturalWidth || 0 };
       return set.split(',')
         .map((part) => {
           const bits = part.trim().split(/\s+/);
           return { url: bits[0], w: parseInt(bits[1], 10) || 0 };
         })
-        .sort((a, b) => b.w - a.w)[0].url;
+        .sort((a, b) => b.w - a.w)[0];
     }
 
-    // Scale every photo up to fill the viewport box, not just down to fit.
-    // Sources vary from 480px to 1600px, and at natural size the small ones
-    // rendered about a third the width of the large ones -- the gallery looked
-    // broken rather than modest. The frame is sized to the photo's own ratio so
-    // the close/prev/next controls keep hugging the image instead of floating
-    // at the corners of a letterboxed box.
-    //
-    // Upscaling a 480px source ~2.9x is visibly soft; that is a known and
-    // accepted trade for consistent sizing. Better originals remain the real
-    // fix. To cap it, clamp `w` against `img.naturalWidth * <factor>`.
     // Upscaling is CAPPED. Filling the viewport unconditionally made a 480px
     // source render ~2.9x and visibly mushy -- worse than being small. 1.6x is
-    // the point where softness stops reading as a fault. Sources now run
-    // 750-1540px, so the cap rarely binds and the frames still land within a
-    // few percent of each other.
+    // the point where softness stops reading as a fault, and with sources now
+    // 750-1600px it rarely binds, so frames still land within a few percent of
+    // each other. The frame is sized to each photo's own ratio so the
+    // close/prev/next controls hug the image rather than floating at the
+    // corners of a letterboxed box.
     const MAX_UPSCALE = 1.6;
 
-    function fit() {
-      const r = img.naturalWidth / img.naturalHeight;
-      if (!r) return;
+    // Ratio and true width of the photo currently being shown. Held here rather
+    // than read off `img`, because during a change `img` still reports the
+    // OUTGOING photo's dimensions.
+    let curRatio = 0;
+    let curWidth = 0;
+
+    function sizeFrame() {
+      if (!curRatio) return;
       const w = Math.min(
         window.innerWidth * 0.96,
-        window.innerHeight * 0.82 * r,
-        img.naturalWidth * MAX_UPSCALE,
+        window.innerHeight * 0.82 * curRatio,
+        curWidth * MAX_UPSCALE,
       );
       frame.style.width = w + 'px';
-      frame.style.height = w / r + 'px';
+      frame.style.height = w / curRatio + 'px';
+    }
+
+    // Warm the neighbours so arrowing through the gallery paints from cache.
+    // The grid only ever loaded the 400w/800w thumbnails, so without this every
+    // change waits on a fresh network fetch of the full-size file.
+    function preload(n) {
+      const el = shots[(n + shots.length) % shots.length].querySelector('img');
+      new Image().src = widest(el).url;
     }
 
     function show(n) {
       i = (n + shots.length) % shots.length;
       const src = shots[i].querySelector('img');
-      // Clear the old box first, or a portrait briefly wears a landscape frame.
-      frame.style.width = frame.style.height = '';
-      img.src = widest(src);
+      const best = widest(src);
+
+      // Size the box from the THUMBNAIL's own width/height attributes, which
+      // Astro always emits and which carry the same ratio as the full image.
+      // Doing it synchronously is what removes the flash: the old code cleared
+      // the frame and waited for load, so the box collapsed and sprang back.
+      const w0 = Number(src.getAttribute('width')) || src.naturalWidth;
+      const h0 = Number(src.getAttribute('height')) || src.naturalHeight;
+      if (w0 && h0) curRatio = w0 / h0;
+      curWidth = best.w || w0 || 0;
+      sizeFrame();
+
+      img.src = best.url;
       img.alt = src.alt;
       cap.textContent = src.alt;
-      if (img.complete) fit();
+
+      if (shots.length > 1) { preload(i + 1); preload(i - 1); }
     }
 
-    img.addEventListener('load', fit);
-    window.addEventListener('resize', fit);
+    window.addEventListener('resize', sizeFrame);
 
     shots.forEach((btn, n) => {
       btn.addEventListener('click', () => { show(n); dlg.showModal(); });
