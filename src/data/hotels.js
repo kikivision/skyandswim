@@ -152,6 +152,12 @@ export const CITIES = {
           "pool": "35 ft, HEATED, open year-round. Not stated anywhere in the site copy; supplied directly — Editorial, Karen Dailey, 2026-09-04. Third of the four Austin properties that contradicts the city noteBody claim that none is heated or year-round; only the W is unheated and seasonal.",
           "stay": "Opened October 2023 at 68 East Ave, a block off Rainey Street; Limestone rooftop bar on the 16th floor — Confirmed 2026-07-19 via CultureMap Austin and Urbanize Austin."
         },
+        "galleryAlt": {
+          "outdoor-patio": "The patio terrace, navy and coral seating under a heat lamp beside the glass.",
+          "lobby": "The lobby, a marbled feature wall beside low seating and the bar counter.",
+          "guest-room": "A king room in pale blue, slatted wood bedside panel, window onto downtown.",
+          "guest-suite": "A suite living room, a long sofa under framed Austin prints, corner windows."
+        },
         "heroCredit": "Cambria Austin Downtown"
       }
     ]
