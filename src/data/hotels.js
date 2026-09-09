@@ -563,6 +563,12 @@ export const CITIES = {
         "verified": {
           "stay": "Autograph Collection; downtown, above Discovery Green — Confirmed by Karen 2026-07-18."
         },
+        "galleryAlt": {
+          "lobby-staircase": "The lobby's marble staircase under brass and glass rails, mirrored wall alongside.",
+          "hull-oak-bar": "Hull Oak's marble bar under an arch, pale stools and a globe pendant.",
+          "deluxe-room": "A deluxe room in cream and brass, green velvet chaise by the window.",
+          "presidential-suite": "The presidential suite at night, velvet sofas facing the lit city."
+        },
         "heroCredit": "The Laura Hotel"
       }
     ]
