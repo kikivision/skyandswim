@@ -489,6 +489,14 @@ export const CITIES = {
         "verified": {
           "stay": "On Discovery Green; walkable to the George R. Brown Convention Center, Toyota Center, and Minute Maid Park — Confirmed by Karen 2026-07-18."
         },
+        "galleryAlt": {
+          "texas-lazy-river": "The Texas-shaped lazy river lit turquoise at dusk, seen from straight above.",
+          "cabana-firepit": "Cabanas drawn around a lit firepit on the deck, tower rising behind.",
+          "highdive-bar": "High Dive's outdoor bar and teak tables along the pool deck at midday.",
+          "exterior": "The tower at blue hour above Discovery Green, lit windows on the water.",
+          "luxury-suite-king": "A king room in navy and walnut, floor-to-ceiling window onto the city.",
+          "executive-suite-bathroom": "A freestanding tub at the glass, downtown Houston spread out below."
+        },
         "heroCredit": "Marriott Marquis Houston"
       },
       {
