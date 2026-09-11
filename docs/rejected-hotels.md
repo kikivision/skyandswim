@@ -10,7 +10,7 @@ a view worth naming, at a currently-operating hotel with solid reviews. Rooftop
 Ground-level and courtyard pools don't count. Indoor pools don't count unless
 genuinely elevated with a view — and none so far have been.
 
-Last updated 2026-08-25.
+Last updated 2026-09-11.
 
 ---
 
@@ -168,6 +168,7 @@ Also never fully swept. Four Miami Beach rooftops were confirmed and ADDED
 | **SLS LUX Brickell** | **Held 2026-08-25, not rejected.** Operator: "Altitude Pool & Lounge" on "an expansive 9th floor terrace overlooking the colorful Brickell skyline." Same reason as EPIC. Note its pool name, "Altitude," already draws impressions we cannot serve ("altitude pool miami"). |
 | **Hotel Greystone** | **EXCLUDED 2026-08-25, on size.** Karen: has a rooftop pool, but "a little small. Not terrible, but a little small." Called out FOR it rather than kept despite it — the same judgment as Viceroy DC and Rosewood DC, not the Godfrey Hollywood exception. Decided, not pending: do not re-raise without new information about the pool itself. |
 | **The James Nautilus Miami Beach** | Still closed as of 2026-08-25 (confirmed by Karen). Re-add on reopening, per the Notable Pools note. |
+| **W Miami** (Icon Brickell, Brickell) | **EXCLUDED 2026-09-11, on reviews — and it is not a Notable Pool either.** The famous Icon Brickell pool — 300 ft long, Philippe Starck's columns, Biscayne Bay behind it — reads ground-level in photographs but sits on the **15th-floor pool deck, roughly 100 ft above the bay**. Elevated, so the only list it could ever have joined is Miami's rooftop one. It fails that on review quality: Booking.com **6.1 "Pleasant" across 116 reviews**, far under the 8.2 that excluded The Ven at Embassy Row. Two further strikes: the deck belongs to the Icon Brickell condo association and is shared with residents, not the hotel's own; and the operator's fine print, during the ongoing facade restoration, says access to it "will be limited to weekends." Revisit only if the score recovers *and* the deck returns to seven days. |
 
 The Tony Hotel South Beach cleared its review-tier check on 2026-08-25 at 8.4
 ("Very good") on Booking.com, against the 8.2 that excluded The Ven at Embassy
