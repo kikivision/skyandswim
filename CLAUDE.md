@@ -72,11 +72,19 @@ description must carry every point its `poolNote` lists, because the pool-note
 strip does not render on the card — it still feeds the detail page's "The pool"
 list, the meta description and the JSON-LD.
 
-**Expedia coverage: 71 of 72.** The holdout is `dua-miami`, which has no findable
-Expedia listing under its current name or its former one (SLS Brickell). Property
-IDs must be read off the live listing, never derived from the name — watch for
-legacy slugs after a rebrand (The Tony still sits on `The-Hotel-Of-South-Beach`)
-and for zero-review duplicate listings (take the one holding the review history).
+**Expedia coverage: 72 of 72** (complete as of 2026-09-09). `dua-miami` was the
+last holdout and is now covered — its listing was eventually found under a THIRD
+name, neither "Dua Miami" nor its former "SLS Brickell" but **"Autograph
+Collection Brickell"**, which is why every earlier search under the current and
+former names came up empty. It is also the only entry carrying a generator-made
+`expediaCjUrl` rather than a plain property URL (see the SID rule above).
+
+Property IDs must be read off the live listing, never derived from the name.
+Three traps, all seen here: a legacy slug after a rebrand (The Tony still sits on
+`The-Hotel-Of-South-Beach`); zero-review duplicate listings (take the one holding
+the review history); and a property listed under a brand name that appears
+nowhere in its current or former trading name — if a hotel seems absent from
+Expedia, search its parent collection before concluding it has no listing.
 
 **To add a hotel to the affiliate program:** add `slug: { bookingcom: '<url>',
 expedia: '<url>' }` to `affiliates.js`, then add a matching `slug` field to that
