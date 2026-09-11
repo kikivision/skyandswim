@@ -425,3 +425,45 @@ export const AFFILIATE_HOTELS = {
   // "THEhotel at Mandarin Club" is omitted — no matching Booking.com property
   // could be identified (source name appears garbled). Both flagged for review.
 };
+
+/**
+ * Hotels whose LISTING CARDS show one booking button instead of two, and which
+ * provider survives. Detail pages are NOT affected — they keep both, because
+ * a reader who has opened the write-up is further along and a price comparison
+ * is worth the second button there.
+ *
+ * Austin plus every notable pool is the test cell (2026-09-10). These cards
+ * carried two CTAs from the 2026-08 rollout; each is now back to a single
+ * Expedia link beside "See the pool". Expedia because its CJ attribution window
+ * is materially longer than Booking.com's session-only one, so it is the
+ * likelier earner of the two. Every other city keeps both buttons and is the
+ * control.
+ *
+ * Read the result on GA4 `affiliate_click` for these slugs. If the click rate
+ * improves, widen this map; if it does not, delete it and the cards go back to
+ * two buttons with no other change.
+ *
+ * NOTE the two halves measure different things and should be read separately.
+ * Austin is a whole city — four cards on /cities/austin/ plus the same four on
+ * the /rooftop-pools hub. The notable pools are three cards on one small page,
+ * and `line-austin` sits in both halves by coincidence of geography: it is a
+ * notable pool that happens to be in Austin, and it is NOT on the Austin city
+ * page. Do not add its clicks to the Austin total.
+ *
+ * Keys must be slugs that exist in AFFILIATE_HOTELS above, and the value must
+ * be a provider that hotel actually has — a slug whose named provider is absent
+ * falls back to showing both rather than rendering a card with no booking link.
+ */
+export const CARD_SINGLE_PROVIDER = {
+  // --- Austin (city cards + their rows on the /rooftop-pools hub) ---
+  'w-austin': 'expedia',
+  'hotel-van-zandt': 'expedia',
+  'austin-proper': 'expedia',
+  'cambria-austin-downtown': 'expedia',
+
+  // --- Notable pools (/notable-pools cards; these are ground-level pools and
+  // do NOT appear on the rooftop hub, so each has exactly one card on the site) ---
+  'faena-miami-beach': 'expedia',
+  'standard-spa-miami-beach': 'expedia',
+  'line-austin': 'expedia',
+};

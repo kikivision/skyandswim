@@ -61,9 +61,20 @@ restores that hotel's per-page attribution in the Commission Detail report.
   Two providers → two buttons labelled by provider; one → a single button named
   for the hotel.
 - `src/components/HotelCard.astro` — renders the same buttons on the listing
-  cards, beneath the "See the pool" link to the hotel page. Both components call
-  `affiliateCtas()`, so adding a provider key lights up the card and the detail
-  page at once.
+  cards, beside the "See the pool" link to the hotel page. It calls
+  `cardAffiliateCtas()`, NOT `affiliateCtas()` — same list, except that a hotel
+  named in `CARD_SINGLE_PROVIDER` (also in `affiliates.js`) is cut down to that
+  one provider on CARDS ONLY. Detail pages always keep both. Adding a provider
+  key still lights up the card and the detail page at once, unless that hotel is
+  in the map.
+
+  **`CARD_SINGLE_PROVIDER` is a live experiment, not settled design** (opened
+  2026-09-10): the four Austin hotels and the three notable pools show one
+  Expedia CTA, everything else shows both, and GA4 `affiliate_click` on those
+  slugs decides whether it widens or gets deleted. Austin and the notable pools
+  are separate cells — `line-austin` is a notable pool that happens to be in
+  Austin and is NOT on the Austin city page, so its clicks are not part of the
+  Austin total.
 
 **Card anatomy** (in order): meta row → name → prose → pills → actions. The prose
 is the elevated layer and is capped at **340 characters**; the pills are what
