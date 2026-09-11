@@ -16,7 +16,7 @@
 // Do not reintroduce a redirector for either provider. The CJ hop from
 // jdoqocy.com to the booking site is CJ's own tracking redirect and is the
 // sanctioned mechanism; the interstitial was ours, and that was the problem.
-import { AFFILIATE_HOTELS } from '../data/affiliates.js';
+import { AFFILIATE_HOTELS, CARD_SINGLE_PROVIDER } from '../data/affiliates.js';
 
 // CJ deep-link click bases for the Sky & Swim promotional property — Property ID
 // 101819827, its OWN id, distinct from jetandswim's 101767900, so commissions
@@ -122,4 +122,29 @@ export function affiliateCtas(slug) {
   }
 
   return ctas;
+}
+
+/**
+ * The booking CTAs for a LISTING CARD — the same list as affiliateCtas(), except
+ * that a hotel named in CARD_SINGLE_PROVIDER is cut down to that one provider.
+ *
+ * Cards and detail pages deliberately diverge here. HotelCard calls this;
+ * HotelDetail calls affiliateCtas() and keeps both buttons. The card is a
+ * scanning surface where a second near-identical button competes with "See the
+ * pool" for the same click, while the detail page is a decision surface where a
+ * price comparison earns its space.
+ *
+ * The filter is a no-op for every hotel absent from the map, so the control
+ * cities are byte-identical to what they rendered before this existed.
+ *
+ * Falls back to the full list if the named provider is missing for that hotel,
+ * so a typo in the map can never produce a card with no way to book.
+ */
+export function cardAffiliateCtas(slug) {
+  const ctas = affiliateCtas(slug);
+  const only = slug ? CARD_SINGLE_PROVIDER[slug] : undefined;
+  if (!only) return ctas;
+
+  const kept = ctas.filter((c) => c.provider === only);
+  return kept.length > 0 ? kept : ctas;
 }

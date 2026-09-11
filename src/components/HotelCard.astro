@@ -1,5 +1,5 @@
 ---
-import { affiliateCtas } from "../lib/affiliate-links.js";
+import { cardAffiliateCtas } from "../lib/affiliate-links.js";
 
 interface Props {
   name: string;
@@ -33,12 +33,17 @@ const {
 // redirect page of ours in the click path (ref. policy 5.1.1).
 // `slug` doubles as the hotel-page URL segment, so having one does NOT imply an
 // affiliate destination exists — affiliateCtas() returns [] when it doesn't.
-const providerCtas = affiliateCtas(slug);
+const providerCtas = cardAffiliateCtas(slug);
 
 // The provider suffix appears ONLY when there are two buttons, where it is
 // required to tell them apart. A hotel with a single destination keeps the
 // original bare label — which also leaves the 58 Booking-only hotels untouched
 // as a comparison group against the 14 that now carry both.
+//
+// As of 2026-09-10 a hotel can also reach one button by being listed in
+// CARD_SINGLE_PROVIDER, which cardAffiliateCtas() applies to cards only. Such a
+// hotel still has two providers; it just shows one HERE, and gets the bare label
+// for the same reason — there is nothing left to tell apart.
 const named = providerCtas.length > 1;
 const directHref = providerCtas.length === 0 ? bookingUrl : null;
 const showDirect = Boolean(directHref && directHref !== "#");
