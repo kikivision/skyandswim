@@ -1237,6 +1237,14 @@ export const CITIES = {
         "verified": {
           "stay": "Center City, near City Hall — Confirmed by Karen 2026-07-18."
         },
+        "galleryAlt": {
+          "rooftop-pool-aerial": "The WET deck from above, the pool running the roof's length between clipped hedges.",
+          "secret-garden": "The garden terrace, string lights over turf, a fireplace and lit busts among the planters.",
+          "hotel-interior": "The lobby, fluted white columns beneath a canopy of hanging bulbs, olive banquettes.",
+          "prophecy-secret-space": "A teal lounge, tufted banquettes and gilt-framed portraits under pendant lights.",
+          "mega-suite-bedroom": "A suite bedroom, red-lit glass doors beside the bed and a toile runner.",
+          "exterior": "The Chestnut Street entrance at dusk, the lit W above the canopy."
+        },
         "heroCredit": "W Philadelphia"
       },
       {
