@@ -149,15 +149,32 @@ const graph = [
         // there is no readable /go/<provider>/<slug> path left to match, and
         // without this they would fall through to the anonymous `outbound_click`
         // branch below.
+        //
+        // `placement` says WHICH SURFACE the click came from -- 'card' on a
+        // listing card, 'detail' on a hotel's own page, 'body' for an in-prose
+        // partner link. It is stamped at render time, the same opt-in shape as
+        // data-pool-cta, rather than inferred from pagePath. pagePath only ever
+        // worked by accident: it happens that a hotel's detail page is the only
+        // place its own URL appears, and the moment a card is embedded anywhere
+        // unexpected that inference is silently wrong. The single-CTA card test
+        // (CARD_SINGLE_PROVIDER in src/data/affiliates.js) changes cards while
+        // deliberately leaving detail pages alone, so telling the two apart is
+        // the whole read.
         const provider = a.getAttribute('data-affiliate-provider');
-        if (provider) return { provider, slug: a.getAttribute('data-affiliate-slug') || '' };
+        const placement = a.getAttribute('data-affiliate-placement') || undefined;
+        const slug = a.getAttribute('data-affiliate-slug') || '';
+        if (provider) return { provider, slug, placement };
 
         let host = '';
         try { host = new URL(a.href).hostname; } catch { return null; }
-        if (host.includes('usa-transfers')) return { provider: 'usa_transfers', slug: '' };
-        if (host.includes('hotels.com') || host.includes('hotelscom.stay22')) return { provider: 'hotelscom', slug: '' };
-        if (host.includes('booking.com') || host.includes('booking.stay22')) return { provider: 'booking', slug: '' };
-        if (host.includes('stay22.com')) return { provider: 'stay22', slug: '' };
+        // Unstamped links reach here. The card/detail "no affiliate link for
+        // this hotel" fallback still carries a placement and a slug, so prefer
+        // those; anything genuinely loose is an in-prose partner link.
+        const where = placement || 'body';
+        if (host.includes('usa-transfers')) return { provider: 'usa_transfers', slug, placement: where };
+        if (host.includes('hotels.com') || host.includes('hotelscom.stay22')) return { provider: 'hotelscom', slug, placement: where };
+        if (host.includes('booking.com') || host.includes('booking.stay22')) return { provider: 'booking', slug, placement: where };
+        if (host.includes('stay22.com')) return { provider: 'stay22', slug, placement: where };
         return null;
       }
       document.addEventListener('click', (e) => {
@@ -207,6 +224,7 @@ const graph = [
           window.gtag('event', 'affiliate_click', {
             provider: hit.provider,
             item_slug: hit.slug || undefined,
+            placement: hit.placement,
             link_url: a.href,
             link_domain: domain,
           });
