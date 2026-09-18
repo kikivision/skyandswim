@@ -738,6 +738,14 @@ export const CITIES = {
         "verified": {
           "stay": "Opened March 2015 as the brand's first hotel; 600 feet of beachfront on Collins Avenue at the upper end of South Beach; LEED Silver certified, living-wall and reclaimed-material design — Confirmed 2026-07-19 via 1hotels.com, Haute Living and Architizer."
         },
+        "galleryAlt": {
+          "exterior": "An aerial view down the property: a long lap pool runs parallel to the Atlantic, a second pool sits nearer the tower, and loungers line the beach beyond.",
+          "rooftop-lounge": "The 18th-floor adults-only rooftop at dusk, white sectionals and lantern candles under palms with the ocean past the glass rail.",
+          "livingroom": "A suite's living room, a white sectional beneath framed coastal art, sliding glass open to the balcony.",
+          "oceanview-balcony": "A bedroom on a raised wood platform, its headboard in weathered wood beside glass doors onto a balcony with a slice of ocean.",
+          "presidential-suite-bath": "The presidential suite's bathroom, a freestanding tub beside a floor-mounted rain shower and a floor-to-ceiling city view.",
+          "pool-cabana": "A shaded daybed on an oceanfront terrace, blue pillows facing the beach's loungers and umbrellas through the palms."
+        },
         "heroCredit": "1 Hotel South Beach"
       },
       {
