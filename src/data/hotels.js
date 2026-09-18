@@ -765,6 +765,12 @@ export const CITIES = {
         "verified": {
           "stay": "Formerly SLS Brickell, rebranded Dua Miami (Autograph Collection) 2024; 124 Philippe Starck-designed rooms with balconies; Ahu|Mar (wood-fired seafood) and The Lounge on site; rooftop deck holds two infinity pools, a jacuzzi and a cold plunge — Confirmed 2026-07-19 via duamiamihotel.com, Hotels.com and miamiandbeaches.com."
         },
+        "galleryAlt": {
+          "view-bar": "The rooftop deck's poolside bar on black-and-white checkerboard tile, striped loungers along the infinity pool with downtown Miami's towers behind.",
+          "pool-loungers": "Red, yellow, and black-striped loungers between oversized terracotta planters at the pool's edge.",
+          "lobby": "The lobby, raw concrete and a spiral stair beside a wall of brass-framed screens, a green racing-stripe runner underfoot.",
+          "room": "A guest room in Philippe Starck's design, pink walls and a black handprint-patterned carpet beneath an angled mirrored ceiling fixture."
+        },
         "heroCredit": "Dua Miami, Autograph Collection"
       },
       {
